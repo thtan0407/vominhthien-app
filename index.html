@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<title>Template VMT App</title>
+	<meta name="description" content="Template VMT App">
+	<meta name="author" content="">
+
+	<meta property="og:title" content="Template VMT App">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="Template VMT App">
+	<meta property="og:image" content="">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		  rel="stylesheet">
+
+	<link rel="icon" href="./assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<div class="floating-copy">
+	
+</div>
+
+<header id="header" class="header bg-white position-sticky top-0 start-0 zi-10 w-100">
+	<div class="container">
+		<div class="hstack justify-content-between gap-5">
+			<div class="header-left hstack gap-10px">
+				<button type="button" class="header-icon p-0 bg-transparent border-0"
+						id="btnOpen-navigation" role="button">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							  d="M3.6001 5.99999C3.6001 5.68173 3.72653 5.3765 3.95157 5.15146C4.17661 4.92642 4.48184 4.79999 4.8001 4.79999H19.2001C19.5184 4.79999 19.8236 4.92642 20.0486 5.15146C20.2737 5.3765 20.4001 5.68173 20.4001 5.99999C20.4001 6.31825 20.2737 6.62347 20.0486 6.84852C19.8236 7.07356 19.5184 7.19999 19.2001 7.19999H4.8001C4.48184 7.19999 4.17661 7.07356 3.95157 6.84852C3.72653 6.62347 3.6001 6.31825 3.6001 5.99999ZM3.6001 12C3.6001 11.6817 3.72653 11.3765 3.95157 11.1515C4.17661 10.9264 4.48184 10.8 4.8001 10.8H19.2001C19.5184 10.8 19.8236 10.9264 20.0486 11.1515C20.2737 11.3765 20.4001 11.6817 20.4001 12C20.4001 12.3182 20.2737 12.6235 20.0486 12.8485C19.8236 13.0736 19.5184 13.2 19.2001 13.2H4.8001C4.48184 13.2 4.17661 13.0736 3.95157 12.8485C3.72653 12.6235 3.6001 12.3182 3.6001 12ZM3.6001 18C3.6001 17.6817 3.72653 17.3765 3.95157 17.1515C4.17661 16.9264 4.48184 16.8 4.8001 16.8H12.0001C12.3184 16.8 12.6236 16.9264 12.8486 17.1515C13.0737 17.3765 13.2001 17.6817 13.2001 18C13.2001 18.3182 13.0737 18.6235 12.8486 18.8485C12.6236 19.0736 12.3184 19.2 12.0001 19.2H4.8001C4.48184 19.2 4.17661 19.0736 3.95157 18.8485C3.72653 18.6235 3.6001 18.3182 3.6001 18Z"
+							  fill="#191E24"/>
+					</svg>
+				</button>
+				<div class="header-logo">
+					<a href="/" class="d-inline-flex align-middle">
+						<img src="./assets/images/logo-icon_primary.png" width="24" height="20" class="mw-100 w-auto"
+							 alt="">
+					</a>
+				</div>
+			</div>
+			<div class="header-right hstack gap-10px">
+				<div class="header-text hstack gap-10px fw-bold text-black">
+					Tỉ giá <span class="primary-color">1 Y = 3650đ</span>
+				</div>
+				<div class="header-search">
+					<button class="header-button border-0 p-0 bg-transparent" type="button">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								  d="M10.8989 4.92135C7.59758 4.92135 4.92135 7.59758 4.92135 10.8989C4.92135 14.2002 7.59758 16.8764 10.8989 16.8764C12.5498 16.8764 14.0429 16.2084 15.1256 15.1256C16.2084 14.0429 16.8764 12.5498 16.8764 10.8989C16.8764 7.59758 14.2002 4.92135 10.8989 4.92135ZM3 10.8989C3 6.53645 6.53645 3 10.8989 3C15.2613 3 18.7978 6.53645 18.7978 10.8989C18.7978 12.7335 18.1714 14.4231 17.1223 15.7637L21.7186 20.36C22.0938 20.7352 22.0938 21.3435 21.7186 21.7186C21.3435 22.0938 20.7352 22.0938 20.36 21.7186L15.7637 17.1223C14.4231 18.1714 12.7335 18.7978 10.8989 18.7978C6.53645 18.7978 3 15.2613 3 10.8989Z"
+								  fill="#191E24"/>
+						</svg>
+					</button>
+				</div>
+				<div class="header-cart">
+					<button class="header-button border-0 p-0 bg-transparent" type="button">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+							<path d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001"
+								  stroke="#212C28" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+								  stroke-linejoin="round"/>
+							<path d="M9.00007 22H15.0001C19.0201 22 19.7401 20.39 19.9501 18.43L20.7001 12.43C20.9701 9.99 20.2701 8 16.0001 8H8.00007C3.73007 8 3.03007 9.99 3.30007 12.43L4.05007 18.43C4.26007 20.39 4.98007 22 9.00007 22Z"
+								  stroke="#212C28" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+								  stroke-linejoin="round"/>
+							<path d="M15.4955 12H15.5045" stroke="#212C28" stroke-width="2" stroke-linecap="round"
+								  stroke-linejoin="round"/>
+							<path d="M8.49451 12H8.50349" stroke="#212C28" stroke-width="2" stroke-linecap="round"
+								  stroke-linejoin="round"/>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-floating position-fixed top-0 start-0 vh-100 bg-white transition-default w-100">
+		<div class="vstack h-100 gap-15px">
+			<div class="header-top">
+				<div class="container">
+					<div class="hstack justify-content-between gap-5">
+						<div class="header-left hstack gap-10px">
+							<button type="button" class="header-icon p-0 bg-transparent border-0"
+									id="btnClose-navigation" role="button">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+									 fill="none">
+									<path d="M5 5L12 12M12 12L19 19M12 12L19 5M12 12L5 19" stroke="#444444"
+										  stroke-width="1.8"
+										  stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+							<div class="header-logo">
+								<a href="/" class="d-inline-flex align-middle">
+									<img src="./assets/images/logo-text_hoz_primary.png" width="123" height="32"
+										 class="mw-100 w-auto"
+										 alt="">
+								</a>
+							</div>
+						</div>
+						<div class="header-right hstack gap-10px">
+							<div class="header-text hstack gap-10px fw-bold text-black">
+								Tỉ giá <span class="primary-color">1 Y = 3650đ</span>
+							</div>
+							<div class="header-search">
+								<button class="header-button border-0 p-0 bg-transparent" type="button">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+										 fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											  d="M10.8989 4.92135C7.59758 4.92135 4.92135 7.59758 4.92135 10.8989C4.92135 14.2002 7.59758 16.8764 10.8989 16.8764C12.5498 16.8764 14.0429 16.2084 15.1256 15.1256C16.2084 14.0429 16.8764 12.5498 16.8764 10.8989C16.8764 7.59758 14.2002 4.92135 10.8989 4.92135ZM3 10.8989C3 6.53645 6.53645 3 10.8989 3C15.2613 3 18.7978 6.53645 18.7978 10.8989C18.7978 12.7335 18.1714 14.4231 17.1223 15.7637L21.7186 20.36C22.0938 20.7352 22.0938 21.3435 21.7186 21.7186C21.3435 22.0938 20.7352 22.0938 20.36 21.7186L15.7637 17.1223C14.4231 18.1714 12.7335 18.7978 10.8989 18.7978C6.53645 18.7978 3 15.2613 3 10.8989Z"
+											  fill="#191E24"/>
+									</svg>
+								</button>
+							</div>
+							<div class="header-cart">
+								<button class="header-button border-0 p-0 bg-transparent" type="button">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+										 fill="none">
+										<path d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001"
+											  stroke="#212C28" stroke-width="1.5" stroke-miterlimit="10"
+											  stroke-linecap="round"
+											  stroke-linejoin="round"/>
+										<path d="M9.00007 22H15.0001C19.0201 22 19.7401 20.39 19.9501 18.43L20.7001 12.43C20.9701 9.99 20.2701 8 16.0001 8H8.00007C3.73007 8 3.03007 9.99 3.30007 12.43L4.05007 18.43C4.26007 20.39 4.98007 22 9.00007 22Z"
+											  stroke="#212C28" stroke-width="1.5" stroke-miterlimit="10"
+											  stroke-linecap="round"
+											  stroke-linejoin="round"/>
+										<path d="M15.4955 12H15.5045" stroke="#212C28" stroke-width="2"
+											  stroke-linecap="round"
+											  stroke-linejoin="round"/>
+										<path d="M8.49451 12H8.50349" stroke="#212C28" stroke-width="2"
+											  stroke-linecap="round"
+											  stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-body scrollbar">
+				<div class="container">
+					<div class="header-navigation" id="header-navigation">
+						<ul class="list-unstyled mb-0">
+							<li>
+								<a href="#dich-vu" data-bs-toggle="collapse"
+								   class="header-navigation_item text-uppercase fw-bold">
+									Dịch vụ
+									<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
+										 fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											  d="M5.79481 8.29289C6.18529 7.90237 6.81839 7.90237 7.20887 8.29289L12.5012 13.5858L17.7935 8.29289C18.1839 7.90237 18.817 7.90237 19.2075 8.29289C19.598 8.68342 19.598 9.31658 19.2075 9.70711L13.2082 15.7071C12.8177 16.0976 12.1846 16.0976 11.7941 15.7071L5.79481 9.70711C5.40433 9.31658 5.40433 8.68342 5.79481 8.29289Z"
+											  fill="#191E24"/>
+									</svg>
+								</a>
+								<ul class="list-unstyled mb-0 collapse" data-bs-parent="#header-navigation"
+									id="dich-vu">
+									<li>
+										<a href="" class="header-navigation_item fw-semibold">
+											Đặt hàng Trung Quốc
+										</a>
+									</li>
+									<li>
+										<a href="" class="header-navigation_item fw-semibold">
+											Thanh toán hộ
+										</a>
+									</li>
+									<li>
+										<a href="" class="header-navigation_item fw-semibold">
+											Vận chuyển hộ
+										</a>
+									</li>
+									<li>
+										<a href="" class="header-navigation_item fw-semibold">
+											Nhập khẩu chính ngạch
+										</a>
+									</li>
+									<li>
+										<a href="" class="header-navigation_item fw-semibold">
+											Gửi hàng sang Trung Quốc
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#huong-dan" data-bs-toggle="collapse"
+								   class="header-navigation_item text-uppercase fw-bold">
+									Hướng dẫn
+									<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
+										 fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											  d="M5.79481 8.29289C6.18529 7.90237 6.81839 7.90237 7.20887 8.29289L12.5012 13.5858L17.7935 8.29289C18.1839 7.90237 18.817 7.90237 19.2075 8.29289C19.598 8.68342 19.598 9.31658 19.2075 9.70711L13.2082 15.7071C12.8177 16.0976 12.1846 16.0976 11.7941 15.7071L5.79481 9.70711C5.40433 9.31658 5.40433 8.68342 5.79481 8.29289Z"
+											  fill="#191E24"/>
+									</svg>
+								</a>
+								<ul class="list-unstyled mb-0 collapse" data-bs-parent="#header-navigation"
+									id="huong-dan">
+									<li>
+										<a href="" class="header-navigation_item fw-semibold">
+											Sử dụng công cụ VMT
+										</a>
+									</li>
+									<li>
+										<a href="" class="header-navigation_item fw-semibold">
+											Quy trình đặt hàng hộ
+										</a>
+									</li>
+									<li>
+										<a href="" class="header-navigation_item fw-semibold">
+											Các bước thanh toán hộ
+										</a>
+									</li>
+									<li>
+										<a href="" class="header-navigation_item fw-semibold">
+											Gửi hàng sang Trung Quốc
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#bieu-phi" data-bs-toggle="collapse"
+								   class="header-navigation_item text-uppercase fw-bold">
+									Biểu Phí
+									<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
+										 fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											  d="M5.79481 8.29289C6.18529 7.90237 6.81839 7.90237 7.20887 8.29289L12.5012 13.5858L17.7935 8.29289C18.1839 7.90237 18.817 7.90237 19.2075 8.29289C19.598 8.68342 19.598 9.31658 19.2075 9.70711L13.2082 15.7071C12.8177 16.0976 12.1846 16.0976 11.7941 15.7071L5.79481 9.70711C5.40433 9.31658 5.40433 8.68342 5.79481 8.29289Z"
+											  fill="#191E24"/>
+									</svg>
+								</a>
+								<ul class="list-unstyled mb-0 collapse" data-bs-parent="#header-navigation"
+									id="bieu-phi">
+									<li>
+										<a href="" class="header-navigation_item fw-semibold">
+											Đặt hàng Trung Quốc
+										</a>
+									</li>
+									<li>
+										<a href="" class="header-navigation_item fw-semibold">
+											Thanh toán hộ
+										</a>
+									</li>
+									<li>
+										<a href="" class="header-navigation_item fw-semibold">
+											Vận chuyển hộ
+										</a>
+									</li>
+									<li>
+										<a href="" class="header-navigation_item fw-semibold">
+											Gửi hàng sang Trung Quốc
+										</a>
+									</li>
+									<li>
+										<a href="" class="header-navigation_item fw-semibold">
+											Phí nẹp giấy, đóng gỗ
+										</a>
+									</li>
+									<li>
+										<a href="" class="header-navigation_item fw-semibold">
+											Phí kiểm đếm, bảo hiểm
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#chinh-sach" data-bs-toggle="collapse"
+								   class="header-navigation_item text-uppercase fw-bold">
+									Chính sách
+									<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
+										 fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											  d="M5.79481 8.29289C6.18529 7.90237 6.81839 7.90237 7.20887 8.29289L12.5012 13.5858L17.7935 8.29289C18.1839 7.90237 18.817 7.90237 19.2075 8.29289C19.598 8.68342 19.598 9.31658 19.2075 9.70711L13.2082 15.7071C12.8177 16.0976 12.1846 16.0976 11.7941 15.7071L5.79481 9.70711C5.40433 9.31658 5.40433 8.68342 5.79481 8.29289Z"
+											  fill="#191E24"/>
+									</svg>
+								</a>
+								<ul class="list-unstyled mb-0 collapse" data-bs-parent="#header-navigation"
+									id="chinh-sach">
+									<li>
+										<a href="" class="header-navigation_item fw-semibold">
+											Chính xác vận chuyển
+										</a>
+									</li>
+									<li>
+										<a href="" class="header-navigation_item fw-semibold">
+											Chính sách thanh toán hộ
+										</a>
+									</li>
+									<li>
+										<a href="" class="header-navigation_item fw-semibold">
+											Chính sách bảo mật
+										</a>
+									</li>
+									<li>
+										<a href="" class="header-navigation_item fw-semibold">
+											Chính sách đặt hàng
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href=""
+								   class="header-navigation_item text-uppercase fw-bold">
+									Blog
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<main id="main" class="main">
+	<div class="section-hero pseudo" style="--bg: url('../images/background/background-hero.png')">
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<div class="hero-title heading-1">
+						Chào mừng trở lại, <br>Storage X !
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+<footer id="footer" class="footer"></footer>
+
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript"
+		src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+</body>
+</html>

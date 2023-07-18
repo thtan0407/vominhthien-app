@@ -1,0 +1,99 @@
+.header {
+	padding: 15px 0;
+	box-shadow: 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.header-floating {
+	-webkit-transform: translateX(-150%);
+	-moz-transform: translateX(-150%);
+	-ms-transform: translateX(-150%);
+	-o-transform: translateX(-150%);
+	transform: translateX(-150%);
+}
+
+.header.header-show .header-floating {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
+}
+
+.header-floating .header-top {
+	padding: 15px 0;
+	box-shadow: 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.header-floating .header-body {
+	flex: 1 1 0;
+	overflow-y: auto;
+}
+
+.header-floating .header-body .header-navigation {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.header-floating .header-body .header-navigation ul {
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+.header-floating .header-body .header-navigation ul li {
+	margin-top: 26px;
+}
+
+.header-floating .header-body .header-navigation > ul > li:first-child {
+	margin: 0;
+	padding-top: 10px;
+}
+
+.header-floating .header-body .header-navigation > ul > li + li {
+	border-top: 1px solid #E4E4E4;
+	padding-top: 26px;
+}
+
+.header-floating .header-body .header-navigation ul li a {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: var(--bs-black);
+	font-size: 1.15em;
+}
+
+.header-floating .header-body .header-navigation ul li li a {
+	padding-left: 16px;
+}
+
+.header-floating .header-body .header-navigation ul li a svg {
+	transition: transform .3s ease-in-out;
+}
+
+.header-floating .header-body .header-navigation ul li a:active,
+.header-floating .header-body .header-navigation ul li a[aria-expanded=true] {
+	color: var(--primary-color);
+}
+
+.header-floating .header-body .header-navigation ul li a[aria-expanded=true] svg {
+	transform: rotate(180deg);
+	stroke: var(--primary-color);
+}
+
+.section-hero {
+	margin-top: 38px;
+}
+
+.section-hero .hero-title {
+	padding: 60px 0 85px;
+}
+
+.section-hero:after {
+	background-image: var(--bg);
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+	background-size: 100%;
+	inset: 0;
+	pointer-events: none;
+}
