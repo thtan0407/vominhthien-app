@@ -284,6 +284,22 @@ input[type='number'] {
 	line-height: 135%;
 }
 
+.heading-5 {
+	color: #191E24;
+	font-family: 'Cabin', Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	font-weight: 700;
+	line-height: 135%;
+}
+
+.heading-6 {
+	color: #191E24;
+	font-family: 'Cabin', Arial, Helvetica, sans-serif;
+	font-size: 0.85em;
+	font-weight: 700;
+	line-height: 135%;
+}
+
 .scrollbar::-webkit-scrollbar {
 	width: 5px;
 }
@@ -298,4 +314,27 @@ input[type='number'] {
 
 .scrollbar::-webkit-scrollbar-thumb:hover {
 	background: #afafaf;
+}
+
+.section-gap {
+	padding: 16px 0;
+}
+
+.section-heading {
+	margin-bottom: 30px;
+	gap: 8px;
+}
+
+.section-heading .heading-title {
+	color: #191E24;
+	font-family: 'Cabin', Arial, Helvetica, sans-serif;
+	font-size: 1.3em;
+	font-weight: 700;
+	line-height: 135%;
+}
+
+.section-heading .heading-link .heading-link_item {
+	color: var(--primary-color);
+	font-size: 1.075em;
+	line-height: 22px;
 }
