@@ -1,356 +1,396 @@
 @font-face {
-    font-family: "Cabin";
-    src: url("../fonts/cabin/Cabin-Regular.ttf");
-    font-weight: 400;
-    font-style: normal;
+	font-family: "Cabin";
+	src: url("../fonts/cabin/Cabin-Regular.ttf");
+	font-weight: 400;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: "Cabin";
-    src: url("../fonts/cabin/Cabin-Italic.ttf");
-    font-weight: 400;
-    font-style: italic;
+	font-family: "Cabin";
+	src: url("../fonts/cabin/Cabin-Italic.ttf");
+	font-weight: 400;
+	font-style: italic;
 }
 
 @font-face {
-    font-family: "Cabin";
-    src: url("../fonts/cabin/Cabin-Medium.ttf");
-    font-weight: 500;
-    font-style: normal;
+	font-family: "Cabin";
+	src: url("../fonts/cabin/Cabin-Medium.ttf");
+	font-weight: 500;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: "Cabin";
-    src: url("../fonts/cabin/Cabin-MediumItalic.ttf");
-    font-weight: 500;
-    font-style: italic;
+	font-family: "Cabin";
+	src: url("../fonts/cabin/Cabin-MediumItalic.ttf");
+	font-weight: 500;
+	font-style: italic;
 }
 
 @font-face {
-    font-family: "Cabin";
-    src: url("../fonts/cabin/Cabin-SemiBold.ttf");
-    font-weight: 600;
-    font-style: normal;
+	font-family: "Cabin";
+	src: url("../fonts/cabin/Cabin-SemiBold.ttf");
+	font-weight: 600;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: "Cabin";
-    src: url("../fonts/cabin/Cabin-SemiBoldItalic.ttf");
-    font-weight: 600;
-    font-style: italic;
+	font-family: "Cabin";
+	src: url("../fonts/cabin/Cabin-SemiBoldItalic.ttf");
+	font-weight: 600;
+	font-style: italic;
 }
 
 @font-face {
-    font-family: "Cabin";
-    src: url("../fonts/cabin/Cabin-Bold.ttf");
-    font-weight: 700;
-    font-style: normal;
+	font-family: "Cabin";
+	src: url("../fonts/cabin/Cabin-Bold.ttf");
+	font-weight: 700;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: "Cabin";
-    src: url("../fonts/cabin/Cabin-BoldItalic.ttf");
-    font-weight: 700;
-    font-style: italic;
+	font-family: "Cabin";
+	src: url("../fonts/cabin/Cabin-BoldItalic.ttf");
+	font-weight: 700;
+	font-style: italic;
 }
 
 :root {
-    --transition-default: 0.3s all ease-in-out;
-    --font-theme: 'Cabin', Arial, Helvetica, sans-serif;
+	--transition-default: 0.3s all ease-in-out;
+	--font-theme: 'Cabin', Arial, Helvetica, sans-serif;
 
-    --logo-color: #076007;
-    --primary-color: #178317;
-    --primary-hover: #1AB616;
-    --primary-bg: #B9FFB0;
+	--logo-color: #076007;
+	--primary-color: #178317;
+	--primary-hover: #1AB616;
+	--primary-bg: #B9FFB0;
 
-    --gradient-theme: linear-gradient(356deg, var(--primary-color) 0%, var(--primary-hover) 92.50%);
-    --shadow-button: 0px 4px 15px 0px rgba(140, 255, 165, 0.35);
+	--gradient-theme: linear-gradient(356deg, var(--primary-color) 0%, var(--primary-hover) 92.50%);
+	--shadow-button: 0px 4px 15px 0px rgba(140, 255, 165, 0.35);
 }
 
 body {
-    position: relative;
-    width: 100%;
-    color: var(--bs-gray-800);
-    font-family: var(--font-theme);
-    font-size: 14px;
-    font-weight: 400;
-    font-style: normal;
-    background-color: #eee;
-    line-height: 1.4;
+	position: relative;
+	width: 100%;
+	color: var(--bs-gray-800);
+	font-family: var(--font-theme);
+	font-size: 14px;
+	font-weight: 400;
+	font-style: normal;
+	background-color: #eee;
+	line-height: 1.4;
 }
 
 a,
 a:hover,
 a:focus {
-    outline: none;
-    text-decoration: none;
-    cursor: pointer;
-    -o-transition: var(--transition-default);
-    transition: var(--transition-default);
-    -webkit-transition: var(--transition-default);
+	outline: none;
+	text-decoration: none;
+	cursor: pointer;
+	-o-transition: var(--transition-default);
+	transition: var(--transition-default);
+	-webkit-transition: var(--transition-default);
 }
 
 button,
 button:hover,
 button:focus {
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    outline: none !important;
-    text-decoration: none !important;
-    cursor: pointer;
-    -o-transition: var(--transition-default);
-    transition: var(--transition-default);
-    -webkit-transition: var(--transition-default);
-    cursor: pointer !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+	text-decoration: none !important;
+	cursor: pointer;
+	-o-transition: var(--transition-default);
+	transition: var(--transition-default);
+	-webkit-transition: var(--transition-default);
+	cursor: pointer !important;
 }
 
 
 .transition-default {
-    -o-transition: var(--transition-default);
-    transition: var(--transition-default);
-    -webkit-transition: var(--transition-default);
+	-o-transition: var(--transition-default);
+	transition: var(--transition-default);
+	-webkit-transition: var(--transition-default);
 }
 
 .background-cover {
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
 }
 
 .image-cover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 
 .image-contain {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: contain;
-    object-fit: contain;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: contain;
+	object-fit: contain;
 }
 
 .object-fit-cover {
-    -o-object-fit: cover;
-    object-fit: cover;
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 
 .object-fit-contain {
-    -o-object-fit: contain;
-    object-fit: contain;
+	-o-object-fit: contain;
+	object-fit: contain;
 }
 
 .pseudo {
-    position: relative;
+	position: relative;
 }
 
 .pseudo:before,
 .pseudo:after {
-    position: absolute;
-    content: '';
-    display: block;
+	position: absolute;
+	content: '';
+	display: block;
 }
 
 .limit {
-    --line: 2;
-    overflow: hidden;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: var(--line);
-    line-clamp: var(--line);
-    -webkit-box-orient: vertical;
+	--line: 2;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: var(--line);
+	line-clamp: var(--line);
+	-webkit-box-orient: vertical;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 input[type='number'] {
-    -moz-appearance: textfield;
+	-moz-appearance: textfield;
 }
 
 .zi--1 {
-    z-index: -1;
+	z-index: -1;
 }
 
 .zi-1 {
-    z-index: 1;
+	z-index: 1;
 }
 
 .zi-2 {
-    z-index: 2;
+	z-index: 2;
 }
 
 .zi-3 {
-    z-index: 3;
+	z-index: 3;
 }
 
 .zi-4 {
-    z-index: 4;
+	z-index: 4;
 }
 
 .zi-5 {
-    z-index: 5;
+	z-index: 5;
 }
 
 .zi-10 {
-    z-index: 10;
+	z-index: 10;
 }
 
 .ratio > img {
-    -o-object-fit: cover;
-    object-fit: cover;
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 
 .ratio-2x1 {
-    --bs-aspect-ratio: 50%;
+	--bs-aspect-ratio: 50%;
 }
 
 .ratio-3x2 {
-    --bs-aspect-ratio: calc(2 / 3 * 100%);
+	--bs-aspect-ratio: calc(2 / 3 * 100%);
 }
 
 .gap-5px {
-    gap: 5px;
+	gap: 5px;
 }
 
 .gap-10px {
-    gap: 10px;
+	gap: 10px;
 }
 
 .gap-15px {
-    gap: 15px;
+	gap: 15px;
 }
 
 .gap-20px {
-    gap: 20px;
+	gap: 20px;
 }
 
 .gap-25px {
-    gap: 25px;
+	gap: 25px;
 }
 
 .gap-30px {
-    gap: 30px;
+	gap: 30px;
 }
 
 .heading-1 {
-    color: #191E24;
-    font-family: 'Cabin', Arial, Helvetica, sans-serif;
-    font-size: 1.6em;
-    font-weight: 700;
-    line-height: normal;
+	color: #191E24;
+	font-family: 'Cabin', Arial, Helvetica, sans-serif;
+	font-size: 1.6em; /* 22px */
+	font-weight: 700;
+	line-height: normal;
 }
 
 .heading-2 {
-    color: #191E24;
-    font-family: 'Cabin', Arial, Helvetica, sans-serif;
-    font-size: 1.45em;
-    font-weight: 700;
-    line-height: 135%;
+	color: #191E24;
+	font-family: 'Cabin', Arial, Helvetica, sans-serif;
+	font-size: 1.45em; /* 20px */
+	font-weight: 700;
+	line-height: 135%;
 }
 
 .heading-3 {
-    color: #191E24;
-    font-family: 'Cabin', Arial, Helvetica, sans-serif;
-    font-size: 1.3em;
-    font-weight: 700;
-    line-height: 135%;
+	color: #191E24;
+	font-family: 'Cabin', Arial, Helvetica, sans-serif;
+	font-size: 1.3em; /* 18px */
+	font-weight: 700;
+	line-height: 135%;
 }
 
 .heading-4 {
-    color: #191E24;
-    font-family: 'Cabin', Arial, Helvetica, sans-serif;
-    font-size: 1.15em;
-    font-weight: 700;
-    line-height: 135%;
+	color: #191E24;
+	font-family: 'Cabin', Arial, Helvetica, sans-serif;
+	font-size: 1.15em; /* 16px */
+	font-weight: 700;
+	line-height: 135%;
 }
 
 .heading-5 {
-    color: #191E24;
-    font-family: 'Cabin', Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    font-weight: 700;
-    line-height: 135%;
+	color: #191E24;
+	font-family: 'Cabin', Arial, Helvetica, sans-serif;
+	font-size: 1em; /* 14px */
+	font-weight: 700;
+	line-height: 135%;
 }
 
 .heading-6 {
-    color: #191E24;
-    font-family: 'Cabin', Arial, Helvetica, sans-serif;
-    font-size: 0.85em;
-    font-weight: 700;
-    line-height: 135%;
+	color: #191E24;
+	font-family: 'Cabin', Arial, Helvetica, sans-serif;
+	font-size: 0.85em; /* 12px */
+	font-weight: 700;
+	line-height: 135%;
 }
 
 .primary-color {
-    color: var(--primary-color);
+	color: var(--primary-color);
 }
 
 .background-color {
-    background-color: var(--primary-color);
+	background-color: var(--primary-color);
 }
 
 .background-red {
-    background: #FF4545;
+	background: #FF4545;
 }
 
 .gradient-green {
-    background: linear-gradient(356deg, var(--primary-color) 0%, var(--primary-hover) 92.50%);
+	background: linear-gradient(356deg, var(--primary-color) 0%, var(--primary-hover) 92.50%);
 }
 
 .gradient-orange {
-    background: linear-gradient(90deg, #E9750E 0%, #FF993E 100%);
+	background: linear-gradient(90deg, #E9750E 0%, #FF993E 100%);
+}
+
+.button-text {
+	color: var(--primary-color);
+	font-size: 1.075em;
+	line-height: 22px;
+}
+
+.button-theme {
+	padding: 12px 36px;
+	border: 0;
+	border-radius: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	font-size: 1.15em;
+	font-weight: 700;
+	line-height: 135%;
+	white-space: normal;
+}
+
+.button-gradient_green {
+	background: linear-gradient(356deg, var(--primary-color) 0%, var(--primary-hover) 92.50%);
+	color: var(--bs-white);
+	box-shadow: 0 4px 15px rgba(140, 255, 165, 0.35);
+}
+
+.shadow-pseudo {
+	position: relative;
+}
+
+.shadow-pseudo:after {
+	transform: translateX(-50%);
+	height: 32px;
+	max-width: 85%;
+	width: 100%;
+	border-radius: 50%;
+	opacity: 0.20000000298023224;
+	background: radial-gradient(104.16% 106.67% at 50.00% 0.00%, #26D921 0%, #0EA40A 100%);
+	filter: blur(25px);
+	position: absolute;
+	content: "";
+	bottom: 0;
+	left: 50%;
+	z-index: -1;
 }
 
 .scrollbar::-webkit-scrollbar {
-    width: 5px;
+	width: 5px;
 }
 
 .scrollbar::-webkit-scrollbar-track {
-    background: #e3e3e3;
+	background: #e3e3e3;
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
-    background: #b4b4b4;
+	background: #b4b4b4;
 }
 
 .scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #afafaf;
+	background: #afafaf;
 }
 
 .section-gap {
-    padding: 16px 0;
+	padding: 16px 0;
 }
 
 .section-heading {
-    margin-bottom: 30px;
-    gap: 8px;
+	margin-bottom: 30px;
+	gap: 8px;
 }
 
 .section-heading .heading-title {
-    color: #191E24;
-    font-family: 'Cabin', Arial, Helvetica, sans-serif;
-    font-size: 1.3em;
-    font-weight: 700;
-    line-height: 135%;
-}
-
-.section-heading .heading-link .heading-link_item {
-    color: var(--primary-color);
-    font-size: 1.075em;
-    line-height: 22px;
+	color: #191E24;
+	font-family: 'Cabin', Arial, Helvetica, sans-serif;
+	font-size: 1.3em;
+	font-weight: 700;
+	line-height: 135%;
 }
 
 .main-spacing {
-    padding-bottom: 108px;
+	padding-bottom: 108px;
 }
