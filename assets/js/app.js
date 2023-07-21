@@ -63,11 +63,10 @@ export function handleButtonShowHidden() {
 export function handleChartDoughnut() {
 	const canvas = document.getElementById('chart-doughnut');
 	if (canvas != null) {
-		const chartDoughnut = new Chart(document.getElementById('chart-doughnut').getContext('2d'), {
+		const chartDoughnut = new Chart(canvas.getContext('2d'), {
 			type: 'doughnut',
 			data: {
 				datasets: [{
-					label: 'Tổng đơn',
 					data: ["14", "11", "75"],
 					backgroundColor: [
 						'rgb(7, 96, 7)',
@@ -78,21 +77,101 @@ export function handleChartDoughnut() {
 				}]
 			},
 			options: {
+				events: [],
 				responsive: true,
+				maintainAspectRatio: false,
 				plugins: {
-					legend: {
-						position: 'top',
+					doughnutlabel: {
+						labels: [
+							{
+								text: 'Tổng đơn',
+								font: {
+									size: '14',
+									family: "'Cabin', 'Arial', 'Helvetica', sans-serif",
+									weight: '400'
+								},
+								color: '#909090'
+							},
+							{
+								text: '100',
+								font: {
+									size: '24',
+									family: "'Cabin', 'Arial', 'Helvetica', sans-serif",
+									weight: '700'
+								},
+								color: '#333'
+							},
+						]
 					},
-					title: {
-						display: true,
-						text: 'Chart.js Doughnut Chart'
+					labels: {
+						render: 'percentage',
+						fontSize: 16,
+						fontStyle: '700',
+						fontColor: '#ffffff',
+						fontFamily: "'Cabin', 'Arial', 'Helvetica', sans-serif",
 					}
-				}
+				},
 			},
-
 		});
-		console.log(chartDoughnut)
 	}
+}
+
+export function handleChartLine() {
+	const canvas = document.getElementById('chart-line');
+	if (canvas != null) {
+		const chartLine = new Chart(canvas.getContext('2d'), {
+			type: 'line',
+			data: {
+				labels: ['01/07', '05/07', '10/07', '15/07', '21/07', '26/07', '31/07'],
+				datasets: [{
+					label: 'Biểu đồ Line',
+					data: [180, 140, 200, 160, 220, 180, 200],
+					borderColor: 'rgb(3,161,50)',
+					backgroundColor: 'rgba(0, 0, 0, 0)',
+					borderWidth: 2,
+					pointRadius: 0
+				}]
+			},
+			options: {
+				events: [],
+				scales: {
+					yAxes: [{
+						ticks: {
+							fontSize: 14,
+							fontStyle: '400',
+							fontColor: '#A2A3A5',
+							fontFamily: "'Cabin', 'Arial', 'Helvetica', sans-serif",
+							beginAtZero: false,
+							stepSize: 40,
+							max: 260,
+							min: 140,
+							callback: function (value) {
+								return value + 'M';
+							}
+						}
+					}],
+					xAxes: [{
+						ticks: {
+							fontSize: 15,
+							fontStyle: '400',
+							fontColor: '#A2A3A5',
+							fontFamily: "'Cabin', 'Arial', 'Helvetica', sans-serif",
+						}
+					}]
+				},
+				legend: {
+					display: false
+				}
+			}
+		});
+	}
+}
+
+export function handleModalCopy() {
+	const modalCopy = document.getElementById('modal-copy');
+	setTimeout(function () {
+		new bootstrap.Modal('#modal-copy').show()
+	});
 }
 
 window.addEventListener('load', function () {
@@ -100,6 +179,8 @@ window.addEventListener('load', function () {
 	handleExtendFooter();
 	handleButtonShowHidden();
 	handleChartDoughnut();
+	handleChartLine();
+	handleModalCopy();
 	window.addEventListener("resize", () => {
 		windowWidth = window.innerWidth;
 	});

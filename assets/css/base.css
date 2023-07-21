@@ -296,6 +296,14 @@ input[type='number'] {
 	color: var(--primary-color);
 }
 
+.orange-color {
+	color: #E9750E;
+}
+
+.gray-color {
+	color: #ADB4BB;
+}
+
 .background-color {
 	background-color: var(--primary-color);
 }
@@ -329,12 +337,18 @@ input[type='number'] {
 	font-size: 1.15em;
 	font-weight: 700;
 	line-height: 135%;
-	white-space: normal;
+	white-space: nowrap;
+}
+
+.button-background_green {
+	background: var(--bs-white);
+	color: #212C28 !important;
+	box-shadow: 0 4px 15px rgba(140, 255, 165, 0.25);
 }
 
 .button-gradient_green {
 	background: linear-gradient(356deg, var(--primary-color) 0%, var(--primary-hover) 92.50%);
-	color: var(--bs-white);
+	color: var(--bs-white) !important;
 	box-shadow: 0 4px 15px rgba(140, 255, 165, 0.35);
 }
 
@@ -393,4 +407,8 @@ input[type='number'] {
 
 .main-spacing {
 	padding-bottom: 108px;
+}
+
+.modal.modal-static .modal-dialog {
+	transform: none;
 }

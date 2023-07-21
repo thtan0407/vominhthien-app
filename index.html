@@ -30,6 +30,61 @@
 </head>
 <body>
 
+<div class="modal fade modal-copy" id="modal-copy" data-bs-backdrop="static" data-bs-keyboard="false">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content border-0">
+			<div class="modal-header p-3 border-0 bg-transparent justify-content-center">
+				<div class="modal-title mb-0 text-white text-center heading-3">
+					Sản phẩm bạn vừa copy
+				</div>
+			</div>
+			<div class="modal-body p-3 bg-white">
+				<div class="product-copy">
+					<div class="product-copy_header gap-2 hstack align-items-center">
+						<div class="heading-4">
+							Shop:
+						</div>
+						<div class="heading-4 gap-1 hstack align-items-center">
+							<img src="./assets/images/icon/tmall.png" width="16" height="16" class="mw-100" alt="">
+							diw迪威
+						</div>
+					</div>
+					<div class="product-copy_body hstack gap-3">
+						<div class="product-copy_image overflow-hidden flex-shrink-0">
+							<img src="./assets/images/product/product-1.png" width="120" height="120" class="mw-100"
+								 alt="">
+						</div>
+						<div class="product-copy_content vstack gap-2">
+							<div class="product-copy_title">
+								适用摩托车摩托铃木悦帅GD110摩托车摩托车...
+							</div>
+							<div class="product-copy_information hstack gap-3 justify-content-between">
+								<div class="primary-color heading-4">252.000 đ</div>
+								<div class="orange-color heading-4">Đã bán 756</div>
+							</div>
+							<div class="product-copy_information">
+								<div class="gray-color heading-4">67 ¥</div>
+							</div>
+							<div class="product-copy_information hstack gap-4">
+								<div class="gray-color heading-4">Điều kiện</div>
+								<div class="orange-color heading-4">>= 3</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer p-3 border-top-0 bg-transparent justify-content-center gap-2 flex-nowrap rounded-0">
+				<a href="" class="button-theme button-gradient_green m-0 w-100">
+					Xem sản phẩm
+				</a>
+				<button type="button" data-bs-dismiss="modal" class="button-theme button-background_white m-0">
+					Bỏ qua
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="floating-copy">
 	<a href="" class="d-inline-flex align-middle text-white fw-bold align-items-center">
 		<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
@@ -626,7 +681,7 @@
 			<div class="statistical-inner bg-white p-3 vstack">
 				<div class="statistical-inner_grid hstack align-items-center">
 					<div class="statistical-item vstack">
-						<div class="statistical-item_sub">
+						<div class="statistical-item_sub gray-color">
 							Đang vận chuyển
 						</div>
 						<div class="statistical-item_wrapper hstack align-items-center">
@@ -662,7 +717,7 @@
 						</div>
 					</div>
 					<div class="statistical-item vstack">
-						<div class="statistical-item_sub">
+						<div class="statistical-item_sub gray-color">
 							Chờ thanh toán
 						</div>
 						<div class="statistical-item_wrapper hstack align-items-center">
@@ -687,7 +742,7 @@
 				</div>
 				<div class="statistical-inner_grid hstack align-items-center">
 					<div class="statistical-item vstack">
-						<div class="statistical-item_sub">
+						<div class="statistical-item_sub gray-color">
 							Đã nhập kho VN
 						</div>
 						<div class="statistical-item_wrapper hstack align-items-center">
@@ -709,7 +764,7 @@
 						</div>
 					</div>
 					<div class="statistical-item vstack">
-						<div class="statistical-item_sub">
+						<div class="statistical-item_sub gray-color">
 							Khiếu nại
 						</div>
 						<div class="statistical-item_wrapper hstack align-items-center">
@@ -799,10 +854,139 @@
 							<div class="chart-doughnut">
 								<canvas id="chart-doughnut" style="width: 200px; height: 200px;"></canvas>
 							</div>
+							<div class="chart-detail hstack">
+								<div class="chart-detail_column w-50 vstack gap-15px">
+									<div class="chart-detail_item hstack gap-15px">
+										<div class="chart-detail_line align-self-start">
+											<svg xmlns="http://www.w3.org/2000/svg" width="30" height="23"
+												 viewBox="0 0 30 23" fill="none">
+												<rect y="9.50671" width="30" height="8" rx="4" fill="#076007"/>
+											</svg>
+										</div>
+										<div class="chart-detail_content">
+											<div class="heading-5 gray-color fw-normal">
+												Vận chuyển hộ
+											</div>
+											<div class="heading-4">
+												05
+											</div>
+										</div>
+									</div>
+									<div class="chart-detail_item hstack gap-15px">
+										<div class="chart-detail_line align-self-start">
+											<svg xmlns="http://www.w3.org/2000/svg" width="30" height="23"
+												 viewBox="0 0 30 23" fill="none">
+												<rect y="9.50671" width="30" height="8" rx="4" fill="#1A8917"/>
+											</svg>
+										</div>
+										<div class="chart-detail_content">
+											<div class="heading-5 gray-color fw-normal">
+												Thanh toán hộ
+											</div>
+											<div class="heading-4">
+												08
+											</div>
+										</div>
+									</div>
+									<div class="chart-detail_item hstack gap-15px">
+										<div class="chart-detail_line align-self-start">
+											<svg xmlns="http://www.w3.org/2000/svg" width="30" height="23"
+												 viewBox="0 0 30 23" fill="none">
+												<rect y="9.50671" width="30" height="8" rx="4"
+													  fill="url(#paint0_linear_2747_39787)"/>
+												<defs>
+													<linearGradient id="paint0_linear_2747_39787" x1="37.3359"
+																	y1="13.5067" x2="-11.8157" y2="13.705"
+																	gradientUnits="userSpaceOnUse">
+														<stop stop-color="#8DC63F"/>
+														<stop offset="1" stop-color="#009444"/>
+													</linearGradient>
+												</defs>
+											</svg>
+										</div>
+										<div class="chart-detail_content">
+											<div class="heading-5 gray-color fw-normal">
+												Đặt hàng TQ
+											</div>
+											<div class="heading-4">
+												70
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="chart-detail_column w-50 vstack gap-15px align-self-end">
+									<div class="chart-detail_item hstack gap-15px">
+										<div class="chart-detail_line align-self-start">
+											<svg xmlns="http://www.w3.org/2000/svg" width="30" height="23"
+												 viewBox="0 0 30 23" fill="none">
+												<rect y="9.50671" width="30" height="8" rx="4" fill="#F2994A"/>
+											</svg>
+										</div>
+										<div class="chart-detail_content">
+											<div class="heading-5 gray-color fw-normal">
+												NK chính ngạch
+											</div>
+											<div class="heading-4">
+												0
+											</div>
+										</div>
+									</div>
+									<div class="chart-detail_item hstack gap-15px">
+										<div class="chart-detail_line align-self-start">
+											<svg xmlns="http://www.w3.org/2000/svg" width="30" height="23"
+												 viewBox="0 0 30 23" fill="none">
+												<rect y="9.50671" width="30" height="8" rx="4" fill="#C05A00"/>
+											</svg>
+										</div>
+										<div class="chart-detail_content">
+											<div class="heading-5 gray-color fw-normal">
+												Gửi hàng TQ
+											</div>
+											<div class="heading-4">
+												0
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="tab-pane fade show active" id="tab-tai-chinh">
-
+					<div class="tab-pane fade" id="tab-tai-chinh">
+						<div class="chart-content">
+							<div class="chart-select hstack align-items-center justify-content-center gap-3">
+								<select name="" class="form-select" id="">
+									<option value="">Tất cả dịch vụ</option>
+									<option value="">Tất cả dịch vụ</option>
+									<option value="">Tất cả dịch vụ</option>
+									<option value="">Tất cả dịch vụ</option>
+									<option value="">Tất cả dịch vụ</option>
+								</select>
+								<select name="" class="form-select" id="">
+									<option value="">Hôm nay</option>
+									<option value="">Hôm qua</option>
+									<option value="">Tuần này</option>
+									<option value="">Tháng này</option>
+									<option value="">Năm này</option>
+								</select>
+							</div>
+							<div class="chart-heading hstack align-items-center justify-content-between">
+								<div class="heading-4">
+									Tổng giá trị
+								</div>
+								<div class="heading-4 text-black fw-normal hstack align-items-center justify-content-between gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+										 fill="none">
+										<circle cx="12" cy="12" r="12" fill="#1A8917"/>
+										<path d="M16.1403 18L8.86159 18C8.52939 18.0002 8.22759 17.7969 8.08759 17.479C7.93857 17.1539 7.98217 16.767 8.19951 16.488C8.21544 16.4672 8.23304 16.4479 8.2519 16.43L12.5733 12.3736C12.6744 12.2787 12.7322 12.1428 12.7322 12.0001C12.7322 11.8574 12.6744 11.7213 12.5733 11.6266L8.2519 7.57C8.23304 7.5523 8.21544 7.53283 8.19951 7.51203C7.98217 7.23303 7.93858 6.84606 8.08759 6.52105C8.22759 6.20311 8.5294 5.99978 8.86159 6L16.1403 6C16.619 6.00509 17.0033 6.41794 17 6.92306L17 8.1926C17 8.46872 16.7879 8.69263 16.5263 8.69263C16.2648 8.69263 16.0527 8.46872 16.0527 8.1926L16.0527 7.00006L9.07033 7.00006L13.2029 10.879C13.5062 11.1638 13.6797 11.5715 13.6797 12.0001C13.6797 12.4285 13.5062 12.8364 13.2029 13.121L9.07033 16.9999L16.0527 16.9999L16.0527 15.8074C16.0527 15.5313 16.2648 15.3076 16.5263 15.3076C16.7879 15.3076 17 15.5313 17 15.8074L17 17.0769C17.0033 17.5823 16.619 17.9951 16.1403 18Z"
+											  fill="white"/>
+									</svg>
+									Tổng cộng: <b>1,32 tỷ</b>
+								</div>
+							</div>
+							<div class="chart-line">
+								<canvas id="chart-line" style="width: 100%; height: 250px;"></canvas>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -994,7 +1178,9 @@
 </footer>
 
 <script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
-<script type="text/javascript" src="./assets/plugins/chartjs/chart.umd.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chart.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-labels.js"></script>
 <script type="text/javascript"
 		src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
