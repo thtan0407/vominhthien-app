@@ -257,10 +257,10 @@ export function handleSetPositionPaginationIntro() {
 
 
 /****
- * Form Account Example
+ * Form Login Example
  */
-export function handleFrmAccountExample() {
-    const frmAccount = document.getElementById('formAccountExample');
+export function handleFrmLoginExample() {
+    const frmAccount = document.getElementById('formLoginExample');
     if (frmAccount !== null) {
         frmAccount.addEventListener('submit', (event) => {
             event.preventDefault();
@@ -292,7 +292,7 @@ window.addEventListener('load', function () {
     handleChartLine();
     handleModalCopy();
     handleScreenIntro();
-    handleFrmAccountExample();
+    handleFrmLoginExample();
     window.addEventListener("resize", () => {
         windowWidth = window.innerWidth;
     });

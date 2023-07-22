@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <title>Template VMT App</title>
+    <meta name="description" content="Template VMT App">
+    <meta name="author" content="">
+
+    <meta property="og:title" content="Template VMT App">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Template VMT App">
+    <meta property="og:image" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+
+    <link rel="icon" href="./assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<div class="modal fade modal-account" id="modal-validate" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+            <div class="modal-body bg-white">
+                <div class="vstack align-items-center justify-content-center gap-15px">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
+                        <path opacity="0.4"
+                              d="M39.2466 8.8208H18.7533C12.7841 8.8208 7.95081 13.6783 7.95081 19.6233V42.3641C7.95081 48.3091 12.8083 53.1666 18.7533 53.1666H39.2225C45.1916 53.1666 50.025 48.3091 50.025 42.3641V19.6233C50.0491 13.6541 45.1916 8.8208 39.2466 8.8208Z"
+                              fill="#FF4545"/>
+                        <path d="M34.6791 4.83325H23.3208C20.8075 4.83325 18.7533 6.86325 18.7533 9.37659V11.6483C18.7533 14.1616 20.7833 16.1916 23.2966 16.1916H34.6791C37.1925 16.1916 39.2225 14.1616 39.2225 11.6483V9.37659C39.2466 6.86325 37.1925 4.83325 34.6791 4.83325Z"
+                              fill="#FF4545"/>
+                        <path d="M35.1142 37.7485L31.61 34.2443L34.9934 30.861C35.6942 30.1601 35.6942 29.0001 34.9934 28.2993C34.2925 27.5985 33.1325 27.5985 32.4317 28.2993L29.0484 31.6826L25.5442 28.1785C24.8434 27.4776 23.6834 27.4776 22.9825 28.1785C22.2817 28.8793 22.2817 30.0393 22.9825 30.7401L26.4867 34.2443L22.8859 37.8451C22.185 38.546 22.185 39.706 22.8859 40.4068C23.2484 40.7693 23.7075 40.9385 24.1667 40.9385C24.6259 40.9385 25.085 40.7693 25.4475 40.4068L29.0484 36.806L32.5525 40.3101C32.915 40.6726 33.3742 40.8418 33.8334 40.8418C34.2925 40.8418 34.7517 40.6726 35.1142 40.3101C35.815 39.6093 35.815 38.4735 35.1142 37.7485Z"
+                              fill="#FF4545"/>
+                    </svg>
+                    <div class="heading-3 text-black">
+                        Tài khoản hoặc mật khẩu không đúng.
+                    </div>
+                    <div class="text-center w-100">
+                        <button data-bs-dismiss="modal" type="button"
+                                class="button-theme button-gradient_green w-100">
+                            Nhập lại
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="screen-register">
+    <div class="register-wrapper vh-100 transition-default hidden-bg position-relative">
+        <div class="register-heading vstack gap-5px">
+            <div class="register-heading_title">
+                Đăng kí
+            </div>
+            <div class="register-heading_desc heading-4 fw-normal text-white hstack align-items-center gap-2">
+                Bạn đã có tài khoản?
+                <a class="text-white text-decoration-underline fw-bold" href="./dang-nhap.html">
+                    Đăng nhập
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M6.91076 15.5893C6.58533 15.2639 6.58533 14.7362 6.91076 14.4108L11.3215 10L6.91076 5.5893C6.58533 5.26386 6.58533 4.73622 6.91076 4.41078C7.2362 4.08535 7.76384 4.08535 8.08928 4.41078L13.0893 9.41078C13.4147 9.73622 13.4147 10.2639 13.0893 10.5893L8.08928 15.5893C7.76384 15.9147 7.2362 15.9147 6.91076 15.5893Z"
+                              fill="white"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="register-heading_image position-absolute top-0 end-0 pe-none">
+                <img src="./assets/images/logo-icon_opacity.png" height="180" width="210" alt="">
+            </div>
+        </div>
+        <div class="register-body vstack gap-30px position-absolute zi-2 bottom-0 start-0 end-0 bg-white">
+            <div class="register-body_title fw-normal heading-4">
+                Vui lòng nhập số điện của bạn
+            </div>
+            <form action="" id="formRegisterExample">
+                <div class="vstack gap-30px">
+                    <div class="account-form vstack gap-20px">
+                        <div class="flex-fill hstack gap-2 account-form_item">
+                            <div class="account-form_item__list position-absolute flex-fill">
+                                <div class="account-list_fill hstack gap-5px">
+                                    <div class="account-list_fill__image">
+                                        <img src="./assets/images/icon/flag-vn.png" height="24" width="34"
+                                             class="mw-100" alt="">
+                                    </div>
+                                    <div class="account-list_fill__number">
+                                        +84
+                                    </div>
+                                    <div class="account-list_fill__arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z"
+                                                  fill="#191E24"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="account-list_fill__dropdown shadow-sm position-absolute bg-white zi-2 transition-default">
+                                    <ul class="list-unstyled mb-0 vstack gap-10px">
+                                        <li>
+                                            <div class="account-list_fill hstack gap-5px">
+                                                <div class="account-list_fill__image">
+                                                    <img src="./assets/images/icon/flag-vn.png" height="24" width="34"
+                                                         class="mw-100" alt="">
+                                                </div>
+                                                <div class="account-list_fill__number">
+                                                    +84
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="account-list_fill hstack gap-5px">
+                                                <div class="account-list_fill__image">
+                                                    <img src="./assets/images/icon/flag-vn.png" height="24" width="34"
+                                                         class="mw-100" alt="">
+                                                </div>
+                                                <div class="account-list_fill__number">
+                                                    +84
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="account-list_fill hstack gap-5px">
+                                                <div class="account-list_fill__image">
+                                                    <img src="./assets/images/icon/flag-vn.png" height="24" width="34"
+                                                         class="mw-100" alt="">
+                                                </div>
+                                                <div class="account-list_fill__number">
+                                                    +84
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="account-list_fill hstack gap-5px">
+                                                <div class="account-list_fill__image">
+                                                    <img src="./assets/images/icon/flag-vn.png" height="24" width="34"
+                                                         class="mw-100" alt="">
+                                                </div>
+                                                <div class="account-list_fill__number">
+                                                    +84
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <input id="inputExample2" placeholder="Số điện thoại" class="account-form_item__input"
+                                   type="text">
+                        </div>
+                        <div class="flex-fill account-form_item">
+                            <label class="position-relative gray-color account-form_item__checkbox"
+                                   for="checkBoxExample">
+                                <input type="checkbox" id="checkBoxExample">
+                                Tôi đã đọc và đồng với
+                            </label>
+                            <a href="" class="blue-color">
+                                Điều khoản và chính sách
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hstack align-items-center justify-content-center">
+                        <div class="d-flex align-items-center flex-fill">
+                            <button type="submit" class="button-theme button-gradient_green w-100">
+                                Đăng ký
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="./assets/plugins/chartjs/chart.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-labels.js"></script>
+<script type="text/javascript"
+        src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+
+</body>
+</html>

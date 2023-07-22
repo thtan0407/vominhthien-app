@@ -516,6 +516,78 @@
     border-bottom-color: var(--primary-color);
 }
 
+.account-form .account-form_item .account-form_item__checkbox {
+    padding-left: 24px;
+}
+
+.account-form .account-form_item .account-form_item__checkbox > input[type=checkbox] {
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.account-form .account-form_item .account-form_item__checkbox:before {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    top: calc(50% - 1px);
+    transform: translateY(-50%);
+    left: 0;
+    border-radius: 8px;
+    border: 2px solid #adb4bb;
+    display: block;
+    content: "";
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.account-form .account-form_item .account-form_item__checkbox:after {
+    position: absolute;
+    top: calc(50% - 1px);
+    transform: translateY(-50%);
+    display: block;
+    content: "";
+    background-image: url("../images/icon/check.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+    left: 3px;
+}
+
+.account-form .account-form_item .account-form_item__list {
+    padding-bottom: 8px;
+}
+
+.account-form .account-form_item .account-form_item__list .account-list_fill__dropdown {
+    top: 100%;
+    left: -8px !important;
+    border-radius: 8px;
+    padding: 8px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.account-form .account-form_item .account-form_item__list .account-list_fill__dropdown:before {
+    position: absolute;
+    top: -8px;
+    height: 8px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: block;
+    content: "";
+    background: transparent;
+}
+
+.account-form .account-form_item .account-form_item__list + .account-form_item__input {
+    padding-left: 104px;
+}
+
 .modal-account .modal-content {
     border-radius: 24px;
     overflow: hidden;
@@ -574,4 +646,29 @@
         transform: rotate(360deg);
         opacity: .8;
     }
+}
+
+.screen-register {
+    background-color: var(--primary-color);
+}
+
+.screen-register .register-heading {
+    padding: 130px 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.screen-register .register-heading .register-heading_title {
+    color: var(--bs-white);
+    font-family: 'Cabin', Arial, Helvetica, sans-serif;
+    font-size: 2.2em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.screen-register .register-body {
+    padding: 50px;
+    border-radius: 20px 20px 0 0;
+    height: calc(100vh - 325px);
 }
