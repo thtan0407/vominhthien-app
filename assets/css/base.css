@@ -324,11 +324,14 @@ input[type='number'] {
 	color: var(--primary-color);
 	font-size: 1.075em;
 	line-height: 22px;
+	border: 0;
+	padding: 0;
+	background: transparent;
 }
 
 .button-theme {
 	padding: 12px 36px;
-	border: 0;
+	border: 1px solid transparent;
 	border-radius: 16px;
 	display: flex;
 	align-items: center;
@@ -341,8 +344,14 @@ input[type='number'] {
 }
 
 .button-background_green {
-	background: var(--bs-white);
-	color: #212C28 !important;
+	background: var(--primary-color);
+	color: var(--bs-white) !important;
+	box-shadow: 0 4px 15px rgba(140, 255, 165, 0.25);
+}
+
+.button-outline_green {
+	border: 1px solid var(--primary-color);
+	color: var(--primary-color) !important;
 	box-shadow: 0 4px 15px rgba(140, 255, 165, 0.25);
 }
 

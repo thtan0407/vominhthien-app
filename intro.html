@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<title>Template VMT App</title>
+	<meta name="description" content="Template VMT App">
+	<meta name="author" content="">
+
+	<meta property="og:title" content="Template VMT App">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="Template VMT App">
+	<meta property="og:image" content="">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		  rel="stylesheet">
+
+	<link rel="icon" href="./assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<div class="screen-intro">
+	<div class="intro-wrapper vh-100 transition-default hidden-bg position-relative"
+		 id="intro-wrapper">
+		<div class="intro-background h-100 w-100 position-absolute top-0 start-0 zi-1 vstack justify-content-center align-items-center pseudo transition-default"
+			 style="--bg: url('../images/background/background-intro.png')">
+			<img src="./assets/images/logo-text_ver_primary.png" height="82" width="216" class="" alt="">
+		</div>
+		<div class="intro-slider h-100 w-100 position-absolute top-0 start-0 zi-2" id="intro-slider">
+			<div class="swiper h-100">
+				<div class="swiper-wrapper h-100">
+					<div class="swiper-slide h-100">
+						<div class="intro-slider_item h-100 vstack justify-content-center align-items-center ">
+							<div class="intro-slider_image">
+								<img src="./assets/images/intro/intro-bg-1.png" width="231" height="241"
+									 class="mw-100 w-auto" alt="">
+							</div>
+							<div class="intro-slider_title hstack align-items-center justify-content-center heading-1 text-center">
+								Dễ dàng mua hàng <br>
+								với vài bước đơn giản
+							</div>
+							<div class="intro-slider_buttons hstack gap-2 w-100">
+								<button type="button" class="button-theme button-gradient_green button-next flex-fill w-100">
+									Tiếp theo
+								</button>
+							</div>
+							<div class="intro-slider_skip">
+								<button type="button" class="button-text">Bỏ qua</button>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide h-100">
+						<div class="intro-slider_item h-100 vstack justify-content-center align-items-center ">
+							<div class="intro-slider_image">
+								<img src="./assets/images/intro/intro-bg-2.png" width="228" height="241"
+									 class="mw-100 w-auto" alt="">
+							</div>
+							<div class="intro-slider_title hstack align-items-center justify-content-center heading-1 text-center">
+								Quản lý đơn hàng <br>
+								nhanh chóng
+							</div>
+							<div class="intro-slider_buttons hstack gap-2 w-100">
+								<button type="button" class="button-theme button-outline_green button-prev flex-fill w-100">
+									Quay lại
+								</button>
+								<button type="button" class="button-theme button-gradient_green button-next flex-fill w-100">
+									Tiếp theo
+								</button>
+							</div>
+							<div class="intro-slider_skip">
+								<button type="button" class="button-text">Bỏ qua</button>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide h-100">
+						<div class="intro-slider_item h-100 vstack justify-content-center align-items-center ">
+							<div class="intro-slider_image">
+								<img src="./assets/images/intro/intro-bg-3.png" width="314" height="241"
+									 class="mw-100 w-auto" alt="">
+							</div>
+							<div class="intro-slider_title hstack align-items-center justify-content-center heading-1 text-center">
+								Tài chính minh bạch
+							</div>
+							<div class="intro-slider_buttons hstack gap-2 w-100">
+								<button type="button" class="button-theme button-outline_green button-prev flex-fill w-100">
+									Quay lại
+								</button>
+								<button type="button" class="button-theme button-gradient_green button-next flex-fill w-100">
+									Tiếp theo
+								</button>
+							</div>
+							<div class="intro-slider_skip">
+								<button type="button" class="button-text">Bỏ qua</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="intro-slider-pagination" class="intro-slider-pagination d-inline-flex align-items-center justify-content-center position-absolute start-50 translate-middle-x zi-2"></div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chart.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-labels.js"></script>
+<script type="text/javascript"
+		src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+
+</body>
+</html>
