@@ -388,6 +388,27 @@ export function handleFrmForgotExampleStep3() {
     }
 }
 
+/****
+ * Collapse Checkbox Select Items Cart
+ */
+
+export function handleSelectItemsCart() {
+    const cartChoose = document.getElementById('cart-choose_02');
+    const cartWrapper = document.getElementById('cart-wrapper');
+    if (cartChoose !== null && cartWrapper !== null) {
+        const cartButtons = cartWrapper.querySelectorAll('.cart-action_button');
+        if (cartButtons.length > 0) {
+            cartChoose.addEventListener('show.bs.collapse', event => {
+                cartButtons.forEach((button) => button.classList.add('is-checkbox'));
+            });
+
+            cartChoose.addEventListener('hide.bs.collapse', event => {
+                cartButtons.forEach((button) => button.classList.remove('is-checkbox'));
+            })
+        }
+    }
+}
+
 window.addEventListener('load', function () {
     handleNavigation();
 
@@ -412,6 +433,8 @@ window.addEventListener('load', function () {
     handleFrmForgotExampleStep1();
 
     handleFrmForgotExampleStep3();
+
+    handleSelectItemsCart();
 
     window.addEventListener("resize", () => {
         windowWidth = window.innerWidth;
