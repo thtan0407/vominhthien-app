@@ -283,16 +283,136 @@ export function handleFrmLoginExample() {
     }
 }
 
+/****
+ * Form Register Example - Step 1
+ * Nhập số điện thoại
+ */
+export function handleFrmRegisterExampleStep1() {
+    const frmRegister = document.getElementById('formRegisterExampleStep1');
+    if (frmRegister !== null) {
+        frmRegister.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const modalValidate = new bootstrap.Modal('#modal-validate');
+
+            const inputExample1 = document.getElementById('inputExample1').value;
+            const inputExample2 = document.getElementById('inputExample2').value;
+            if (inputExample1.trim() === '' || inputExample2.trim() === '') {
+                modalValidate.show();
+                return false;
+            }
+        })
+    }
+}
+
+/****
+ * Dropdown Phone Number
+ */
+export function handleDropdownNumberPhone() {
+    const dropdownPhoneNumber = document.getElementById('dropdown-phoneNumber');
+    const dropdownCall = document.getElementById('call-dropdown');
+    const dropdownFill = document.getElementById('fill-dropdown');
+    const dropdownInput = document.getElementById('inputExample1');
+    const dropdownInner = document.getElementById('handle-dropdown');
+    const dropdownInnerItems = document.querySelectorAll('#handle-dropdown > ul > li');
+    if (dropdownPhoneNumber !== null && dropdownCall !== null && dropdownFill !== null && dropdownInput !== null && dropdownInner !== null && dropdownInnerItems !== null) {
+        dropdownCall.addEventListener('click', () => dropdownInner.classList.toggle('is-show'));
+
+        dropdownInnerItems.forEach(function (item) {
+            item.addEventListener('click', function () {
+                dropdownInnerItems.forEach(function (otherItem) {
+                    if (otherItem !== item && otherItem.classList.contains('is-active')) {
+                        otherItem.classList.remove('is-active');
+                    }
+                });
+
+                item.classList.add('is-active');
+
+                dropdownInner.classList.remove('is-show');
+
+                dropdownFill.innerHTML = item.innerHTML;
+                dropdownInput.value = item.getAttribute('data-value');
+            });
+        });
+
+        document.body.addEventListener('click', function (event) {
+            const target = event.target;
+
+            if (!dropdownPhoneNumber.contains(target) && !dropdownCall.contains(target) && !dropdownInner.contains(target)) {
+                dropdownInner.classList.remove('is-show');
+            }
+        });
+    }
+}
+
+
+/****
+ * Form Forgot Example - Step 1
+ */
+export function handleFrmForgotExampleStep1() {
+    const frmForgot = document.getElementById('formForgotExampleStep1');
+    if (frmForgot !== null) {
+        frmForgot.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const modalValidate = new bootstrap.Modal('#modal-validate');
+
+            const inputExample1 = document.getElementById('inputExample1').value;
+            if (inputExample1.trim() === '') {
+                modalValidate.show();
+                return false;
+            }
+        })
+    }
+}
+
+/****
+ * Form Forgot Example - Step 3
+ */
+export function handleFrmForgotExampleStep3() {
+    const frmForgot = document.getElementById('formForgotExampleStep3');
+    if (frmForgot !== null) {
+        frmForgot.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+
+            const inputExample1 = document.getElementById('inputExample1').value;
+            const inputExample2 = document.getElementById('inputExample2').value;
+
+            if (inputExample1.trim() !== '' && inputExample2.trim() !== '' && inputExample1 === inputExample2) {
+                const modalSuccess = new bootstrap.Modal('#modal-success');
+                modalSuccess.show();
+            }
+            return false;
+        })
+    }
+}
 
 window.addEventListener('load', function () {
     handleNavigation();
+
     handleExtendFooter();
+
     handleButtonShowHidden();
+
     handleChartDoughnut();
+
     handleChartLine();
+
     handleModalCopy();
+
     handleScreenIntro();
+
     handleFrmLoginExample();
+
+    handleFrmRegisterExampleStep1();
+
+    handleDropdownNumberPhone();
+
+    handleFrmForgotExampleStep1();
+
+    handleFrmForgotExampleStep3();
+
     window.addEventListener("resize", () => {
         windowWidth = window.innerWidth;
     });

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <title>Template VMT App</title>
+    <meta name="description" content="Template VMT App">
+    <meta name="author" content="">
+
+    <meta property="og:title" content="Template VMT App">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Template VMT App">
+    <meta property="og:image" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+
+    <link rel="icon" href="./assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<div class="modal fade modal-account" id="modal-validate" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+            <div class="modal-body bg-white">
+                <div class="vstack align-items-center justify-content-center gap-15px">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
+                        <path opacity="0.4"
+                              d="M39.2466 8.8208H18.7533C12.7841 8.8208 7.95081 13.6783 7.95081 19.6233V42.3641C7.95081 48.3091 12.8083 53.1666 18.7533 53.1666H39.2225C45.1916 53.1666 50.025 48.3091 50.025 42.3641V19.6233C50.0491 13.6541 45.1916 8.8208 39.2466 8.8208Z"
+                              fill="#FF4545"/>
+                        <path d="M34.6791 4.8335H23.3208C20.8075 4.8335 18.7533 6.8635 18.7533 9.37683V11.6485C18.7533 14.1618 20.7833 16.1918 23.2966 16.1918H34.6791C37.1925 16.1918 39.2225 14.1618 39.2225 11.6485V9.37683C39.2466 6.8635 37.1925 4.8335 34.6791 4.8335Z"
+                              fill="#FF4545"/>
+                        <path d="M35.1142 37.7485L31.61 34.2443L34.9934 30.861C35.6942 30.1601 35.6942 29.0001 34.9934 28.2993C34.2925 27.5985 33.1325 27.5985 32.4317 28.2993L29.0484 31.6826L25.5442 28.1785C24.8434 27.4776 23.6834 27.4776 22.9825 28.1785C22.2817 28.8793 22.2817 30.0393 22.9825 30.7401L26.4867 34.2443L22.8859 37.8451C22.185 38.546 22.185 39.706 22.8859 40.4068C23.2484 40.7693 23.7075 40.9385 24.1667 40.9385C24.6259 40.9385 25.085 40.7693 25.4475 40.4068L29.0484 36.806L32.5525 40.3101C32.915 40.6726 33.3742 40.8418 33.8334 40.8418C34.2925 40.8418 34.7517 40.6726 35.1142 40.3101C35.815 39.6093 35.815 38.4735 35.1142 37.7485Z"
+                              fill="#FF4545"/>
+                    </svg>
+                    <div class="heading-3 text-black text-center">
+                        Email này chưa đăng kí trên hệ thống.
+                    </div>
+                    <div class="text-center hstack gap-2 w-100">
+                        <a href="./dang-ky-buoc-1.html"
+                           class="button-theme button-gradient_green flex-fill w-50">
+                            Tạo tài khoản
+                        </a>
+                        <button data-bs-dismiss="modal" type="button"
+                                class="button-theme button-outline_green flex-fill w-50">
+                            Nhập lại
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="screen-register gradient-orange">
+    <div class="register-wrapper vh-100 transition-default hidden-bg position-relative">
+        <div class="register-heading vstack gap-5px">
+            <div class="register-heading_title">
+                Quên mật khẩu?
+            </div>
+            <div class="register-heading_image position-absolute top-0 end-0 pe-none">
+                <img src="./assets/images/logo-icon_opacity.png" height="180" width="210" alt="">
+            </div>
+        </div>
+        <div class="register-body vstack gap-30px position-absolute zi-2 bottom-0 start-0 end-0 bg-white">
+            <div class="register-body_title fw-normal heading-4">
+                Vui lòng nhập số điện của bạn
+            </div>
+            <form action="" id="formForgotExampleStep1">
+                <div class="vstack gap-30px">
+                    <div class="account-form vstack gap-20px">
+                        <div class="flex-fill account-form_item">
+                            <input id="inputExample1" placeholder="Email" class="account-form_item__input"
+                                   type="text">
+                            <label class="account-form_item__label" for="inputExample1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M3.88534 5.2371C3.20538 5.86848 2.75 6.89295 2.75 8.5V15.5C2.75 17.107 3.20538 18.1315 3.88534 18.7629C4.57535 19.4036 5.61497 19.75 7 19.75H17C18.385 19.75 19.4246 19.4036 20.1147 18.7629C20.7946 18.1315 21.25 17.107 21.25 15.5V12.98C21.25 12.5658 21.5858 12.23 22 12.23C22.4142 12.23 22.75 12.5658 22.75 12.98V15.5C22.75 17.393 22.2054 18.8685 21.1353 19.8621C20.0754 20.8464 18.615 21.25 17 21.25H7C5.38503 21.25 3.92465 20.8464 2.86466 19.8621C1.79462 18.8685 1.25 17.393 1.25 15.5V8.5C1.25 6.60705 1.79462 5.13152 2.86466 4.1379C3.92465 3.15363 5.38503 2.75 7 2.75H17C18.615 2.75 20.0754 3.15363 21.1353 4.1379C22.2054 5.13152 22.75 6.60705 22.75 8.5C22.75 8.91421 22.4142 9.25 22 9.25C21.5858 9.25 21.25 8.91421 21.25 8.5C21.25 6.89295 20.7946 5.86848 20.1147 5.2371C19.4246 4.59637 18.385 4.25 17 4.25H7C5.61497 4.25 4.57535 4.59637 3.88534 5.2371ZM17.586 8.53194C17.8445 8.85558 17.7917 9.32751 17.4681 9.58602L14.3371 12.0868C13.0337 13.1244 10.9563 13.1244 9.65286 12.0868L9.65102 12.0853L6.53102 9.58529C6.20778 9.32627 6.1557 8.85426 6.41471 8.53102C6.67373 8.20778 7.14574 8.1557 7.46898 8.41471L10.5871 10.9132C10.5874 10.9135 10.5877 10.9137 10.5879 10.9139C11.3445 11.5155 12.646 11.5154 13.4024 10.9136C13.4022 10.9137 13.4025 10.9135 13.4024 10.9136L16.5319 8.41398C16.8556 8.15548 17.3275 8.20829 17.586 8.53194Z"
+                                          fill="#ADB4BB"/>
+                                </svg>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="hstack align-items-center justify-content-center">
+                        <div class="d-flex align-items-center flex-fill">
+                            <button type="submit" class="button-theme button-gradient_green w-100">
+                                Tiếp tục
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="./assets/plugins/chartjs/chart.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-labels.js"></script>
+<script type="text/javascript"
+        src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+
+</body>
+</html>
