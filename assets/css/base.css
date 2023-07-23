@@ -308,6 +308,10 @@ input[type='number'] {
     color: #6C6C6C !important;
 }
 
+.black-50-color {
+    color: #444444 !important;
+}
+
 .blue-color {
     color: #0077AA !important;
 }
@@ -321,11 +325,11 @@ input[type='number'] {
 }
 
 .gradient-green {
-    background: linear-gradient(356deg, var(--primary-color) 0%, var(--primary-hover) 92.50%) !important;
+    background-image: linear-gradient(356deg, var(--primary-color) 0%, var(--primary-hover) 92.50%) !important;
 }
 
 .gradient-orange {
-    background: linear-gradient(90deg, #E9750E 0%, #FF993E 100%) !important;
+    background-image: linear-gradient(90deg, #E9750E 0%, #FF993E 100%) !important;
 }
 
 .button-text {
@@ -377,8 +381,22 @@ input[type='number'] {
     background-color: transparent;
 }
 
+.button-outline_orange {
+    border: 1px solid #E9750E;
+    color: #E9750E !important;
+    background-color: transparent;
+}
+
 .button-theme:hover {
     opacity: .85;
+}
+
+.button-reset {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    outline: none;
+    box-shadow: none;
 }
 
 .shadow-pseudo {

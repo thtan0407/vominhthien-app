@@ -289,6 +289,7 @@
     color: var(--color);
     transition: var(--transition-default);
     padding: 0;
+    border: 0;
 }
 
 .chart-inner .nav-tabs .nav-item .nav-link svg {
@@ -322,7 +323,6 @@
     background-color: #eaebf0;
     font-size: 1em;
     line-height: 135%;
-    color: #444;
     border: 0;
     outline: none;
     box-shadow: none;
@@ -330,10 +330,6 @@
 
 .chart-inner .chart-content .chart-heading {
     padding-bottom: 24px;
-}
-
-.chart-inner .chart-content .chart-heading .heading-4 {
-    color: #444;
 }
 
 .chart-inner .chart-content .chart-detail {
@@ -364,18 +360,57 @@
     padding-bottom: 18px;
 }
 
-.modal-copy .product-copy .product-copy_header .heading-4 {
-    color: #444;
-}
-
-.modal-copy .product-copy .product-copy_body .product-copy_image {
+.product-item .product-item_image {
     border: 1px solid #eee;
     border-radius: 8px;
 }
 
-.modal-copy .product-copy .product-copy_body .product-copy_content .product-copy_title {
+.product-item .product-item_content .product-item_title {
     font-size: 1em;
     line-height: 22px;
+}
+
+.product-item .product-item_quantity .product-item_quantity__button svg rect {
+    transition: var(--transition-default)
+}
+
+.product-item .product-item_quantity .product-item_quantity__button.disabled svg rect,
+.product-item .product-item_quantity .product-item_quantity__button:disabled svg rect {
+    fill: #919191;
+}
+
+.product-item .product-item_quantity .product-item_quantity__input {
+    border-radius: 4px;
+    border: 1px solid #EAEBF0;
+    background: var(--bs-white);
+    outline: none;
+    box-shadow: none;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 2px 16px;
+    text-align: center;
+    flex: 1 1 60px;
+    max-width: 60px;
+}
+
+.product-item .product-item_note .product-item_note__input {
+    border-radius: 8px;
+    background: #eee;
+    padding: 8px 16px;
+    text-align: right;
+    font-size: 1em;
+    color: var(--bs-black);
+    line-height: 22px;
+    outline: none;
+    box-shadow: none;
+    border: 0;
+    width: 80%;
+}
+
+.product-item .product-item_note .product-item_note__input::placeholder {
+    color: #6C6C6C;
 }
 
 .screen-intro .intro-wrapper .intro-background {
@@ -749,4 +784,151 @@
     padding: 50px 45px;
     border-radius: 20px 20px 0 0;
     height: calc(100vh - 325px);
+}
+
+.section-header .header-inner {
+    box-shadow: 0px 5.759913921356201px 11.519827842712402px 0px rgba(71, 71, 71, 0.04), 0px 20px 90px -30px rgba(26, 137, 23, 0.10);
+}
+
+.section-header .header-inner_tabs .nav-link {
+    color: #ADB4BB;
+    font-size: 1.075em;
+    font-weight: 700;
+    line-height: 22px;
+    -webkit-transition: var(--transition-default);
+    -moz-transition: var(--transition-default);
+    -ms-transition: var(--transition-default);
+    -o-transition: var(--transition-default);
+    transition: var(--transition-default);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 0;
+}
+
+.section-header .header-inner_tabs .nav-link:before {
+    width: 16px;
+    height: 2px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    -webkit-transition: var(--transition-default);
+    -moz-transition: var(--transition-default);
+    -ms-transition: var(--transition-default);
+    -o-transition: var(--transition-default);
+    transition: var(--transition-default);
+}
+
+.section-header .header-inner_tabs .nav-link.active {
+    color: var(--primary-color);
+}
+
+.section-header .header-inner_tabs .nav-link.active:before {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.cart-choose {
+    background: #eee;
+}
+
+.cart-choose .cart-choose_inner .cart-choose_item .cart-choose_item__text {
+    font-size: 1.075em;
+    line-height: 22px;
+}
+
+.cart-wrapper {
+    padding-bottom: 270px;
+}
+
+.cart-wrapper .cart-actions .cart-action_collapse button svg {
+    transition: var(--transition-default);
+}
+
+.cart-wrapper .cart-actions .cart-action_collapse button[aria-expanded=false] svg {
+    transform: rotate(180deg);
+}
+
+.cart-wrapper .cart-content {
+    border-radius: 16px;
+    border: 1px solid #EAEBF0;
+}
+
+.cart-wrapper .cart-content .cart-list,
+.cart-wrapper .cart-content .cart-list .cart-order,
+.cart-wrapper .cart-content .cart-list .cart-total {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px dashed #adb4bb;
+}
+
+.cart-wrapper .cart-content .cart-list .cart-item + .cart-item {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ADB4BB;
+}
+
+.cart-footer {
+    padding-top: 32px !important;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -5.760000228881836px 11.519827842712402px 0 rgba(71, 71, 71, 0.04), 0 -20px 90px -30px rgba(26, 137, 23, 0.10);
+}
+
+.cart-footer .cart-footer_collapse {
+    top: 3px;
+}
+
+.cart-footer .cart-footer_collapse .cart-footer_collapse__button {
+    width: 22px;
+    height: 6px;
+}
+
+.cart-footer .cart-footer_collapse .cart-footer_collapse__button:before,
+.cart-footer .cart-footer_collapse .cart-footer_collapse__button:after {
+    width: 22px;
+    height: 2px;
+    background: var(--bs-black);
+}
+
+.cart-footer .cart-footer_collapse .cart-footer_collapse__button:before {
+    top: 0;
+}
+
+.cart-footer .cart-footer_collapse .cart-footer_collapse__button:after {
+    bottom: 0;
+}
+
+.cart-footer .card-footer_detail {
+    margin-bottom: 15px;
+}
+
+.cart-footer .card-footer_detail .card-footer_detail__header > * + * {
+    padding-left: 16px;
+    margin-left: 16px;
+    position: relative;
+}
+
+.cart-footer .card-footer_detail .card-footer_detail__header > * + *:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 1px;
+    display: block;
+    content: "";
+    background: #ADB4BB;
+}
+
+.cart-footer .card-footer_detail .card-footer_detail__header {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #adb4bb;
+}
+
+.cart-footer .card-footer_buttons {
+    margin-top: 15px;
 }
