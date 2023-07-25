@@ -356,6 +356,10 @@ input[type='number'] {
 	transition: var(--transition-default);
 }
 
+.button-them_sm {
+	padding: 8px 30px;
+}
+
 .button-background_green {
 	background: var(--primary-color);
 	color: var(--bs-white) !important;

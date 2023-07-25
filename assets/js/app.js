@@ -423,6 +423,9 @@ export function handlePreventDefault() {
 }
 
 
+/****
+ * Init Tooltip Bootstrap
+ */
 export function handleInitTooltipBS() {
 	const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 	if (tooltipTriggerList.length > 0) {
@@ -430,9 +433,68 @@ export function handleInitTooltipBS() {
 	}
 }
 
+
 /****
- * Init Tooltip Bootstrap
+ * Slider Tab Tất cả đơn hàng
  */
+export function handleSliderTabOrders() {
+	const ordersTab = document.getElementById('order-tab_slide');
+	const ordersWrapper = document.getElementById('order-screen_slide');
+	if (ordersTab !== null && ordersWrapper !== null) {
+		const sliderOrdersTab = new Swiper('#order-tab_slide .swiper', {
+			speed: 500,
+			slidesPerView: 3.5,
+			loop: false,
+			freeMode: true,
+			slideToClickedSlide: true,
+		});
+
+		const sliderOrdersWrapper = new Swiper('#order-screen_slide .swiper', {
+			speed: 500,
+			slidesPerView: 1,
+			effect: 'slide',
+			loop: false,
+			spaceBetween: 15,
+			thumbs: {
+				swiper: sliderOrdersTab,
+			},
+		});
+
+		sliderOrdersWrapper.on('slideChange', function () {
+			const currentIndex = sliderOrdersWrapper.activeIndex;
+			sliderOrdersTab.slideTo(currentIndex);
+		});
+	}
+}
+
+/****
+ * Handle Call Detail Order
+ */
+export function handleCallDetailOrder() {
+	const callDetailItems = document.querySelectorAll('.call-detail_order');
+	if (callDetailItems.length > 0) {
+		callDetailItems.forEach(function (item) {
+			item.addEventListener('click', function (event) {
+				event.stopPropagation();
+				item.closest('.order-item').classList.toggle('is-show');
+			});
+		});
+	}
+}
+
+/****
+ * Handle Modal Report
+ * Dùng cho modal khiếu nại - Page tất cả đơn hàng
+ */
+export function handleModalReport() {
+	const callModalReported = document.getElementById('call-modal_reported');
+	const modalReported = document.getElementById('modal-reported');
+	if (callModalReported !== null && modalReported !== null) {
+		callModalReported.addEventListener('click', () => {
+			new bootstrap.Modal('#modal-reported').show()
+		})
+	}
+}
 
 window.addEventListener('load', function () {
 	handleNavigation();
@@ -465,9 +527,24 @@ window.addEventListener('load', function () {
 
 	handleInitTooltipBS();
 
+	handleSliderTabOrders();
+
+	handleCallDetailOrder();
+
+	handleModalReport()
+
 	window.addEventListener("resize", () => {
 		windowWidth = window.innerWidth;
 	});
+
+	const modalCopy = document.getElementById('modal-report');
+	if (modalCopy !== null) {
+		setTimeout(function () {
+			new bootstrap.Modal('#modal-report').show()
+		});
+	}
+
+
 });
 
 
