@@ -316,6 +316,10 @@ input[type='number'] {
 	color: #0077AA !important;
 }
 
+.red-color {
+	color: #FF4545 !important;
+}
+
 .background-color {
 	background-color: var(--primary-color) !important;
 }
