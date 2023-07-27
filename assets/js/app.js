@@ -266,7 +266,7 @@ export function handleCalcHeight() {
 		const calcElmHeading = elmHeading.scrollHeight;
 		const elmBody = elmWrapper.querySelector('.handleCalcHeightBody');
 		const calcElmBody = elmBody.scrollHeight;
-		elmBody.style.height = calcElmBody + 'px';
+		elmBody.style.height = calcElmBody + 50 + 'px';
 		elmWrapper.style.height = calcElmHeading + calcElmBody + 'px';
 	}
 }
