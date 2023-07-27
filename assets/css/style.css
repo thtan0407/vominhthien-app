@@ -1120,6 +1120,18 @@
 
 .screen-register {
 	background-color: var(--primary-color);
+	position: relative;
+}
+
+.screen-register:before {
+	position: absolute;
+	bottom: 0;
+	height: 100px;
+	width: 100%;
+	right: 0;
+	left: 0;
+	display: block;
+	content: "";
 }
 
 .screen-register .register-heading {
