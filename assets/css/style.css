@@ -1123,19 +1123,19 @@
 	position: relative;
 }
 
-.screen-register:before {
-	position: absolute;
-	bottom: 0;
-	height: 100px;
-	width: 100%;
-	right: 0;
-	left: 0;
-	display: block;
-	content: "";
-}
+/*.screen-register:before {*/
+/*	position: absolute;*/
+/*	bottom: 0;*/
+/*	height: 100px;*/
+/*	width: 100%;*/
+/*	right: 0;*/
+/*	left: 0;*/
+/*	display: block;*/
+/*	content: "";*/
+/*}*/
 
 .screen-register .register-heading {
-	padding: 130px 45px;
+	padding: 120px 45px;
 	position: relative;
 	overflow: hidden;
 }
@@ -1164,10 +1164,8 @@
 }
 
 .screen-register .register-body {
-	padding: 50px 45px 0;
+	padding: 50px 45px;
 	border-radius: 20px 20px 0 0;
-	height: calc(100vh - 325px);
-	min-height: 325px;
 }
 
 .section-header .header-inner {

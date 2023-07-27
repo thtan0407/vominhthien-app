@@ -588,7 +588,7 @@ window.addEventListener('load', function () {
 
     handleScreenIntro();
 
-    handleCalcHeight();
+    // handleCalcHeight();
 
     handleFrmLoginExample();
 
@@ -618,8 +618,8 @@ window.addEventListener('load', function () {
 
     window.addEventListener("resize", () => {
         windowWidth = window.innerWidth;
-        firstLoad = false;
-        handleCalcHeight();
+        // firstLoad = false;
+        // handleCalcHeight();
     });
 });
 
