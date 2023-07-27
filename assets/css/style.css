@@ -1152,7 +1152,7 @@
 }
 
 .screen-register .register-body {
-	padding: 50px 45px;
+	padding: 50px 45px 0;
 	border-radius: 20px 20px 0 0;
 	height: calc(100vh - 325px);
 	min-height: 325px;
