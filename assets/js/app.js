@@ -255,30 +255,6 @@ export function handleSetPositionPaginationIntro() {
     }
 }
 
-
-/****
- * Calculator Height Screen Login - Register
- */
-export let firstLoad = true;
-
-export function handleCalcHeight() {
-    const elmWrapper = document.getElementById('handleCalcHeight');
-    if (elmWrapper !== null) {
-        const elmHeading = elmWrapper.querySelector('.handleCalcHeightHeading');
-        const calcElmHeading = elmHeading.scrollHeight;
-        const elmBody = elmWrapper.querySelector('.handleCalcHeightBody');
-        let calcElmBody = elmBody.scrollHeight;
-        console.log(calcElmBody)
-        if(firstLoad) {
-            calcElmBody += 50;
-        } else {
-            calcElmBody -= 50;
-        }
-        elmBody.style.height = calcElmBody + 'px';
-        elmWrapper.style.height = calcElmHeading + calcElmBody + 'px';
-    }
-}
-
 /****
  * Form Login Example
  */
@@ -588,8 +564,6 @@ window.addEventListener('load', function () {
 
     handleScreenIntro();
 
-    // handleCalcHeight();
-
     handleFrmLoginExample();
 
     handleFrmRegisterExampleStep1();
@@ -618,8 +592,6 @@ window.addEventListener('load', function () {
 
     window.addEventListener("resize", () => {
         windowWidth = window.innerWidth;
-        // firstLoad = false;
-        // handleCalcHeight();
     });
 });
 
