@@ -549,6 +549,56 @@ export function handleInitDateRangePicker() {
     }
 }
 
+/****
+ * Add Voucher in Modal
+ */
+export function handleAddVoucher() {
+    const elmAdd = document.getElementById('add-voucher');
+    const voucherList = document.getElementById('voucher-list');
+    if (elmAdd !== null && voucherList !== null) {
+        elmAdd.addEventListener('click', function () {
+            const voucherNewItems = voucherList.querySelectorAll('.voucher-new')
+            voucherNewItems.forEach((item) => item.classList.remove('voucher-new', 'voucher-highlight'))
+            const htmlVoucher = `<div class="voucher-item voucher-new voucher-highlight p-3 hstack align-items-start gap-3">
+                                            <div class="flex-shrink-0">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                                     viewBox="0 0 36 36"
+                                                     fill="none">
+                                                    <path d="M33.75 5.625H12.375C12.0758 5.625 11.79 5.74425 11.5785 5.9535L10.125 7.40925L8.6715 5.9535C8.46 5.74425 8.17425 5.625 7.875 5.625H2.25C1.01025 5.625 0 6.63525 0 7.875V28.125C0 29.367 1.01025 30.375 2.25 30.375H7.875C8.17425 30.375 8.46 30.2558 8.6715 30.0465L10.125 28.5907L11.5785 30.0442C11.79 30.2557 12.0758 30.375 12.375 30.375H33.75C34.992 30.375 36 29.367 36 28.125V7.875C36 6.63525 34.992 5.625 33.75 5.625Z"
+                                                          class="voucher-fill"/>
+                                                    <path d="M19.125 16.875C17.2642 16.875 15.75 15.3608 15.75 13.5C15.75 11.6392 17.2642 10.125 19.125 10.125C20.9858 10.125 22.5 11.6392 22.5 13.5C22.5 15.3608 20.9858 16.875 19.125 16.875ZM19.125 12.375C18.504 12.375 18 12.879 18 13.5C18 14.121 18.504 14.625 19.125 14.625C19.746 14.625 20.25 14.121 20.25 13.5C20.25 12.879 19.746 12.375 19.125 12.375Z"
+                                                          fill="white"/>
+                                                    <path d="M25.875 25.875C24.0142 25.875 22.5 24.3608 22.5 22.5C22.5 20.6392 24.0142 19.125 25.875 19.125C27.7358 19.125 29.25 20.6392 29.25 22.5C29.25 24.3608 27.7358 25.875 25.875 25.875ZM25.875 21.375C25.2562 21.375 24.75 21.8812 24.75 22.5C24.75 23.1188 25.2562 23.625 25.875 23.625C26.4938 23.625 27 23.1188 27 22.5C27 21.8812 26.4938 21.375 25.875 21.375Z"
+                                                          fill="white"/>
+                                                    <path d="M16.875 25.8747C16.6207 25.8747 16.3665 25.7892 16.155 25.6137C15.678 25.2155 15.6127 24.5067 16.011 24.0297L27.261 10.5297C27.6615 10.0505 28.3702 9.992 28.845 10.3857C29.322 10.784 29.385 11.4927 28.9867 11.972L17.7367 25.472C17.5162 25.7352 17.1967 25.8747 16.875 25.8747Z"
+                                                          fill="white"/>
+                                                    <path d="M11.25 10.125H9V12.375H11.25V10.125Z" fill="white"/>
+                                                    <path d="M11.25 23.625H9V25.875H11.25V23.625Z" fill="white"/>
+                                                    <path d="M11.25 19.125H9V21.375H11.25V19.125Z" fill="white"/>
+                                                    <path d="M11.25 14.625H9V16.875H11.25V14.625Z" fill="white"/>
+                                                </svg>
+                                            </div>
+                                            <div class="vstack gap-2">
+                                                <div class="heading-4">
+                                                    Khuyến mãi tháng 7
+                                                </div>
+                                                <div class="primary-color">Hạn sử dụng: 31.07.2021</div>
+                                                <div class="voucher-item_divider heading-4">
+                                                    [VMTTAUJUL30]&nbsp;<span class="fw-normal">Giảm giá ngay 30% cho đơn hàng đi
+                                                    bằng tàu về
+                                                    TP.HCMM</span>
+                                                </div>
+                                                <div class="black-50-color">
+                                                    Số lượng: x1
+                                                </div>
+                                            </div>
+                                        </div>`;
+
+            voucherList.insertAdjacentHTML('afterbegin', htmlVoucher);
+        })
+    }
+}
+
 window.addEventListener('load', function () {
     handleNavigation();
 
@@ -589,6 +639,8 @@ window.addEventListener('load', function () {
     handleModalFilterTime();
 
     handleInitDateRangePicker();
+
+    handleAddVoucher();
 
     window.addEventListener("resize", () => {
         windowWidth = window.innerWidth;
