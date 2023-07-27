@@ -475,3 +475,9 @@ input[type='number'] {
 .modal.show .modal-dialog {
 	transform: none;
 }
+
+*::-webkit-scrollbar {
+	display: none !important;
+	opacity: 0 !important;
+	visibility: hidden; !important;
+}
