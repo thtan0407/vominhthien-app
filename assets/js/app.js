@@ -262,9 +262,12 @@ export function handleSetPositionPaginationIntro() {
 export function handleCalcHeight() {
 	const elmWrapper = document.getElementById('handleCalcHeight');
 	if (elmWrapper !== null) {
+		const elmHeading = elmWrapper.querySelector('.handleCalcHeightHeading');
+		const calcElmHeading = elmHeading.scrollHeight;
 		const elmBody = elmWrapper.querySelector('.handleCalcHeightBody');
 		const calcElmBody = elmBody.scrollHeight;
 		elmBody.style.height = calcElmBody + 50 + 'px';
+		elmWrapper.style.height = calcElmHeading + calcElmBody + 'px';
 	}
 }
 
