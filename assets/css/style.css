@@ -1551,11 +1551,100 @@
     padding-bottom: 8px;
 }
 
-.order-highlight .order-highlight_inner{
+.order-highlight .order-highlight_inner {
     border-radius: 12px;
     padding: 6px 8px;
     background: #EEE;
     text-align: center;
+}
+
+.order-collapse_inner {
+    top: calc(100% + 10px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    font-size: .9em;
+}
+
+.order-item_collapse.is-show .order-collapse_inner {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.order-item_collapse.is-show svg .plus {
+    display: none;
+}
+
+.order-collapse_inner:before {
+    height: calc(100% - 17px);
+    width: 1px;
+    background: #CCCCCC;
+    left: 2px;
+    top: 0;
+}
+
+.order-collapse_inner .order-collapse_item {
+    padding-left: 30px;
+}
+
+.order-collapse_inner .order-collapse_item .order-collapse_item__left {
+    width: 70px;
+    flex-shrink: 0;
+}
+
+.order-collapse_inner .order-collapse_item .order-collapse_item__decor {
+    left: 1.25px;
+    position: absolute;
+    top: -5px;
+}
+
+.order-status {
+    border-radius: 16px;
+    margin-bottom: 50px;
+}
+
+.order-status_item.heading-4 {
+    font-size: 1.075em !important;
+}
+
+.order-status_item .order-status_item__time {
+    font-size: .925em;
+    padding-left: 8px;
+    position: relative;
+}
+
+.order-status_item .order-status_item__time:before {
+    height: 14px;
+    width: 1px;
+    background: #909090;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.order-status_item .order-status_content {
+    margin-top: 6px;
+}
+
+.order-status_item + .order-status_item {
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 1px dashed #CCC;
+}
+
+.order-status_item .order-status_content .order-status_content--description {
+    padding-left: 22px;
+}
+
+.order-status_item .order-status_content .order-status_content--box {
+    padding: 6px 22px;
+    background: #F0F8EF;
+    border-radius: 16px;
+}
+
+.order-status_item .order-status_content .order-status_content--box .limit{
+    --line: 1;
 }
 
 .voucher-input input {
