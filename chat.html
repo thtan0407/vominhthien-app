@@ -1,161 +1,392 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta name="theme-color" content="#ffffff">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
 
-	<title>Template VMT App</title>
-	<meta name="description" content="Template VMT App">
-	<meta name="author" content="">
+    <title>Template VMT App</title>
+    <meta name="description" content="Template VMT App">
+    <meta name="author" content="">
 
-	<meta property="og:title" content="Template VMT App">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="">
-	<meta property="og:description" content="Template VMT App">
-	<meta property="og:image" content="">
+    <meta property="og:title" content="Template VMT App">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Template VMT App">
+    <meta property="og:image" content="">
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-		  rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
 
-	<link rel="icon" href="./assets/images/favicon.png">
-	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
-	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
-	<link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
-	<link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
-	<link rel="stylesheet" href="./assets/css/base.css">
-	<link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+    <link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
-<div class="screen-chat min-vh-100 bg-white overflow-hidden vstack main-spacing">
-	<!-- Header page -->
-	<div class="section-header bg-white position-sticky top-0 start-0 end-0 zi-10 w-100">
-		<div class="header-inner">
-			<div class="container">
-				<div class="vstack">
-					<div class="header-inner_title pt-3 pb-2 heading-2 hstack gap-2">
-						<a href="./index.html" class="hstack align-items-center justify-content-center">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-								 fill="none">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-									  d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
-									  fill="#191E24"/>
-							</svg>
-						</a>
-						DHTQ940593Q
-						<div class="header-inner_buttons ms-auto hstack align-items-center justify-content-end gap-2">
-							<div class="orange-color heading-6">
-								Chờ báo giá
-							</div>
-							<button type="button" class="button-reset">
-								<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
-									 fill="none">
-									<path fill-rule="evenodd" clip-rule="evenodd"
-										  d="M12.7675 3.79199L15.8071 3.79199C17.6764 3.79198 19.1573 3.79197 20.3289 3.93045C21.5317 4.07263 22.5218 4.37111 23.3489 5.04989C23.6295 5.28017 23.8868 5.53747 24.1171 5.81806C24.7959 6.64517 25.0944 7.63532 25.2365 8.83812C25.375 10.0097 25.375 11.4906 25.375 13.3599V13.4741C25.375 15.3434 25.375 16.8243 25.2365 17.9959C25.0944 19.1987 24.7959 20.1888 24.1171 21.0159C23.8868 21.2965 23.6295 21.5538 23.3489 21.7841C22.5218 22.4629 21.5317 22.7614 20.3289 22.9035C19.1573 23.042 17.6764 23.042 15.8071 23.042H10.8526C10.0854 23.042 9.79368 23.0444 9.52192 23.0863C8.92013 23.179 8.34952 23.4154 7.85838 23.7753C7.63659 23.9379 7.42861 24.1425 6.88613 24.685L6.86703 24.7041C6.56053 25.0106 6.30337 25.2677 6.09046 25.4572C5.88813 25.6372 5.63047 25.8463 5.32149 25.9509C4.35215 26.2791 3.28956 25.839 2.83623 24.9215C2.69173 24.629 2.65733 24.299 2.64157 24.0286C2.62499 23.7441 2.62499 23.3805 2.625 22.9471L2.625 13.9345C2.62498 11.7905 2.62497 10.0922 2.80366 8.76313C2.98756 7.39531 3.37503 6.2882 4.24812 5.41511C5.12121 4.54202 6.22831 4.15455 7.59614 3.97065C8.92522 3.79196 10.6235 3.79197 12.7675 3.79199ZM7.82932 5.70504C6.65555 5.86285 5.9793 6.1588 5.48555 6.65255C4.99181 7.14629 4.69586 7.82254 4.53805 8.99632C4.37686 10.1953 4.375 11.7757 4.375 14.0003V22.9199C4.375 23.3876 4.37536 23.6996 4.38861 23.9268C4.3976 24.081 4.41108 24.147 4.41417 24.1631C4.48004 24.2772 4.61472 24.3329 4.74197 24.2989C4.75556 24.2896 4.81174 24.2525 4.92714 24.1498C5.09717 23.9985 5.31798 23.7782 5.6487 23.4475L5.69876 23.3974C6.17446 22.9216 6.48071 22.6153 6.82394 22.3638C7.54176 21.8377 8.37572 21.4923 9.25528 21.3567C9.67584 21.2919 10.109 21.2919 10.7818 21.292L15.75 21.292C17.6891 21.292 19.0666 21.2906 20.1235 21.1656C21.161 21.043 21.7751 20.8118 22.2387 20.4313C22.4307 20.2738 22.6068 20.0977 22.7643 19.9057C23.1448 19.4421 23.376 18.828 23.4986 17.7904C23.6236 16.7335 23.625 15.3561 23.625 13.417C23.625 11.4779 23.6236 10.1004 23.4986 9.04354C23.376 8.00596 23.1448 7.39189 22.7643 6.92825C22.6068 6.73626 22.4307 6.56022 22.2387 6.40266C21.7751 6.02216 21.161 5.791 20.1235 5.66835C19.0666 5.54342 17.6891 5.54199 15.75 5.54199H12.8333C10.6087 5.54199 9.02827 5.54385 7.82932 5.70504Z"
-										  fill="#1A8917"/>
-									<ellipse cx="8.75" cy="13.417" rx="1.75" ry="1.75" fill="#1A8917"/>
-									<ellipse cx="14" cy="13.417" rx="1.75" ry="1.75" fill="#1A8917"/>
-									<ellipse cx="19.25" cy="13.417" rx="1.75" ry="1.75" fill="#1A8917"/>
-									<ellipse cx="22.1667" cy="5.83333" rx="5.83333" ry="5.83333" fill="#FF4545"/>
-								</svg>
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="screen-chat min-vh-100 h-100 bg-white overflow-hidden vstack main-spacing">
+    <!-- Header page -->
+    <div class="section-header bg-white position-relative top-0 start-0 end-0 zi-10 w-100">
+        <div class="header-inner">
+            <div class="container">
+                <div class="vstack">
+                    <div class="header-inner_title pt-3 pb-2 heading-2 hstack gap-2">
+                        <a href="./index.html" class="hstack align-items-center justify-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
+                                      fill="#191E24"/>
+                            </svg>
+                        </a>
+                        DHTQ940593Q
+                        <div class="header-inner_buttons ms-auto hstack align-items-center justify-content-end gap-2">
+                            <div class="orange-color heading-6">
+                                Chờ báo giá
+                            </div>
+                            <button type="button" class="button-reset">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                     fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M12.7675 3.79199L15.8071 3.79199C17.6764 3.79198 19.1573 3.79197 20.3289 3.93045C21.5317 4.07263 22.5218 4.37111 23.3489 5.04989C23.6295 5.28017 23.8868 5.53747 24.1171 5.81806C24.7959 6.64517 25.0944 7.63532 25.2365 8.83812C25.375 10.0097 25.375 11.4906 25.375 13.3599V13.4741C25.375 15.3434 25.375 16.8243 25.2365 17.9959C25.0944 19.1987 24.7959 20.1888 24.1171 21.0159C23.8868 21.2965 23.6295 21.5538 23.3489 21.7841C22.5218 22.4629 21.5317 22.7614 20.3289 22.9035C19.1573 23.042 17.6764 23.042 15.8071 23.042H10.8526C10.0854 23.042 9.79368 23.0444 9.52192 23.0863C8.92013 23.179 8.34952 23.4154 7.85838 23.7753C7.63659 23.9379 7.42861 24.1425 6.88613 24.685L6.86703 24.7041C6.56053 25.0106 6.30337 25.2677 6.09046 25.4572C5.88813 25.6372 5.63047 25.8463 5.32149 25.9509C4.35215 26.2791 3.28956 25.839 2.83623 24.9215C2.69173 24.629 2.65733 24.299 2.64157 24.0286C2.62499 23.7441 2.62499 23.3805 2.625 22.9471L2.625 13.9345C2.62498 11.7905 2.62497 10.0922 2.80366 8.76313C2.98756 7.39531 3.37503 6.2882 4.24812 5.41511C5.12121 4.54202 6.22831 4.15455 7.59614 3.97065C8.92522 3.79196 10.6235 3.79197 12.7675 3.79199ZM7.82932 5.70504C6.65555 5.86285 5.9793 6.1588 5.48555 6.65255C4.99181 7.14629 4.69586 7.82254 4.53805 8.99632C4.37686 10.1953 4.375 11.7757 4.375 14.0003V22.9199C4.375 23.3876 4.37536 23.6996 4.38861 23.9268C4.3976 24.081 4.41108 24.147 4.41417 24.1631C4.48004 24.2772 4.61472 24.3329 4.74197 24.2989C4.75556 24.2896 4.81174 24.2525 4.92714 24.1498C5.09717 23.9985 5.31798 23.7782 5.6487 23.4475L5.69876 23.3974C6.17446 22.9216 6.48071 22.6153 6.82394 22.3638C7.54176 21.8377 8.37572 21.4923 9.25528 21.3567C9.67584 21.2919 10.109 21.2919 10.7818 21.292L15.75 21.292C17.6891 21.292 19.0666 21.2906 20.1235 21.1656C21.161 21.043 21.7751 20.8118 22.2387 20.4313C22.4307 20.2738 22.6068 20.0977 22.7643 19.9057C23.1448 19.4421 23.376 18.828 23.4986 17.7904C23.6236 16.7335 23.625 15.3561 23.625 13.417C23.625 11.4779 23.6236 10.1004 23.4986 9.04354C23.376 8.00596 23.1448 7.39189 22.7643 6.92825C22.6068 6.73626 22.4307 6.56022 22.2387 6.40266C21.7751 6.02216 21.161 5.791 20.1235 5.66835C19.0666 5.54342 17.6891 5.54199 15.75 5.54199H12.8333C10.6087 5.54199 9.02827 5.54385 7.82932 5.70504Z"
+                                          fill="#1A8917"/>
+                                    <ellipse cx="8.75" cy="13.417" rx="1.75" ry="1.75" fill="#1A8917"/>
+                                    <ellipse cx="14" cy="13.417" rx="1.75" ry="1.75" fill="#1A8917"/>
+                                    <ellipse cx="19.25" cy="13.417" rx="1.75" ry="1.75" fill="#1A8917"/>
+                                    <ellipse cx="22.1667" cy="5.83333" rx="5.83333" ry="5.83333" fill="#FF4545"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<div class="chat-body vstack flex-fill">
-		<div class="chat-footer mt-auto py-3">
-			<div class="container">
-				<div class="chat-footer_hint hstack gap-15px">
-					<button type="button" class="button-reset text-nowrap button-hint">
-						Cảm ơn bạn nhé.
-					</button>
-					<button type="button" class="button-reset text-nowrap button-hint">
-						Tôi cần hỗ trợ gấp.
-					</button>
-					<button type="button" class="button-reset text-nowrap button-hint">
-						Thời gian giao hàng là bao lâu?
-					</button>
-					<button type="button" class="button-reset text-nowrap button-hint">
-						Cảm ơn bạn nhé.
-					</button>
-					<button type="button" class="button-reset text-nowrap button-hint">
-						Tôi cần hỗ trợ gấp.
-					</button>
-					<button type="button" class="button-reset text-nowrap button-hint">
-						Thời gian giao hàng là bao lâu?
-					</button>
-					<button type="button" class="button-reset text-nowrap button-hint">
-						Cảm ơn bạn nhé.
-					</button>
-					<button type="button" class="button-reset text-nowrap button-hint">
-						Tôi cần hỗ trợ gấp.
-					</button>
-					<button type="button" class="button-reset text-nowrap button-hint">
-						Thời gian giao hàng là bao lâu?
-					</button>
-				</div>
-				<div class="chat-footer_form hstack align-items-center gap-2">
-					<div class="position-relative hstack align-items-center w-100">
-						<textarea class="chat-footer_form__input" placeholder="Nhập nội dung"></textarea>
-						<button type="button" class="button-reset chat-footer_form__icon">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-								 fill="none">
-								<path d="M2 12.96V15C2 20 4 22 9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9"
-									  stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round"
-									  stroke-linejoin="round"/>
-								<path d="M15.5 9.75C16.3284 9.75 17 9.07843 17 8.25C17 7.42157 16.3284 6.75 15.5 6.75C14.6716 6.75 14 7.42157 14 8.25C14 9.07843 14.6716 9.75 15.5 9.75Z"
-									  stroke="#6C6C6C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-									  stroke-linejoin="round"/>
-								<path d="M8.5 9.75C9.32843 9.75 10 9.07843 10 8.25C10 7.42157 9.32843 6.75 8.5 6.75C7.67157 6.75 7 7.42157 7 8.25C7 9.07843 7.67157 9.75 8.5 9.75Z"
-									  stroke="#6C6C6C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-									  stroke-linejoin="round"/>
-								<path d="M8.4 13.2998H15.6C16.1 13.2998 16.5 13.6998 16.5 14.1998C16.5 16.6898 14.49 18.6998 12 18.6998C9.51 18.6998 7.5 16.6898 7.5 14.1998C7.5 13.6998 7.9 13.2998 8.4 13.2998Z"
-									  stroke="#6C6C6C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-									  stroke-linejoin="round"/>
-							</svg>
-						</button>
-					</div>
-					<div class="chat-footer_form__buttons d-flex align-items-center justify-content-center position-relative flex-shrink-0">
-						<button type="button"
-								class="position-absolute top-50 start-50 translate-middle transition-default button-reset chat-footer_form__button chat-footer_form__image"
-								id="buttonImage">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-								 fill="none">
-								<path d="M9 10.75C7.48 10.75 6.25 9.52 6.25 8C6.25 6.48 7.48 5.25 9 5.25C10.52 5.25 11.75 6.48 11.75 8C11.75 9.52 10.52 10.75 9 10.75ZM9 6.75C8.31 6.75 7.75 7.31 7.75 8C7.75 8.69 8.31 9.25 9 9.25C9.69 9.25 10.25 8.69 10.25 8C10.25 7.31 9.69 6.75 9 6.75Z"
-									  fill="#6C6C6C"/>
-								<path d="M15 22.75H9C3.57 22.75 1.25 20.43 1.25 15V9C1.25 3.57 3.57 1.25 9 1.25H13C13.41 1.25 13.75 1.59 13.75 2C13.75 2.41 13.41 2.75 13 2.75H9C4.39 2.75 2.75 4.39 2.75 9V15C2.75 19.61 4.39 21.25 9 21.25H15C19.61 21.25 21.25 19.61 21.25 15V10C21.25 9.59 21.59 9.25 22 9.25C22.41 9.25 22.75 9.59 22.75 10V15C22.75 20.43 20.43 22.75 15 22.75Z"
-									  fill="#6C6C6C"/>
-								<path d="M21.25 5.75H15.75C15.34 5.75 15 5.41 15 5C15 4.59 15.34 4.25 15.75 4.25H21.25C21.66 4.25 22 4.59 22 5C22 5.41 21.66 5.75 21.25 5.75Z"
-									  fill="#6C6C6C"/>
-								<path d="M18.5 8.5C18.09 8.5 17.75 8.16 17.75 7.75V2.25C17.75 1.84 18.09 1.5 18.5 1.5C18.91 1.5 19.25 1.84 19.25 2.25V7.75C19.25 8.16 18.91 8.5 18.5 8.5Z"
-									  fill="#6C6C6C"/>
-								<path d="M2.74744 19.4525C2.50744 19.4525 2.26744 19.3325 2.12744 19.1225C1.89744 18.7825 1.98744 18.3125 2.32744 18.0825L7.25744 14.7725C8.33744 14.0525 9.82744 14.1325 10.8074 14.9625L11.1374 15.2525C11.6374 15.6825 12.4874 15.6825 12.9774 15.2525L17.1374 11.6825C18.2074 10.7725 19.8674 10.7725 20.9374 11.6825L22.5674 13.0825C22.8774 13.3525 22.9174 13.8225 22.6474 14.1425C22.3774 14.4525 21.9074 14.4925 21.5874 14.2225L19.9574 12.8225C19.4574 12.3925 18.6074 12.3925 18.1174 12.8225L13.9574 16.3925C12.8974 17.3025 11.2274 17.3025 10.1574 16.3925L9.82744 16.1025C9.36744 15.7125 8.60744 15.6725 8.09744 16.0225L3.17744 19.3325C3.03744 19.4125 2.88744 19.4525 2.74744 19.4525Z"
-									  fill="#6C6C6C"/>
-							</svg>
-						</button>
-						<button type="button"
-								class="position-absolute top-50 start-50 translate-middle transition-default button-reset chat-footer_form__button chat-footer_form__text"
-								id="buttonText">
-							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
-								 fill="none">
-								<path d="M21.52 3.94672L9.47999 7.94672C1.38666 10.6534 1.38666 15.0667 9.47999 17.7601L13.0533 18.9467L14.24 22.5201C16.9333 30.6134 21.36 30.6134 24.0533 22.5201L28.0667 10.4934C29.8533 5.09339 26.92 2.14672 21.52 3.94672ZM21.9467 11.1201L16.88 16.2134C16.68 16.4134 16.4267 16.5067 16.1733 16.5067C15.92 16.5067 15.6667 16.4134 15.4667 16.2134C15.08 15.8267 15.08 15.1867 15.4667 14.8001L20.5333 9.70672C20.92 9.32006 21.56 9.32006 21.9467 9.70672C22.3333 10.0934 22.3333 10.7334 21.9467 11.1201Z"
-									  fill="#1A8917"/>
-							</svg>
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="chat-body vstack flex-fill overflow-hidden position-relative">
+        <div class="chat-wrapper flex-fill py-3 vstack gap-15px">
+            <div class="chat-inner d-flex flex-column gap-15px">
+                <div class="chat-day text-center">
+                    Hôm qua
+                </div>
+                <div class="chat-item hstack align-items-start gap-10px chat-admin">
+                    <div class="chat-item_image flex-shrink-0">
+                        <img src="./assets/images/icon/admin.png" width="40px" height="40px" class="mw-100" alt="">
+                    </div>
+                    <div class="d-inline-flex flex-column gap-5px">
+                        <div class="chat-item_content vstack">
+                            <div class="chat-item_content__name">
+                                CSKH - Tiến
+                            </div>
+                            <div class="chat-item_content__text">
+                                Bạn cần hỗ trợ gì ạ ?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-item hstack align-items-start gap-10px">
+                    <div class="d-inline-flex flex-column gap-5px">
+                        <div class="chat-item_content">
+                            <div class="chat-item_content__text">
+                                Alo alo, hỗ trợ đi bạn ơi.
+                            </div>
+                        </div>
+                        <div class="chat-item_time">
+                            23:54 • 29.06.2021
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-inner d-flex flex-column gap-15px">
+                <div class="chat-day text-center">
+                    Hôm nay
+                </div>
+                <div class="chat-item hstack align-items-start gap-10px chat-admin">
+                    <div class="chat-item_image flex-shrink-0">
+                        <img src="./assets/images/icon/admin.png" width="40px" height="40px" class="mw-100" alt="">
+                    </div>
+                    <div class="d-inline-flex flex-column gap-5px">
+                        <div class="chat-item_content vstack">
+                            <div class="chat-item_content__name">
+                                CSKH - Tiến
+                            </div>
+                            <div class="chat-item_content__text">
+                                Đây bân êi, bạn cần hỗ trợ về vấn đề gì ạ?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-item hstack align-items-start gap-10px">
+                    <div class="d-inline-flex flex-column gap-5px">
+                        <div class="chat-item_content">
+                            <div class="chat-item_content__text">
+                                Giao hàng liền cho mình được không bạn, mình trả tiền ship ngoài.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-item hstack align-items-start gap-10px chat-admin">
+                    <div class="chat-item_image flex-shrink-0">
+                        <img src="./assets/images/icon/admin.png" width="40px" height="40px" class="mw-100" alt="">
+                    </div>
+                    <div class="d-inline-flex flex-column gap-5px">
+                        <div class="chat-item_content vstack">
+                            <div class="chat-item_content__name">
+                                CSKH - Tiến
+                            </div>
+                            <div class="chat-item_content__text">
+                                Ok, bạn chú ý điện thoại nhé
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-inner d-flex flex-column gap-15px">
+                <div class="chat-day text-center">
+                    Hôm qua
+                </div>
+                <div class="chat-item hstack align-items-start gap-10px chat-admin">
+                    <div class="chat-item_image flex-shrink-0">
+                        <img src="./assets/images/icon/admin.png" width="40px" height="40px" class="mw-100" alt="">
+                    </div>
+                    <div class="d-inline-flex flex-column gap-5px">
+                        <div class="chat-item_content vstack">
+                            <div class="chat-item_content__name">
+                                CSKH - Tiến
+                            </div>
+                            <div class="chat-item_content__text">
+                                Bạn cần hỗ trợ gì ạ ?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-item hstack align-items-start gap-10px">
+                    <div class="d-inline-flex flex-column gap-5px">
+                        <div class="chat-item_content">
+                            <div class="chat-item_content__text">
+                                Alo alo, hỗ trợ đi bạn ơi.
+                            </div>
+                        </div>
+                        <div class="chat-item_time">
+                            23:54 • 29.06.2021
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-inner d-flex flex-column gap-15px">
+                <div class="chat-day text-center">
+                    Hôm nay
+                </div>
+                <div class="chat-item hstack align-items-start gap-10px chat-admin">
+                    <div class="chat-item_image flex-shrink-0">
+                        <img src="./assets/images/icon/admin.png" width="40px" height="40px" class="mw-100" alt="">
+                    </div>
+                    <div class="d-inline-flex flex-column gap-5px">
+                        <div class="chat-item_content vstack">
+                            <div class="chat-item_content__name">
+                                CSKH - Tiến
+                            </div>
+                            <div class="chat-item_content__text">
+                                Đây bân êi, bạn cần hỗ trợ về vấn đề gì ạ?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-item hstack align-items-start gap-10px">
+                    <div class="d-inline-flex flex-column gap-5px">
+                        <div class="chat-item_content">
+                            <div class="chat-item_content__text">
+                                Giao hàng liền cho mình được không bạn, mình trả tiền ship ngoài.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-item hstack align-items-start gap-10px chat-admin">
+                    <div class="chat-item_image flex-shrink-0">
+                        <img src="./assets/images/icon/admin.png" width="40px" height="40px" class="mw-100" alt="">
+                    </div>
+                    <div class="d-inline-flex flex-column gap-5px">
+                        <div class="chat-item_content vstack">
+                            <div class="chat-item_content__name">
+                                CSKH - Tiến
+                            </div>
+                            <div class="chat-item_content__text">
+                                Ok, bạn chú ý điện thoại nhé
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-inner d-flex flex-column gap-15px">
+                <div class="chat-day text-center">
+                    Hôm qua
+                </div>
+                <div class="chat-item hstack align-items-start gap-10px chat-admin">
+                    <div class="chat-item_image flex-shrink-0">
+                        <img src="./assets/images/icon/admin.png" width="40px" height="40px" class="mw-100" alt="">
+                    </div>
+                    <div class="d-inline-flex flex-column gap-5px">
+                        <div class="chat-item_content vstack">
+                            <div class="chat-item_content__name">
+                                CSKH - Tiến
+                            </div>
+                            <div class="chat-item_content__text">
+                                Bạn cần hỗ trợ gì ạ ?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-item hstack align-items-start gap-10px">
+                    <div class="d-inline-flex flex-column gap-5px">
+                        <div class="chat-item_content">
+                            <div class="chat-item_content__text">
+                                Alo alo, hỗ trợ đi bạn ơi.
+                            </div>
+                        </div>
+                        <div class="chat-item_time">
+                            23:54 • 29.06.2021
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-inner d-flex flex-column gap-15px">
+                <div class="chat-day text-center">
+                    Hôm nay
+                </div>
+                <div class="chat-item hstack align-items-start gap-10px chat-admin">
+                    <div class="chat-item_image flex-shrink-0">
+                        <img src="./assets/images/icon/admin.png" width="40px" height="40px" class="mw-100" alt="">
+                    </div>
+                    <div class="d-inline-flex flex-column gap-5px">
+                        <div class="chat-item_content vstack">
+                            <div class="chat-item_content__name">
+                                CSKH - Tiến
+                            </div>
+                            <div class="chat-item_content__text">
+                                Đây bân êi, bạn cần hỗ trợ về vấn đề gì ạ?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-item hstack align-items-start gap-10px">
+                    <div class="d-inline-flex flex-column gap-5px">
+                        <div class="chat-item_content">
+                            <div class="chat-item_content__text">
+                                Giao hàng liền cho mình được không bạn, mình trả tiền ship ngoài.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-item hstack align-items-start gap-10px chat-admin">
+                    <div class="chat-item_image flex-shrink-0">
+                        <img src="./assets/images/icon/admin.png" width="40px" height="40px" class="mw-100" alt="">
+                    </div>
+                    <div class="d-inline-flex flex-column gap-5px">
+                        <div class="chat-item_content vstack">
+                            <div class="chat-item_content__name">
+                                CSKH - Tiến
+                            </div>
+                            <div class="chat-item_content__text">
+                                Ok, bạn chú ý điện thoại nhé
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="chat-footer mt-auto py-3">
+        <div class="container">
+            <div class="chat-footer_hint hstack gap-15px">
+                <button type="button" class="button-reset text-nowrap button-hint">
+                    Cảm ơn bạn nhé.
+                </button>
+                <button type="button" class="button-reset text-nowrap button-hint">
+                    Tôi cần hỗ trợ gấp.
+                </button>
+                <button type="button" class="button-reset text-nowrap button-hint">
+                    Thời gian giao hàng là bao lâu?
+                </button>
+                <button type="button" class="button-reset text-nowrap button-hint">
+                    Cảm ơn bạn nhé.
+                </button>
+                <button type="button" class="button-reset text-nowrap button-hint">
+                    Tôi cần hỗ trợ gấp.
+                </button>
+                <button type="button" class="button-reset text-nowrap button-hint">
+                    Thời gian giao hàng là bao lâu?
+                </button>
+                <button type="button" class="button-reset text-nowrap button-hint">
+                    Cảm ơn bạn nhé.
+                </button>
+                <button type="button" class="button-reset text-nowrap button-hint">
+                    Tôi cần hỗ trợ gấp.
+                </button>
+                <button type="button" class="button-reset text-nowrap button-hint">
+                    Thời gian giao hàng là bao lâu?
+                </button>
+            </div>
+            <div class="chat-footer_form hstack align-items-center gap-2">
+                <div class="position-relative hstack align-items-center w-100">
+                        <textarea class="chat-footer_form__input" id="handleCalcHeightTextarea"
+                                  placeholder="Nhập nội dung"></textarea>
+                    <button type="button" class="button-reset chat-footer_form__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                             fill="none">
+                            <path d="M2 12.96V15C2 20 4 22 9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9"
+                                  stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M15.5 9.75C16.3284 9.75 17 9.07843 17 8.25C17 7.42157 16.3284 6.75 15.5 6.75C14.6716 6.75 14 7.42157 14 8.25C14 9.07843 14.6716 9.75 15.5 9.75Z"
+                                  stroke="#6C6C6C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M8.5 9.75C9.32843 9.75 10 9.07843 10 8.25C10 7.42157 9.32843 6.75 8.5 6.75C7.67157 6.75 7 7.42157 7 8.25C7 9.07843 7.67157 9.75 8.5 9.75Z"
+                                  stroke="#6C6C6C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M8.4 13.2998H15.6C16.1 13.2998 16.5 13.6998 16.5 14.1998C16.5 16.6898 14.49 18.6998 12 18.6998C9.51 18.6998 7.5 16.6898 7.5 14.1998C7.5 13.6998 7.9 13.2998 8.4 13.2998Z"
+                                  stroke="#6C6C6C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="chat-footer_form__buttons d-flex align-items-center justify-content-center position-relative flex-shrink-0">
+                    <button type="button"
+                            class="position-absolute is-show top-50 start-50 translate-middle transition-default button-reset chat-footer_form__button chat-footer_form__image"
+                            id="buttonImage">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                             fill="none">
+                            <path d="M9 10.75C7.48 10.75 6.25 9.52 6.25 8C6.25 6.48 7.48 5.25 9 5.25C10.52 5.25 11.75 6.48 11.75 8C11.75 9.52 10.52 10.75 9 10.75ZM9 6.75C8.31 6.75 7.75 7.31 7.75 8C7.75 8.69 8.31 9.25 9 9.25C9.69 9.25 10.25 8.69 10.25 8C10.25 7.31 9.69 6.75 9 6.75Z"
+                                  fill="#6C6C6C"/>
+                            <path d="M15 22.75H9C3.57 22.75 1.25 20.43 1.25 15V9C1.25 3.57 3.57 1.25 9 1.25H13C13.41 1.25 13.75 1.59 13.75 2C13.75 2.41 13.41 2.75 13 2.75H9C4.39 2.75 2.75 4.39 2.75 9V15C2.75 19.61 4.39 21.25 9 21.25H15C19.61 21.25 21.25 19.61 21.25 15V10C21.25 9.59 21.59 9.25 22 9.25C22.41 9.25 22.75 9.59 22.75 10V15C22.75 20.43 20.43 22.75 15 22.75Z"
+                                  fill="#6C6C6C"/>
+                            <path d="M21.25 5.75H15.75C15.34 5.75 15 5.41 15 5C15 4.59 15.34 4.25 15.75 4.25H21.25C21.66 4.25 22 4.59 22 5C22 5.41 21.66 5.75 21.25 5.75Z"
+                                  fill="#6C6C6C"/>
+                            <path d="M18.5 8.5C18.09 8.5 17.75 8.16 17.75 7.75V2.25C17.75 1.84 18.09 1.5 18.5 1.5C18.91 1.5 19.25 1.84 19.25 2.25V7.75C19.25 8.16 18.91 8.5 18.5 8.5Z"
+                                  fill="#6C6C6C"/>
+                            <path d="M2.74744 19.4525C2.50744 19.4525 2.26744 19.3325 2.12744 19.1225C1.89744 18.7825 1.98744 18.3125 2.32744 18.0825L7.25744 14.7725C8.33744 14.0525 9.82744 14.1325 10.8074 14.9625L11.1374 15.2525C11.6374 15.6825 12.4874 15.6825 12.9774 15.2525L17.1374 11.6825C18.2074 10.7725 19.8674 10.7725 20.9374 11.6825L22.5674 13.0825C22.8774 13.3525 22.9174 13.8225 22.6474 14.1425C22.3774 14.4525 21.9074 14.4925 21.5874 14.2225L19.9574 12.8225C19.4574 12.3925 18.6074 12.3925 18.1174 12.8225L13.9574 16.3925C12.8974 17.3025 11.2274 17.3025 10.1574 16.3925L9.82744 16.1025C9.36744 15.7125 8.60744 15.6725 8.09744 16.0225L3.17744 19.3325C3.03744 19.4125 2.88744 19.4525 2.74744 19.4525Z"
+                                  fill="#6C6C6C"/>
+                        </svg>
+                    </button>
+                    <button type="button"
+                            class="position-absolute top-50 start-50 translate-middle transition-default button-reset chat-footer_form__button chat-footer_form__text"
+                            id="buttonText">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                             fill="none">
+                            <path d="M21.52 3.94672L9.47999 7.94672C1.38666 10.6534 1.38666 15.0667 9.47999 17.7601L13.0533 18.9467L14.24 22.5201C16.9333 30.6134 21.36 30.6134 24.0533 22.5201L28.0667 10.4934C29.8533 5.09339 26.92 2.14672 21.52 3.94672ZM21.9467 11.1201L16.88 16.2134C16.68 16.4134 16.4267 16.5067 16.1733 16.5067C15.92 16.5067 15.6667 16.4134 15.4667 16.2134C15.08 15.8267 15.08 15.1867 15.4667 14.8001L20.5333 9.70672C20.92 9.32006 21.56 9.32006 21.9467 9.70672C22.3333 10.0934 22.3333 10.7334 21.9467 11.1201Z"
+                                  fill="#1A8917"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
@@ -164,7 +395,7 @@
 <script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-labels.js"></script>
 <script type="text/javascript"
-		src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/daterangepicker/daterangepicker.min.js"></script>

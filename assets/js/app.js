@@ -604,6 +604,37 @@ export function handleScrollTabActive() {
     }
 }
 
+/****
+ * Handle Calculator Height Textarea Chat
+ */
+export function handleCalcHeightTextarea() {
+    const textareaChat = document.getElementById('handleCalcHeightTextarea');
+    const buttonImage = document.getElementById('buttonImage');
+    const buttonText = document.getElementById('buttonText');
+
+    if (textareaChat !== null) {
+        textareaChat.addEventListener('input', () => {
+            if (textareaChat.value.trim() !== '') {
+                textareaChat.style.height = textareaChat.scrollHeight + 'px';
+                if (buttonImage !== null) {
+                    buttonImage.classList.remove('is-show');
+                }
+                if (buttonText !== null) {
+                    buttonText.classList.add('is-show');
+                }
+            } else {
+                textareaChat.style.height = '40px';
+                if (buttonImage !== null) {
+                    buttonImage.classList.add('is-show');
+                }
+                if (buttonText !== null) {
+                    buttonText.classList.remove('is-show');
+                }
+            }
+        });
+    }
+}
+
 window.addEventListener('load', function () {
     handleNavigation();
 
@@ -650,6 +681,8 @@ window.addEventListener('load', function () {
     handleAddVoucher();
 
     handleScrollTabActive();
+
+    handleCalcHeightTextarea();
 
     window.addEventListener("resize", () => {
         windowWidth = window.innerWidth;
