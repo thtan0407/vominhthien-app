@@ -489,3 +489,23 @@ input[type='number'] {
 .modal.show .modal-dialog {
     transform: none;
 }
+
+.fancybox__container {
+    --fancybox-bg: rgba(24, 24, 27, 0.68);
+}
+
+.is-compact .fancybox__toolbar {
+    top: 5px;
+}
+
+.fancybox__toolbar .fancybox__toolbar__column .f-button {
+    border-radius: 50%;
+    background: linear-gradient(90deg, #E9750E 0%, #FF993E 100%) !important;
+    width: 36px;
+    height: 36px;
+}
+
+.fancybox__toolbar .fancybox__toolbar__column .f-button svg{
+    width: 15px;
+    height: 15px;
+}

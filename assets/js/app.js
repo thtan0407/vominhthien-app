@@ -635,6 +635,27 @@ export function handleCalcHeightTextarea() {
     }
 }
 
+/****
+ * Init fancybox version 5.0
+ * File Đính kèm
+ * Page gui-hang-trung-quoc-ttchung-file-dinh-kem.html
+ */
+export function handleInitFancyboxFile() {
+    Fancybox.bind("[data-fancybox=file-dinh-kem]", {
+        Toolbar: {
+            display: {
+                left: [""],
+                middle: ["close",],
+                right: [""],
+            },
+        },
+        idle: false,
+        Thumbs: {
+            type: "classic",
+        },
+    });
+}
+
 window.addEventListener('load', function () {
     handleNavigation();
 
@@ -683,6 +704,8 @@ window.addEventListener('load', function () {
     handleScrollTabActive();
 
     handleCalcHeightTextarea();
+
+    handleInitFancyboxFile();
 
     window.addEventListener("resize", () => {
         windowWidth = window.innerWidth;
