@@ -336,20 +336,20 @@
                     <div class="theme-tabs theme-tabs_overflow">
                         <ul class="nav nav-tabs border-0 flex-nowrap align-items-center justify-content-start">
                             <li class="nav-item">
-                                <a href="./dhtq-rut-gon-ttchung-tai-chinh.html"
+                                <a href="./nk-chinh-ngach-ttchung-tai-chinh.html"
                                    class="nav-link active px-3 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
                                     Thông tin chung
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./dhtq-rut-gon-cap-nhat-tat-ca.html"
+                                <a href="./nk-chinh-ngach-cap-nhat-tat-ca.html"
                                    class="nav-link px-3 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
                                     Cập nhật
                                     <span class="position-absolute rounded-circle background-red top-50 translate-middle-y"></span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./dhtq-rut-gon-lo-trinh.html"
+                                <a href="./nk-chinh-ngach-lo-trinh.html"
                                    class="nav-link px-3 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
                                     Lộ trình
                                 </a>
@@ -366,27 +366,33 @@
             <div class="theme-tabs theme-tabs_dark theme-tabs_overflow mt-1">
                 <ul class="nav nav-tabs border-0 flex-nowrap align-items-center justify-content-start">
                     <li class="nav-item">
-                        <a href="./dhtq-rut-gon-ttchung-tai-chinh.html"
+                        <a href="./nk-chinh-ngach-ttchung-tai-chinh.html"
                            class="nav-link active px-3 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
                             Tài chính
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="./dhtq-rut-gon-ttchung-san-pham.html"
+                        <a href="./nk-chinh-ngach-ttchung-san-pham.html"
                            class="nav-link px-3 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
                             Sản phẩm
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="./dhtq-rut-gon-ttchung-dich-vu.html"
+                        <a href="./nk-chinh-ngach-ttchung-dich-vu.html"
                            class="nav-link px-3 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
                             Dịch vụ
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="./dhtq-rut-gon-ttchung-kienhang-vanchuyen.html"
+                        <a href="./nk-chinh-ngach-ttchung-kienhang-vanchuyen.html"
                            class="nav-link px-3 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
                             Kiện hàng và vận chuyển
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./nk-chinh-ngach-ttchung-hop-dong.html"
+                           class="nav-link px-3 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+                            Hợp đồng
                         </a>
                     </li>
                 </ul>
@@ -417,14 +423,6 @@
                                 </div>
                             </div>
                             <div class="order-item_list vstack gap-10px pt-2 ps-2">
-                                <div class="hstack align-items-start justify-content-between gap-10px">
-                                    <div class="text-black heading-4 fw-normal">
-                                        Tổng tiền hàng
-                                    </div>
-                                    <div class="black-50-color heading-4">
-                                        621.000đ
-                                    </div>
-                                </div>
                                 <div class="hstack align-items-start justify-content-between gap-10px">
                                     <div class="text-black heading-4 fw-normal">
                                         Vận chuyển nội địa
@@ -519,6 +517,95 @@
                         <div class="order-item">
                             <div class="hstack align-items-start justify-content-between gap-10px">
                                 <div class="orange-color heading-4">
+                                    Biểu phí chính ngạch
+                                </div>
+                            </div>
+                            <div class="order-item_list vstack gap-10px pt-2 ps-2">
+                                <div class="hstack align-items-start justify-content-between gap-10px">
+                                    <div class="text-black heading-4 fw-normal">
+                                        Phí ủy thác NK
+                                    </div>
+                                    <div class="black-50-color heading-4">
+                                        10.000đ
+                                    </div>
+                                </div>
+                                <div class="hstack align-items-start justify-content-between gap-10px">
+                                    <div class="gray-color heading-4 fw-normal">
+                                        Phí VAT
+                                    </div>
+                                    <div class="black-50-color heading-4">
+                                        10.000đ
+                                    </div>
+                                </div>
+                                <div class="hstack align-items-start justify-content-between gap-10px">
+                                    <div class="gray-color heading-4 fw-normal">
+                                        Thuế nhập khẩu
+                                    </div>
+                                    <div class="gray-color heading-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                            <path d="M18.3333 9.99935C18.3333 14.5993 14.6 18.3327 9.99996 18.3327C5.39996 18.3327 1.66663 14.5993 1.66663 9.99935C1.66663 5.39935 5.39996 1.66602 9.99996 1.66602C14.6 1.66602 18.3333 5.39935 18.3333 9.99935Z"
+                                                  stroke="#919191" stroke-width="1.5" stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                            <path d="M13.0917 12.6495L10.5083 11.1078C10.0583 10.8411 9.69165 10.1995 9.69165 9.67448V6.25781"
+                                                  stroke="#919191" stroke-width="1.5" stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="hstack align-items-start justify-content-between gap-10px">
+                                    <div class="gray-color heading-4 fw-normal">
+                                        Kiểm định chất lượng
+                                    </div>
+                                    <div class="gray-color heading-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                            <path d="M18.3333 9.99935C18.3333 14.5993 14.6 18.3327 9.99996 18.3327C5.39996 18.3327 1.66663 14.5993 1.66663 9.99935C1.66663 5.39935 5.39996 1.66602 9.99996 1.66602C14.6 1.66602 18.3333 5.39935 18.3333 9.99935Z"
+                                                  stroke="#919191" stroke-width="1.5" stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                            <path d="M13.0917 12.6495L10.5083 11.1078C10.0583 10.8411 9.69165 10.1995 9.69165 9.67448V6.25781"
+                                                  stroke="#919191" stroke-width="1.5" stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="hstack align-items-start justify-content-between gap-10px">
+                                    <div class="gray-color heading-4 fw-normal">
+                                        Chứng nhận hợp quy
+                                    </div>
+                                    <div class="gray-color heading-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                            <path d="M18.3333 9.99935C18.3333 14.5993 14.6 18.3327 9.99996 18.3327C5.39996 18.3327 1.66663 14.5993 1.66663 9.99935C1.66663 5.39935 5.39996 1.66602 9.99996 1.66602C14.6 1.66602 18.3333 5.39935 18.3333 9.99935Z"
+                                                  stroke="#919191" stroke-width="1.5" stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                            <path d="M13.0917 12.6495L10.5083 11.1078C10.0583 10.8411 9.69165 10.1995 9.69165 9.67448V6.25781"
+                                                  stroke="#919191" stroke-width="1.5" stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="hstack align-items-start justify-content-between gap-10px">
+                                    <div class="gray-color heading-4 fw-normal">
+                                        Phí phát sinh
+                                    </div>
+                                    <div class="gray-color heading-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                            <path d="M18.3333 9.99935C18.3333 14.5993 14.6 18.3327 9.99996 18.3327C5.39996 18.3327 1.66663 14.5993 1.66663 9.99935C1.66663 5.39935 5.39996 1.66602 9.99996 1.66602C14.6 1.66602 18.3333 5.39935 18.3333 9.99935Z"
+                                                  stroke="#919191" stroke-width="1.5" stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                            <path d="M13.0917 12.6495L10.5083 11.1078C10.0583 10.8411 9.69165 10.1995 9.69165 9.67448V6.25781"
+                                                  stroke="#919191" stroke-width="1.5" stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <div class="hstack align-items-start justify-content-between gap-10px">
+                                <div class="orange-color heading-4">
                                     Voucher
                                 </div>
                             </div>
@@ -539,14 +626,15 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="vstack gap-10px order-item_wrapper">
                             <div class="order-item">
                                 <div class="hstack align-items-start justify-content-between gap-10px">
                                     <div class="primary-color heading-4">
                                         Tạm tính
                                     </div>
-                                    <div class="gray-color fw-normal heading-4">
-                                        Chờ báo giá
+                                    <div class="text-black heading-4">
+                                        754.000đ
                                     </div>
                                 </div>
                             </div>
@@ -555,17 +643,14 @@
                                     <div class="primary-color heading-4">
                                         Cần đặt cọc
                                     </div>
-                                    <div class="gray-color fw-normal heading-4">
-                                        Chờ báo giá
+                                    <div class="primary-color heading-4">
+                                        657.000đ
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="order-item">
-                            <div class="vstack gap-1 justify-content-center text-center align-items-center">
-                                <div class="black-50-color fw-normal heading-4">
-                                    Nhân viên đang báo giá, vui lòng chờ trong giây lát.
-                                </div>
+                            <div class="hstack gap-2 justify-content-end align-items-center">
                                 <button type="button"
                                         class="button-reset primary-color hstack align-items-center justify-content-center heading-4 fw-normal">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="21"
@@ -580,7 +665,11 @@
                                         <path d="M13.5116 19.0855L8.5116 19.092C3.82828 19.0981 2.88383 16.9493 2.87933 13.4743L2.87286 8.4743C2.86794 4.67431 4.24084 3.04753 7.62394 2.86815C7.97392 2.85103 8.26592 3.10899 8.28304 3.45896C8.30016 3.80894 8.03386 4.09262 7.69221 4.10973C5.32572 4.24613 4.11831 4.95602 4.12286 8.47269L4.12933 13.4727C4.13332 16.556 4.74332 17.8469 8.50999 17.842L13.51 17.8355C17.2766 17.8307 17.8833 16.5382 17.8793 13.4549L17.8728 8.45489C17.8683 4.93823 16.659 4.23146 14.2922 4.10119C13.9505 4.08496 13.6835 3.78531 13.6997 3.44362C13.7159 3.10193 14.0156 2.83488 14.3573 2.8511C17.7408 3.03006 19.1179 4.65328 19.1228 8.44494L19.1293 13.4449C19.1338 16.9283 18.1949 19.0795 13.5116 19.0855Z"
                                               fill="#1A8917"/>
                                     </svg>
-                                    Hủy yêu cầu
+                                    Hủy yêu cầu?
+                                </button>
+                                <button type="button"
+                                        class="button-theme button-gradient_green button-them_sm">
+                                    Thanh toán
                                 </button>
                             </div>
                         </div>

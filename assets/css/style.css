@@ -1275,7 +1275,7 @@
     pointer-events: auto;
 }
 
-.theme-tabs.theme-tabs_overflow {
+.theme-tabs.theme-tabs_overflow{
     max-width: 100%;
     overflow-x: auto;
 }
@@ -1858,7 +1858,7 @@
     height: calc(100% + 12.5px);
     background: #ccc;
     top: 12.5px;
-    left: 102px;
+    left: 92px;
 }
 
 .order-process_item:last-child:before {
@@ -1866,7 +1866,7 @@
 }
 
 .order-process_item .order-process_item__time {
-    width: 80px;
+    width: 70px;
     font-size: .925em;
 }
 
