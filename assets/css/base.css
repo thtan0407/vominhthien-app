@@ -389,6 +389,11 @@ input[type='number'] {
     background-color: transparent;
 }
 
+.button-background_orange {
+    background: #E9750E;
+    color: var(--bs-white) !important;
+}
+
 .button-outline_orange {
     border: 1px solid #E9750E;
     color: #E9750E !important;
@@ -505,7 +510,7 @@ input[type='number'] {
     height: 36px;
 }
 
-.fancybox__toolbar .fancybox__toolbar__column .f-button svg{
+.fancybox__toolbar .fancybox__toolbar__column .f-button svg {
     width: 15px;
     height: 15px;
 }
