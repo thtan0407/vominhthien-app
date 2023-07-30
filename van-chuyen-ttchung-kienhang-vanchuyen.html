@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Template VMT App</title>
+    <meta name="description" content="Template VMT App">
+    <meta name="author" content="">
+
+    <meta property="og:title" content="Template VMT App">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Template VMT App">
+    <meta property="og:image" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+
+    <link rel="icon" href="./assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+    <link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<div class="modal modal-bottom fade modal-notification" id="modal-pay" data-bs-backdrop="static"
+     data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+            <div class="modal-body bg-white">
+                <div class="vstack align-items-center justify-content-center gap-15px">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
+                        <path opacity="0.4"
+                              d="M28.9999 53.1663C42.3468 53.1663 53.1666 42.3466 53.1666 28.9997C53.1666 15.6528 42.3468 4.83301 28.9999 4.83301C15.653 4.83301 4.83325 15.6528 4.83325 28.9997C4.83325 42.3466 15.653 53.1663 28.9999 53.1663Z"
+                              fill="#E9750E"/>
+                        <path d="M29 33.2288C29.9908 33.2288 30.8125 32.4072 30.8125 31.4163V19.333C30.8125 18.3422 29.9908 17.5205 29 17.5205C28.0092 17.5205 27.1875 18.3422 27.1875 19.333V31.4163C27.1875 32.4072 28.0092 33.2288 29 33.2288Z"
+                              fill="#E9750E"/>
+                        <path d="M31.2233 37.748C31.1024 37.458 30.9333 37.1921 30.7158 36.9505C30.4741 36.733 30.2083 36.5638 29.9183 36.443C29.3383 36.2013 28.6616 36.2013 28.0816 36.443C27.7916 36.5638 27.5258 36.733 27.2841 36.9505C27.0666 37.1921 26.8974 37.458 26.7766 37.748C26.6558 38.038 26.5833 38.3521 26.5833 38.6663C26.5833 38.9805 26.6558 39.2946 26.7766 39.5846C26.8974 39.8988 27.0666 40.1405 27.2841 40.3821C27.5258 40.5996 27.7916 40.7688 28.0816 40.8896C28.3716 41.0105 28.6858 41.083 28.9999 41.083C29.3141 41.083 29.6283 41.0105 29.9183 40.8896C30.2083 40.7688 30.4741 40.5996 30.7158 40.3821C30.9333 40.1405 31.1024 39.8988 31.2233 39.5846C31.3441 39.2946 31.4166 38.9805 31.4166 38.6663C31.4166 38.3521 31.3441 38.038 31.2233 37.748Z"
+                              fill="#E9750E"/>
+                    </svg>
+                    <div class="heading-3 text-black text-center">
+                        Xác nhận thanh toán số tiền <br>5.403.000đ cho ơn hàng XXX
+                    </div>
+                    <div class="text-center hstack gap-2 w-100">
+                        <button type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modal-pay_success"
+                                class="button-theme button-gradient_green flex-fill w-50">
+                            Thanh toán
+                        </button>
+                        <button data-bs-dismiss="modal" type="button"
+                                class="button-theme button-outline_green flex-fill w-50">
+                            Hủy
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-bottom fade modal-notification" id="modal-pay_success" data-bs-backdrop="static"
+     data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+            <div class="modal-body bg-white">
+                <div class="vstack align-items-center justify-content-center gap-15px">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="59" viewBox="0 0 58 59"
+                         fill="none">
+                        <path opacity="0.4"
+                              d="M39.2466 9.52759H18.7533C12.7841 9.52759 7.95081 14.3851 7.95081 20.3301V43.0709C7.95081 49.0159 12.8083 53.8734 18.7533 53.8734H39.2225C45.1916 53.8734 50.025 49.0159 50.025 43.0709V20.3301C50.0491 14.3609 45.1916 9.52759 39.2466 9.52759Z"
+                              fill="#1A8917"/>
+                        <path d="M34.6791 5.54004H23.3208C20.8075 5.54004 18.7533 7.57004 18.7533 10.0834V12.355C18.7533 14.8684 20.7833 16.8984 23.2966 16.8984H34.6791C37.1925 16.8984 39.2225 14.8684 39.2225 12.355V10.0834C39.2466 7.57004 37.1925 5.54004 34.6791 5.54004Z"
+                              fill="#1A8917"/>
+                        <path d="M26.1242 41.6692C25.665 41.6692 25.2059 41.5 24.8434 41.1375L21.2184 37.5125C20.5175 36.8117 20.5175 35.6517 21.2184 34.9508C21.9192 34.25 23.0792 34.25 23.78 34.9508L26.1242 37.295L34.51 28.9092C35.2109 28.2083 36.3709 28.2083 37.0717 28.9092C37.7725 29.61 37.7725 30.77 37.0717 31.4708L27.405 41.1375C27.0667 41.5 26.5834 41.6692 26.1242 41.6692Z"
+                              fill="#1A8917"/>
+                    </svg>
+                    <div class="heading-3 text-black text-center">
+                        Thanh toán thành công
+                    </div>
+                    <div class="text-center hstack gap-2 w-100">
+                        <button type="button"
+                                data-bs-dismiss="modal"
+                                class="button-theme button-gradient_green flex-fill w-100">
+                            Đóng
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-bottom fade modal-theme" id="modal-voucher" data-bs-backdrop="static"
+     data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content modal-theme_inner border-0">
+            <div class="modal-header pb-0 border-bottom-0 hstack">
+                <div class="modal-theme_header modal-theme_header_solid hstack w-100 gap-2 align-items-center primary-color heading-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M3.75 5C3.75 4.30964 4.30964 3.75 5 3.75H11.1716C11.5031 3.75 11.821 3.8817 12.0555 4.11612L21.0555 13.1161C21.5436 13.6043 21.5436 14.3957 21.0555 14.8839L14.8839 21.0555C14.3957 21.5436 13.6043 21.5436 13.1161 21.0555L4.11612 12.0555C3.8817 11.821 3.75 11.5031 3.75 11.1716V5ZM5 2.25C3.48122 2.25 2.25 3.48122 2.25 5V11.1716C2.25 11.9009 2.53973 12.6004 3.05546 13.1161L12.0555 22.1161C13.1294 23.1901 14.8706 23.1901 15.9445 22.1161L22.1161 15.9445C23.1901 14.8706 23.1901 13.1294 22.1161 12.0555L13.1161 3.05546C12.6004 2.53973 11.9009 2.25 11.1716 2.25H5ZM7.6 9C7.6 8.2268 8.2268 7.6 9 7.6C9.7732 7.6 10.4 8.2268 10.4 9C10.4 9.7732 9.7732 10.4 9 10.4C8.2268 10.4 7.6 9.7732 7.6 9ZM9 6.4C7.56406 6.4 6.4 7.56406 6.4 9C6.4 10.4359 7.56406 11.6 9 11.6C10.4359 11.6 11.6 10.4359 11.6 9C11.6 7.56406 10.4359 6.4 9 6.4Z"
+                              fill="#1A8917"/>
+                    </svg>
+                    Khiếu nại
+                    <button type="button" class="button-reset ms-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 5L12 12M12 12L19 19M12 12L19 5M12 12L5 19" stroke="#444444" stroke-width="1.8"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body bg-transparent vstack gap-15px">
+                <div class="modal-theme_body flex-fill w-100 vstack gap-10px">
+                    <div class="vstack gap-15px">
+                        <div class="vstack gap-10px">
+                            <div class="heading-4">
+                                Nhập voucher
+                            </div>
+                            <div class="voucher-input position-relative">
+                                <input type="text" placeholder="Nhập mã voucher">
+                                <button type="button" id="add-voucher" class="button-reset primary-color">Áp dụng
+                                </button>
+                            </div>
+                        </div>
+                        <div class="vstack gap-10px">
+                            <div class="heading-4">
+                                Voucher đã lưu
+                            </div>
+                            <div id="voucher-list" class="vstack gap-15px">
+                                <div class="voucher-item voucher-new p-3 hstack align-items-start gap-3">
+                                    <div class="flex-shrink-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                             viewBox="0 0 36 36"
+                                             fill="none">
+                                            <path d="M33.75 5.625H12.375C12.0758 5.625 11.79 5.74425 11.5785 5.9535L10.125 7.40925L8.6715 5.9535C8.46 5.74425 8.17425 5.625 7.875 5.625H2.25C1.01025 5.625 0 6.63525 0 7.875V28.125C0 29.367 1.01025 30.375 2.25 30.375H7.875C8.17425 30.375 8.46 30.2558 8.6715 30.0465L10.125 28.5907L11.5785 30.0442C11.79 30.2557 12.0758 30.375 12.375 30.375H33.75C34.992 30.375 36 29.367 36 28.125V7.875C36 6.63525 34.992 5.625 33.75 5.625Z"
+                                                  class="voucher-fill"/>
+                                            <path d="M19.125 16.875C17.2642 16.875 15.75 15.3608 15.75 13.5C15.75 11.6392 17.2642 10.125 19.125 10.125C20.9858 10.125 22.5 11.6392 22.5 13.5C22.5 15.3608 20.9858 16.875 19.125 16.875ZM19.125 12.375C18.504 12.375 18 12.879 18 13.5C18 14.121 18.504 14.625 19.125 14.625C19.746 14.625 20.25 14.121 20.25 13.5C20.25 12.879 19.746 12.375 19.125 12.375Z"
+                                                  fill="white"/>
+                                            <path d="M25.875 25.875C24.0142 25.875 22.5 24.3608 22.5 22.5C22.5 20.6392 24.0142 19.125 25.875 19.125C27.7358 19.125 29.25 20.6392 29.25 22.5C29.25 24.3608 27.7358 25.875 25.875 25.875ZM25.875 21.375C25.2562 21.375 24.75 21.8812 24.75 22.5C24.75 23.1188 25.2562 23.625 25.875 23.625C26.4938 23.625 27 23.1188 27 22.5C27 21.8812 26.4938 21.375 25.875 21.375Z"
+                                                  fill="white"/>
+                                            <path d="M16.875 25.8747C16.6207 25.8747 16.3665 25.7892 16.155 25.6137C15.678 25.2155 15.6127 24.5067 16.011 24.0297L27.261 10.5297C27.6615 10.0505 28.3702 9.992 28.845 10.3857C29.322 10.784 29.385 11.4927 28.9867 11.972L17.7367 25.472C17.5162 25.7352 17.1967 25.8747 16.875 25.8747Z"
+                                                  fill="white"/>
+                                            <path d="M11.25 10.125H9V12.375H11.25V10.125Z" fill="white"/>
+                                            <path d="M11.25 23.625H9V25.875H11.25V23.625Z" fill="white"/>
+                                            <path d="M11.25 19.125H9V21.375H11.25V19.125Z" fill="white"/>
+                                            <path d="M11.25 14.625H9V16.875H11.25V14.625Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                    <div class="vstack gap-2">
+                                        <div class="heading-4">
+                                            Khuyến mãi tháng 7
+                                        </div>
+                                        <div class="primary-color">Hạn sử dụng: 31.07.2021</div>
+                                        <div class="voucher-item_divider heading-4">
+                                            [VMTTAUJUL30]&nbsp;<span class="fw-normal">Giảm giá ngay 30% cho đơn hàng đi
+                                            bằng tàu về
+                                            TP.HCMM</span>
+                                        </div>
+                                        <div class="black-50-color">
+                                            Số lượng: x1
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="voucher-item p-3 hstack align-items-start gap-3">
+                                    <div class="flex-shrink-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                             viewBox="0 0 36 36"
+                                             fill="none">
+                                            <path d="M33.75 5.625H12.375C12.0758 5.625 11.79 5.74425 11.5785 5.9535L10.125 7.40925L8.6715 5.9535C8.46 5.74425 8.17425 5.625 7.875 5.625H2.25C1.01025 5.625 0 6.63525 0 7.875V28.125C0 29.367 1.01025 30.375 2.25 30.375H7.875C8.17425 30.375 8.46 30.2558 8.6715 30.0465L10.125 28.5907L11.5785 30.0442C11.79 30.2557 12.0758 30.375 12.375 30.375H33.75C34.992 30.375 36 29.367 36 28.125V7.875C36 6.63525 34.992 5.625 33.75 5.625Z"
+                                                  class="voucher-fill"/>
+                                            <path d="M19.125 16.875C17.2642 16.875 15.75 15.3608 15.75 13.5C15.75 11.6392 17.2642 10.125 19.125 10.125C20.9858 10.125 22.5 11.6392 22.5 13.5C22.5 15.3608 20.9858 16.875 19.125 16.875ZM19.125 12.375C18.504 12.375 18 12.879 18 13.5C18 14.121 18.504 14.625 19.125 14.625C19.746 14.625 20.25 14.121 20.25 13.5C20.25 12.879 19.746 12.375 19.125 12.375Z"
+                                                  fill="white"/>
+                                            <path d="M25.875 25.875C24.0142 25.875 22.5 24.3608 22.5 22.5C22.5 20.6392 24.0142 19.125 25.875 19.125C27.7358 19.125 29.25 20.6392 29.25 22.5C29.25 24.3608 27.7358 25.875 25.875 25.875ZM25.875 21.375C25.2562 21.375 24.75 21.8812 24.75 22.5C24.75 23.1188 25.2562 23.625 25.875 23.625C26.4938 23.625 27 23.1188 27 22.5C27 21.8812 26.4938 21.375 25.875 21.375Z"
+                                                  fill="white"/>
+                                            <path d="M16.875 25.8747C16.6207 25.8747 16.3665 25.7892 16.155 25.6137C15.678 25.2155 15.6127 24.5067 16.011 24.0297L27.261 10.5297C27.6615 10.0505 28.3702 9.992 28.845 10.3857C29.322 10.784 29.385 11.4927 28.9867 11.972L17.7367 25.472C17.5162 25.7352 17.1967 25.8747 16.875 25.8747Z"
+                                                  fill="white"/>
+                                            <path d="M11.25 10.125H9V12.375H11.25V10.125Z" fill="white"/>
+                                            <path d="M11.25 23.625H9V25.875H11.25V23.625Z" fill="white"/>
+                                            <path d="M11.25 19.125H9V21.375H11.25V19.125Z" fill="white"/>
+                                            <path d="M11.25 14.625H9V16.875H11.25V14.625Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                    <div class="vstack gap-2">
+                                        <div class="heading-4">
+                                            Khuyến mãi tháng 7
+                                        </div>
+                                        <div class="primary-color">Hạn sử dụng: 31.07.2021</div>
+                                        <div class="voucher-item_divider heading-4">
+                                            [VMTTAUJUL30]&nbsp;<span class="fw-normal">Giảm giá ngay 30% cho đơn hàng đi
+                                            bằng tàu về
+                                            TP.HCMM</span>
+                                        </div>
+                                        <div class="black-50-color">
+                                            Số lượng: x1
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="voucher-item p-3 hstack align-items-start gap-3">
+                                    <div class="flex-shrink-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                             viewBox="0 0 36 36"
+                                             fill="none">
+                                            <path d="M33.75 5.625H12.375C12.0758 5.625 11.79 5.74425 11.5785 5.9535L10.125 7.40925L8.6715 5.9535C8.46 5.74425 8.17425 5.625 7.875 5.625H2.25C1.01025 5.625 0 6.63525 0 7.875V28.125C0 29.367 1.01025 30.375 2.25 30.375H7.875C8.17425 30.375 8.46 30.2558 8.6715 30.0465L10.125 28.5907L11.5785 30.0442C11.79 30.2557 12.0758 30.375 12.375 30.375H33.75C34.992 30.375 36 29.367 36 28.125V7.875C36 6.63525 34.992 5.625 33.75 5.625Z"
+                                                  class="voucher-fill"/>
+                                            <path d="M19.125 16.875C17.2642 16.875 15.75 15.3608 15.75 13.5C15.75 11.6392 17.2642 10.125 19.125 10.125C20.9858 10.125 22.5 11.6392 22.5 13.5C22.5 15.3608 20.9858 16.875 19.125 16.875ZM19.125 12.375C18.504 12.375 18 12.879 18 13.5C18 14.121 18.504 14.625 19.125 14.625C19.746 14.625 20.25 14.121 20.25 13.5C20.25 12.879 19.746 12.375 19.125 12.375Z"
+                                                  fill="white"/>
+                                            <path d="M25.875 25.875C24.0142 25.875 22.5 24.3608 22.5 22.5C22.5 20.6392 24.0142 19.125 25.875 19.125C27.7358 19.125 29.25 20.6392 29.25 22.5C29.25 24.3608 27.7358 25.875 25.875 25.875ZM25.875 21.375C25.2562 21.375 24.75 21.8812 24.75 22.5C24.75 23.1188 25.2562 23.625 25.875 23.625C26.4938 23.625 27 23.1188 27 22.5C27 21.8812 26.4938 21.375 25.875 21.375Z"
+                                                  fill="white"/>
+                                            <path d="M16.875 25.8747C16.6207 25.8747 16.3665 25.7892 16.155 25.6137C15.678 25.2155 15.6127 24.5067 16.011 24.0297L27.261 10.5297C27.6615 10.0505 28.3702 9.992 28.845 10.3857C29.322 10.784 29.385 11.4927 28.9867 11.972L17.7367 25.472C17.5162 25.7352 17.1967 25.8747 16.875 25.8747Z"
+                                                  fill="white"/>
+                                            <path d="M11.25 10.125H9V12.375H11.25V10.125Z" fill="white"/>
+                                            <path d="M11.25 23.625H9V25.875H11.25V23.625Z" fill="white"/>
+                                            <path d="M11.25 19.125H9V21.375H11.25V19.125Z" fill="white"/>
+                                            <path d="M11.25 14.625H9V16.875H11.25V14.625Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                    <div class="vstack gap-2">
+                                        <div class="heading-4">
+                                            Khuyến mãi tháng 7
+                                        </div>
+                                        <div class="primary-color">Hạn sử dụng: 31.07.2021</div>
+                                        <div class="voucher-item_divider heading-4">
+                                            [VMTTAUJUL30]&nbsp;<span class="fw-normal">Giảm giá ngay 30% cho đơn hàng đi
+                                            bằng tàu về
+                                            TP.HCMM</span>
+                                        </div>
+                                        <div class="black-50-color">
+                                            Số lượng: x1
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="voucher-item disabled p-3 hstack align-items-start gap-3">
+                                    <div class="flex-shrink-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                             viewBox="0 0 36 36"
+                                             fill="none">
+                                            <path d="M33.75 5.625H12.375C12.0758 5.625 11.79 5.74425 11.5785 5.9535L10.125 7.40925L8.6715 5.9535C8.46 5.74425 8.17425 5.625 7.875 5.625H2.25C1.01025 5.625 0 6.63525 0 7.875V28.125C0 29.367 1.01025 30.375 2.25 30.375H7.875C8.17425 30.375 8.46 30.2558 8.6715 30.0465L10.125 28.5907L11.5785 30.0442C11.79 30.2557 12.0758 30.375 12.375 30.375H33.75C34.992 30.375 36 29.367 36 28.125V7.875C36 6.63525 34.992 5.625 33.75 5.625Z"
+                                                  class="voucher-fill"/>
+                                            <path d="M19.125 16.875C17.2642 16.875 15.75 15.3608 15.75 13.5C15.75 11.6392 17.2642 10.125 19.125 10.125C20.9858 10.125 22.5 11.6392 22.5 13.5C22.5 15.3608 20.9858 16.875 19.125 16.875ZM19.125 12.375C18.504 12.375 18 12.879 18 13.5C18 14.121 18.504 14.625 19.125 14.625C19.746 14.625 20.25 14.121 20.25 13.5C20.25 12.879 19.746 12.375 19.125 12.375Z"
+                                                  fill="white"/>
+                                            <path d="M25.875 25.875C24.0142 25.875 22.5 24.3608 22.5 22.5C22.5 20.6392 24.0142 19.125 25.875 19.125C27.7358 19.125 29.25 20.6392 29.25 22.5C29.25 24.3608 27.7358 25.875 25.875 25.875ZM25.875 21.375C25.2562 21.375 24.75 21.8812 24.75 22.5C24.75 23.1188 25.2562 23.625 25.875 23.625C26.4938 23.625 27 23.1188 27 22.5C27 21.8812 26.4938 21.375 25.875 21.375Z"
+                                                  fill="white"/>
+                                            <path d="M16.875 25.8747C16.6207 25.8747 16.3665 25.7892 16.155 25.6137C15.678 25.2155 15.6127 24.5067 16.011 24.0297L27.261 10.5297C27.6615 10.0505 28.3702 9.992 28.845 10.3857C29.322 10.784 29.385 11.4927 28.9867 11.972L17.7367 25.472C17.5162 25.7352 17.1967 25.8747 16.875 25.8747Z"
+                                                  fill="white"/>
+                                            <path d="M11.25 10.125H9V12.375H11.25V10.125Z" fill="white"/>
+                                            <path d="M11.25 23.625H9V25.875H11.25V23.625Z" fill="white"/>
+                                            <path d="M11.25 19.125H9V21.375H11.25V19.125Z" fill="white"/>
+                                            <path d="M11.25 14.625H9V16.875H11.25V14.625Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                    <div class="vstack gap-2">
+                                        <div class="heading-4">
+                                            Khuyến mãi tháng 7
+                                        </div>
+                                        <div class="primary-color">Hạn sử dụng: 31.07.2021</div>
+                                        <div class="voucher-item_divider heading-4">
+                                            [VMTTAUJUL30]&nbsp;<span class="fw-normal">Giảm giá ngay 30% cho đơn hàng đi
+                                            bằng tàu về
+                                            TP.HCMM</span>
+                                        </div>
+                                        <div class="black-50-color">
+                                            Số lượng: x1
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-top-0">
+                <div class="modal-theme_footer vstack gap-10px m-0 w-100">
+                    <div class="heading-4 fw-normal">Đã chọn 1 voucher, <span class="primary-color">giảm 30.000đ</span>
+                    </div>
+                    <div class="text-center hstack gap-2 w-100">
+                        <button id="call-modal_reported" type="button"
+                                class="button-theme button-gradient_green flex-fill w-50">
+                            Xác nhận
+                        </button>
+                        <button data-bs-dismiss="modal" type="button"
+                                class="button-theme button-outline_green flex-fill w-50">
+                            Huỷ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="screen-orders main-spacing">
+    <!-- Header page -->
+    <div class="section-header bg-white position-sticky top-0 start-0 end-0 zi-10 w-100">
+        <div class="header-inner">
+            <div class="container">
+                <div class="vstack">
+                    <div class="header-inner_title pt-3 pb-2 heading-2 hstack gap-2">
+                        <a href="./index.html" class="hstack align-items-center justify-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
+                                      fill="#191E24"/>
+                            </svg>
+                        </a>
+                        DHTQ940593Q
+                        <div class="header-inner_buttons ms-auto hstack align-items-center justify-content-end gap-2">
+                            <div class="orange-color heading-6">
+                                Chờ báo giá
+                            </div>
+                            <button type="button" class="button-reset">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                     fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M12.7675 3.79199L15.8071 3.79199C17.6764 3.79198 19.1573 3.79197 20.3289 3.93045C21.5317 4.07263 22.5218 4.37111 23.3489 5.04989C23.6295 5.28017 23.8868 5.53747 24.1171 5.81806C24.7959 6.64517 25.0944 7.63532 25.2365 8.83812C25.375 10.0097 25.375 11.4906 25.375 13.3599V13.4741C25.375 15.3434 25.375 16.8243 25.2365 17.9959C25.0944 19.1987 24.7959 20.1888 24.1171 21.0159C23.8868 21.2965 23.6295 21.5538 23.3489 21.7841C22.5218 22.4629 21.5317 22.7614 20.3289 22.9035C19.1573 23.042 17.6764 23.042 15.8071 23.042H10.8526C10.0854 23.042 9.79368 23.0444 9.52192 23.0863C8.92013 23.179 8.34952 23.4154 7.85838 23.7753C7.63659 23.9379 7.42861 24.1425 6.88613 24.685L6.86703 24.7041C6.56053 25.0106 6.30337 25.2677 6.09046 25.4572C5.88813 25.6372 5.63047 25.8463 5.32149 25.9509C4.35215 26.2791 3.28956 25.839 2.83623 24.9215C2.69173 24.629 2.65733 24.299 2.64157 24.0286C2.62499 23.7441 2.62499 23.3805 2.625 22.9471L2.625 13.9345C2.62498 11.7905 2.62497 10.0922 2.80366 8.76313C2.98756 7.39531 3.37503 6.2882 4.24812 5.41511C5.12121 4.54202 6.22831 4.15455 7.59614 3.97065C8.92522 3.79196 10.6235 3.79197 12.7675 3.79199ZM7.82932 5.70504C6.65555 5.86285 5.9793 6.1588 5.48555 6.65255C4.99181 7.14629 4.69586 7.82254 4.53805 8.99632C4.37686 10.1953 4.375 11.7757 4.375 14.0003V22.9199C4.375 23.3876 4.37536 23.6996 4.38861 23.9268C4.3976 24.081 4.41108 24.147 4.41417 24.1631C4.48004 24.2772 4.61472 24.3329 4.74197 24.2989C4.75556 24.2896 4.81174 24.2525 4.92714 24.1498C5.09717 23.9985 5.31798 23.7782 5.6487 23.4475L5.69876 23.3974C6.17446 22.9216 6.48071 22.6153 6.82394 22.3638C7.54176 21.8377 8.37572 21.4923 9.25528 21.3567C9.67584 21.2919 10.109 21.2919 10.7818 21.292L15.75 21.292C17.6891 21.292 19.0666 21.2906 20.1235 21.1656C21.161 21.043 21.7751 20.8118 22.2387 20.4313C22.4307 20.2738 22.6068 20.0977 22.7643 19.9057C23.1448 19.4421 23.376 18.828 23.4986 17.7904C23.6236 16.7335 23.625 15.3561 23.625 13.417C23.625 11.4779 23.6236 10.1004 23.4986 9.04354C23.376 8.00596 23.1448 7.39189 22.7643 6.92825C22.6068 6.73626 22.4307 6.56022 22.2387 6.40266C21.7751 6.02216 21.161 5.791 20.1235 5.66835C19.0666 5.54342 17.6891 5.54199 15.75 5.54199H12.8333C10.6087 5.54199 9.02827 5.54385 7.82932 5.70504Z"
+                                          fill="#1A8917"/>
+                                    <ellipse cx="8.75" cy="13.417" rx="1.75" ry="1.75" fill="#1A8917"/>
+                                    <ellipse cx="14" cy="13.417" rx="1.75" ry="1.75" fill="#1A8917"/>
+                                    <ellipse cx="19.25" cy="13.417" rx="1.75" ry="1.75" fill="#1A8917"/>
+                                    <ellipse cx="22.1667" cy="5.83333" rx="5.83333" ry="5.83333" fill="#FF4545"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="theme-tabs theme-tabs_overflow">
+                        <ul class="nav nav-tabs border-0 flex-nowrap align-items-center justify-content-center">
+                            <li class="nav-item">
+                                <a href="./san-pham-ttchung-tai-chinh.html"
+                                   class="nav-link active px-3 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+                                    Thông tin chung
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="order-screen_slide">
+        <div class="container">
+            <div class="theme-tabs theme-tabs_dark theme-tabs_overflow mt-1">
+                <ul class="nav nav-tabs border-0 flex-nowrap align-items-center justify-content-start">
+                    <li class="nav-item">
+                        <a href="./van-chuyen-ttchung-san-pham.html"
+                           class="nav-link px-3 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+                            Sản phẩm
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./van-chuyen-ttchung-dich-vu.html"
+                           class="nav-link px-3 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+                            Dịch vụ
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./van-chuyen-ttchung-kienhang-vanchuyen.html"
+                           class="nav-link active px-3 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+                            Kiện hàng và vận chuyển
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="order-wrapper order-spacing mt-3 vstack gap-3">
+                <div class="order-box p-3 bg-white">
+                    <div class="order-box_title heading-3 text-black hstack gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                             fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.52091 6.06392C1.72838 5.70541 2.1872 5.58297 2.54571 5.79044L10.9999 10.6829L19.3941 5.82056C19.7525 5.61294 20.2114 5.7352 20.419 6.09362C20.6266 6.45205 20.5044 6.91091 20.1459 7.11853L11.376 12.1985C11.1435 12.3332 10.8569 12.3332 10.6244 12.1987L1.79439 7.08871C1.43588 6.88124 1.31344 6.42243 1.52091 6.06392Z"
+                                  fill="#212C28"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M11 10.7891C11.4142 10.7891 11.75 11.1248 11.75 11.5391V20.6091C11.75 21.0233 11.4142 21.3591 11 21.3591C10.5858 21.3591 10.25 21.0233 10.25 20.6091V11.5391C10.25 11.1248 10.5858 10.7891 11 10.7891Z"
+                                  fill="#212C28"/>
+                            <path d="M1.39014 8.16958C1.39014 6.78958 2.38012 5.1096 3.59012 4.4396L8.93011 1.46957C10.0701 0.83957 11.9401 0.83957 13.0801 1.46957L18.4201 4.4396C19.6301 5.1096 20.6201 6.78958 20.6201 8.16958V13.8196C20.6201 15.1996 19.6301 16.8796 18.4201 17.5496L13.0801 20.5196C11.9401 21.1496 10.0701 21.1496 8.93011 20.5196L3.59012 17.5496C2.38012 16.8796 1.39014 15.1996 1.39014 13.8196V12.9996"
+                                  stroke="#212C28" stroke-width="1.5" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M5.86106 2.72439C6.06836 2.36578 6.52711 2.24312 6.88572 2.45041L9.2541 3.81947L10.3058 4.42049L16.3758 7.93051C16.6076 8.06455 16.7504 8.31201 16.7504 8.57978V12.2397C16.7504 12.654 16.4146 12.9897 16.0004 12.9897C15.5862 12.9897 15.2504 12.654 15.2504 12.2397V9.01245L9.55824 5.72094L8.50502 5.11906L6.13503 3.74905C5.77642 3.54176 5.65376 3.083 5.86106 2.72439Z"
+                                  fill="#212C28"/>
+                        </svg>
+                        Thông tin kiện hàng
+                    </div>
+                    <div class="vstack gap-10px">
+                        <div class="order-highlight heading-4">
+                            <div class="order-highlight_inner">
+                                1 kg = <span class="primary-color fw-bold">35.000 vnđ</span>
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <div class="hstack gap-2">
+                                <table class="table product-item_table table-borderless w-100 mb-0">
+                                    <tbody>
+                                    <tr>
+                                        <th class="px-1 text-center heading-4">
+                                            STT
+                                        </th>
+                                        <th class="px-1 text-start heading-4">
+                                            Mã kiện
+                                        </th>
+                                        <th class="px-1 text-center heading-4">
+                                            Số kiện
+                                        </th>
+                                        <th class="px-1 text-center heading-4">
+                                            KL tính phí
+                                        </th>
+                                        <th class="px-1 text-end heading-4">
+                                            Thành tiền
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-1 text-center heading-4">
+                                            01
+                                        </td>
+                                        <td class="px-1 text-start heading-4">
+                                            <div class="position-relative order-item_collapse">
+                                                <button type="button"
+                                                        class="button-reset hstack gap-1 order-item_collapse__button fw-bold">
+                                                    RFFTTTGE
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"
+                                                         viewBox="0 0 8 8" fill="none">
+                                                        <path class="plus" d="M4.07202 7V1" stroke="#1A8917"
+                                                              stroke-width="1.5"
+                                                              stroke-miterlimit="10" stroke-linecap="round"
+                                                              stroke-linejoin="round"/>
+                                                        <path class="minus" d="M7 4H1" stroke="#1A8917"
+                                                              stroke-width="1.5"
+                                                              stroke-miterlimit="10" stroke-linecap="round"
+                                                              stroke-linejoin="round"/>
+                                                    </svg>
+                                                </button>
+                                                <div class="order-collapse_inner pseudo position-absolute bg-white zi-2">
+                                                    <div class="order-collapse_item position-relative hstack text-nowrap gap-4">
+                                                        <div class="order-collapse_item__decor">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="17"
+                                                                 height="12" viewBox="0 0 17 12" fill="none">
+                                                                <path d="M1 0V3C1 7.41828 4.58172 11 9 11H17"
+                                                                      stroke="#CCCCCC"/>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="fw-bold text-black order-collapse_item__left">
+                                                            Kích thước
+                                                        </div>
+                                                        <div class="black-50-color fw-normal order-collapse_item__right">
+                                                            25 x 40 x 10 cm
+                                                        </div>
+                                                    </div>
+                                                    <div class="order-collapse_item position-relative hstack text-nowrap gap-4">
+                                                        <div class="order-collapse_item__decor">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="17"
+                                                                 height="12" viewBox="0 0 17 12" fill="none">
+                                                                <path d="M1 0V3C1 7.41828 4.58172 11 9 11H17"
+                                                                      stroke="#CCCCCC"/>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="fw-bold text-black order-collapse_item__left">
+                                                            KL thực tế
+                                                        </div>
+                                                        <div class="black-50-color fw-normal order-collapse_item__right">
+                                                            4 Kg
+                                                        </div>
+                                                    </div>
+                                                    <div class="order-collapse_item position-relative hstack text-nowrap gap-4">
+                                                        <div class="order-collapse_item__decor">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="17"
+                                                                 height="12" viewBox="0 0 17 12" fill="none">
+                                                                <path d="M1 0V3C1 7.41828 4.58172 11 9 11H17"
+                                                                      stroke="#CCCCCC"/>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="fw-bold text-black order-collapse_item__left">
+                                                            KL quy đổi
+                                                        </div>
+                                                        <div class="black-50-color fw-normal order-collapse_item__right">
+                                                            5 Kg
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="px-1 text-center heading-4">
+                                            02
+                                        </td>
+                                        <td class="px-1 text-center heading-4">
+                                            5 kg
+                                        </td>
+                                        <td class="px-1 text-end heading-4">
+                                            185.500đ
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-1 text-center heading-4">
+                                            01
+                                        </td>
+                                        <td class="px-1 text-start heading-4">
+                                            <div class="position-relative order-item_collapse">
+                                                <button type="button"
+                                                        class="button-reset hstack gap-1 order-item_collapse__button fw-bold">
+                                                    RFFTTTGE
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"
+                                                         viewBox="0 0 8 8" fill="none">
+                                                        <path class="plus" d="M4.07202 7V1" stroke="#1A8917"
+                                                              stroke-width="1.5"
+                                                              stroke-miterlimit="10" stroke-linecap="round"
+                                                              stroke-linejoin="round"/>
+                                                        <path class="minus" d="M7 4H1" stroke="#1A8917"
+                                                              stroke-width="1.5"
+                                                              stroke-miterlimit="10" stroke-linecap="round"
+                                                              stroke-linejoin="round"/>
+                                                    </svg>
+                                                </button>
+                                                <div class="order-collapse_inner pseudo position-absolute bg-white zi-2">
+                                                    <div class="order-collapse_item position-relative hstack text-nowrap gap-4">
+                                                        <div class="order-collapse_item__decor">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="17"
+                                                                 height="12" viewBox="0 0 17 12" fill="none">
+                                                                <path d="M1 0V3C1 7.41828 4.58172 11 9 11H17"
+                                                                      stroke="#CCCCCC"/>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="fw-bold text-black order-collapse_item__left">
+                                                            Kích thước
+                                                        </div>
+                                                        <div class="black-50-color fw-normal order-collapse_item__right">
+                                                            25 x 40 x 10 cm
+                                                        </div>
+                                                    </div>
+                                                    <div class="order-collapse_item position-relative hstack text-nowrap gap-4">
+                                                        <div class="order-collapse_item__decor">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="17"
+                                                                 height="12" viewBox="0 0 17 12" fill="none">
+                                                                <path d="M1 0V3C1 7.41828 4.58172 11 9 11H17"
+                                                                      stroke="#CCCCCC"/>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="fw-bold text-black order-collapse_item__left">
+                                                            KL thực tế
+                                                        </div>
+                                                        <div class="black-50-color fw-normal order-collapse_item__right">
+                                                            4 Kg
+                                                        </div>
+                                                    </div>
+                                                    <div class="order-collapse_item position-relative hstack text-nowrap gap-4">
+                                                        <div class="order-collapse_item__decor">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="17"
+                                                                 height="12" viewBox="0 0 17 12" fill="none">
+                                                                <path d="M1 0V3C1 7.41828 4.58172 11 9 11H17"
+                                                                      stroke="#CCCCCC"/>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="fw-bold text-black order-collapse_item__left">
+                                                            KL quy đổi
+                                                        </div>
+                                                        <div class="black-50-color fw-normal order-collapse_item__right">
+                                                            5 Kg
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="px-1 text-center heading-4">
+                                            02
+                                        </td>
+                                        <td class="px-1 text-center heading-4">
+                                            5 kg
+                                        </td>
+                                        <td class="px-1 text-end heading-4">
+                                            185.500đ
+                                        </td>
+                                    </tr>
+                                    <tr class="border-top">
+                                        <td></td>
+                                        <td class="px-1" colspan="3">
+                                            <div class="text-end heading-4">
+                                                Tổng cộng
+                                            </div>
+                                        </td>
+                                        <td class="px-1">
+                                            <div class="primary-color fw-bold text-end heading-4">
+                                                185.500đ
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-box p-3 bg-white">
+                    <div class="order-box_title heading-3 text-black hstack gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                             fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M6 2.75C4.20421 2.75 2.75 4.20421 2.75 6V13.25H13C13.6858 13.25 14.25 12.6858 14.25 12V2.75H6ZM1.25 6C1.25 3.37579 3.37579 1.25 6 1.25H15C15.4142 1.25 15.75 1.58579 15.75 2V12C15.75 13.5142 14.5142 14.75 13 14.75H2C1.58579 14.75 1.25 14.4142 1.25 14V6Z"
+                                  fill="#212C28"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M14.25 5C14.25 4.58579 14.5858 4.25 15 4.25H16.84C17.8339 4.25 18.7377 4.788 19.2286 5.63341L19.231 5.63766L19.231 5.63767L20.9411 8.62766C21.0738 8.85978 21.0729 9.14502 20.9388 9.37633C20.8046 9.60763 20.5574 9.75 20.29 9.75H19C18.8642 9.75 18.75 9.86421 18.75 10V13C18.75 13.1358 18.8642 13.25 19 13.25H22C22.4142 13.25 22.75 13.5858 22.75 14V17C22.75 19.0742 21.0742 20.75 19 20.75H18C17.5858 20.75 17.25 20.4142 17.25 20C17.25 19.3142 16.6858 18.75 16 18.75C15.3142 18.75 14.75 19.3142 14.75 20C14.75 20.4142 14.4142 20.75 14 20.75H10C9.58579 20.75 9.25 20.4142 9.25 20C9.25 19.3142 8.68579 18.75 8 18.75C7.31421 18.75 6.75 19.3142 6.75 20C6.75 20.4142 6.41421 20.75 6 20.75H5C2.92579 20.75 1.25 19.0742 1.25 17V14C1.25 13.5858 1.58579 13.25 2 13.25H13C13.6858 13.25 14.25 12.6858 14.25 12V5ZM15.75 5.75V12C15.75 13.5142 14.5142 14.75 13 14.75H2.75V17C2.75 18.2458 3.75421 19.25 5 19.25H5.35431C5.68227 18.0981 6.74559 17.25 8 17.25C9.25441 17.25 10.3177 18.0981 10.6457 19.25H13.3543C13.6823 18.0981 14.7456 17.25 16 17.25C17.2544 17.25 18.3177 18.0981 18.6457 19.25H19C20.2458 19.25 21.25 18.2458 21.25 17V14.75H19C18.0358 14.75 17.25 13.9642 17.25 13V10C17.25 9.03676 18.0342 8.25159 18.9971 8.25L17.9314 6.38661C17.931 6.38599 17.9307 6.38537 17.9303 6.38475C17.701 5.99126 17.2854 5.75 16.84 5.75H15.75Z"
+                                  fill="#212C28"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M8 18.75C7.30964 18.75 6.75 19.3096 6.75 20C6.75 20.6904 7.30964 21.25 8 21.25C8.69036 21.25 9.25 20.6904 9.25 20C9.25 19.3096 8.69036 18.75 8 18.75ZM5.25 20C5.25 18.4812 6.48122 17.25 8 17.25C9.51878 17.25 10.75 18.4812 10.75 20C10.75 21.5188 9.51878 22.75 8 22.75C6.48122 22.75 5.25 21.5188 5.25 20Z"
+                                  fill="#212C28"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M16 18.75C15.3096 18.75 14.75 19.3096 14.75 20C14.75 20.6904 15.3096 21.25 16 21.25C16.6904 21.25 17.25 20.6904 17.25 20C17.25 19.3096 16.6904 18.75 16 18.75ZM13.25 20C13.25 18.4812 14.4812 17.25 16 17.25C17.5188 17.25 18.75 18.4812 18.75 20C18.75 21.5188 17.5188 22.75 16 22.75C14.4812 22.75 13.25 21.5188 13.25 20Z"
+                                  fill="#212C28"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M19 9.75C18.8642 9.75 18.75 9.86421 18.75 10V13C18.75 13.1358 18.8642 13.25 19 13.25H21.25V12.1987L19.8542 9.75H19ZM17.25 10C17.25 9.03579 18.0358 8.25 19 8.25H20.29C20.5594 8.25 20.8082 8.39452 20.9416 8.6286L22.6516 11.6286C22.7161 11.7418 22.75 11.8698 22.75 12V14C22.75 14.4142 22.4142 14.75 22 14.75H19C18.0358 14.75 17.25 13.9642 17.25 13V10Z"
+                                  fill="#212C28"/>
+                        </svg>
+                        Hình thức vận chuyển
+                    </div>
+                    <div class="vstack gap-10px">
+                        <div class="order-highlight heading-4">
+                            <div class="order-highlight_inner hstack justify-content-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none">
+                                    <path d="M20.0501 10.6296L15.3801 8.61957L14.3401 8.17957C14.1801 8.09957 14.0401 7.88957 14.0401 7.70957V4.64957C14.0401 3.68957 13.3301 2.54957 12.4701 2.10957C12.1701 1.95957 11.8101 1.95957 11.5101 2.10957C10.6601 2.54957 9.95006 3.69957 9.95006 4.65957V7.71957C9.95006 7.89957 9.81006 8.10957 9.65006 8.18957L3.95006 10.6396C3.32006 10.8996 2.81006 11.6896 2.81006 12.3696V13.6896C2.81006 14.5396 3.45006 14.9596 4.24006 14.6196L9.25006 12.4596C9.64006 12.2896 9.96006 12.4996 9.96006 12.9296V14.0396V15.8396C9.96006 16.0696 9.83006 16.3996 9.67006 16.5596L7.35006 18.8896C7.11006 19.1296 7.00006 19.5996 7.11006 19.9396L7.56006 21.2996C7.74006 21.8896 8.41006 22.1696 8.96006 21.8896L11.3401 19.8896C11.7001 19.5796 12.2901 19.5796 12.6501 19.8896L15.0301 21.8896C15.5801 22.1596 16.2501 21.8896 16.4501 21.2996L16.9001 19.9396C17.0101 19.6096 16.9001 19.1296 16.6601 18.8896L14.3401 16.5596C14.1701 16.3996 14.0401 16.0696 14.0401 15.8396V12.9296C14.0401 12.4996 14.3501 12.2996 14.7501 12.4596L19.7601 14.6196C20.5501 14.9596 21.1901 14.5396 21.1901 13.6896V12.3696C21.1901 11.6896 20.6801 10.8996 20.0501 10.6296Z"
+                                          fill="#292D32"/>
+                                </svg>
+                                <span class="primary-color fw-bold">Ưu tiên</span>
+                                <div data-bs-toggle="tooltip" title="Nội dung ưu tiên" class="handlePrevent">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                         viewBox="0 0 16 16"
+                                         fill="none">
+                                        <g clip-path="url(#clip0_2842_13529)">
+                                            <path d="M5.33317 6.20866C5.33317 4.7359 6.52708 3.54199 7.99984 3.54199C9.47259 3.54199 10.6665 4.7359 10.6665 6.20866C10.6665 7.45122 9.81665 8.49528 8.6665 8.79131V9.54199C8.6665 9.91018 8.36803 10.2087 7.99984 10.2087C7.63165 10.2087 7.33317 9.91018 7.33317 9.54199V8.20866C7.33317 7.84047 7.63165 7.54199 7.99984 7.54199C8.73621 7.54199 9.33317 6.94504 9.33317 6.20866C9.33317 5.47228 8.73621 4.87533 7.99984 4.87533C7.26346 4.87533 6.6665 5.47228 6.6665 6.20866C6.6665 6.57685 6.36803 6.87533 5.99984 6.87533C5.63165 6.87533 5.33317 6.57685 5.33317 6.20866Z"
+                                                  fill="#ADB4BB"/>
+                                            <path d="M8.83317 11.7087C8.83317 12.1689 8.46007 12.542 7.99984 12.542C7.5396 12.542 7.1665 12.1689 7.1665 11.7087C7.1665 11.2484 7.5396 10.8753 7.99984 10.8753C8.46007 10.8753 8.83317 11.2484 8.83317 11.7087Z"
+                                                  fill="#ADB4BB"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M2.81439 2.81487C4.14075 1.48854 5.97499 0.666992 7.99984 0.666992C10.0247 0.666992 11.8589 1.48854 13.1853 2.81487C14.5116 4.14123 15.3332 5.97548 15.3332 8.00033C15.3332 10.0252 14.5116 11.8594 13.1853 13.1858C11.8589 14.5121 10.0247 15.3337 7.99984 15.3337C5.97499 15.3337 4.14074 14.5121 2.81439 13.1858C1.48805 11.8594 0.666504 10.0252 0.666504 8.00033C0.666504 5.97548 1.48806 4.14123 2.81439 2.81487ZM7.99984 2.00033C6.34282 2.00033 4.84373 2.67117 3.75719 3.75769C2.67067 4.84422 1.99984 6.3433 1.99984 8.00033C1.99984 9.65735 2.67068 11.1564 3.7572 12.243C4.84373 13.3295 6.34282 14.0003 7.99984 14.0003C9.65686 14.0003 11.1559 13.3295 12.2425 12.243C13.329 11.1564 13.9998 9.65734 13.9998 8.00033C13.9998 6.34331 13.329 4.84422 12.2425 3.75768C11.1559 2.67117 9.65686 2.00033 7.99984 2.00033Z"
+                                                  fill="#ADB4BB"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2842_13529">
+                                                <rect width="16" height="16" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <div class="hstack primary-color heading-4 gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M4.22555 4.07824C3.95814 3.95676 3.64626 3.97779 3.39818 4.13402C3.15009 4.29024 3 4.56013 3 4.85V17.6C3 17.9315 3.19586 18.2328 3.50172 18.3718L9.10858 20.9187C9.15749 20.9414 9.20818 20.9594 9.25992 20.9726C9.38557 21.0048 9.51635 21.0085 9.64244 20.9843C9.70437 20.9725 9.76516 20.9539 9.82367 20.9287L15.5097 18.5303L20.7745 20.9218C21.0419 21.0432 21.3537 21.0222 21.6018 20.866C21.8499 20.7098 22 20.4398 22 20.15V7.4C22 7.06846 21.8041 6.76718 21.4983 6.62824L15.889 4.08022C15.852 4.06315 15.8139 4.04877 15.7752 4.03712C15.6927 4.0123 15.6076 3.99999 15.5227 4C15.455 4 15.3872 4.00782 15.3207 4.02358C15.2717 4.03518 15.2236 4.05103 15.1769 4.0711L9.49027 6.46975L4.22555 4.07824ZM14.6591 6.13906L10.3409 7.96049V18.8609L14.6591 17.0395V6.13906ZM16.3864 17.0562L20.2727 18.8215V7.94385L16.3864 6.17847V17.0562ZM4.72727 6.17847L8.61364 7.94385V18.8215L4.72727 17.0562V6.17847Z"
+                                          fill="#076007"/>
+                                </svg>
+                                Địa chỉ kho đích
+                            </div>
+                            <div class="heading-4 mt-1 fw-normal black-50-color">
+                                <span class="fw-bold">Kho VMT Hồ Chí Minh</span> | 0988977308 <br>Cộng Hoà Garden,
+                                Số 20
+                                Cộng Hòa, Phường 12, Quận
+                                Tân Bình, TP.HCM
+                            </div>
+                            <div class="mt-2">
+                                <button type="button" class="button-theme button-background_gray">
+                                    Đã nhận hàng
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-footer position-fixed bottom-0 start-0 end-0 zi-10 bg-white w-100 p-3 pb-0">
+        <div class="section-footer_collapse position-absolute start-50 translate-middle-x">
+            <button type="button" data-bs-target="#card-footer_detail" data-bs-toggle="collapse"
+                    class="section-footer_collapse__button pseudo button-reset"></button>
+        </div>
+        <div class="collapse show" id="card-footer_detail">
+            <div class="card-footer_total">
+                <div class="hstack align-items-start justify-content-between gap-3">
+                    <div class="heading-4 fw-normal dark-color">
+                        Cần đặt cọc
+                    </div>
+                    <div class="vstack align-items-end text-end">
+                        <div class="heading-3 primary-color">
+                            5.403.000(VNĐ)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer_buttons hstack gap-2 w-100 pb-3">
+                <button type="button" data-bs-toggle="modal" data-bs-target="#modal-pay"
+                        class="button-theme button-gradient_green flex-fill w-100">
+                    Thanh toán
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/momment.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chart.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-labels.js"></script>
+<script type="text/javascript"
+        src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+
+</body>
+</html>
