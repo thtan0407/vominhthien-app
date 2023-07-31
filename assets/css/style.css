@@ -1949,3 +1949,54 @@
 .order-process_item.is-active .order-process_item__content .fw-bold {
     color: var(--primary-color);
 }
+
+.icon-notification.is-read svg path {
+    stroke: #6C6C6C !important;
+}
+
+.screen-notification .order-status_item .hstack > svg {
+    width: 20px;
+    height: 20px;
+}
+
+.screen-notification .order-status_item .order-status_content .order-status_content--description {
+    padding-left: calc(20px + .5rem);
+    font-size: 1.075em;
+    font-weight: 700 !important;
+    color: #444444 !important;
+}
+
+.screen-notification .order-status_item .order-status_content .order-status_content--description .button-reset {
+    color: var(--primary-color);
+    font-size: 0.925em;
+    font-weight: 400 !important;
+}
+
+.screen-notification .order-status_item + .order-status_item {
+    border-top: 0;
+}
+
+.screen-notification .order-status {
+    padding: 0 !important;
+    background: transparent !important;
+    border-radius: 0;
+}
+
+.screen-notification .order-status .order-status_item {
+    padding: 1rem;
+    background: #F0F8EF;
+    border-radius: 16px;
+}
+
+.screen-notification .order-status .order-status_item.is-read {
+    background: #fff;
+}
+
+.screen-notification .order-status .order-status_item.is-read .order-status_content--description {
+    color: #6C6C6C !important;
+    font-weight: 400 !important;
+}
+
+.screen-notification .order-status .order-status_item.is-read .order-status_content .order-status_content--description .button-reset {
+    color: var(--bs-black);
+}
