@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Template VMT App</title>
+    <meta name="description" content="Template VMT App">
+    <meta name="author" content="">
+
+    <meta property="og:title" content="Template VMT App">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Template VMT App">
+    <meta property="og:image" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+
+    <link rel="icon" href="./assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+    <link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<div class="modal modal-bottom fade modal-notification" id="modal-readAll" data-bs-backdrop="static"
+     data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+            <div class="modal-body bg-white">
+                <div class="vstack align-items-center justify-content-center gap-15px">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
+                        <path opacity="0.4"
+                              d="M39.2465 8.82129H18.7532C12.784 8.82129 7.95068 13.6788 7.95068 19.6238V42.3646C7.95068 48.3096 12.8082 53.1671 18.7532 53.1671H39.2224C45.1915 53.1671 50.0249 48.3096 50.0249 42.3646V19.6238C50.049 13.6546 45.1915 8.82129 39.2465 8.82129Z"
+                              fill="#1A8917"/>
+                        <path d="M34.6792 4.83301H23.3209C20.8076 4.83301 18.7534 6.86301 18.7534 9.37634V11.648C18.7534 14.1613 20.7834 16.1913 23.2968 16.1913H34.6792C37.1926 16.1913 39.2226 14.1613 39.2226 11.648V9.37634C39.2467 6.86301 37.1926 4.83301 34.6792 4.83301Z"
+                              fill="#1A8917"/>
+                        <path d="M26.1243 40.9624C25.6652 40.9624 25.206 40.7932 24.8435 40.4307L21.2185 36.8057C20.5177 36.1049 20.5177 34.9449 21.2185 34.2441C21.9193 33.5432 23.0793 33.5432 23.7802 34.2441L26.1243 36.5882L34.5102 28.2024C35.211 27.5015 36.371 27.5015 37.0718 28.2024C37.7727 28.9032 37.7727 30.0632 37.0718 30.764L27.4052 40.4307C27.0668 40.7932 26.5835 40.9624 26.1243 40.9624Z"
+                              fill="#1A8917"/>
+                    </svg>
+                    <div class="heading-3 text-black text-center">
+                        Đánh dấu đã đọc tất cả thông báo?
+                    </div>
+                    <div class="text-center hstack gap-2 w-100">
+                        <button type="button"
+                                id="button-readAll"
+                                class="button-theme button-gradient_green flex-fill w-50">
+                            Xác nhận
+                        </button>
+                        <button data-bs-dismiss="modal" type="button"
+                                class="button-theme button-outline_green flex-fill w-50">
+                            Hủy
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="screen-notification_detail min-vh-100 h-100 bg-white vstack overflow-hidden main-spacing">
+    <!-- Header page -->
+    <div class="section-header bg-white position-sticky top-0 start-0 end-0 zi-10 w-100">
+        <div class="header-inner">
+            <div class="container">
+                <div class="vstack">
+                    <div class="header-inner_title pt-3 pb-2 heading-2 hstack gap-2">
+                        <a href="./index.html" class="hstack align-items-center justify-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
+                                      fill="#191E24"/>
+                            </svg>
+                        </a>
+                        Thông báo
+                        <div class="header-inner_buttons ms-auto hstack align-items-center justify-content-end gap-2">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modal-readAll"
+                                    id="icon-notification"
+                                    class="button-reset icon-notification">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none">
+                                    <path d="M9.30957 14.7002L10.8096 16.2002L14.8096 12.2002" stroke="#076007"
+                                          stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10 6H14C16 6 16 5 16 4C16 2 15 2 14 2H10C9 2 8 2 8 4C8 6 9 6 10 6Z"
+                                          stroke="#076007" stroke-width="1.5" stroke-miterlimit="10"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M16 4.01953C19.33 4.19953 21 5.42953 21 9.99953V15.9995C21 19.9995 20 21.9995 15 21.9995H9C4 21.9995 3 19.9995 3 15.9995V9.99953C3 5.43953 4.67 4.19953 8 4.01953"
+                                          stroke="#076007" stroke-width="1.5" stroke-miterlimit="10"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification-detail_body bg-white vstack">
+        <div class="container">
+            <div class="p-3">
+                <div class="notification-detail_title primary-color heading-2">
+                    Thông báo lịch nghỉ Quốc khánh Trung Quốc 2021
+
+                </div>
+                <div class="notification-detail_meta hstack align-items-center">
+                    <div class="notification-detail_meta__item hstack align-items-center gap-2 blue-color fw-bold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10.8337 18.3587H7.50033C5.3067 18.3587 3.88415 17.8877 2.99855 17.0021C2.11295 16.1165 1.64199 14.694 1.64199 12.5003V7.50033C1.64199 5.3067 2.11295 3.88415 2.99855 2.99855C3.88415 2.11295 5.3067 1.64199 7.50033 1.64199H12.5003C14.694 1.64199 16.1165 2.11295 17.0021 2.99855C17.8877 3.88415 18.3587 5.3067 18.3587 7.50033V10.8337C18.3587 10.8357 18.3581 10.842 18.35 10.85C18.342 10.8581 18.3357 10.8587 18.3337 10.8587C18.3316 10.8587 18.3254 10.8581 18.3173 10.85C18.3092 10.842 18.3087 10.8357 18.3087 10.8337V7.50033C18.3087 5.53716 17.9657 4.0276 16.9694 3.03127C15.9731 2.03494 14.4635 1.69199 12.5003 1.69199H7.50033C5.53716 1.69199 4.0276 2.03494 3.03127 3.03127C2.03494 4.0276 1.69199 5.53716 1.69199 7.50033V12.5003C1.69199 14.4635 2.03494 15.9731 3.03127 16.9694C4.0276 17.9657 5.53716 18.3087 7.50033 18.3087H10.8337C10.8357 18.3087 10.842 18.3092 10.85 18.3173C10.8581 18.3254 10.8587 18.3316 10.8587 18.3337C10.8587 18.3357 10.8581 18.342 10.85 18.35C10.842 18.3581 10.8357 18.3587 10.8337 18.3587Z"
+                                  fill="#005DD0" stroke="#005DD0" stroke-width="1.2"/>
+                            <path d="M10.8337 18.3587H7.50033C5.3067 18.3587 3.88415 17.8877 2.99855 17.0021C2.11295 16.1165 1.64199 14.694 1.64199 12.5003V7.50033C1.64199 5.3067 2.11295 3.88415 2.99855 2.99855C3.88415 2.11295 5.3067 1.64199 7.50033 1.64199H12.5003C14.694 1.64199 16.1165 2.11295 17.0021 2.99855C17.8877 3.88415 18.3587 5.3067 18.3587 7.50033V10.8337C18.3587 10.8357 18.3581 10.842 18.35 10.85C18.342 10.8581 18.3357 10.8587 18.3337 10.8587C18.3316 10.8587 18.3254 10.8581 18.3173 10.85C18.3092 10.842 18.3087 10.8357 18.3087 10.8337V7.50033C18.3087 5.53716 17.9657 4.0276 16.9694 3.03127C15.9731 2.03494 14.4635 1.69199 12.5003 1.69199H7.50033C5.53716 1.69199 4.0276 2.03494 3.03127 3.03127C2.03494 4.0276 1.69199 5.53716 1.69199 7.50033V12.5003C1.69199 14.4635 2.03494 15.9731 3.03127 16.9694C4.0276 17.9657 5.53716 18.3087 7.50033 18.3087H10.8337C10.8357 18.3087 10.842 18.3092 10.85 18.3173C10.8581 18.3254 10.8587 18.3316 10.8587 18.3337C10.8587 18.3357 10.8581 18.342 10.85 18.35C10.842 18.3581 10.8357 18.3587 10.8337 18.3587Z"
+                                  fill="#005DD0" stroke="#005DD0" stroke-width="1.2"/>
+                            <path d="M5.83301 11.6414C5.831 11.6414 5.82471 11.6408 5.81665 11.6328C5.80858 11.6247 5.80801 11.6184 5.80801 11.6164V8.94141C5.80801 8.9394 5.80858 8.93311 5.81665 8.92505C5.82471 8.91698 5.831 8.91641 5.83301 8.91641C5.83502 8.91641 5.8413 8.91698 5.84937 8.92505C5.85743 8.93311 5.85801 8.9394 5.85801 8.94141V11.6164C5.85801 11.6222 5.85699 11.6252 5.85627 11.6269C5.85536 11.629 5.85381 11.6315 5.85133 11.6339C5.84627 11.639 5.8403 11.6414 5.83301 11.6414Z"
+                                  fill="#005DD0" stroke="#005DD0" stroke-width="1.2"/>
+                            <path d="M14.167 12.2414C13.8253 12.2414 13.542 11.9581 13.542 11.6164V8.94141C13.542 8.59974 13.8253 8.31641 14.167 8.31641C14.5087 8.31641 14.792 8.59974 14.792 8.94141V11.6164C14.792 11.9664 14.5087 12.2414 14.167 12.2414Z"
+                                  fill="#005DD0"/>
+                            <path d="M10.8337 18.9587H7.50033C2.97533 18.9587 1.04199 17.0253 1.04199 12.5003V7.50033C1.04199 2.97533 2.97533 1.04199 7.50033 1.04199H12.5003C17.0253 1.04199 18.9587 2.97533 18.9587 7.50033V10.8337C18.9587 11.1753 18.6753 11.4587 18.3337 11.4587C17.992 11.4587 17.7087 11.1753 17.7087 10.8337V7.50033C17.7087 3.65866 16.342 2.29199 12.5003 2.29199H7.50033C3.65866 2.29199 2.29199 3.65866 2.29199 7.50033V12.5003C2.29199 16.342 3.65866 17.7087 7.50033 17.7087H10.8337C11.1753 17.7087 11.4587 17.992 11.4587 18.3337C11.4587 18.6753 11.1753 18.9587 10.8337 18.9587Z"
+                                  fill="#005DD0"/>
+                            <path d="M14.6498 18.125C14.4831 18.125 14.3248 18.0584 14.2081 17.9417L12.8914 16.6334C12.6498 16.3917 12.6414 15.9917 12.8914 15.75C13.1331 15.5084 13.5331 15.5 13.7748 15.75L14.6164 16.5834L17.0331 13.7584C17.2581 13.4917 17.6498 13.4667 17.9164 13.6917C18.1748 13.9167 18.2081 14.3084 17.9831 14.575L15.1331 17.9084C15.0164 18.0417 14.8581 18.1167 14.6831 18.125C14.6664 18.125 14.6581 18.125 14.6498 18.125Z"
+                                  fill="#005DD0"/>
+                            <path d="M10 11.875C9.65833 11.875 9.375 11.5917 9.375 11.25V8.75C9.375 8.40833 9.65833 8.125 10 8.125C10.3417 8.125 10.625 8.40833 10.625 8.75V11.25C10.625 11.5917 10.3417 11.875 10 11.875Z"
+                                  fill="#005DD0"/>
+                        </svg>
+                        Tin tức
+                    </div>
+                    <div class="notification-detail_meta__item text-black">
+                        16.02.2021
+                    </div>
+                </div>
+                <div class="notification-detail_content">
+                    <p class="heading-4">
+                        Kính gửi Quý Khách hàng!
+                    </p>
+                    <p>
+                        Theo thông lệ hàng năm, người dân Trung Quốc sẽ nghỉ lễ Quốc Khánh từ ngày 01/10/2021 đến ngày
+                        08/10/2021. Trong khoảng thời gian này, các vấn đề phát sinh về giao dịch mua hàng, trao đổi, xử
+                        lý khiếu nại Nhà cung cấp có thể sẽ chậm hơn so với thông thường.
+                    </p>
+                    <p>
+                        Với thời gian nghỉ lễ Quốc khánh Trung Quốc, việc thông quan hàng hóa giữa 2 nước vẫn diễn ra
+                        nhưng có thể sẽ chậm hơn so với thông thường.
+                    </p>
+                    <p>
+                        Để biết thêm thông tin, Quý khách vui lòng liên hệ BP Kinh doanh hoặc DVKH để được hỗ trợ chi
+                        tiết.
+                    </p>
+                    <p class="heading-4">
+                        Trân trọng!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/momment.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chart.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-labels.js"></script>
+<script type="text/javascript"
+        src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+
+</body>
+</html>

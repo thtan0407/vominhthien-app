@@ -819,8 +819,14 @@
     pointer-events: auto;
 }
 
-.product-choose .product-choose_content .heading-4 {
+.product-choose .heading-4 {
     font-size: 1.075em !important;
+}
+
+.product-choose .product-choose_content.product-choose_content__divider {
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #C4C4C4;
 }
 
 .product-choose .product-choose_content .product-choose_info .product-choose_quantity__button svg rect {
@@ -1999,4 +2005,52 @@
 
 .screen-notification .order-status .order-status_item.is-read .order-status_content .order-status_content--description .button-reset {
     color: var(--bs-black);
+}
+
+.screen-notification_detail {
+    padding-bottom: 0;
+}
+
+.screen-notification_detail .section-header .header-inner {
+    box-shadow: none !important
+}
+
+.screen-notification_detail .notification-detail_meta {
+    margin-top: 8px;
+}
+
+.screen-notification_detail .notification-detail_meta .notification-detail_meta__item {
+    position: relative;
+}
+
+.screen-notification_detail .notification-detail_meta .notification-detail_meta__item svg {
+    width: 20px;
+    height: 20px;
+}
+
+.screen-notification_detail .notification-detail_meta .notification-detail_meta__item + .notification-detail_meta__item {
+    margin-left: 8px;
+    padding-left: 8px;
+}
+
+.screen-notification_detail .notification-detail_meta .notification-detail_meta__item + .notification-detail_meta__item:before {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 10px;
+    width: 1px;
+    background: #909090;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.screen-notification_detail .notification-detail_content {
+    padding-top: 16px;
+    margin-top: 16px;
+    border-top: 1px solid #CCC;
+}
+
+.screen-notification_detail .notification-detail_content .button-app {
+    filter: drop-shadow(0px 4.399937629699707px 10.57091999053955px rgba(0, 0, 0, 0.01)) drop-shadow(0px 10.573661804199219px 25.40338897705078px rgba(0, 0, 0, 0.02)) drop-shadow(0px 19.90926742553711px 47.83232879638672px rgba(0, 0, 0, 0.02)) drop-shadow(0px 35.514732360839844px 85.32469940185547px rgba(0, 0, 0, 0.02)) drop-shadow(0px 66.42639923095703px 159.59046936035156px rgba(0, 0, 0, 0.03)) drop-shadow(0px 159px 382px rgba(0, 0, 0, 0.15));
 }

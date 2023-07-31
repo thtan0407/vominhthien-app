@@ -438,7 +438,7 @@ export function handleCallCollapseOrder() {
 
 /****
  * Handle Modal Report
- * Dùng cho modal khiếu nại - Page tất cả đơn hàng
+ * Dùng cho modal khiếu nại
  */
 export function handleModalReport() {
 	const callModalReported = document.getElementById('call-modal_reported');
@@ -663,8 +663,8 @@ export function handleReadAllNotification() {
 	const buttonReadAll = document.getElementById('button-readAll');
 	const iconNotification = document.getElementById('icon-notification');
 	const modalReadAll = document.getElementById('modal-readAll');
-	const handleModal = new bootstrap.Modal('#modal-readAll');
 	if (buttonReadAll !== null && iconNotification !== null && modalReadAll !== null) {
+		const handleModal = new bootstrap.Modal('#modal-readAll');
 		buttonReadAll.addEventListener('click', () => {
 			handleModal.hide();
 			iconNotification.classList.add('is-read');
