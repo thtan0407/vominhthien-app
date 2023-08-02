@@ -463,16 +463,6 @@ input[type='number'] {
 	-webkit-appearance: none;
 }
 
-.scrollbar-hidden {
-	-ms-overflow-style: none;
-	scrollbar-width: none;
-}
-
-.scrollbar-hidden::-webkit-scrollbar {
-	display: none;
-	-webkit-appearance: none;
-}
-
 .section-gap {
 	padding: 16px 0;
 }

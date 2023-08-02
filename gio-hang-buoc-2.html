@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
 
     <title>Template VMT App</title>
     <meta name="description" content="Template VMT App">
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
-	<link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -70,470 +70,486 @@
     </div>
 </div>
 
-<div class="screen-cart main-spacing_tabs">
-    <!-- Header page -->
-    <div class="section-header bg-white position-fixed top-0 start-0 end-0 zi-10 w-100">
-        <div class="header-inner">
-            <div class="container">
-                <div class="vstack">
-                    <div class="header-inner_title pt-3 pb-2 heading-2 hstack gap-2">
-                        <a href="./index.html" class="hstack align-items-center justify-content-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
-                                      fill="#191E24"/>
-                            </svg>
+<div class="vstack position-relative min-vh-100 h-100 overflow-hidden">
+
+    <div class="vstack flex-fill overflow-hidden position-relative">
+        <div class="screen-overflow">
+            <div class="main main-spacing_tabs screen-cart">
+                <!-- Header page -->
+                <div class="section-header bg-white position-fixed top-0 start-0 end-0 zi-10 w-100">
+                    <div class="header-inner">
+                        <div class="container">
+                            <div class="vstack">
+                                <div class="header-inner_title pt-3 pb-2 heading-2 hstack gap-2">
+                                    <a href="./index.html" class="hstack align-items-center justify-content-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24"
+                                             fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
+                                                  fill="#191E24"/>
+                                        </svg>
+                                    </a>
+                                    Giỏ hàng
+                                </div>
+                                <div class="theme-tabs">
+                                    <ul class="nav nav-tabs border-0 flex-nowrap align-items-center justify-content-center">
+                                        <li class="nav-item flex-fill">
+                                            <a href="./gio-hang-buoc-1.html"
+                                               class="nav-link px-3 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+                                                1. Thông tin
+                                            </a>
+                                        </li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24"
+                                             fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M8.29289 18.7071C7.90237 18.3166 7.90237 17.6834 8.29289 17.2929L13.5858 12L8.29289 6.70711C7.90237 6.31658 7.90237 5.68342 8.29289 5.29289C8.68342 4.90237 9.31658 4.90237 9.70711 5.29289L15.7071 11.2929C16.0976 11.6834 16.0976 12.3166 15.7071 12.7071L9.70711 18.7071C9.31658 19.0976 8.68342 19.0976 8.29289 18.7071Z"
+                                                  fill="#191E24"/>
+                                        </svg>
+                                        <li class="nav-item flex-fill" role="presentation">
+                                            <a href="./gio-hang-buoc-2.html"
+                                               class="nav-link px-3 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset active">
+                                                2. Xác nhận
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-wrapper" id="cart-wrapper">
+                    <div class="container">
+                        <div class="py-3 heading-4 fw-normal">
+                            Khách hàng vui lòng kiểm tra lại số lượng và sản phẩm cần mua.<br>
+                            Số tiền đặt cọc sẽ tính theo giá trị tiền hàng
+                        </div>
+                        <div class="vstack gap-3">
+                            <div class="cart-content cart-content_bg bg-white p-3">
+                                <div class="cart-actions gap-3 hstack align-items-center">
+                                    <div class="cart-action_title gap-2 hstack align-items-center">
+                                        <div class="heading-4 black-50-color">
+                                            Shop:
+                                        </div>
+                                        <div class="heading-4 black-50-color gap-1 hstack align-items-center">
+                                            <img src="./assets/images/icon/tmall.png" width="16" height="16"
+                                                 class="mw-100" alt="">
+                                            diw迪威
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse show" id="cart-list_01">
+                                    <div class="cart-list">
+                                        <div class="cart-item">
+                                            <div class="product-item vstack gap-10px">
+                                                <div class="hstack gap-3">
+                                                    <div class="product-item_image overflow-hidden flex-shrink-0">
+                                                        <img src="./assets/images/product/product-1.png" width="80"
+                                                             height="80"
+                                                             class="mw-100"
+                                                             alt="">
+                                                    </div>
+                                                    <div class="product-item_content vstack gap-2">
+                                                        <div class="product-item_title dark-color">
+                                                            适用铃木悦帅GD110摩托车摩托车...
+                                                        </div>
+                                                        <div class="product-item_information">
+                                                            <div class="gray-color">Phân loại: Xám x 2</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-item_unit hstack align-items-start justify-content-between gap-3">
+                                                    <div class="heading-4 fw-bold text-black">
+                                                        Đơn giá
+                                                    </div>
+                                                    <div class="vstack align-items-end text-end">
+                                                        <div class="heading-4 fw-normal">
+                                                            320.000 (VNĐ)
+                                                        </div>
+                                                        <div class="heading-5 dark-color">
+                                                            60 (¥)
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-item_note mt-2 hstack justify-content-between gap-3">
+                                                    <div class="heading-4 fw-bold text-black">
+                                                        Ghi chú
+                                                    </div>
+                                                    <div class="vstack align-items-end">
+                                                        <input type="text" class="product-item_note__input"
+                                                               placeholder="Thêm ghi chú" value="Màu xanh blue ạ">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cart-item">
+                                            <div class="product-item vstack gap-10px">
+                                                <div class="hstack gap-3">
+                                                    <div class="product-item_image overflow-hidden flex-shrink-0">
+                                                        <img src="./assets/images/product/product-1.png" width="80"
+                                                             height="80"
+                                                             class="mw-100"
+                                                             alt="">
+                                                    </div>
+                                                    <div class="product-item_content vstack gap-2">
+                                                        <div class="product-item_title dark-color">
+                                                            适用铃木悦帅GD110摩托车摩托车...
+                                                        </div>
+                                                        <div class="product-item_information">
+                                                            <div class="gray-color">Phân loại: Trắng x1</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-item_unit hstack align-items-start justify-content-between gap-3">
+                                                    <div class="heading-4 fw-bold text-black">
+                                                        Đơn giá
+                                                    </div>
+                                                    <div class="vstack align-items-end text-end">
+                                                        <div class="heading-4 fw-normal">
+                                                            320.000 (VNĐ)
+                                                        </div>
+                                                        <div class="heading-5 dark-color">
+                                                            60 (¥)
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-item_note mt-2 hstack justify-content-between gap-3">
+                                                    <div class="heading-4 fw-bold text-black">
+                                                        Ghi chú
+                                                    </div>
+                                                    <div class="vstack align-items-end">
+                                                        <input type="text" class="product-item_note__input"
+                                                               placeholder="Thêm ghi chú" value="Màu xanh blue ạ">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cart-order vstack gap-3">
+                                            <div class="cart-order_item hstack align-items-center justify-content-between gap-3">
+                                                <div class="heading-4 fw-bold text-black">
+                                                    Dịch vụ
+                                                </div>
+                                                <div class="hstack gap-2 align-items-center justify-content-center ms-auto">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
+                                                         viewBox="0 0 21 20"
+                                                         fill="none">
+                                                        <path d="M17.3418 6.51662L10.9252 10.2333C10.6668 10.3833 10.3418 10.3833 10.0752 10.2333L3.65851 6.51662C3.20018 6.24995 3.08351 5.62495 3.43351 5.23328C3.67518 4.95828 3.95018 4.73328 4.24185 4.57495L8.75851 2.07495C9.72518 1.53328 11.2918 1.53328 12.2585 2.07495L16.7752 4.57495C17.0668 4.73328 17.3418 4.96662 17.5835 5.23328C17.9168 5.62495 17.8002 6.24995 17.3418 6.51662Z"
+                                                              fill="#212C28"/>
+                                                        <path d="M10.0251 11.7833V17.4666C10.0251 18.1 9.3834 18.5166 8.81673 18.2416C7.10006 17.4 4.2084 15.825 4.2084 15.825C3.19173 15.25 2.3584 13.8 2.3584 12.6083V8.30831C2.3584 7.64998 3.05007 7.23331 3.61673 7.55831L9.6084 11.0333C9.8584 11.1916 10.0251 11.475 10.0251 11.7833Z"
+                                                              fill="#212C28"/>
+                                                        <path d="M10.9746 11.7833V17.4666C10.9746 18.1 11.6163 18.5166 12.1829 18.2416C13.8996 17.4 16.7913 15.825 16.7913 15.825C17.8079 15.25 18.6413 13.8 18.6413 12.6083V8.30831C18.6413 7.64998 17.9496 7.23331 17.3829 7.55831L11.3913 11.0333C11.1413 11.1916 10.9746 11.475 10.9746 11.7833Z"
+                                                              fill="#212C28"/>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
+                                                         viewBox="0 0 21 20"
+                                                         fill="none">
+                                                        <path d="M13.8333 1.66663H7.16667C4.86667 1.66663 3 3.53329 3 5.83329V14.1666C3 16.4666 4.86667 18.3333 7.16667 18.3333H13.8333C16.1333 18.3333 18 16.4666 18 14.1666V5.83329C18 3.53329 16.1333 1.66663 13.8333 1.66663ZM7.88333 15.525C7.725 15.6833 7.51667 15.7666 7.3 15.7666C7.075 15.7666 6.86667 15.6833 6.70833 15.525C6.55 15.3666 6.45833 15.1583 6.45833 14.9333C6.45833 14.7166 6.55 14.5 6.70833 14.3416C6.78333 14.2666 6.875 14.2083 6.975 14.1666C7.18333 14.0833 7.40833 14.0833 7.61667 14.1666C7.66667 14.1833 7.71667 14.2083 7.75833 14.2416C7.80833 14.2666 7.85 14.3083 7.88333 14.3416C8.04167 14.5 8.13333 14.7166 8.13333 14.9333C8.13333 15.1583 8.04167 15.3666 7.88333 15.525ZM6.45833 11.6C6.45833 11.4916 6.48333 11.3833 6.525 11.2833C6.56667 11.175 6.625 11.0916 6.70833 11.0083C6.9 10.8166 7.19167 10.725 7.45833 10.7833C7.50833 10.7916 7.56667 10.8083 7.61667 10.8333C7.66667 10.85 7.71667 10.875 7.75833 10.9083C7.80833 10.9333 7.85 10.975 7.88333 11.0083C7.95833 11.0916 8.025 11.175 8.06667 11.2833C8.10833 11.3833 8.125 11.4916 8.125 11.6C8.125 11.825 8.04167 12.0333 7.88333 12.1916C7.725 12.35 7.51667 12.4333 7.3 12.4333C7.18333 12.4333 7.075 12.4083 6.975 12.3666C6.875 12.325 6.78333 12.2666 6.70833 12.1916C6.55 12.0333 6.45833 11.825 6.45833 11.6ZM11.2167 15.525C11.1417 15.6 11.05 15.6583 10.95 15.7C10.85 15.7416 10.7417 15.7666 10.625 15.7666C10.4083 15.7666 10.2 15.6833 10.0417 15.525C9.88333 15.3666 9.79167 15.1583 9.79167 14.9333C9.79167 14.875 9.8 14.825 9.80833 14.7666C9.825 14.7166 9.84167 14.6666 9.85833 14.6166C9.88333 14.5666 9.90833 14.5166 9.93333 14.4666C9.96667 14.425 10 14.3833 10.0417 14.3416C10.1167 14.2666 10.2083 14.2083 10.3083 14.1666C10.6167 14.0416 10.9833 14.1083 11.2167 14.3416C11.375 14.5 11.4583 14.7166 11.4583 14.9333C11.4583 15.1583 11.375 15.3666 11.2167 15.525ZM11.2167 12.1916C11.0583 12.35 10.85 12.4333 10.625 12.4333C10.4083 12.4333 10.2 12.35 10.0417 12.1916C9.88333 12.0333 9.79167 11.825 9.79167 11.6C9.79167 11.3833 9.88333 11.1666 10.0417 11.0083C10.35 10.7 10.9083 10.7 11.2167 11.0083C11.2917 11.0916 11.3583 11.175 11.4 11.2833C11.4417 11.3833 11.4583 11.4916 11.4583 11.6C11.4583 11.825 11.375 12.0333 11.2167 12.1916ZM8 8.71663C7.14167 8.71663 6.43333 8.01663 6.43333 7.14996V6.31663C6.43333 5.45829 7.13333 4.74996 8 4.74996H13C13.8583 4.74996 14.5667 5.44996 14.5667 6.31663V7.14996C14.5667 8.00829 13.8667 8.71663 13 8.71663H8ZM14.55 15.525C14.3917 15.6833 14.1833 15.7666 13.9583 15.7666C13.85 15.7666 13.7417 15.7416 13.6417 15.7C13.5417 15.6583 13.45 15.6 13.375 15.525C13.2167 15.3666 13.1333 15.1583 13.1333 14.9333C13.1333 14.7166 13.2167 14.5 13.375 14.3416C13.6 14.1083 13.975 14.0416 14.2833 14.1666C14.3833 14.2083 14.475 14.2666 14.55 14.3416C14.7083 14.5 14.7917 14.7166 14.7917 14.9333C14.7917 15.1583 14.7083 15.3666 14.55 15.525ZM14.7333 11.9166C14.6917 12.0166 14.6333 12.1083 14.55 12.1916C14.3917 12.35 14.1833 12.4333 13.9583 12.4333C13.7417 12.4333 13.5333 12.35 13.375 12.1916C13.2167 12.0333 13.125 11.825 13.125 11.6C13.125 11.3833 13.2167 11.1666 13.375 11.0083C13.6833 10.7 14.2417 10.7 14.55 11.0083C14.7083 11.1666 14.8 11.3833 14.8 11.6C14.8 11.7083 14.775 11.8166 14.7333 11.9166Z"
+                                                              fill="#212C28"/>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
+                                                         viewBox="0 0 21 20"
+                                                         fill="none">
+                                                        <path d="M13.992 1.66663H7.00866C3.97533 1.66663 2.16699 3.47496 2.16699 6.50829V13.4833C2.16699 16.525 3.97533 18.3333 7.00866 18.3333H13.9837C17.017 18.3333 18.8253 16.525 18.8253 13.4916V6.50829C18.8337 3.47496 17.0253 1.66663 13.992 1.66663ZM8.50033 13.5C8.50033 14.325 7.82533 15 7.00033 15C6.17533 15 5.50033 14.325 5.50033 13.5C5.50033 12.675 6.17533 12 7.00033 12H7.66699C8.12533 12 8.50033 12.375 8.50033 12.8333V13.5ZM8.50033 7.16663C8.50033 7.62496 8.12533 7.99996 7.66699 7.99996H7.00033C6.17533 7.99996 5.50033 7.32496 5.50033 6.49996C5.50033 5.67496 6.17533 4.99996 7.00033 4.99996C7.82533 4.99996 8.50033 5.67496 8.50033 6.49996V7.16663ZM12.292 11.0416C12.292 11.45 11.9587 11.7916 11.542 11.7916H9.45033C9.04199 11.7916 8.70033 11.4583 8.70033 11.0416V8.94996C8.70033 8.54163 9.03366 8.19996 9.45033 8.19996H11.542C11.9503 8.19996 12.292 8.53329 12.292 8.94996V11.0416ZM14.0003 15C13.1753 15 12.5003 14.325 12.5003 13.5V12.8333C12.5003 12.375 12.8753 12 13.3337 12H14.0003C14.8253 12 15.5003 12.675 15.5003 13.5C15.5003 14.325 14.8253 15 14.0003 15ZM14.0003 7.99996H13.3337C12.8753 7.99996 12.5003 7.62496 12.5003 7.16663V6.49996C12.5003 5.67496 13.1753 4.99996 14.0003 4.99996C14.8253 4.99996 15.5003 5.67496 15.5003 6.49996C15.5003 7.32496 14.8253 7.99996 14.0003 7.99996Z"
+                                                              fill="#212C28"/>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
+                                                         viewBox="0 0 21 20"
+                                                         fill="none">
+                                                        <path d="M15.9497 3.43337L11.3663 1.7167C10.8913 1.5417 10.1163 1.5417 9.64134 1.7167L5.05801 3.43337C4.17467 3.7667 3.45801 4.80003 3.45801 5.7417V12.4917C3.45801 13.1667 3.89967 14.0584 4.44134 14.4584L9.02467 17.8834C9.83301 18.4917 11.158 18.4917 11.9663 17.8834L16.5497 14.4584C17.0913 14.05 17.533 13.1667 17.533 12.4917V5.7417C17.5413 4.80003 16.8247 3.7667 15.9497 3.43337ZM13.3997 8.10003L9.81634 11.6834C9.69134 11.8084 9.53301 11.8667 9.37467 11.8667C9.21634 11.8667 9.05801 11.8084 8.93301 11.6834L7.59967 10.3334C7.35801 10.0917 7.35801 9.6917 7.59967 9.45003C7.84134 9.20837 8.24134 9.20837 8.48301 9.45003L9.38301 10.35L12.5247 7.20837C12.7663 6.9667 13.1663 6.9667 13.408 7.20837C13.6497 7.45003 13.6497 7.85837 13.3997 8.10003Z"
+                                                              fill="#212C28"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="cart-order_item hstack align-items-center justify-content-between gap-3">
+                                                <div class="heading-4 fw-bold text-black">
+                                                    Vận chuyển
+                                                </div>
+                                                <div class="vstack align-items-end">
+                                                    <div class="button-reset orange-color hstack align-items-center justify-content-end">
+                                                        Ưu tiên
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cart-total pb-3">
+                                            <div class="cart-total_item hstack align-items-start justify-content-between gap-3">
+                                                <div class="heading-3 fw-bold text-black">
+                                                    Tổng tiền
+                                                </div>
+                                                <div class="vstack align-items-end text-end">
+                                                    <div class="heading-3 primary-color">
+                                                        640.000 (VNĐ)
+                                                    </div>
+                                                    <div class="heading-4 dark-color">
+                                                        120 (¥)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-content cart-content_bg bg-white p-3">
+                                <div class="cart-actions gap-3 hstack align-items-center">
+                                    <div class="cart-action_title gap-2 hstack align-items-center">
+                                        <div class="heading-4 black-50-color">
+                                            Shop:
+                                        </div>
+                                        <div class="heading-4 black-50-color gap-1 hstack align-items-center">
+                                            <img src="./assets/images/icon/tmall.png" width="16" height="16"
+                                                 class="mw-100" alt="">
+                                            diw迪威
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse show" id="cart-list_02">
+                                    <div class="cart-list">
+                                        <div class="cart-item">
+                                            <div class="product-item vstack gap-10px">
+                                                <div class="hstack gap-3">
+                                                    <div class="product-item_image overflow-hidden flex-shrink-0">
+                                                        <img src="./assets/images/product/product-1.png" width="80"
+                                                             height="80"
+                                                             class="mw-100"
+                                                             alt="">
+                                                    </div>
+                                                    <div class="product-item_content vstack gap-2">
+                                                        <div class="product-item_title dark-color">
+                                                            适用铃木悦帅GD110摩托车摩托车...
+                                                        </div>
+                                                        <div class="product-item_information">
+                                                            <div class="gray-color">Phân loại: Xám x 2</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-item_unit hstack align-items-start justify-content-between gap-3">
+                                                    <div class="heading-4 fw-bold text-black">
+                                                        Đơn giá
+                                                    </div>
+                                                    <div class="vstack align-items-end text-end">
+                                                        <div class="heading-4 fw-normal">
+                                                            320.000 (VNĐ)
+                                                        </div>
+                                                        <div class="heading-5 dark-color">
+                                                            60 (¥)
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-item_note mt-2 hstack justify-content-between gap-3">
+                                                    <div class="heading-4 fw-bold text-black">
+                                                        Ghi chú
+                                                    </div>
+                                                    <div class="vstack align-items-end">
+                                                        <input type="text" class="product-item_note__input"
+                                                               placeholder="Thêm ghi chú" value="Màu xanh blue ạ">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cart-item">
+                                            <div class="product-item vstack gap-10px">
+                                                <div class="hstack gap-3">
+                                                    <div class="product-item_image overflow-hidden flex-shrink-0">
+                                                        <img src="./assets/images/product/product-1.png" width="80"
+                                                             height="80"
+                                                             class="mw-100"
+                                                             alt="">
+                                                    </div>
+                                                    <div class="product-item_content vstack gap-2">
+                                                        <div class="product-item_title dark-color">
+                                                            适用铃木悦帅GD110摩托车摩托车...
+                                                        </div>
+                                                        <div class="product-item_information">
+                                                            <div class="gray-color">Phân loại: Trắng x 2</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-item_unit hstack align-items-start justify-content-between gap-3">
+                                                    <div class="heading-4 fw-bold text-black">
+                                                        Đơn giá
+                                                    </div>
+                                                    <div class="vstack align-items-end text-end">
+                                                        <div class="heading-4 fw-normal">
+                                                            320.000 (VNĐ)
+                                                        </div>
+                                                        <div class="heading-5 dark-color">
+                                                            60 (¥)
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-item_note mt-2 hstack justify-content-between gap-3">
+                                                    <div class="heading-4 fw-bold text-black">
+                                                        Ghi chú
+                                                    </div>
+                                                    <div class="vstack align-items-end">
+                                                        <input type="text" class="product-item_note__input"
+                                                               placeholder="Thêm ghi chú" value="Màu xanh blue ạ">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cart-order vstack gap-3">
+                                            <div class="cart-order_item hstack align-items-center justify-content-between gap-3">
+                                                <div class="heading-4 fw-bold text-black">
+                                                    Dịch vụ
+                                                </div>
+                                                <div class="hstack gap-2 align-items-center justify-content-center ms-auto">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
+                                                         viewBox="0 0 21 20"
+                                                         fill="none">
+                                                        <path d="M17.3418 6.51662L10.9252 10.2333C10.6668 10.3833 10.3418 10.3833 10.0752 10.2333L3.65851 6.51662C3.20018 6.24995 3.08351 5.62495 3.43351 5.23328C3.67518 4.95828 3.95018 4.73328 4.24185 4.57495L8.75851 2.07495C9.72518 1.53328 11.2918 1.53328 12.2585 2.07495L16.7752 4.57495C17.0668 4.73328 17.3418 4.96662 17.5835 5.23328C17.9168 5.62495 17.8002 6.24995 17.3418 6.51662Z"
+                                                              fill="#212C28"/>
+                                                        <path d="M10.0251 11.7833V17.4666C10.0251 18.1 9.3834 18.5166 8.81673 18.2416C7.10006 17.4 4.2084 15.825 4.2084 15.825C3.19173 15.25 2.3584 13.8 2.3584 12.6083V8.30831C2.3584 7.64998 3.05007 7.23331 3.61673 7.55831L9.6084 11.0333C9.8584 11.1916 10.0251 11.475 10.0251 11.7833Z"
+                                                              fill="#212C28"/>
+                                                        <path d="M10.9746 11.7833V17.4666C10.9746 18.1 11.6163 18.5166 12.1829 18.2416C13.8996 17.4 16.7913 15.825 16.7913 15.825C17.8079 15.25 18.6413 13.8 18.6413 12.6083V8.30831C18.6413 7.64998 17.9496 7.23331 17.3829 7.55831L11.3913 11.0333C11.1413 11.1916 10.9746 11.475 10.9746 11.7833Z"
+                                                              fill="#212C28"/>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
+                                                         viewBox="0 0 21 20"
+                                                         fill="none">
+                                                        <path d="M13.8333 1.66663H7.16667C4.86667 1.66663 3 3.53329 3 5.83329V14.1666C3 16.4666 4.86667 18.3333 7.16667 18.3333H13.8333C16.1333 18.3333 18 16.4666 18 14.1666V5.83329C18 3.53329 16.1333 1.66663 13.8333 1.66663ZM7.88333 15.525C7.725 15.6833 7.51667 15.7666 7.3 15.7666C7.075 15.7666 6.86667 15.6833 6.70833 15.525C6.55 15.3666 6.45833 15.1583 6.45833 14.9333C6.45833 14.7166 6.55 14.5 6.70833 14.3416C6.78333 14.2666 6.875 14.2083 6.975 14.1666C7.18333 14.0833 7.40833 14.0833 7.61667 14.1666C7.66667 14.1833 7.71667 14.2083 7.75833 14.2416C7.80833 14.2666 7.85 14.3083 7.88333 14.3416C8.04167 14.5 8.13333 14.7166 8.13333 14.9333C8.13333 15.1583 8.04167 15.3666 7.88333 15.525ZM6.45833 11.6C6.45833 11.4916 6.48333 11.3833 6.525 11.2833C6.56667 11.175 6.625 11.0916 6.70833 11.0083C6.9 10.8166 7.19167 10.725 7.45833 10.7833C7.50833 10.7916 7.56667 10.8083 7.61667 10.8333C7.66667 10.85 7.71667 10.875 7.75833 10.9083C7.80833 10.9333 7.85 10.975 7.88333 11.0083C7.95833 11.0916 8.025 11.175 8.06667 11.2833C8.10833 11.3833 8.125 11.4916 8.125 11.6C8.125 11.825 8.04167 12.0333 7.88333 12.1916C7.725 12.35 7.51667 12.4333 7.3 12.4333C7.18333 12.4333 7.075 12.4083 6.975 12.3666C6.875 12.325 6.78333 12.2666 6.70833 12.1916C6.55 12.0333 6.45833 11.825 6.45833 11.6ZM11.2167 15.525C11.1417 15.6 11.05 15.6583 10.95 15.7C10.85 15.7416 10.7417 15.7666 10.625 15.7666C10.4083 15.7666 10.2 15.6833 10.0417 15.525C9.88333 15.3666 9.79167 15.1583 9.79167 14.9333C9.79167 14.875 9.8 14.825 9.80833 14.7666C9.825 14.7166 9.84167 14.6666 9.85833 14.6166C9.88333 14.5666 9.90833 14.5166 9.93333 14.4666C9.96667 14.425 10 14.3833 10.0417 14.3416C10.1167 14.2666 10.2083 14.2083 10.3083 14.1666C10.6167 14.0416 10.9833 14.1083 11.2167 14.3416C11.375 14.5 11.4583 14.7166 11.4583 14.9333C11.4583 15.1583 11.375 15.3666 11.2167 15.525ZM11.2167 12.1916C11.0583 12.35 10.85 12.4333 10.625 12.4333C10.4083 12.4333 10.2 12.35 10.0417 12.1916C9.88333 12.0333 9.79167 11.825 9.79167 11.6C9.79167 11.3833 9.88333 11.1666 10.0417 11.0083C10.35 10.7 10.9083 10.7 11.2167 11.0083C11.2917 11.0916 11.3583 11.175 11.4 11.2833C11.4417 11.3833 11.4583 11.4916 11.4583 11.6C11.4583 11.825 11.375 12.0333 11.2167 12.1916ZM8 8.71663C7.14167 8.71663 6.43333 8.01663 6.43333 7.14996V6.31663C6.43333 5.45829 7.13333 4.74996 8 4.74996H13C13.8583 4.74996 14.5667 5.44996 14.5667 6.31663V7.14996C14.5667 8.00829 13.8667 8.71663 13 8.71663H8ZM14.55 15.525C14.3917 15.6833 14.1833 15.7666 13.9583 15.7666C13.85 15.7666 13.7417 15.7416 13.6417 15.7C13.5417 15.6583 13.45 15.6 13.375 15.525C13.2167 15.3666 13.1333 15.1583 13.1333 14.9333C13.1333 14.7166 13.2167 14.5 13.375 14.3416C13.6 14.1083 13.975 14.0416 14.2833 14.1666C14.3833 14.2083 14.475 14.2666 14.55 14.3416C14.7083 14.5 14.7917 14.7166 14.7917 14.9333C14.7917 15.1583 14.7083 15.3666 14.55 15.525ZM14.7333 11.9166C14.6917 12.0166 14.6333 12.1083 14.55 12.1916C14.3917 12.35 14.1833 12.4333 13.9583 12.4333C13.7417 12.4333 13.5333 12.35 13.375 12.1916C13.2167 12.0333 13.125 11.825 13.125 11.6C13.125 11.3833 13.2167 11.1666 13.375 11.0083C13.6833 10.7 14.2417 10.7 14.55 11.0083C14.7083 11.1666 14.8 11.3833 14.8 11.6C14.8 11.7083 14.775 11.8166 14.7333 11.9166Z"
+                                                              fill="#212C28"/>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
+                                                         viewBox="0 0 21 20"
+                                                         fill="none">
+                                                        <path d="M13.992 1.66663H7.00866C3.97533 1.66663 2.16699 3.47496 2.16699 6.50829V13.4833C2.16699 16.525 3.97533 18.3333 7.00866 18.3333H13.9837C17.017 18.3333 18.8253 16.525 18.8253 13.4916V6.50829C18.8337 3.47496 17.0253 1.66663 13.992 1.66663ZM8.50033 13.5C8.50033 14.325 7.82533 15 7.00033 15C6.17533 15 5.50033 14.325 5.50033 13.5C5.50033 12.675 6.17533 12 7.00033 12H7.66699C8.12533 12 8.50033 12.375 8.50033 12.8333V13.5ZM8.50033 7.16663C8.50033 7.62496 8.12533 7.99996 7.66699 7.99996H7.00033C6.17533 7.99996 5.50033 7.32496 5.50033 6.49996C5.50033 5.67496 6.17533 4.99996 7.00033 4.99996C7.82533 4.99996 8.50033 5.67496 8.50033 6.49996V7.16663ZM12.292 11.0416C12.292 11.45 11.9587 11.7916 11.542 11.7916H9.45033C9.04199 11.7916 8.70033 11.4583 8.70033 11.0416V8.94996C8.70033 8.54163 9.03366 8.19996 9.45033 8.19996H11.542C11.9503 8.19996 12.292 8.53329 12.292 8.94996V11.0416ZM14.0003 15C13.1753 15 12.5003 14.325 12.5003 13.5V12.8333C12.5003 12.375 12.8753 12 13.3337 12H14.0003C14.8253 12 15.5003 12.675 15.5003 13.5C15.5003 14.325 14.8253 15 14.0003 15ZM14.0003 7.99996H13.3337C12.8753 7.99996 12.5003 7.62496 12.5003 7.16663V6.49996C12.5003 5.67496 13.1753 4.99996 14.0003 4.99996C14.8253 4.99996 15.5003 5.67496 15.5003 6.49996C15.5003 7.32496 14.8253 7.99996 14.0003 7.99996Z"
+                                                              fill="#212C28"/>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
+                                                         viewBox="0 0 21 20"
+                                                         fill="none">
+                                                        <path d="M15.9497 3.43337L11.3663 1.7167C10.8913 1.5417 10.1163 1.5417 9.64134 1.7167L5.05801 3.43337C4.17467 3.7667 3.45801 4.80003 3.45801 5.7417V12.4917C3.45801 13.1667 3.89967 14.0584 4.44134 14.4584L9.02467 17.8834C9.83301 18.4917 11.158 18.4917 11.9663 17.8834L16.5497 14.4584C17.0913 14.05 17.533 13.1667 17.533 12.4917V5.7417C17.5413 4.80003 16.8247 3.7667 15.9497 3.43337ZM13.3997 8.10003L9.81634 11.6834C9.69134 11.8084 9.53301 11.8667 9.37467 11.8667C9.21634 11.8667 9.05801 11.8084 8.93301 11.6834L7.59967 10.3334C7.35801 10.0917 7.35801 9.6917 7.59967 9.45003C7.84134 9.20837 8.24134 9.20837 8.48301 9.45003L9.38301 10.35L12.5247 7.20837C12.7663 6.9667 13.1663 6.9667 13.408 7.20837C13.6497 7.45003 13.6497 7.85837 13.3997 8.10003Z"
+                                                              fill="#212C28"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="cart-order_item hstack align-items-center justify-content-between gap-3">
+                                                <div class="heading-4 fw-bold text-black">
+                                                    Vận chuyển
+                                                </div>
+                                                <div class="vstack align-items-end">
+                                                    <div class="button-reset orange-color hstack align-items-center justify-content-end">
+                                                        Ưu tiên
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cart-total pb-3">
+                                            <div class="cart-total_item hstack align-items-start justify-content-between gap-3">
+                                                <div class="heading-3 fw-bold text-black">
+                                                    Tổng tiền
+                                                </div>
+                                                <div class="vstack align-items-end text-end">
+                                                    <div class="heading-3 primary-color">
+                                                        640.000 (VNĐ)
+                                                    </div>
+                                                    <div class="heading-4 dark-color">
+                                                        120 (¥)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-footer position-fixed bottom-0 start-0 end-0 zi-10 bg-white w-100 p-3 p-0">
+                    <div class="section-footer_collapse position-absolute start-50 translate-middle-x">
+                        <button type="button" data-bs-target="#card-footer_detail" data-bs-toggle="collapse"
+                                class="section-footer_collapse__button pseudo button-reset"></button>
+                    </div>
+                    <div class="collapse" id="card-footer_detail">
+                        <div class="card-footer_detail vstack gap-3">
+                            <div class="card-footer_detail__header hstack">
+                                <div class="hstack gap-3 align-items-center">
+                                    <div class="gray-color">
+                                        Tỉ giá
+                                    </div>
+                                    <div class="orange-color">
+                                        1¥ = 3750 VND
+                                    </div>
+                                </div>
+                                <div class="hstack gap-3 align-items-center justify-content-between flex-fill">
+                                    <div class="gray-color">
+                                        Tổng số tệ
+                                    </div>
+                                    <div class="text-black fw-bold">
+                                        2400¥
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer_detail__item">
+                                <div class="hstack align-items-start justify-content-between gap-3">
+                                    <div class="heading-5 fw-normal gray-color">
+                                        Phí dịch vụ
+                                    </div>
+                                    <div class="vstack align-items-end text-end">
+                                        <div class="heading-5 text-black">
+                                            Cập nhật sau khi tạo yêu cầu
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer_detail__item">
+                                <div class="hstack align-items-start justify-content-between gap-3">
+                                    <div class="heading-5 fw-normal gray-color">
+                                        Tổng VND
+                                    </div>
+                                    <div class="vstack align-items-end text-end">
+                                        <div class="heading-5 text-black">
+                                            1.280.000 VND
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer_detail__item">
+                                <div class="hstack align-items-start justify-content-between gap-3">
+                                    <div class="heading-5 text-black hstack align-items-center">
+                                        Voucher
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 24 24"
+                                             fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M8.29289 18.7071C7.90237 18.3166 7.90237 17.6834 8.29289 17.2929L13.5858 12L8.29289 6.70711C7.90237 6.31658 7.90237 5.68342 8.29289 5.29289C8.68342 4.90237 9.31658 4.90237 9.70711 5.29289L15.7071 11.2929C16.0976 11.6834 16.0976 12.3166 15.7071 12.7071L9.70711 18.7071C9.31658 19.0976 8.68342 19.0976 8.29289 18.7071Z"
+                                                  fill="#191E24"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="vstack align-items-end text-end">
+                                        <div class="heading-6 fw-normal button-theme button-outline_orange py-1 px-2 rounded-3">
+                                            30.000 VND
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer_total">
+                        <div class="hstack align-items-start justify-content-between gap-3">
+                            <div class="heading-4 fw-bold gray-color">
+                                Tổng tiền
+                            </div>
+                            <div class="vstack align-items-end text-end">
+                                <div class="heading-3 primary-color">
+                                    1.250.000 (VNĐ)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer_buttons hstack gap-2 w-100 pb-3">
+                        <a href="./gio-hang-buoc-2.html" class="button-theme button-outline_green flex-fill w-50">
+                            Quay lại
                         </a>
-                        Giỏ hàng
-                    </div>
-                    <div class="theme-tabs">
-                        <ul class="nav nav-tabs border-0 flex-nowrap align-items-center justify-content-center">
-                            <li class="nav-item flex-fill">
-                                <a href="./gio-hang-buoc-1.html"
-                                   class="nav-link px-3 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
-                                    1. Thông tin
-                                </a>
-                            </li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M8.29289 18.7071C7.90237 18.3166 7.90237 17.6834 8.29289 17.2929L13.5858 12L8.29289 6.70711C7.90237 6.31658 7.90237 5.68342 8.29289 5.29289C8.68342 4.90237 9.31658 4.90237 9.70711 5.29289L15.7071 11.2929C16.0976 11.6834 16.0976 12.3166 15.7071 12.7071L9.70711 18.7071C9.31658 19.0976 8.68342 19.0976 8.29289 18.7071Z"
-                                      fill="#191E24"/>
-                            </svg>
-                            <li class="nav-item flex-fill" role="presentation">
-                                <a href="./gio-hang-buoc-2.html"
-                                   class="nav-link px-3 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset active">
-                                    2. Xác nhận
-                                </a>
-                            </li>
-                        </ul>
+                        <button type="button" data-bs-target="#modal-order" data-bs-toggle="modal"
+                                class="button-theme button-gradient_green flex-fill w-50">
+                            Xác nhận
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="cart-wrapper" id="cart-wrapper">
-        <div class="container">
-			<div class="py-3 heading-4 fw-normal">
-				Khách hàng vui lòng kiểm tra lại số lượng và sản phẩm cần mua.<br>
-				Số tiền đặt cọc sẽ tính theo giá trị tiền hàng
-			</div>
-            <div class="vstack gap-3">
-                <div class="cart-content cart-content_bg bg-white p-3">
-                    <div class="cart-actions gap-3 hstack align-items-center">
-                        <div class="cart-action_title gap-2 hstack align-items-center">
-                            <div class="heading-4 black-50-color">
-                                Shop:
-                            </div>
-                            <div class="heading-4 black-50-color gap-1 hstack align-items-center">
-                                <img src="./assets/images/icon/tmall.png" width="16" height="16" class="mw-100" alt="">
-                                diw迪威
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse show" id="cart-list_01">
-                        <div class="cart-list">
-                            <div class="cart-item">
-                                <div class="product-item vstack gap-10px">
-                                    <div class="hstack gap-3">
-                                        <div class="product-item_image overflow-hidden flex-shrink-0">
-                                            <img src="./assets/images/product/product-1.png" width="80" height="80"
-                                                 class="mw-100"
-                                                 alt="">
-                                        </div>
-                                        <div class="product-item_content vstack gap-2">
-                                            <div class="product-item_title dark-color">
-                                                适用铃木悦帅GD110摩托车摩托车...
-                                            </div>
-                                            <div class="product-item_information">
-                                                <div class="gray-color">Phân loại: Xám x 2</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-item_unit hstack align-items-start justify-content-between gap-3">
-                                        <div class="heading-4 fw-bold text-black">
-                                            Đơn giá
-                                        </div>
-                                        <div class="vstack align-items-end text-end">
-                                            <div class="heading-4 fw-normal">
-                                                320.000 (VNĐ)
-                                            </div>
-                                            <div class="heading-5 dark-color">
-                                                60 (¥)
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-item_note mt-2 hstack justify-content-between gap-3">
-                                        <div class="heading-4 fw-bold text-black">
-                                            Ghi chú
-                                        </div>
-                                        <div class="vstack align-items-end">
-                                            <input type="text" class="product-item_note__input"
-                                                   placeholder="Thêm ghi chú" value="Màu xanh blue ạ">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cart-item">
-                                <div class="product-item vstack gap-10px">
-                                    <div class="hstack gap-3">
-                                        <div class="product-item_image overflow-hidden flex-shrink-0">
-                                            <img src="./assets/images/product/product-1.png" width="80" height="80"
-                                                 class="mw-100"
-                                                 alt="">
-                                        </div>
-                                        <div class="product-item_content vstack gap-2">
-                                            <div class="product-item_title dark-color">
-                                                适用铃木悦帅GD110摩托车摩托车...
-                                            </div>
-                                            <div class="product-item_information">
-                                                <div class="gray-color">Phân loại: Trắng x1</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-item_unit hstack align-items-start justify-content-between gap-3">
-                                        <div class="heading-4 fw-bold text-black">
-                                            Đơn giá
-                                        </div>
-                                        <div class="vstack align-items-end text-end">
-                                            <div class="heading-4 fw-normal">
-                                                320.000 (VNĐ)
-                                            </div>
-                                            <div class="heading-5 dark-color">
-                                                60 (¥)
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-item_note mt-2 hstack justify-content-between gap-3">
-                                        <div class="heading-4 fw-bold text-black">
-                                            Ghi chú
-                                        </div>
-                                        <div class="vstack align-items-end">
-                                            <input type="text" class="product-item_note__input"
-                                                   placeholder="Thêm ghi chú" value="Màu xanh blue ạ">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cart-order vstack gap-3">
-                                <div class="cart-order_item hstack align-items-center justify-content-between gap-3">
-                                    <div class="heading-4 fw-bold text-black">
-                                        Dịch vụ
-                                    </div>
-                                    <div class="hstack gap-2 align-items-center justify-content-center ms-auto">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
-                                             viewBox="0 0 21 20"
-                                             fill="none">
-                                            <path d="M17.3418 6.51662L10.9252 10.2333C10.6668 10.3833 10.3418 10.3833 10.0752 10.2333L3.65851 6.51662C3.20018 6.24995 3.08351 5.62495 3.43351 5.23328C3.67518 4.95828 3.95018 4.73328 4.24185 4.57495L8.75851 2.07495C9.72518 1.53328 11.2918 1.53328 12.2585 2.07495L16.7752 4.57495C17.0668 4.73328 17.3418 4.96662 17.5835 5.23328C17.9168 5.62495 17.8002 6.24995 17.3418 6.51662Z"
-                                                  fill="#212C28"/>
-                                            <path d="M10.0251 11.7833V17.4666C10.0251 18.1 9.3834 18.5166 8.81673 18.2416C7.10006 17.4 4.2084 15.825 4.2084 15.825C3.19173 15.25 2.3584 13.8 2.3584 12.6083V8.30831C2.3584 7.64998 3.05007 7.23331 3.61673 7.55831L9.6084 11.0333C9.8584 11.1916 10.0251 11.475 10.0251 11.7833Z"
-                                                  fill="#212C28"/>
-                                            <path d="M10.9746 11.7833V17.4666C10.9746 18.1 11.6163 18.5166 12.1829 18.2416C13.8996 17.4 16.7913 15.825 16.7913 15.825C17.8079 15.25 18.6413 13.8 18.6413 12.6083V8.30831C18.6413 7.64998 17.9496 7.23331 17.3829 7.55831L11.3913 11.0333C11.1413 11.1916 10.9746 11.475 10.9746 11.7833Z"
-                                                  fill="#212C28"/>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
-                                             viewBox="0 0 21 20"
-                                             fill="none">
-                                            <path d="M13.8333 1.66663H7.16667C4.86667 1.66663 3 3.53329 3 5.83329V14.1666C3 16.4666 4.86667 18.3333 7.16667 18.3333H13.8333C16.1333 18.3333 18 16.4666 18 14.1666V5.83329C18 3.53329 16.1333 1.66663 13.8333 1.66663ZM7.88333 15.525C7.725 15.6833 7.51667 15.7666 7.3 15.7666C7.075 15.7666 6.86667 15.6833 6.70833 15.525C6.55 15.3666 6.45833 15.1583 6.45833 14.9333C6.45833 14.7166 6.55 14.5 6.70833 14.3416C6.78333 14.2666 6.875 14.2083 6.975 14.1666C7.18333 14.0833 7.40833 14.0833 7.61667 14.1666C7.66667 14.1833 7.71667 14.2083 7.75833 14.2416C7.80833 14.2666 7.85 14.3083 7.88333 14.3416C8.04167 14.5 8.13333 14.7166 8.13333 14.9333C8.13333 15.1583 8.04167 15.3666 7.88333 15.525ZM6.45833 11.6C6.45833 11.4916 6.48333 11.3833 6.525 11.2833C6.56667 11.175 6.625 11.0916 6.70833 11.0083C6.9 10.8166 7.19167 10.725 7.45833 10.7833C7.50833 10.7916 7.56667 10.8083 7.61667 10.8333C7.66667 10.85 7.71667 10.875 7.75833 10.9083C7.80833 10.9333 7.85 10.975 7.88333 11.0083C7.95833 11.0916 8.025 11.175 8.06667 11.2833C8.10833 11.3833 8.125 11.4916 8.125 11.6C8.125 11.825 8.04167 12.0333 7.88333 12.1916C7.725 12.35 7.51667 12.4333 7.3 12.4333C7.18333 12.4333 7.075 12.4083 6.975 12.3666C6.875 12.325 6.78333 12.2666 6.70833 12.1916C6.55 12.0333 6.45833 11.825 6.45833 11.6ZM11.2167 15.525C11.1417 15.6 11.05 15.6583 10.95 15.7C10.85 15.7416 10.7417 15.7666 10.625 15.7666C10.4083 15.7666 10.2 15.6833 10.0417 15.525C9.88333 15.3666 9.79167 15.1583 9.79167 14.9333C9.79167 14.875 9.8 14.825 9.80833 14.7666C9.825 14.7166 9.84167 14.6666 9.85833 14.6166C9.88333 14.5666 9.90833 14.5166 9.93333 14.4666C9.96667 14.425 10 14.3833 10.0417 14.3416C10.1167 14.2666 10.2083 14.2083 10.3083 14.1666C10.6167 14.0416 10.9833 14.1083 11.2167 14.3416C11.375 14.5 11.4583 14.7166 11.4583 14.9333C11.4583 15.1583 11.375 15.3666 11.2167 15.525ZM11.2167 12.1916C11.0583 12.35 10.85 12.4333 10.625 12.4333C10.4083 12.4333 10.2 12.35 10.0417 12.1916C9.88333 12.0333 9.79167 11.825 9.79167 11.6C9.79167 11.3833 9.88333 11.1666 10.0417 11.0083C10.35 10.7 10.9083 10.7 11.2167 11.0083C11.2917 11.0916 11.3583 11.175 11.4 11.2833C11.4417 11.3833 11.4583 11.4916 11.4583 11.6C11.4583 11.825 11.375 12.0333 11.2167 12.1916ZM8 8.71663C7.14167 8.71663 6.43333 8.01663 6.43333 7.14996V6.31663C6.43333 5.45829 7.13333 4.74996 8 4.74996H13C13.8583 4.74996 14.5667 5.44996 14.5667 6.31663V7.14996C14.5667 8.00829 13.8667 8.71663 13 8.71663H8ZM14.55 15.525C14.3917 15.6833 14.1833 15.7666 13.9583 15.7666C13.85 15.7666 13.7417 15.7416 13.6417 15.7C13.5417 15.6583 13.45 15.6 13.375 15.525C13.2167 15.3666 13.1333 15.1583 13.1333 14.9333C13.1333 14.7166 13.2167 14.5 13.375 14.3416C13.6 14.1083 13.975 14.0416 14.2833 14.1666C14.3833 14.2083 14.475 14.2666 14.55 14.3416C14.7083 14.5 14.7917 14.7166 14.7917 14.9333C14.7917 15.1583 14.7083 15.3666 14.55 15.525ZM14.7333 11.9166C14.6917 12.0166 14.6333 12.1083 14.55 12.1916C14.3917 12.35 14.1833 12.4333 13.9583 12.4333C13.7417 12.4333 13.5333 12.35 13.375 12.1916C13.2167 12.0333 13.125 11.825 13.125 11.6C13.125 11.3833 13.2167 11.1666 13.375 11.0083C13.6833 10.7 14.2417 10.7 14.55 11.0083C14.7083 11.1666 14.8 11.3833 14.8 11.6C14.8 11.7083 14.775 11.8166 14.7333 11.9166Z"
-                                                  fill="#212C28"/>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
-                                             viewBox="0 0 21 20"
-                                             fill="none">
-                                            <path d="M13.992 1.66663H7.00866C3.97533 1.66663 2.16699 3.47496 2.16699 6.50829V13.4833C2.16699 16.525 3.97533 18.3333 7.00866 18.3333H13.9837C17.017 18.3333 18.8253 16.525 18.8253 13.4916V6.50829C18.8337 3.47496 17.0253 1.66663 13.992 1.66663ZM8.50033 13.5C8.50033 14.325 7.82533 15 7.00033 15C6.17533 15 5.50033 14.325 5.50033 13.5C5.50033 12.675 6.17533 12 7.00033 12H7.66699C8.12533 12 8.50033 12.375 8.50033 12.8333V13.5ZM8.50033 7.16663C8.50033 7.62496 8.12533 7.99996 7.66699 7.99996H7.00033C6.17533 7.99996 5.50033 7.32496 5.50033 6.49996C5.50033 5.67496 6.17533 4.99996 7.00033 4.99996C7.82533 4.99996 8.50033 5.67496 8.50033 6.49996V7.16663ZM12.292 11.0416C12.292 11.45 11.9587 11.7916 11.542 11.7916H9.45033C9.04199 11.7916 8.70033 11.4583 8.70033 11.0416V8.94996C8.70033 8.54163 9.03366 8.19996 9.45033 8.19996H11.542C11.9503 8.19996 12.292 8.53329 12.292 8.94996V11.0416ZM14.0003 15C13.1753 15 12.5003 14.325 12.5003 13.5V12.8333C12.5003 12.375 12.8753 12 13.3337 12H14.0003C14.8253 12 15.5003 12.675 15.5003 13.5C15.5003 14.325 14.8253 15 14.0003 15ZM14.0003 7.99996H13.3337C12.8753 7.99996 12.5003 7.62496 12.5003 7.16663V6.49996C12.5003 5.67496 13.1753 4.99996 14.0003 4.99996C14.8253 4.99996 15.5003 5.67496 15.5003 6.49996C15.5003 7.32496 14.8253 7.99996 14.0003 7.99996Z"
-                                                  fill="#212C28"/>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
-                                             viewBox="0 0 21 20"
-                                             fill="none">
-                                            <path d="M15.9497 3.43337L11.3663 1.7167C10.8913 1.5417 10.1163 1.5417 9.64134 1.7167L5.05801 3.43337C4.17467 3.7667 3.45801 4.80003 3.45801 5.7417V12.4917C3.45801 13.1667 3.89967 14.0584 4.44134 14.4584L9.02467 17.8834C9.83301 18.4917 11.158 18.4917 11.9663 17.8834L16.5497 14.4584C17.0913 14.05 17.533 13.1667 17.533 12.4917V5.7417C17.5413 4.80003 16.8247 3.7667 15.9497 3.43337ZM13.3997 8.10003L9.81634 11.6834C9.69134 11.8084 9.53301 11.8667 9.37467 11.8667C9.21634 11.8667 9.05801 11.8084 8.93301 11.6834L7.59967 10.3334C7.35801 10.0917 7.35801 9.6917 7.59967 9.45003C7.84134 9.20837 8.24134 9.20837 8.48301 9.45003L9.38301 10.35L12.5247 7.20837C12.7663 6.9667 13.1663 6.9667 13.408 7.20837C13.6497 7.45003 13.6497 7.85837 13.3997 8.10003Z"
-                                                  fill="#212C28"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="cart-order_item hstack align-items-center justify-content-between gap-3">
-                                    <div class="heading-4 fw-bold text-black">
-                                        Vận chuyển
-                                    </div>
-                                    <div class="vstack align-items-end">
-                                        <div class="button-reset orange-color hstack align-items-center justify-content-end">
-                                            Ưu tiên
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cart-total pb-3">
-                                <div class="cart-total_item hstack align-items-start justify-content-between gap-3">
-                                    <div class="heading-3 fw-bold text-black">
-                                        Tổng tiền
-                                    </div>
-                                    <div class="vstack align-items-end text-end">
-                                        <div class="heading-3 primary-color">
-                                            640.000 (VNĐ)
-                                        </div>
-                                        <div class="heading-4 dark-color">
-                                            120 (¥)
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-content cart-content_bg bg-white p-3">
-                    <div class="cart-actions gap-3 hstack align-items-center">
-                        <div class="cart-action_title gap-2 hstack align-items-center">
-                            <div class="heading-4 black-50-color">
-                                Shop:
-                            </div>
-                            <div class="heading-4 black-50-color gap-1 hstack align-items-center">
-                                <img src="./assets/images/icon/tmall.png" width="16" height="16" class="mw-100" alt="">
-                                diw迪威
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse show" id="cart-list_02">
-                        <div class="cart-list">
-                            <div class="cart-item">
-                                <div class="product-item vstack gap-10px">
-                                    <div class="hstack gap-3">
-                                        <div class="product-item_image overflow-hidden flex-shrink-0">
-                                            <img src="./assets/images/product/product-1.png" width="80" height="80"
-                                                 class="mw-100"
-                                                 alt="">
-                                        </div>
-                                        <div class="product-item_content vstack gap-2">
-                                            <div class="product-item_title dark-color">
-                                                适用铃木悦帅GD110摩托车摩托车...
-                                            </div>
-                                            <div class="product-item_information">
-                                                <div class="gray-color">Phân loại: Xám x 2</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-item_unit hstack align-items-start justify-content-between gap-3">
-                                        <div class="heading-4 fw-bold text-black">
-                                            Đơn giá
-                                        </div>
-                                        <div class="vstack align-items-end text-end">
-                                            <div class="heading-4 fw-normal">
-                                                320.000 (VNĐ)
-                                            </div>
-                                            <div class="heading-5 dark-color">
-                                                60 (¥)
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-item_note mt-2 hstack justify-content-between gap-3">
-                                        <div class="heading-4 fw-bold text-black">
-                                            Ghi chú
-                                        </div>
-                                        <div class="vstack align-items-end">
-                                            <input type="text" class="product-item_note__input"
-                                                   placeholder="Thêm ghi chú" value="Màu xanh blue ạ">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cart-item">
-                                <div class="product-item vstack gap-10px">
-                                    <div class="hstack gap-3">
-                                        <div class="product-item_image overflow-hidden flex-shrink-0">
-                                            <img src="./assets/images/product/product-1.png" width="80" height="80"
-                                                 class="mw-100"
-                                                 alt="">
-                                        </div>
-                                        <div class="product-item_content vstack gap-2">
-                                            <div class="product-item_title dark-color">
-                                                适用铃木悦帅GD110摩托车摩托车...
-                                            </div>
-                                            <div class="product-item_information">
-                                                <div class="gray-color">Phân loại: Trắng x 2</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-item_unit hstack align-items-start justify-content-between gap-3">
-                                        <div class="heading-4 fw-bold text-black">
-                                            Đơn giá
-                                        </div>
-                                        <div class="vstack align-items-end text-end">
-                                            <div class="heading-4 fw-normal">
-                                                320.000 (VNĐ)
-                                            </div>
-                                            <div class="heading-5 dark-color">
-                                                60 (¥)
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-item_note mt-2 hstack justify-content-between gap-3">
-                                        <div class="heading-4 fw-bold text-black">
-                                            Ghi chú
-                                        </div>
-                                        <div class="vstack align-items-end">
-                                            <input type="text" class="product-item_note__input"
-                                                   placeholder="Thêm ghi chú" value="Màu xanh blue ạ">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cart-order vstack gap-3">
-                                <div class="cart-order_item hstack align-items-center justify-content-between gap-3">
-                                    <div class="heading-4 fw-bold text-black">
-                                        Dịch vụ
-                                    </div>
-                                    <div class="hstack gap-2 align-items-center justify-content-center ms-auto">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
-                                             viewBox="0 0 21 20"
-                                             fill="none">
-                                            <path d="M17.3418 6.51662L10.9252 10.2333C10.6668 10.3833 10.3418 10.3833 10.0752 10.2333L3.65851 6.51662C3.20018 6.24995 3.08351 5.62495 3.43351 5.23328C3.67518 4.95828 3.95018 4.73328 4.24185 4.57495L8.75851 2.07495C9.72518 1.53328 11.2918 1.53328 12.2585 2.07495L16.7752 4.57495C17.0668 4.73328 17.3418 4.96662 17.5835 5.23328C17.9168 5.62495 17.8002 6.24995 17.3418 6.51662Z"
-                                                  fill="#212C28"/>
-                                            <path d="M10.0251 11.7833V17.4666C10.0251 18.1 9.3834 18.5166 8.81673 18.2416C7.10006 17.4 4.2084 15.825 4.2084 15.825C3.19173 15.25 2.3584 13.8 2.3584 12.6083V8.30831C2.3584 7.64998 3.05007 7.23331 3.61673 7.55831L9.6084 11.0333C9.8584 11.1916 10.0251 11.475 10.0251 11.7833Z"
-                                                  fill="#212C28"/>
-                                            <path d="M10.9746 11.7833V17.4666C10.9746 18.1 11.6163 18.5166 12.1829 18.2416C13.8996 17.4 16.7913 15.825 16.7913 15.825C17.8079 15.25 18.6413 13.8 18.6413 12.6083V8.30831C18.6413 7.64998 17.9496 7.23331 17.3829 7.55831L11.3913 11.0333C11.1413 11.1916 10.9746 11.475 10.9746 11.7833Z"
-                                                  fill="#212C28"/>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
-                                             viewBox="0 0 21 20"
-                                             fill="none">
-                                            <path d="M13.8333 1.66663H7.16667C4.86667 1.66663 3 3.53329 3 5.83329V14.1666C3 16.4666 4.86667 18.3333 7.16667 18.3333H13.8333C16.1333 18.3333 18 16.4666 18 14.1666V5.83329C18 3.53329 16.1333 1.66663 13.8333 1.66663ZM7.88333 15.525C7.725 15.6833 7.51667 15.7666 7.3 15.7666C7.075 15.7666 6.86667 15.6833 6.70833 15.525C6.55 15.3666 6.45833 15.1583 6.45833 14.9333C6.45833 14.7166 6.55 14.5 6.70833 14.3416C6.78333 14.2666 6.875 14.2083 6.975 14.1666C7.18333 14.0833 7.40833 14.0833 7.61667 14.1666C7.66667 14.1833 7.71667 14.2083 7.75833 14.2416C7.80833 14.2666 7.85 14.3083 7.88333 14.3416C8.04167 14.5 8.13333 14.7166 8.13333 14.9333C8.13333 15.1583 8.04167 15.3666 7.88333 15.525ZM6.45833 11.6C6.45833 11.4916 6.48333 11.3833 6.525 11.2833C6.56667 11.175 6.625 11.0916 6.70833 11.0083C6.9 10.8166 7.19167 10.725 7.45833 10.7833C7.50833 10.7916 7.56667 10.8083 7.61667 10.8333C7.66667 10.85 7.71667 10.875 7.75833 10.9083C7.80833 10.9333 7.85 10.975 7.88333 11.0083C7.95833 11.0916 8.025 11.175 8.06667 11.2833C8.10833 11.3833 8.125 11.4916 8.125 11.6C8.125 11.825 8.04167 12.0333 7.88333 12.1916C7.725 12.35 7.51667 12.4333 7.3 12.4333C7.18333 12.4333 7.075 12.4083 6.975 12.3666C6.875 12.325 6.78333 12.2666 6.70833 12.1916C6.55 12.0333 6.45833 11.825 6.45833 11.6ZM11.2167 15.525C11.1417 15.6 11.05 15.6583 10.95 15.7C10.85 15.7416 10.7417 15.7666 10.625 15.7666C10.4083 15.7666 10.2 15.6833 10.0417 15.525C9.88333 15.3666 9.79167 15.1583 9.79167 14.9333C9.79167 14.875 9.8 14.825 9.80833 14.7666C9.825 14.7166 9.84167 14.6666 9.85833 14.6166C9.88333 14.5666 9.90833 14.5166 9.93333 14.4666C9.96667 14.425 10 14.3833 10.0417 14.3416C10.1167 14.2666 10.2083 14.2083 10.3083 14.1666C10.6167 14.0416 10.9833 14.1083 11.2167 14.3416C11.375 14.5 11.4583 14.7166 11.4583 14.9333C11.4583 15.1583 11.375 15.3666 11.2167 15.525ZM11.2167 12.1916C11.0583 12.35 10.85 12.4333 10.625 12.4333C10.4083 12.4333 10.2 12.35 10.0417 12.1916C9.88333 12.0333 9.79167 11.825 9.79167 11.6C9.79167 11.3833 9.88333 11.1666 10.0417 11.0083C10.35 10.7 10.9083 10.7 11.2167 11.0083C11.2917 11.0916 11.3583 11.175 11.4 11.2833C11.4417 11.3833 11.4583 11.4916 11.4583 11.6C11.4583 11.825 11.375 12.0333 11.2167 12.1916ZM8 8.71663C7.14167 8.71663 6.43333 8.01663 6.43333 7.14996V6.31663C6.43333 5.45829 7.13333 4.74996 8 4.74996H13C13.8583 4.74996 14.5667 5.44996 14.5667 6.31663V7.14996C14.5667 8.00829 13.8667 8.71663 13 8.71663H8ZM14.55 15.525C14.3917 15.6833 14.1833 15.7666 13.9583 15.7666C13.85 15.7666 13.7417 15.7416 13.6417 15.7C13.5417 15.6583 13.45 15.6 13.375 15.525C13.2167 15.3666 13.1333 15.1583 13.1333 14.9333C13.1333 14.7166 13.2167 14.5 13.375 14.3416C13.6 14.1083 13.975 14.0416 14.2833 14.1666C14.3833 14.2083 14.475 14.2666 14.55 14.3416C14.7083 14.5 14.7917 14.7166 14.7917 14.9333C14.7917 15.1583 14.7083 15.3666 14.55 15.525ZM14.7333 11.9166C14.6917 12.0166 14.6333 12.1083 14.55 12.1916C14.3917 12.35 14.1833 12.4333 13.9583 12.4333C13.7417 12.4333 13.5333 12.35 13.375 12.1916C13.2167 12.0333 13.125 11.825 13.125 11.6C13.125 11.3833 13.2167 11.1666 13.375 11.0083C13.6833 10.7 14.2417 10.7 14.55 11.0083C14.7083 11.1666 14.8 11.3833 14.8 11.6C14.8 11.7083 14.775 11.8166 14.7333 11.9166Z"
-                                                  fill="#212C28"/>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
-                                             viewBox="0 0 21 20"
-                                             fill="none">
-                                            <path d="M13.992 1.66663H7.00866C3.97533 1.66663 2.16699 3.47496 2.16699 6.50829V13.4833C2.16699 16.525 3.97533 18.3333 7.00866 18.3333H13.9837C17.017 18.3333 18.8253 16.525 18.8253 13.4916V6.50829C18.8337 3.47496 17.0253 1.66663 13.992 1.66663ZM8.50033 13.5C8.50033 14.325 7.82533 15 7.00033 15C6.17533 15 5.50033 14.325 5.50033 13.5C5.50033 12.675 6.17533 12 7.00033 12H7.66699C8.12533 12 8.50033 12.375 8.50033 12.8333V13.5ZM8.50033 7.16663C8.50033 7.62496 8.12533 7.99996 7.66699 7.99996H7.00033C6.17533 7.99996 5.50033 7.32496 5.50033 6.49996C5.50033 5.67496 6.17533 4.99996 7.00033 4.99996C7.82533 4.99996 8.50033 5.67496 8.50033 6.49996V7.16663ZM12.292 11.0416C12.292 11.45 11.9587 11.7916 11.542 11.7916H9.45033C9.04199 11.7916 8.70033 11.4583 8.70033 11.0416V8.94996C8.70033 8.54163 9.03366 8.19996 9.45033 8.19996H11.542C11.9503 8.19996 12.292 8.53329 12.292 8.94996V11.0416ZM14.0003 15C13.1753 15 12.5003 14.325 12.5003 13.5V12.8333C12.5003 12.375 12.8753 12 13.3337 12H14.0003C14.8253 12 15.5003 12.675 15.5003 13.5C15.5003 14.325 14.8253 15 14.0003 15ZM14.0003 7.99996H13.3337C12.8753 7.99996 12.5003 7.62496 12.5003 7.16663V6.49996C12.5003 5.67496 13.1753 4.99996 14.0003 4.99996C14.8253 4.99996 15.5003 5.67496 15.5003 6.49996C15.5003 7.32496 14.8253 7.99996 14.0003 7.99996Z"
-                                                  fill="#212C28"/>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
-                                             viewBox="0 0 21 20"
-                                             fill="none">
-                                            <path d="M15.9497 3.43337L11.3663 1.7167C10.8913 1.5417 10.1163 1.5417 9.64134 1.7167L5.05801 3.43337C4.17467 3.7667 3.45801 4.80003 3.45801 5.7417V12.4917C3.45801 13.1667 3.89967 14.0584 4.44134 14.4584L9.02467 17.8834C9.83301 18.4917 11.158 18.4917 11.9663 17.8834L16.5497 14.4584C17.0913 14.05 17.533 13.1667 17.533 12.4917V5.7417C17.5413 4.80003 16.8247 3.7667 15.9497 3.43337ZM13.3997 8.10003L9.81634 11.6834C9.69134 11.8084 9.53301 11.8667 9.37467 11.8667C9.21634 11.8667 9.05801 11.8084 8.93301 11.6834L7.59967 10.3334C7.35801 10.0917 7.35801 9.6917 7.59967 9.45003C7.84134 9.20837 8.24134 9.20837 8.48301 9.45003L9.38301 10.35L12.5247 7.20837C12.7663 6.9667 13.1663 6.9667 13.408 7.20837C13.6497 7.45003 13.6497 7.85837 13.3997 8.10003Z"
-                                                  fill="#212C28"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="cart-order_item hstack align-items-center justify-content-between gap-3">
-                                    <div class="heading-4 fw-bold text-black">
-                                        Vận chuyển
-                                    </div>
-                                    <div class="vstack align-items-end">
-                                        <div class="button-reset orange-color hstack align-items-center justify-content-end">
-                                            Ưu tiên
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cart-total pb-3">
-                                <div class="cart-total_item hstack align-items-start justify-content-between gap-3">
-                                    <div class="heading-3 fw-bold text-black">
-                                        Tổng tiền
-                                    </div>
-                                    <div class="vstack align-items-end text-end">
-                                        <div class="heading-3 primary-color">
-                                            640.000 (VNĐ)
-                                        </div>
-                                        <div class="heading-4 dark-color">
-                                            120 (¥)
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section-footer position-fixed bottom-0 start-0 end-0 zi-10 bg-white w-100 p-3 p-0">
-        <div class="section-footer_collapse position-absolute start-50 translate-middle-x">
-            <button type="button" data-bs-target="#card-footer_detail" data-bs-toggle="collapse"
-                    class="section-footer_collapse__button pseudo button-reset"></button>
-        </div>
-        <div class="collapse" id="card-footer_detail">
-            <div class="card-footer_detail vstack gap-3">
-                <div class="card-footer_detail__header hstack">
-                    <div class="hstack gap-3 align-items-center">
-                        <div class="gray-color">
-                            Tỉ giá
-                        </div>
-                        <div class="orange-color">
-                            1¥ = 3750 VND
-                        </div>
-                    </div>
-                    <div class="hstack gap-3 align-items-center justify-content-between flex-fill">
-                        <div class="gray-color">
-                            Tổng số tệ
-                        </div>
-                        <div class="text-black fw-bold">
-                            2400¥
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer_detail__item">
-                    <div class="hstack align-items-start justify-content-between gap-3">
-                        <div class="heading-5 fw-normal gray-color">
-                            Phí dịch vụ
-                        </div>
-                        <div class="vstack align-items-end text-end">
-                            <div class="heading-5 text-black">
-                                Cập nhật sau khi tạo yêu cầu
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer_detail__item">
-                    <div class="hstack align-items-start justify-content-between gap-3">
-                        <div class="heading-5 fw-normal gray-color">
-                            Tổng VND
-                        </div>
-                        <div class="vstack align-items-end text-end">
-                            <div class="heading-5 text-black">
-                                1.280.000 VND
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer_detail__item">
-                    <div class="hstack align-items-start justify-content-between gap-3">
-                        <div class="heading-5 text-black hstack align-items-center">
-                            Voucher
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                 fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M8.29289 18.7071C7.90237 18.3166 7.90237 17.6834 8.29289 17.2929L13.5858 12L8.29289 6.70711C7.90237 6.31658 7.90237 5.68342 8.29289 5.29289C8.68342 4.90237 9.31658 4.90237 9.70711 5.29289L15.7071 11.2929C16.0976 11.6834 16.0976 12.3166 15.7071 12.7071L9.70711 18.7071C9.31658 19.0976 8.68342 19.0976 8.29289 18.7071Z"
-                                      fill="#191E24"></path>
-                            </svg>
-                        </div>
-                        <div class="vstack align-items-end text-end">
-                            <div class="heading-6 fw-normal button-theme button-outline_orange py-1 px-2 rounded-3">
-                                30.000 VND
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card-footer_total">
-            <div class="hstack align-items-start justify-content-between gap-3">
-                <div class="heading-4 fw-bold gray-color">
-                    Tổng tiền
-                </div>
-                <div class="vstack align-items-end text-end">
-                    <div class="heading-3 primary-color">
-                        1.250.000 (VNĐ)
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card-footer_buttons hstack gap-2 w-100 pb-3">
-            <a href="./gio-hang-buoc-2.html" class="button-theme button-outline_green flex-fill w-50">
-                Quay lại
-            </a>
-            <button type="button" data-bs-target="#modal-order" data-bs-toggle="modal"
-                    class="button-theme button-gradient_green flex-fill w-50">
-                Xác nhận
-            </button>
         </div>
     </div>
 </div>
@@ -544,7 +560,7 @@
 <script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-labels.js"></script>
 <script type="text/javascript"
-		src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/daterangepicker/daterangepicker.min.js"></script>
