@@ -545,3 +545,9 @@ input[type='number'] {
 .rounded-inherit {
 	border-radius: inherit !important;
 }
+
+.screen-overflow {
+	position: absolute !important;
+	inset: 0 !important;
+	overflow-y: auto !important;
+}
