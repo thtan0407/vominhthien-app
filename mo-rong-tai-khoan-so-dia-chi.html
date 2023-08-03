@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>Template VMT App</title>
+	<meta name="description" content="Template VMT App">
+	<meta name="author" content="">
+
+	<meta property="og:title" content="Template VMT App">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="Template VMT App">
+	<meta property="og:image" content="">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		  rel="stylesheet">
+
+	<link rel="icon" href="./assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+	<link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+<div class="vstack position-relative min-vh-100 h-100 overflow-hidden">
+
+	<div class="vstack flex-fill overflow-hidden position-relative">
+		<div class="screen-overflow">
+			<div class="main main-spacing screen-extend">
+				<!-- Header page -->
+				<div class="section-header bg-white position-fixed top-0 start-0 end-0 zi-10 w-100">
+					<div class="header-inner">
+						<div class="container">
+							<div class="vstack">
+								<div class="header-inner_title py-3 heading-2 hstack gap-2">
+									<a href="./index.html" class="hstack align-items-center justify-content-center">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+											 viewBox="0 0 24 24"
+											 fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												  d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
+												  fill="#191E24"/>
+										</svg>
+									</a>
+									Sổ địa chỉ
+									<div class="header-inner_buttons ms-auto hstack align-items-center justify-content-end gap-2">
+										<a href="" type="button" class="button-reset heading-6 gray-color fw-normal">
+											Tài khoản
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="extend-inner">
+					<div class="container">
+						<div class="my-3 text-center">
+							<a href="" class="d-inline-flex align-middle align-items-center justify-content-center gap-10px primary-color heading-4">
+								<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M1.50056 12.8467C1.4927 6.77154 6.41119 1.84031 12.4863 1.83244C18.5614 1.82458 23.4927 6.74307 23.5005 12.8182C23.5084 18.8933 18.5899 23.8246 12.5148 23.8324C6.43966 23.8403 1.50843 18.9218 1.50056 12.8467ZM12.4889 3.83244C7.51835 3.83888 3.49413 7.87352 3.50056 12.8441C3.50699 17.8146 7.54164 21.8389 12.5122 21.8324C17.4828 21.826 21.507 17.7913 21.5005 12.8208C21.4941 7.85023 17.4595 3.82601 12.4889 3.83244ZM12.4941 7.83244C13.0464 7.83172 13.4947 8.27886 13.4954 8.83114L13.4993 11.8311L16.4993 11.8273C17.0515 11.8265 17.4998 12.2737 17.5005 12.826C17.5013 13.3782 17.0541 13.8265 16.5018 13.8273L13.5018 13.8311L13.5057 16.8311C13.5064 17.3834 13.0593 17.8317 12.507 17.8324C11.9547 17.8331 11.5064 17.386 11.5057 16.8337L11.5018 13.8337L8.50185 13.8376C7.94957 13.8383 7.50127 13.3912 7.50056 12.8389C7.49984 12.2866 7.94698 11.8383 8.49926 11.8376L11.4993 11.8337L11.4954 8.83373C11.4947 8.28145 11.9418 7.83315 12.4941 7.83244Z" fill="#1A8917"/>
+									<path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M3.49993 12.8437C3.4935 7.87318 7.51771 3.83854 12.4883 3.8321C17.4588 3.82567 21.4935 7.84989 21.4999 12.8204C21.5063 17.791 17.4821 21.8257 12.5116 21.8321C7.54101 21.8385 3.50636 17.8143 3.49993 12.8437ZM12.4935 7.8321C13.0457 7.83139 13.494 8.27852 13.4947 8.8308L13.4986 11.8308L16.4986 11.8269C17.0509 11.8262 17.4992 12.2733 17.4999 12.8256C17.5006 13.3779 17.0535 13.8262 16.5012 13.8269L13.5012 13.8308L13.5051 16.8308C13.5058 17.3831 13.0587 17.8314 12.5064 17.8321C11.9541 17.8328 11.5058 17.3857 11.5051 16.8334L11.5012 13.8334L8.50122 13.8373C7.94893 13.838 7.50064 13.3909 7.49992 12.8386C7.49921 12.2863 7.94635 11.838 8.49863 11.8373L11.4986 11.8334L11.4947 8.83339C11.494 8.28111 11.9412 7.83281 12.4935 7.8321Z" fill="#1A8917"/>
+								</svg>
+								Thêm địa chỉ mới
+							</a>
+						</div>
+						<div class="extend-wrapper mt-3 vstack gap-3">
+							<div class="user-form pt-0">
+								<div class="vstack gap-15px">
+									<div class="user-form_wrapper">
+										<div class="row g-2">
+											<div class="col-12">
+												<div class="hstack gap-15px justify-content-between">
+													<div class="button-theme button-theme_sm rounded-3 py-1 px-3 button-background_green heading-5">
+														Storage X Tân Phú 01
+													</div>
+													<div class="theme-checkbox">
+														<input type="checkbox" checked
+															   class="theme-checkbox_input position-absolute visually-hidden"
+															   id="checkBoxExample01">
+														<label for="checkBoxExample01"
+															   class="theme-checkbox_label hstack gap-1 pseudo primary-color fw-bold">
+															Đặt làm mặc định
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="col-7">
+												<div class="user-form_item vstack gap-10px">
+													<input type="text" class="user-form_item__input"
+														   value="Bùi Xuân Thiện">
+												</div>
+											</div>
+											<div class="col-5">
+												<div class="user-form_item vstack gap-10px">
+													<input type="text" class="user-form_item__input"
+														   value="0838 032 132">
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="user-form_item vstack gap-10px">
+													<input type="text" class="user-form_item__input"
+														   value="62/3 Lê Sát, Phường Tân Quý, Quận Tân Phú, HCM  ">
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="hstack gap-30px">
+													<a href=""
+													   class="d-inline-flex align-middle align-items-center fw-bold gap-2 black-50-color">
+														Chỉnh sửa
+														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+															 viewBox="0 0 15 16" fill="none">
+															<g opacity="0.4">
+																<path d="M6.6398 2.16888L5.45422 2.17041C2.49027 2.17425 1.30622 3.36136 1.31006 6.32531L1.31466 9.88206C1.3185 12.846 2.50561 14.0301 5.46956 14.0262L9.0263 14.0216C11.9903 14.0178 13.1743 12.8307 13.1705 9.86671L13.1689 8.68113"
+																	  fill="#C2C3CC"/>
+																<path d="M6.6398 2.16888L5.45422 2.17041C2.49027 2.17425 1.30622 3.36136 1.31006 6.32531L1.31466 9.88205C1.3185 12.846 2.50561 14.0301 5.46956 14.0262L9.0263 14.0216C11.9903 14.0178 13.1743 12.8307 13.1705 9.86671L13.1689 8.68113"
+																	  stroke="#919191" stroke-width="0.889186"
+																	  stroke-linecap="round" stroke-linejoin="round"/>
+															</g>
+															<path d="M9.62766 2.77011L4.96252 7.44734C4.78491 7.62541 4.60752 7.97539 4.57229 8.23033L4.3197 10.015C4.22569 10.6612 4.68272 11.1112 5.32874 11.0214L7.11271 10.7642C7.36164 10.7283 7.71115 10.55 7.89469 10.3719L12.5598 5.69471C13.365 4.88747 13.7432 3.95037 12.556 2.76632C11.3689 1.58228 10.4328 1.96287 9.62766 2.77011Z"
+																  fill="#C2C3CC" stroke="#919191"
+																  stroke-width="0.889186"
+																  stroke-miterlimit="10" stroke-linecap="round"
+																  stroke-linejoin="round"/>
+															<g opacity="0.4">
+																<path d="M8.95898 3.44043C9.35799 4.85668 10.4679 5.96377 11.8912 6.36502L8.95898 3.44043Z"
+																	  fill="#C2C3CC"/>
+																<path d="M8.95898 3.44043C9.35799 4.85668 10.4679 5.96377 11.8912 6.36502"
+																	  stroke="#919191" stroke-width="0.889186"
+																	  stroke-miterlimit="10" stroke-linecap="round"
+																	  stroke-linejoin="round"/>
+															</g>
+														</svg>
+													</a>
+													<a href=""
+													   class="d-inline-flex align-middle align-items-center fw-bold gap-2 black-50-color">
+														Xóa
+														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+															 viewBox="0 0 15 16" fill="none">
+															<path d="M13.0775 3.86928C12.123 3.77567 11.1685 3.70577 10.2081 3.65366L10.2081 3.64773L10.0767 2.87727C9.98707 2.33202 9.8556 1.51414 8.46847 1.51593L6.91536 1.51794C5.53416 1.51973 5.40475 2.30238 5.31065 2.87751L5.18715 3.63645C4.6359 3.67273 4.08465 3.70901 3.53342 3.76307L2.32429 3.88319C2.07534 3.90723 1.89779 4.12679 1.92182 4.3698C1.94584 4.61282 2.15948 4.79038 2.40842 4.76634L3.61756 4.64622C6.72338 4.33395 9.85347 4.44846 12.9957 4.75857C13.0134 4.75855 13.0253 4.75853 13.0431 4.75851C13.2683 4.75822 13.4637 4.58606 13.4872 4.35484C13.5046 4.11177 13.3265 3.89267 13.0775 3.86928Z"
+																  fill="#C2C3CC"/>
+															<path d="M11.9877 5.59581C11.8452 5.4478 11.6495 5.36506 11.4479 5.36532L3.95507 5.37502C3.75352 5.37528 3.55208 5.45853 3.41593 5.6069C3.27978 5.75528 3.20298 5.95692 3.21511 6.16439L3.59051 12.2459C3.65688 13.1469 3.74133 14.2731 5.81017 14.2704L9.61588 14.2655C11.6847 14.2628 11.7663 13.1423 11.8303 12.2353L12.19 6.1587C12.2015 5.94528 12.1242 5.74383 11.9877 5.59581ZM8.69321 11.2968L6.71922 11.2994C6.47618 11.2997 6.27437 11.0984 6.27405 10.8553C6.27374 10.6123 6.47502 10.4105 6.71807 10.4102L8.69206 10.4076C8.9351 10.4073 9.13691 10.6086 9.13723 10.8516C9.13754 11.0947 8.93625 11.2965 8.69321 11.2968ZM9.18809 8.92499L6.22413 8.92883C5.98109 8.92914 5.77928 8.72785 5.77897 8.48481C5.77865 8.24177 5.97994 8.03996 6.22298 8.03964L9.18694 8.03581C9.42998 8.03549 9.63179 8.23678 9.6321 8.47982C9.63242 8.72287 9.43113 8.92468 9.18809 8.92499Z"
+																  fill="#C2C3CC"/>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="user-form_wrapper">
+										<div class="row g-2">
+											<div class="col-12">
+												<div class="hstack gap-15px justify-content-between">
+													<div class="button-theme button-theme_sm rounded-3 py-1 px-3 button-background_green heading-5">
+														Nhà riêng
+													</div>
+												</div>
+											</div>
+											<div class="col-7">
+												<div class="user-form_item vstack gap-10px">
+													<input type="text" class="user-form_item__input"
+														   value="Bùi Xuân Thiện">
+												</div>
+											</div>
+											<div class="col-5">
+												<div class="user-form_item vstack gap-10px">
+													<input type="text" class="user-form_item__input"
+														   value="0838 032 132">
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="user-form_item vstack gap-10px">
+													<input type="text" class="user-form_item__input"
+														   value="62/3 Lê Sát, Phường Tân Quý, Quận Tân Phú, HCM  ">
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="hstack gap-30px">
+													<a href=""
+													   class="d-inline-flex align-middle align-items-center fw-bold gap-2 black-50-color">
+														Chỉnh sửa
+														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+															 viewBox="0 0 15 16" fill="none">
+															<g opacity="0.4">
+																<path d="M6.6398 2.16888L5.45422 2.17041C2.49027 2.17425 1.30622 3.36136 1.31006 6.32531L1.31466 9.88206C1.3185 12.846 2.50561 14.0301 5.46956 14.0262L9.0263 14.0216C11.9903 14.0178 13.1743 12.8307 13.1705 9.86671L13.1689 8.68113"
+																	  fill="#C2C3CC"/>
+																<path d="M6.6398 2.16888L5.45422 2.17041C2.49027 2.17425 1.30622 3.36136 1.31006 6.32531L1.31466 9.88205C1.3185 12.846 2.50561 14.0301 5.46956 14.0262L9.0263 14.0216C11.9903 14.0178 13.1743 12.8307 13.1705 9.86671L13.1689 8.68113"
+																	  stroke="#919191" stroke-width="0.889186"
+																	  stroke-linecap="round" stroke-linejoin="round"/>
+															</g>
+															<path d="M9.62766 2.77011L4.96252 7.44734C4.78491 7.62541 4.60752 7.97539 4.57229 8.23033L4.3197 10.015C4.22569 10.6612 4.68272 11.1112 5.32874 11.0214L7.11271 10.7642C7.36164 10.7283 7.71115 10.55 7.89469 10.3719L12.5598 5.69471C13.365 4.88747 13.7432 3.95037 12.556 2.76632C11.3689 1.58228 10.4328 1.96287 9.62766 2.77011Z"
+																  fill="#C2C3CC" stroke="#919191"
+																  stroke-width="0.889186"
+																  stroke-miterlimit="10" stroke-linecap="round"
+																  stroke-linejoin="round"/>
+															<g opacity="0.4">
+																<path d="M8.95898 3.44043C9.35799 4.85668 10.4679 5.96377 11.8912 6.36502L8.95898 3.44043Z"
+																	  fill="#C2C3CC"/>
+																<path d="M8.95898 3.44043C9.35799 4.85668 10.4679 5.96377 11.8912 6.36502"
+																	  stroke="#919191" stroke-width="0.889186"
+																	  stroke-miterlimit="10" stroke-linecap="round"
+																	  stroke-linejoin="round"/>
+															</g>
+														</svg>
+													</a>
+													<a href=""
+													   class="d-inline-flex align-middle align-items-center fw-bold gap-2 black-50-color">
+														Xóa
+														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+															 viewBox="0 0 15 16" fill="none">
+															<path d="M13.0775 3.86928C12.123 3.77567 11.1685 3.70577 10.2081 3.65366L10.2081 3.64773L10.0767 2.87727C9.98707 2.33202 9.8556 1.51414 8.46847 1.51593L6.91536 1.51794C5.53416 1.51973 5.40475 2.30238 5.31065 2.87751L5.18715 3.63645C4.6359 3.67273 4.08465 3.70901 3.53342 3.76307L2.32429 3.88319C2.07534 3.90723 1.89779 4.12679 1.92182 4.3698C1.94584 4.61282 2.15948 4.79038 2.40842 4.76634L3.61756 4.64622C6.72338 4.33395 9.85347 4.44846 12.9957 4.75857C13.0134 4.75855 13.0253 4.75853 13.0431 4.75851C13.2683 4.75822 13.4637 4.58606 13.4872 4.35484C13.5046 4.11177 13.3265 3.89267 13.0775 3.86928Z"
+																  fill="#C2C3CC"/>
+															<path d="M11.9877 5.59581C11.8452 5.4478 11.6495 5.36506 11.4479 5.36532L3.95507 5.37502C3.75352 5.37528 3.55208 5.45853 3.41593 5.6069C3.27978 5.75528 3.20298 5.95692 3.21511 6.16439L3.59051 12.2459C3.65688 13.1469 3.74133 14.2731 5.81017 14.2704L9.61588 14.2655C11.6847 14.2628 11.7663 13.1423 11.8303 12.2353L12.19 6.1587C12.2015 5.94528 12.1242 5.74383 11.9877 5.59581ZM8.69321 11.2968L6.71922 11.2994C6.47618 11.2997 6.27437 11.0984 6.27405 10.8553C6.27374 10.6123 6.47502 10.4105 6.71807 10.4102L8.69206 10.4076C8.9351 10.4073 9.13691 10.6086 9.13723 10.8516C9.13754 11.0947 8.93625 11.2965 8.69321 11.2968ZM9.18809 8.92499L6.22413 8.92883C5.98109 8.92914 5.77928 8.72785 5.77897 8.48481C5.77865 8.24177 5.97994 8.03996 6.22298 8.03964L9.18694 8.03581C9.42998 8.03549 9.63179 8.23678 9.6321 8.47982C9.63242 8.72287 9.43113 8.92468 9.18809 8.92499Z"
+																  fill="#C2C3CC"/>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="user-form_wrapper">
+										<div class="row g-2">
+											<div class="col-12">
+												<div class="hstack gap-15px justify-content-between">
+													<div class="button-theme button-theme_sm rounded-3 py-1 px-3 button-background_green heading-5">
+														Storage X quận 1
+													</div>
+												</div>
+											</div>
+											<div class="col-7">
+												<div class="user-form_item vstack gap-10px">
+													<input type="text" class="user-form_item__input"
+														   value="Bùi Xuân Thiện">
+												</div>
+											</div>
+											<div class="col-5">
+												<div class="user-form_item vstack gap-10px">
+													<input type="text" class="user-form_item__input"
+														   value="0838 032 132">
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="user-form_item vstack gap-10px">
+													<input type="text" class="user-form_item__input"
+														   value="62/3 Lê Sát, Phường Tân Quý, Quận Tân Phú, HCM  ">
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="hstack gap-30px">
+													<a href=""
+													   class="d-inline-flex align-middle align-items-center fw-bold gap-2 black-50-color">
+														Chỉnh sửa
+														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+															 viewBox="0 0 15 16" fill="none">
+															<g opacity="0.4">
+																<path d="M6.6398 2.16888L5.45422 2.17041C2.49027 2.17425 1.30622 3.36136 1.31006 6.32531L1.31466 9.88206C1.3185 12.846 2.50561 14.0301 5.46956 14.0262L9.0263 14.0216C11.9903 14.0178 13.1743 12.8307 13.1705 9.86671L13.1689 8.68113"
+																	  fill="#C2C3CC"/>
+																<path d="M6.6398 2.16888L5.45422 2.17041C2.49027 2.17425 1.30622 3.36136 1.31006 6.32531L1.31466 9.88205C1.3185 12.846 2.50561 14.0301 5.46956 14.0262L9.0263 14.0216C11.9903 14.0178 13.1743 12.8307 13.1705 9.86671L13.1689 8.68113"
+																	  stroke="#919191" stroke-width="0.889186"
+																	  stroke-linecap="round" stroke-linejoin="round"/>
+															</g>
+															<path d="M9.62766 2.77011L4.96252 7.44734C4.78491 7.62541 4.60752 7.97539 4.57229 8.23033L4.3197 10.015C4.22569 10.6612 4.68272 11.1112 5.32874 11.0214L7.11271 10.7642C7.36164 10.7283 7.71115 10.55 7.89469 10.3719L12.5598 5.69471C13.365 4.88747 13.7432 3.95037 12.556 2.76632C11.3689 1.58228 10.4328 1.96287 9.62766 2.77011Z"
+																  fill="#C2C3CC" stroke="#919191"
+																  stroke-width="0.889186"
+																  stroke-miterlimit="10" stroke-linecap="round"
+																  stroke-linejoin="round"/>
+															<g opacity="0.4">
+																<path d="M8.95898 3.44043C9.35799 4.85668 10.4679 5.96377 11.8912 6.36502L8.95898 3.44043Z"
+																	  fill="#C2C3CC"/>
+																<path d="M8.95898 3.44043C9.35799 4.85668 10.4679 5.96377 11.8912 6.36502"
+																	  stroke="#919191" stroke-width="0.889186"
+																	  stroke-miterlimit="10" stroke-linecap="round"
+																	  stroke-linejoin="round"/>
+															</g>
+														</svg>
+													</a>
+													<a href=""
+													   class="d-inline-flex align-middle align-items-center fw-bold gap-2 black-50-color">
+														Xóa
+														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+															 viewBox="0 0 15 16" fill="none">
+															<path d="M13.0775 3.86928C12.123 3.77567 11.1685 3.70577 10.2081 3.65366L10.2081 3.64773L10.0767 2.87727C9.98707 2.33202 9.8556 1.51414 8.46847 1.51593L6.91536 1.51794C5.53416 1.51973 5.40475 2.30238 5.31065 2.87751L5.18715 3.63645C4.6359 3.67273 4.08465 3.70901 3.53342 3.76307L2.32429 3.88319C2.07534 3.90723 1.89779 4.12679 1.92182 4.3698C1.94584 4.61282 2.15948 4.79038 2.40842 4.76634L3.61756 4.64622C6.72338 4.33395 9.85347 4.44846 12.9957 4.75857C13.0134 4.75855 13.0253 4.75853 13.0431 4.75851C13.2683 4.75822 13.4637 4.58606 13.4872 4.35484C13.5046 4.11177 13.3265 3.89267 13.0775 3.86928Z"
+																  fill="#C2C3CC"/>
+															<path d="M11.9877 5.59581C11.8452 5.4478 11.6495 5.36506 11.4479 5.36532L3.95507 5.37502C3.75352 5.37528 3.55208 5.45853 3.41593 5.6069C3.27978 5.75528 3.20298 5.95692 3.21511 6.16439L3.59051 12.2459C3.65688 13.1469 3.74133 14.2731 5.81017 14.2704L9.61588 14.2655C11.6847 14.2628 11.7663 13.1423 11.8303 12.2353L12.19 6.1587C12.2015 5.94528 12.1242 5.74383 11.9877 5.59581ZM8.69321 11.2968L6.71922 11.2994C6.47618 11.2997 6.27437 11.0984 6.27405 10.8553C6.27374 10.6123 6.47502 10.4105 6.71807 10.4102L8.69206 10.4076C8.9351 10.4073 9.13691 10.6086 9.13723 10.8516C9.13754 11.0947 8.93625 11.2965 8.69321 11.2968ZM9.18809 8.92499L6.22413 8.92883C5.98109 8.92914 5.77928 8.72785 5.77897 8.48481C5.77865 8.24177 5.97994 8.03996 6.22298 8.03964L9.18694 8.03581C9.42998 8.03549 9.63179 8.23678 9.6321 8.47982C9.63242 8.72287 9.43113 8.92468 9.18809 8.92499Z"
+																  fill="#C2C3CC"/>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/momment.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chart.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-labels.js"></script>
+<script type="text/javascript"
+		src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+
+</body>
+</html>
