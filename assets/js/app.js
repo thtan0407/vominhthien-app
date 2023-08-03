@@ -676,6 +676,56 @@ export function handleReadAllNotification() {
     }
 }
 
+/****
+ * Handle Form Edit User
+ */
+export function handleFormEditUser() {
+    const formEditUser = document.querySelectorAll('.form-edit_user');
+    if (formEditUser.length > 0) {
+        formEditUser.forEach((form) => {
+            const formEditUserItem = form.querySelectorAll('.form-edit_user__item');
+            if (formEditUserItem.length > 0) {
+                formEditUserItem.forEach((item) => {
+
+                    const formEditUserItemInput = item.querySelector('.form-edit_user__input');
+                    if (formEditUserItemInput !== null) {
+                        formEditUserItemInput.addEventListener('keyup', function (event) {
+                            if (event.target.value.trim() !== '') {
+                                item.classList.add('is-value');
+                            } else {
+                                item.classList.remove('is-value');
+                            }
+                        });
+
+                        formEditUserItemInput.addEventListener('mouseup', function (event) {
+                            if (!formEditUserItemInput.classList.contains('abc')) {
+                                item.classList.add('is-value');
+                            }
+                        });
+
+                        formEditUserItemInput.addEventListener('blur', function (event) {
+                            if (event.target.value.trim() === '') {
+                                item.classList.remove('is-value');
+                            }
+                        });
+                    }
+
+                    const formEditUserItemSelect = item.querySelector('.form-edit_user__select');
+                    if (formEditUserItemSelect !== null) {
+                        formEditUserItemSelect.addEventListener('change', function (event) {
+                            if (event.target.value.trim() !== '') {
+                                item.classList.add('is-value');
+                            } else {
+                                item.classList.remove('is-value');
+                            }
+                        });
+                    }
+                });
+            }
+        })
+    }
+}
+
 window.addEventListener('load', function () {
     handleNavigation();
 
@@ -728,6 +778,8 @@ window.addEventListener('load', function () {
     handleInitFancyboxFile();
 
     handleReadAllNotification();
+
+    handleFormEditUser();
 
     window.addEventListener("resize", () => {
         windowWidth = window.innerWidth;
