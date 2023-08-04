@@ -1385,6 +1385,22 @@
 	pointer-events: auto;
 }
 
+.theme-tabs.theme-tabs_icon .nav-link.primary-color.active > span:before {
+	background: var(--primary-color);
+}
+
+.theme-tabs.theme-tabs_icon .nav-link.red-color.active > span:before {
+	background: #FF4545;
+}
+
+.theme-tabs.theme-tabs_icon .nav-link.orange-color.active > span:before {
+	background: #E9750E;
+}
+
+.theme-tabs.theme-tabs_icon .nav-link.blue-color.active > span:before {
+	background: #0077AA;
+}
+
 .theme-tabs.theme-tabs_overflow {
 	max-width: 100%;
 	overflow-x: auto;
