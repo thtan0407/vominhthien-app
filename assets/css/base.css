@@ -497,6 +497,20 @@ input[type='number'] {
 	padding-top: 145px;
 }
 
+.main-spacing_vmt {
+	padding-top: 355px;
+}
+
+.main-spacing_vmt__v2 {
+	padding-top: 270px;
+}
+
+.main-bg {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center bottom;
+}
+
 .modal.modal-static .modal-dialog {
 	transform: none;
 }

@@ -32,41 +32,157 @@
 </head>
 <body>
 
-
 <div class="modal modal-bottom fade modal-notification" id="modal-address" data-bs-backdrop="static"
-     data-bs-keyboard="false">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content border-0">
-            <div class="modal-body bg-white">
-                <div class="vstack align-items-center justify-content-center gap-15px">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
-                        <path opacity="0.4"
-                              d="M28.9999 53.1663C42.3468 53.1663 53.1666 42.3466 53.1666 28.9997C53.1666 15.6528 42.3468 4.83301 28.9999 4.83301C15.653 4.83301 4.83325 15.6528 4.83325 28.9997C4.83325 42.3466 15.653 53.1663 28.9999 53.1663Z"
-                              fill="#E9750E"/>
-                        <path d="M29 33.2288C29.9908 33.2288 30.8125 32.4072 30.8125 31.4163V19.333C30.8125 18.3422 29.9908 17.5205 29 17.5205C28.0092 17.5205 27.1875 18.3422 27.1875 19.333V31.4163C27.1875 32.4072 28.0092 33.2288 29 33.2288Z"
-                              fill="#E9750E"/>
-                        <path d="M31.2233 37.748C31.1024 37.458 30.9333 37.1921 30.7158 36.9505C30.4741 36.733 30.2083 36.5638 29.9183 36.443C29.3383 36.2013 28.6616 36.2013 28.0816 36.443C27.7916 36.5638 27.5258 36.733 27.2841 36.9505C27.0666 37.1921 26.8974 37.458 26.7766 37.748C26.6558 38.038 26.5833 38.3521 26.5833 38.6663C26.5833 38.9805 26.6558 39.2946 26.7766 39.5846C26.8974 39.8988 27.0666 40.1405 27.2841 40.3821C27.5258 40.5996 27.7916 40.7688 28.0816 40.8896C28.3716 41.0105 28.6858 41.083 28.9999 41.083C29.3141 41.083 29.6283 41.0105 29.9183 40.8896C30.2083 40.7688 30.4741 40.5996 30.7158 40.3821C30.9333 40.1405 31.1024 39.8988 31.2233 39.5846C31.3441 39.2946 31.4166 38.9805 31.4166 38.6663C31.4166 38.3521 31.3441 38.038 31.2233 37.748Z"
-                              fill="#E9750E"/>
-                    </svg>
-                    <div class="heading-3 text-black text-center">
-                        Xác nhận thanh toán số tiền <br>5.403.000đ cho ơn hàng XXX
-                    </div>
-                    <div class="text-center hstack gap-2 w-100">
-                        <button type="button"
-                                data-bs-toggle="modal"
-                                data-bs-target="#modal-pay_success"
-                                class="button-theme button-gradient_green flex-fill w-50">
-                            Thanh toán
-                        </button>
-                        <button data-bs-dismiss="modal" type="button"
-                                class="button-theme button-outline_green flex-fill w-50">
-                            Hủy
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	 data-bs-keyboard="false">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content border-0">
+			<div class="modal-body bg-white">
+				<div class="user-form user-form_edit form-edit_user pt-0">
+					<div class="vstack gap-15px">
+						<div class="user-form_wrapper">
+							<div class="row g-2">
+								<div class="col-7">
+									<div class="user-form_item form-edit_user__item vstack gap-10px">
+										<input type="text"
+											   class="user-form_item__input form-edit_user__input">
+										<label class="user-form_item__label form-edit_user__label" for="">Nhập
+																										  tên kho <span
+													class="fw-bold text-danger">*</span></label>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="user-form_item form-edit_user__item vstack gap-10px">
+										<input type="text"
+											   class="user-form_item__input form-edit_user__input">
+										<label class="user-form_item__label form-edit_user__label"
+											   for="">Người nhận <span class="fw-bold text-danger">*</span></label>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="user-form_item form-edit_user__item vstack gap-10px">
+										<input type="text"
+											   class="user-form_item__input form-edit_user__input">
+										<label class="user-form_item__label form-edit_user__label"
+											   for="">Số điện thoại <span
+												class="fw-bold text-danger">*</span></label>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="user-form_item form-edit_user__item vstack gap-10px">
+										<input type="text"
+											   class="user-form_item__input form-edit_user__input">
+										<label class="user-form_item__label form-edit_user__label"
+											   for="">Nhập địa chỉ chi tiết của kho<span
+												class="fw-bold text-danger">*</span></label>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="row g-2 align-items-center">
+										<div class="col-5">
+											<div class="gray-color">
+												Thành phố
+											</div>
+										</div>
+										<div class="col-7">
+											<div class="user-form_item form-edit_user__item">
+												<select name=""
+														class="user-form_item__input form-edit_user__select"
+														id="">
+													<option value="">Chọn thành phố</option>
+													<option value="1">Hồ Chí Minh</option>
+													<option value="2">Hà Nội</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="row g-2 align-items-center">
+										<div class="col-5">
+											<div class="gray-color">
+												Chọn Quận/huyện
+											</div>
+										</div>
+										<div class="col-7">
+											<div class="user-form_item form-edit_user__item">
+												<select name=""
+														class="user-form_item__input form-edit_user__select"
+														id="">
+													<option value="">Chọn quận/huyện</option>
+													<option value="1">Quận Tân Phú</option>
+													<option value="2">Quận 1</option>
+													<option value="3">Quận 2</option>
+													<option value="4">Quận 3</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="theme-checkbox theme-checkbox_right">
+										<input type="checkbox"
+											   class="theme-checkbox_input position-absolute visually-hidden"
+											   id="checkBoxExample">
+										<label for="checkBoxExample"
+											   class="theme-checkbox_label hstack gap-1 pseudo">
+											Đặt làm địa chỉ mặc định
+										</label>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="hstack gap-15px justify-content-between align-items-center">
+										<button type="button"
+												class="button-reset hstack gap-2 px-4 align-items-center heading-1 fw-normal black-50-color">
+											Hủy
+											<svg xmlns="http://www.w3.org/2000/svg" width="35" height="36"
+												 viewBox="0 0 35 36" fill="none">
+												<path d="M17.4748 33.2534C8.98712 33.2644 2.07924 26.3744 2.06825 17.8867C2.05727 9.39896 8.9473 2.49107 17.435 2.48009C25.9227 2.4691 32.8306 9.35913 32.8416 17.8469C32.8526 26.3346 25.9626 33.2425 17.4748 33.2534ZM17.4378 4.62707C10.1381 4.63651 4.20578 10.5842 4.21523 17.8839C4.22468 25.1836 10.1723 31.1159 17.4721 31.1065C24.7718 31.097 30.7041 25.1494 30.6946 17.8496C30.6852 10.5499 24.7375 4.61762 17.4378 4.62707Z"
+													  fill="#C2C3CC"/>
+												<path d="M13.4108 22.9962C13.1389 22.9966 12.8668 22.8967 12.6518 22.6823C12.2362 22.2678 12.2353 21.5807 12.6498 21.1651L20.7406 13.0534C21.1552 12.6377 21.8422 12.6368 22.2578 13.0514C22.6734 13.4659 22.6743 14.153 22.2598 14.5686L14.169 22.6803C13.9689 22.8953 13.6828 22.9959 13.4108 22.9962Z"
+													  fill="#C2C3CC"/>
+												<path d="M21.5121 22.9857C21.2401 22.9861 20.968 22.8862 20.7531 22.6718L12.6413 14.581C12.2257 14.1665 12.2248 13.4795 12.6394 13.0638C13.0539 12.6482 13.7409 12.6473 14.1565 13.0619L22.2683 21.1527C22.6839 21.5672 22.6848 22.2542 22.2703 22.6699C22.0558 22.8848 21.784 22.9854 21.5121 22.9857Z"
+													  fill="#C2C3CC"/>
+											</svg>
+										</button>
+										<button type="button"
+												class="button-reset hstack gap-2 px-4 align-items-center heading-1 fw-normal primary-color">
+											Lưu lại
+											<svg xmlns="http://www.w3.org/2000/svg" width="40" height="39"
+												 viewBox="0 0 40 39" fill="none">
+												<path opacity="0.4"
+													  d="M19.4964 5.29956L19.2813 5.01456L18.9242 5.01502L13.6766 5.02181C13.4602 5.02209 13.2652 4.82765 13.265 4.61121C13.2647 4.39478 13.4591 4.19983 13.6756 4.19955L25.6517 4.18405C29.182 4.17949 32.0562 7.04111 32.0914 10.5778L32.0921 11.1544C32.0924 11.3709 31.898 11.5658 31.6815 11.5661C31.4651 11.5664 31.2701 11.3719 31.2699 11.1555L31.2691 10.5921C31.2687 10.2342 31.2304 9.89244 31.1542 9.55165L31.0604 9.13244L30.6464 9.01801C30.0032 8.84025 29.3431 8.75213 28.6677 8.75301L22.6797 8.76075C22.1909 8.76139 22.1233 8.72489 22.1113 8.71833C22.1112 8.71828 22.0897 8.70813 22.0299 8.64114C21.9629 8.56614 21.8854 8.46425 21.7533 8.28999C21.7532 8.28981 21.753 8.28962 21.7529 8.28944L19.4964 5.29956Z"
+													  fill="url(#paint0_linear_3223_20325)" stroke="#1A8917"
+													  stroke-width="1.43132"/>
+												<path d="M32.357 11.3474L32.357 11.3474L32.362 11.351C34 12.5075 35.0578 14.4006 35.0606 16.5583L35.0761 28.5344C35.0807 32.0668 32.2176 34.9373 28.6852 34.9419L10.721 34.9651C7.18861 34.9697 4.31812 32.1066 4.31354 28.5742L4.2903 10.61C4.28573 7.07761 7.1488 4.20712 10.6812 4.20255L14.4157 4.19771C15.6518 4.19611 16.3751 4.39633 16.8935 4.69704C17.423 5.00417 17.8169 5.45789 18.3379 6.14541C18.3381 6.1456 18.3382 6.14579 18.3384 6.14597L20.5949 9.13596L20.5959 9.13719C20.6129 9.15961 20.6301 9.18246 20.6475 9.20565C20.8462 9.46985 21.0773 9.77698 21.4102 9.95832C21.7888 10.1645 22.2202 10.1757 22.6651 10.1751L28.6532 10.1674C29.204 10.1667 29.7491 10.2386 30.2436 10.3792L30.2566 10.3829L30.2697 10.3861C31.0322 10.5721 31.7374 10.9019 32.357 11.3474ZM15.9419 26.7315L23.4431 26.7218C24.4567 26.7205 25.2683 25.8933 25.267 24.877C25.2657 23.8701 24.4291 23.0356 23.4222 23.0369L15.9371 23.0466C14.9075 23.048 14.0958 23.8912 14.0971 24.8915C14.0984 25.9145 14.9189 26.7328 15.9419 26.7315Z"
+													  fill="url(#paint1_linear_3223_20325)" stroke="#1A8917"
+													  stroke-width="1.43132"/>
+												<defs>
+													<linearGradient id="paint0_linear_3223_20325"
+																	x1="37.7553" y1="7.8633" x2="4.57772"
+																	y2="7.98819"
+																	gradientUnits="userSpaceOnUse">
+														<stop stop-color="#8DC63F"/>
+														<stop offset="1" stop-color="#009444"/>
+													</linearGradient>
+													<linearGradient id="paint1_linear_3223_20325"
+																	x1="43.6526" y1="19.5412" x2="-9.09428"
+																	y2="19.6662"
+																	gradientUnits="userSpaceOnUse">
+														<stop stop-color="#8DC63F"/>
+														<stop offset="1" stop-color="#009444"/>
+													</linearGradient>
+												</defs>
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="modal modal-bottom fade modal-notification" id="modal-delete" data-bs-backdrop="static"
