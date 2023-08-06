@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Template VMT App</title>
+    <meta name="description" content="Template VMT App">
+    <meta name="author" content="">
+
+    <meta property="og:title" content="Template VMT App">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Template VMT App">
+    <meta property="og:image" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+
+    <link rel="icon" href="./assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+    <link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<div class="modal modal-bottom fade modal-notification" id="modal-otp" data-bs-backdrop="static"
+     data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+            <div class="modal-body bg-white">
+                <div class="vstack align-items-center justify-content-center gap-15px">
+                    <div class="heading-5 fw-normal text-start w-100">
+                        Nhập mã OTP từ ngân hàng để hoàn tất
+                    </div>
+                    <div class="account-form hstack gap-20px">
+                        <div class="flex-fill hstack account-form_item">
+                            <input id="inputExample1" class="account-form_item__number" type="tel" minlength="1"
+                                   maxlength="1" value="5">
+                        </div>
+                        <div class="flex-fill hstack account-form_item">
+                            <input id="inputExample2" class="account-form_item__number" type="tel" minlength="1"
+                                   maxlength="1">
+                        </div>
+                        <div class="flex-fill hstack account-form_item">
+                            <input id="inputExample3" class="account-form_item__number" type="tel" minlength="1"
+                                   maxlength="1">
+                        </div>
+                        <div class="flex-fill hstack account-form_item">
+                            <input id="inputExample4" class="account-form_item__number" type="tel" minlength="1"
+                                   maxlength="1">
+                        </div>
+                    </div>
+                    <div class="text-center hstack gap-2 w-100">
+                        <button data-bs-target="#modal-otp_success" data-bs-toggle="modal" type="button"
+                                class="button-theme button-gradient_green flex-fill w-50">
+                            Xác nhận
+                        </button>
+                        <button data-bs-dismiss="modal" type="button"
+                                class="button-theme button-outline_green flex-fill w-50">
+                            Huỷ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-bottom fade modal-notification" id="modal-otp_success" data-bs-backdrop="static"
+     data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+            <div class="modal-body bg-white">
+                <div class="vstack align-items-center justify-content-center gap-15px">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
+                        <path opacity="0.4"
+                              d="M39.247 8.82031H18.7537C12.7845 8.82031 7.95117 13.6778 7.95117 19.6228V42.3636C7.95117 48.3086 12.8087 53.1661 18.7537 53.1661H39.2228C45.192 53.1661 50.0253 48.3086 50.0253 42.3636V19.6228C50.0495 13.6536 45.192 8.82031 39.247 8.82031Z"
+                              fill="#1A8917"/>
+                        <path d="M34.6797 4.83398H23.3214C20.8081 4.83398 18.7539 6.86398 18.7539 9.37732V11.649C18.7539 14.1623 20.7839 16.1923 23.2972 16.1923H34.6797C37.1931 16.1923 39.2231 14.1623 39.2231 11.649V9.37732C39.2472 6.86398 37.1931 4.83398 34.6797 4.83398Z"
+                              fill="#1A8917"/>
+                        <path d="M26.1248 40.9634C25.6657 40.9634 25.2065 40.7942 24.844 40.4317L21.219 36.8067C20.5182 36.1059 20.5182 34.9459 21.219 34.245C21.9198 33.5442 23.0798 33.5442 23.7807 34.245L26.1248 36.5892L34.5107 28.2034C35.2115 27.5025 36.3715 27.5025 37.0723 28.2034C37.7732 28.9042 37.7732 30.0642 37.0723 30.765L27.4057 40.4317C27.0673 40.7942 26.584 40.9634 26.1248 40.9634Z"
+                              fill="#1A8917"/>
+                    </svg>
+                    <div class="heading-3 text-black text-center">
+                        Đã thêm thẻ ATM *5101 thành công
+                    </div>
+                    <div class="text-center hstack gap-2 w-100">
+                        <button data-bs-dismiss="modal" type="button"
+                                class="button-theme button-gradient_green flex-fill w-100">
+                            Đóng
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="vstack position-relative min-vh-100 h-100 overflow-hidden">
+
+    <div class="vstack flex-fill overflow-hidden position-relative">
+        <div class="screen-overflow">
+            <div class="main main-spacing screen-extend">
+                <!-- Header page -->
+                <div class="section-header bg-white position-fixed top-0 start-0 end-0 zi-10 w-100">
+                    <div class="header-inner">
+                        <div class="container">
+                            <div class="vstack">
+                                <div class="header-inner_title pt-3 pb-2 heading-2 hstack gap-2">
+                                    <a href="./index.html" class="hstack align-items-center justify-content-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24"
+                                             fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
+                                                  fill="#191E24"/>
+                                        </svg>
+                                    </a>
+                                    Liên kết thẻ
+                                    <div class="header-inner_buttons ms-auto hstack align-items-center justify-content-end gap-2">
+                                        <a href="./mo-rong-tai-khoan-vi-vmt.html" type="button"
+                                           class="button-reset heading-6 text-black fw-normal">
+                                            Ví VMT
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="extend-inner">
+                    <div class="container">
+                        <div class="extend-wrapper mt-2 vstack gap-3">
+                            <div class="extend-list bg-white">
+                                <div class="extend-list_collapse">
+                                    <div class="extend-list_collapse__inner border-top-0">
+                                        <div class="extend-list_item">
+                                            <div class="vstack gap-15px">
+                                                <div class="text-black fw-normal hstack align-items-center gap-3 heading-4">
+                                                    Nhập thông tin thẻ của bạn
+                                                </div>
+                                                <div class="user-form pt-0">
+                                                    <div class="vstack gap-15px">
+                                                        <div class="user-form_item vstack gap-10px">
+                                                            <label for=""
+                                                                   class="user-form_item__label primary-color fw-bold heading-5">
+                                                                Ngân hàng
+                                                            </label>
+                                                            <input type="text" class="user-form_item__input"
+                                                                   placeholder="Nhập tên ngân hàng"
+                                                                   value="Ngân hàng TMCP Tiên Phong ( TPBank)">
+                                                        </div>
+                                                        <div class="user-form_item vstack gap-10px">
+                                                            <label for=""
+                                                                   class="user-form_item__label primary-color fw-bold heading-5">
+                                                                Số tài khoản
+                                                            </label>
+                                                            <input type="text" class="user-form_item__input"
+                                                                   placeholder="Nhập số tài khoản"
+                                                                   value="02030535101">
+                                                        </div>
+                                                        <div class="user-form_item vstack gap-10px">
+                                                            <label for=""
+                                                                   class="user-form_item__label primary-color fw-bold heading-5">
+                                                                Chủ tài khoản
+                                                            </label>
+                                                            <input type="text" class="user-form_item__input"
+                                                                   placeholder="Nhập tên chủ tài khoản"
+                                                                   value="">
+                                                        </div>
+                                                        <div class="hstack gap-3 align-items-center justify-content-center">
+                                                            <button type="button"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#modal-otp"
+                                                                    class="button-theme button-gradient_green flex-fill">
+                                                                Lưu thẻ
+                                                            </button>
+                                                            <a href="./mo-rong-nap-tien.html"
+                                                               class="button-theme button-outline_green flex-fill">
+                                                                Huỷ
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/momment.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chart.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-labels.js"></script>
+<script type="text/javascript"
+        src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+
+</body>
+</html>

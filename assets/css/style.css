@@ -416,7 +416,7 @@
     pointer-events: visible;
 }
 
-.modal-filter .filter-item_input .filter-item_input__wrapper input {
+.filter-item_input .filter-item_input__wrapper input {
     padding: 1rem;
     border-radius: 16px;
     border: 1px solid #ADB4BB;
@@ -431,7 +431,7 @@
     box-shadow: none;
 }
 
-.modal-filter .filter-item_input .filter-item_input__wrapper svg {
+.filter-item_input .filter-item_input__wrapper svg {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -439,7 +439,7 @@
     pointer-events: none;
 }
 
-.modal-filter .filter-item_input .filter-item_input__button {
+.filter-item_input .filter-item_input__button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -447,7 +447,7 @@
     z-index: 2;
 }
 
-.modal-filter .filter-item_box .filter-item_box--choose {
+.filter-item_box .filter-item_box--choose {
     color: #191E24;
     font-size: 1.075em !important;
     font-weight: 700;
@@ -456,7 +456,25 @@
     border: 1px solid #ADB4BB;
     background: var(--bs-white);
     display: flex;
-    padding: .75rem 1.25rem;
+    padding: 12px;
+}
+
+.filter-item_box .filter-item_box--choose.is-active {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    background: #F0F8EF;
+}
+
+.filter-item_bank .filter-item_box--choose {
+    overflow: hidden;
+    padding: 0;
+    border-color: transparent;
+    filter: grayscale(1);
+}
+
+
+.filter-item_bank .filter-item_box--choose.is-active {
+    filter: grayscale(0);
 }
 
 .modal-search .search-form .search-form_input {
@@ -1414,14 +1432,17 @@
     border-radius: 16px;
 }
 
-.theme-tabs.theme-tabs_vmt .nav-link {
+.theme-tabs.theme-tabs_vmt .nav-item .nav-link {
     padding-top: 12px;
     padding-bottom: 12px;
     height: 48px;
+    background: #F0F8EF !important;
+    color: var(--primary-color);
 }
 
-.theme-tabs.theme-tabs_vmt .nav-link.active {
-    background: #F0F8EF !important;
+.theme-tabs.theme-tabs_vmt .nav-item.active ~ .nav-item .nav-link {
+    background: #fff !important;
+    color: #ADB4BB !important;
 }
 
 .theme-tabs.theme-tabs_vmt .nav-link svg {
@@ -2245,6 +2266,32 @@
     transform: rotate(90deg);
 }
 
+.extend-list .extend-list_content .filter-item_box__other .filter-item_input .filter-item_input__wrapper input {
+    padding: 12px;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    font-weight: 700;
+}
+
+.extend-list .extend-list_content .filter-item_box__other .filter-item_box--choose {
+    transition: unset;
+}
+
+.extend-list .extend-list_content .filter-item_box__other.is-input .filter-item_box--choose {
+    padding: 0;
+    border-radius: 0;
+    border: 0;
+}
+
+.extend-list .extend-list_content .filter-item_box__other.is-input .filter-item_input .filter-item_input__wrapper input {
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
 .toggle-switch .toggle-switch_input {
     display: none;
 }
@@ -2605,4 +2652,68 @@
 .theme-checkbox .theme-checkbox_label:after {
     right: 4px;
     left: unset;
+}
+
+.bank-transfer {
+    padding: 20px;
+    border-radius: 10px;
+    background: #F0F8EF;
+}
+
+.bank-transfer .bank-transfer_divider {
+    padding-top: .5rem;
+    border-top: 1px solid #C4C4C4;
+}
+
+.bank-link {
+    border-radius: 20px;
+    background: #EAEBF0;
+    box-shadow: 0px 5.759913921356201px 11.519827842712402px 0px rgba(71, 71, 71, 0.04), 0px 46px 92px 0px rgba(71, 71, 71, 0.07);
+    border: 1px solid transparent;
+}
+
+.bank-link.is-active {
+    background: #F0F8EF;
+    border-color: var(--primary-color);
+}
+
+.bank-request {
+    border-radius: 16px;
+    border: 2px solid #EAEBF0;
+    background: #FFF;
+}
+
+.bank-request .bank-request_header .bank-request_status {
+    font-size: 13px;
+    padding: 4px 20px;
+}
+
+.bank-request .bank-request_body {
+    padding-top: 10px;
+    border-top: 2px dashed #ADB4BB;
+}
+
+.bank-request .bank-request_body .bank-request_price {
+    width: 40%;
+    padding-right: 10px;
+}
+
+.bank-request .bank-request_body .bank-request_information {
+    width: 60%;
+    padding-right: 10px;
+}
+
+.bank-request .bank-request_footer {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #EAEBF0;
+}
+
+.bank-link_slider {
+    margin-right: -1rem;
+}
+
+.bank-linked {
+    border-radius: 20px;
+    border: 1px dashed var(--primary-color);
 }

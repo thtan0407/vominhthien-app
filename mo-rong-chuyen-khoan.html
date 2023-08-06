@@ -32,6 +32,78 @@
 </head>
 <body>
 
+<div class="modal modal-bottom fade modal-notification" id="modal-transfer" data-bs-backdrop="static"
+     data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+            <div class="modal-body bg-white">
+                <div class="vstack align-items-center justify-content-center gap-15px">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
+                        <path opacity="0.4"
+                              d="M28.9999 53.1663C42.3468 53.1663 53.1666 42.3466 53.1666 28.9997C53.1666 15.6528 42.3468 4.83301 28.9999 4.83301C15.653 4.83301 4.83325 15.6528 4.83325 28.9997C4.83325 42.3466 15.653 53.1663 28.9999 53.1663Z"
+                              fill="#E9750E"/>
+                        <path d="M29 33.2288C29.9908 33.2288 30.8125 32.4072 30.8125 31.4163V19.333C30.8125 18.3422 29.9908 17.5205 29 17.5205C28.0092 17.5205 27.1875 18.3422 27.1875 19.333V31.4163C27.1875 32.4072 28.0092 33.2288 29 33.2288Z"
+                              fill="#E9750E"/>
+                        <path d="M31.2233 37.748C31.1024 37.458 30.9333 37.1921 30.7158 36.9505C30.4741 36.733 30.2083 36.5638 29.9183 36.443C29.3383 36.2013 28.6616 36.2013 28.0816 36.443C27.7916 36.5638 27.5258 36.733 27.2841 36.9505C27.0666 37.1921 26.8974 37.458 26.7766 37.748C26.6558 38.038 26.5833 38.3521 26.5833 38.6663C26.5833 38.9805 26.6558 39.2946 26.7766 39.5846C26.8974 39.8988 27.0666 40.1405 27.2841 40.3821C27.5258 40.5996 27.7916 40.7688 28.0816 40.8896C28.3716 41.0105 28.6858 41.083 28.9999 41.083C29.3141 41.083 29.6283 41.0105 29.9183 40.8896C30.2083 40.7688 30.4741 40.5996 30.7158 40.3821C30.9333 40.1405 31.1024 39.8988 31.2233 39.5846C31.3441 39.2946 31.4166 38.9805 31.4166 38.6663C31.4166 38.3521 31.3441 38.038 31.2233 37.748Z"
+                              fill="#E9750E"/>
+                    </svg>
+                    <div class="heading-3 text-black text-center">
+                        Xác nhận hoàn thành chuyển khoản?
+                    </div>
+                    <div class="text-center hstack gap-2 w-100">
+                        <button type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modal-transfer_success"
+                                class="button-theme button-gradient_green flex-fill w-50">
+                            Xác nhận
+                        </button>
+                        <button data-bs-dismiss="modal" type="button"
+                                class="button-theme button-outline_green flex-fill w-50">
+                            Hủy
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-bottom fade modal-notification" id="modal-transfer_success" data-bs-backdrop="static"
+     data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+            <div class="modal-body bg-white">
+                <div class="vstack align-items-center justify-content-center gap-15px">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="59" viewBox="0 0 58 59"
+                         fill="none">
+                        <path opacity="0.4"
+                              d="M39.2466 9.52759H18.7533C12.7841 9.52759 7.95081 14.3851 7.95081 20.3301V43.0709C7.95081 49.0159 12.8083 53.8734 18.7533 53.8734H39.2225C45.1916 53.8734 50.025 49.0159 50.025 43.0709V20.3301C50.0491 14.3609 45.1916 9.52759 39.2466 9.52759Z"
+                              fill="#1A8917"/>
+                        <path d="M34.6791 5.54004H23.3208C20.8075 5.54004 18.7533 7.57004 18.7533 10.0834V12.355C18.7533 14.8684 20.7833 16.8984 23.2966 16.8984H34.6791C37.1925 16.8984 39.2225 14.8684 39.2225 12.355V10.0834C39.2466 7.57004 37.1925 5.54004 34.6791 5.54004Z"
+                              fill="#1A8917"/>
+                        <path d="M26.1242 41.6692C25.665 41.6692 25.2059 41.5 24.8434 41.1375L21.2184 37.5125C20.5175 36.8117 20.5175 35.6517 21.2184 34.9508C21.9192 34.25 23.0792 34.25 23.78 34.9508L26.1242 37.295L34.51 28.9092C35.2109 28.2083 36.3709 28.2083 37.0717 28.9092C37.7725 29.61 37.7725 30.77 37.0717 31.4708L27.405 41.1375C27.0667 41.5 26.5834 41.6692 26.1242 41.6692Z"
+                              fill="#1A8917"/>
+                    </svg>
+                    <div class="heading-3 text-black text-center">
+                        Hệ thống đã ghi nhận thao tác của bạn. Lệnh chuyển tiền hợp lệ sẽ được xử lý sớm.
+                    </div>
+                    <div class="text-center hstack gap-2 w-100">
+                        <a href="./mo-rong-tai-khoan-vi-vmt.html"
+                           class="button-theme button-gradient_green flex-fill w-100">
+                            Xem ví VMT
+                        </a>
+                        <a href="./mo-rong-nap-tien.html"
+                           class="button-theme button-outline_green flex-fill w-100">
+                            Nạp thêm
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div class="vstack position-relative min-vh-100 h-100 overflow-hidden">
 
     <div class="vstack flex-fill overflow-hidden position-relative">
@@ -107,7 +179,7 @@
                                             </svg>
                                         </div>
                                     </a>
-                                    <div class="collapse" data-bs-parent="#parentCollapse" id="collapse-tructiep">
+                                    <div class="collapse" id="collapse-tructiep">
                                         <div class="extend-list_collapse__inner">
                                             <div class="extend-list_item">
                                                 <div class="vstack gap-15px">
@@ -127,38 +199,34 @@
                                                     </div>
                                                     <div class="vstack gap-2">
                                                         <div class="text-black fw-normal hstack align-items-center gap-3 heading-4">
-                                                            <div class="flex-shrink-0">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="20"
-                                                                     height="20"
-                                                                     viewBox="0 0 20 20" fill="none">
-                                                                    <path d="M3.01675 7.07533C4.65842 -0.141339 15.3501 -0.133006 16.9834 7.08366C17.9417 11.317 15.3084 14.9003 13.0001 17.117C11.3251 18.7337 8.67508 18.7337 6.99175 17.117C4.69175 14.9003 2.05842 11.3087 3.01675 7.07533Z"
-                                                                          stroke="#444444" stroke-width="1.5"></path>
-                                                                    <path d="M7.70898 9.58333L8.95898 10.8333L12.2923 7.5"
-                                                                          stroke="#444444" stroke-width="1.5"
-                                                                          stroke-linecap="round"
-                                                                          stroke-linejoin="round"></path>
-                                                                </svg>
-                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                 height="20"
+                                                                 viewBox="0 0 20 20" fill="none">
+                                                                <path d="M3.01675 7.07533C4.65842 -0.141339 15.3501 -0.133006 16.9834 7.08366C17.9417 11.317 15.3084 14.9003 13.0001 17.117C11.3251 18.7337 8.67508 18.7337 6.99175 17.117C4.69175 14.9003 2.05842 11.3087 3.01675 7.07533Z"
+                                                                      stroke="#444444" stroke-width="1.5"></path>
+                                                                <path d="M7.70898 9.58333L8.95898 10.8333L12.2923 7.5"
+                                                                      stroke="#444444" stroke-width="1.5"
+                                                                      stroke-linecap="round"
+                                                                      stroke-linejoin="round"></path>
+                                                            </svg>
                                                             Số nhà 20 ngõ 17 Lê Văn Thiêm, Thanh Xuân, Hà Nội
                                                         </div>
                                                         <div class="text-black fw-normal hstack align-items-center gap-3 heading-4">
-                                                            <div class="flex-shrink-0">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                                     height="20"
-                                                                     viewBox="0 0 16 20" fill="none">
-                                                                    <path d="M14.6673 5.83366V14.167C14.6673 17.5003 13.834 18.3337 10.5007 18.3337H5.50065C2.16732 18.3337 1.33398 17.5003 1.33398 14.167V5.83366C1.33398 2.50033 2.16732 1.66699 5.50065 1.66699H10.5007C13.834 1.66699 14.6673 2.50033 14.6673 5.83366Z"
-                                                                          stroke="#444444" stroke-width="1.5"
-                                                                          stroke-linecap="round"
-                                                                          stroke-linejoin="round"></path>
-                                                                    <path d="M9.66732 4.58398H6.33398" stroke="#444444"
-                                                                          stroke-width="1.5" stroke-linecap="round"
-                                                                          stroke-linejoin="round"></path>
-                                                                    <path d="M8.00065 15.9173C8.71402 15.9173 9.29232 15.339 9.29232 14.6257C9.29232 13.9123 8.71402 13.334 8.00065 13.334C7.28728 13.334 6.70898 13.9123 6.70898 14.6257C6.70898 15.339 7.28728 15.9173 8.00065 15.9173Z"
-                                                                          stroke="#444444" stroke-width="1.5"
-                                                                          stroke-linecap="round"
-                                                                          stroke-linejoin="round"></path>
-                                                                </svg>
-                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                 height="20"
+                                                                 viewBox="0 0 16 20" fill="none">
+                                                                <path d="M14.6673 5.83366V14.167C14.6673 17.5003 13.834 18.3337 10.5007 18.3337H5.50065C2.16732 18.3337 1.33398 17.5003 1.33398 14.167V5.83366C1.33398 2.50033 2.16732 1.66699 5.50065 1.66699H10.5007C13.834 1.66699 14.6673 2.50033 14.6673 5.83366Z"
+                                                                      stroke="#444444" stroke-width="1.5"
+                                                                      stroke-linecap="round"
+                                                                      stroke-linejoin="round"></path>
+                                                                <path d="M9.66732 4.58398H6.33398" stroke="#444444"
+                                                                      stroke-width="1.5" stroke-linecap="round"
+                                                                      stroke-linejoin="round"></path>
+                                                                <path d="M8.00065 15.9173C8.71402 15.9173 9.29232 15.339 9.29232 14.6257C9.29232 13.9123 8.71402 13.334 8.00065 13.334C7.28728 13.334 6.70898 13.9123 6.70898 14.6257C6.70898 15.339 7.28728 15.9173 8.00065 15.9173Z"
+                                                                      stroke="#444444" stroke-width="1.5"
+                                                                      stroke-linecap="round"
+                                                                      stroke-linejoin="round"></path>
+                                                            </svg>
                                                             1900 2284 bấm phím 6
                                                         </div>
                                                     </div>
@@ -171,39 +239,35 @@
                                                     </div>
                                                     <div class="vstack gap-2">
                                                         <div class="text-black fw-normal hstack align-items-center gap-3 heading-4">
-                                                            <div class="flex-shrink-0">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="20"
-                                                                     height="20"
-                                                                     viewBox="0 0 20 20" fill="none">
-                                                                    <path d="M3.01675 7.07533C4.65842 -0.141339 15.3501 -0.133006 16.9834 7.08366C17.9417 11.317 15.3084 14.9003 13.0001 17.117C11.3251 18.7337 8.67508 18.7337 6.99175 17.117C4.69175 14.9003 2.05842 11.3087 3.01675 7.07533Z"
-                                                                          stroke="#444444" stroke-width="1.5"></path>
-                                                                    <path d="M7.70898 9.58333L8.95898 10.8333L12.2923 7.5"
-                                                                          stroke="#444444" stroke-width="1.5"
-                                                                          stroke-linecap="round"
-                                                                          stroke-linejoin="round"></path>
-                                                                </svg>
-                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                 height="20"
+                                                                 viewBox="0 0 20 20" fill="none">
+                                                                <path d="M3.01675 7.07533C4.65842 -0.141339 15.3501 -0.133006 16.9834 7.08366C17.9417 11.317 15.3084 14.9003 13.0001 17.117C11.3251 18.7337 8.67508 18.7337 6.99175 17.117C4.69175 14.9003 2.05842 11.3087 3.01675 7.07533Z"
+                                                                      stroke="#444444" stroke-width="1.5"></path>
+                                                                <path d="M7.70898 9.58333L8.95898 10.8333L12.2923 7.5"
+                                                                      stroke="#444444" stroke-width="1.5"
+                                                                      stroke-linecap="round"
+                                                                      stroke-linejoin="round"></path>
+                                                            </svg>
                                                             281/58/12A Lê Văn Sỹ, Phường 1, Quận Tân Bình, Tp. Hồ Chí
                                                             Minh
                                                         </div>
                                                         <div class="text-black fw-normal hstack align-items-center gap-3 heading-4">
-                                                            <div class="flex-shrink-0">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                                     height="20"
-                                                                     viewBox="0 0 16 20" fill="none">
-                                                                    <path d="M14.6673 5.83366V14.167C14.6673 17.5003 13.834 18.3337 10.5007 18.3337H5.50065C2.16732 18.3337 1.33398 17.5003 1.33398 14.167V5.83366C1.33398 2.50033 2.16732 1.66699 5.50065 1.66699H10.5007C13.834 1.66699 14.6673 2.50033 14.6673 5.83366Z"
-                                                                          stroke="#444444" stroke-width="1.5"
-                                                                          stroke-linecap="round"
-                                                                          stroke-linejoin="round"></path>
-                                                                    <path d="M9.66732 4.58398H6.33398" stroke="#444444"
-                                                                          stroke-width="1.5" stroke-linecap="round"
-                                                                          stroke-linejoin="round"></path>
-                                                                    <path d="M8.00065 15.9173C8.71402 15.9173 9.29232 15.339 9.29232 14.6257C9.29232 13.9123 8.71402 13.334 8.00065 13.334C7.28728 13.334 6.70898 13.9123 6.70898 14.6257C6.70898 15.339 7.28728 15.9173 8.00065 15.9173Z"
-                                                                          stroke="#444444" stroke-width="1.5"
-                                                                          stroke-linecap="round"
-                                                                          stroke-linejoin="round"></path>
-                                                                </svg>
-                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                 height="20"
+                                                                 viewBox="0 0 16 20" fill="none">
+                                                                <path d="M14.6673 5.83366V14.167C14.6673 17.5003 13.834 18.3337 10.5007 18.3337H5.50065C2.16732 18.3337 1.33398 17.5003 1.33398 14.167V5.83366C1.33398 2.50033 2.16732 1.66699 5.50065 1.66699H10.5007C13.834 1.66699 14.6673 2.50033 14.6673 5.83366Z"
+                                                                      stroke="#444444" stroke-width="1.5"
+                                                                      stroke-linecap="round"
+                                                                      stroke-linejoin="round"></path>
+                                                                <path d="M9.66732 4.58398H6.33398" stroke="#444444"
+                                                                      stroke-width="1.5" stroke-linecap="round"
+                                                                      stroke-linejoin="round"></path>
+                                                                <path d="M8.00065 15.9173C8.71402 15.9173 9.29232 15.339 9.29232 14.6257C9.29232 13.9123 8.71402 13.334 8.00065 13.334C7.28728 13.334 6.70898 13.9123 6.70898 14.6257C6.70898 15.339 7.28728 15.9173 8.00065 15.9173Z"
+                                                                      stroke="#444444" stroke-width="1.5"
+                                                                      stroke-linecap="round"
+                                                                      stroke-linejoin="round"></path>
+                                                            </svg>
                                                             1900 2284 bấm phím 5
                                                         </div>
                                                     </div>
@@ -252,13 +316,13 @@
                                             </svg>
                                         </div>
                                     </a>
-                                    <div class="collapse" data-bs-parent="#parentCollapse" id="collapse-chuyenkhoan">
+                                    <div class="collapse show" id="collapse-chuyenkhoan">
                                         <div class="extend-list_collapse__inner px-3">
                                             <div class="theme-tabs theme-tabs_vmt theme-tabs_overflow theme-tabs_icon">
                                                 <ul class="nav nav-tabs border-0 flex-nowrap align-items-center justify-content-start">
-                                                    <li class="nav-item active w-auto">
+                                                    <li class="nav-item w-auto">
                                                         <a href="./mo-rong-nap-tien.html"
-                                                           class="nav-link active px-3 gap-2 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+                                                           class="nav-link px-3 gap-2 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="22"
                                                                  height="22" viewBox="0 0 22 22" fill="none">
                                                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -287,20 +351,20 @@
                                                            class="nav-link px-3 gap-2 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                                                  height="24" viewBox="0 0 24 24" fill="none">
-                                                                <path d="M2 22H22" stroke="#ADB4BB" stroke-width="1.5"
+                                                                <path d="M2 22H22" stroke="#1A8917" stroke-width="1.5"
                                                                       stroke-miterlimit="10" stroke-linecap="round"
                                                                       stroke-linejoin="round"/>
                                                                 <path d="M2.94922 22.0003L2.99922 9.97023C2.99922 9.36023 3.28922 8.78029 3.76922 8.40029L10.7692 2.95027C11.4892 2.39027 12.4992 2.39027 13.2292 2.95027L20.2292 8.39028C20.7192 8.77028 20.9992 9.35023 20.9992 9.97023V22.0003"
-                                                                      stroke="#ADB4BB" stroke-width="1.5"
+                                                                      stroke="#1A8917" stroke-width="1.5"
                                                                       stroke-miterlimit="10" stroke-linejoin="round"/>
                                                                 <path d="M15.5 11H8.5C7.67 11 7 11.67 7 12.5V22H17V12.5C17 11.67 16.33 11 15.5 11Z"
-                                                                      stroke="#ADB4BB" stroke-width="1.5"
+                                                                      stroke="#1A8917" stroke-width="1.5"
                                                                       stroke-miterlimit="10" stroke-linecap="round"
                                                                       stroke-linejoin="round"/>
-                                                                <path d="M10 16.25V17.75" stroke="#ADB4BB"
+                                                                <path d="M10 16.25V17.75" stroke="#1A8917"
                                                                       stroke-width="1.5" stroke-miterlimit="10"
                                                                       stroke-linecap="round" stroke-linejoin="round"/>
-                                                                <path d="M10.5 7.5H13.5" stroke="#ADB4BB"
+                                                                <path d="M10.5 7.5H13.5" stroke="#1A8917"
                                                                       stroke-width="1.5" stroke-miterlimit="10"
                                                                       stroke-linecap="round" stroke-linejoin="round"/>
                                                             </svg>
@@ -309,14 +373,14 @@
                                                             </span>
                                                         </a>
                                                     </li>
-                                                    <li class="nav-item w-auto">
+                                                    <li class="nav-item w-auto active">
                                                         <a href="./mo-rong-chuyen-khoan.html"
-                                                           class="nav-link px-3 gap-2 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+                                                           class="nav-link active px-3 gap-2 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="25"
                                                                  height="24" viewBox="0 0 25 24" fill="none">
                                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                                       d="M1.73047 7.00047C1.73047 5.47064 2.97064 4.23047 4.50047 4.23047H20.5005C22.0303 4.23047 23.2705 5.47064 23.2705 7.00047V9.00047V17.0005C23.2705 18.5303 22.0303 19.7705 20.5005 19.7705H4.50047C2.97064 19.7705 1.73047 18.5303 1.73047 17.0005V9.00047V7.00047ZM4.50047 5.77047C3.82116 5.77047 3.27047 6.32116 3.27047 7.00047V8.23047H21.7305V7.00047C21.7305 6.32116 21.1798 5.77047 20.5005 5.77047H4.50047ZM21.7305 9.77047H3.27047V17.0005C3.27047 17.6798 3.82116 18.2305 4.50047 18.2305H20.5005C21.1798 18.2305 21.7305 17.6798 21.7305 17.0005V9.77047ZM13.7305 15.0005C13.7305 14.5752 14.0752 14.2305 14.5005 14.2305H18.5005C18.9257 14.2305 19.2705 14.5752 19.2705 15.0005C19.2705 15.4257 18.9257 15.7705 18.5005 15.7705H14.5005C14.0752 15.7705 13.7305 15.4257 13.7305 15.0005Z"
-                                                                      fill="#ADB4BB"/>
+                                                                      fill="#1A8917"/>
                                                             </svg>
                                                             <span>
                                                                 3. Chuyển khoản
@@ -327,60 +391,103 @@
                                             </div>
                                             <div class="extend-list_content mt-3 vstack gap-3">
                                                 <div class="heading-4">
-                                                    Chọn số tiền bạn muốn nạp
+                                                    Khách hàng sử dụng ứng dụng chuyển tiền và tạo lệnh chuyển khoản
+                                                    theo thông tin bên dưới. Vui lòng nhập chính xác để việc nạp tiền
+                                                    được diễn ra nhanh chóng.
                                                 </div>
-                                                <div class="filter-list">
-                                                    <div class="filter-item hstack align-items-center flex-wrap gap-2">
-                                                        <div class="filter-item_box">
-                                                            <button type="button"
-                                                                    class="filter-item_box--choose is-active">
-                                                                100.000đ
-                                                            </button>
-                                                        </div>
-                                                        <div class="filter-item_box">
-                                                            <button type="button" class="filter-item_box--choose">
-                                                                200.000đ
-                                                            </button>
-                                                        </div>
-                                                        <div class="filter-item_box">
-                                                            <button type="button" class="filter-item_box--choose">
-                                                                500.000đ
-                                                            </button>
-                                                        </div>
-                                                        <div class="filter-item_box">
-                                                            <button type="button" class="filter-item_box--choose">
-                                                                1.000.000đ
-                                                            </button>
-                                                        </div>
-                                                        <div class="filter-item_box">
-                                                            <button type="button" class="filter-item_box--choose">
-                                                                2.000.000đ
-                                                            </button>
-                                                        </div>
-                                                        <div class="filter-item_box">
-                                                            <button type="button" class="filter-item_box--choose">
-                                                                5.000.000đ
-                                                            </button>
-                                                        </div>
-                                                        <div class="filter-item_box filter-item_box__other hstack gap-2"
-                                                             id="filterPriceOther">
-                                                            <button type="button" class="filter-item_box--choose">
-                                                                Số khác
-                                                            </button>
-                                                            <div class="filter-item_input position-relative">
-                                                                <div class="filter-item_input__wrapper position">
-                                                                    <input type="text" name=""
-                                                                           class="">
-                                                                </div>
+                                                <div class="bank-transfer vstack gap-15px">
+                                                    <div class="heading-4 fw-medium primary-color">
+                                                        Tài khoản nhận/thụ hưởng:
+                                                    </div>
+                                                    <div class="vstack gap-2">
+                                                        <div class="text-black fw-bold hstack align-items-center gap-3 heading-4">
+                                                            <div class="flex-shrink-0">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                     height="18" viewBox="0 0 18 18" fill="none">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                          d="M1.57824 1.57824C2.6903 0.466183 4.35437 0.0410156 6.49935 0.0410156H11.4993C13.6443 0.0410156 15.3084 0.466183 16.4205 1.57824C17.5325 2.6903 17.9577 4.35437 17.9577 6.49935V11.4993C17.9577 13.6443 17.5325 15.3084 16.4205 16.4205C15.3084 17.5325 13.6443 17.9577 11.4993 17.9577H6.49935C4.35437 17.9577 2.6903 17.5325 1.57824 16.4205C0.466183 15.3084 0.0410156 13.6443 0.0410156 11.4993V6.49935C0.0410156 4.35437 0.466183 2.6903 1.57824 1.57824ZM2.46212 2.46212C1.69918 3.22507 1.29102 4.47766 1.29102 6.49935V11.4993C1.29102 13.521 1.69918 14.7736 2.46212 15.5366C3.22507 16.2995 4.47766 16.7077 6.49935 16.7077H11.4993C13.521 16.7077 14.7736 16.2995 15.5366 15.5366C16.2995 14.7736 16.7077 13.521 16.7077 11.4993V6.49935C16.7077 4.47766 16.2995 3.22507 15.5366 2.46212C14.7736 1.69918 13.521 1.29102 11.4993 1.29102H6.49935C4.47766 1.29102 3.22507 1.69918 2.46212 2.46212Z"
+                                                                          fill="#444444"/>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                          d="M3.34907 3.34907C3.92429 2.77386 4.73634 2.54102 5.66602 2.54102H12.3327C13.2624 2.54102 14.0744 2.77386 14.6496 3.34907C15.2248 3.92429 15.4577 4.73634 15.4577 5.66602V12.3327C15.4577 13.2624 15.2248 14.0744 14.6496 14.6496C14.0744 15.2248 13.2624 15.4577 12.3327 15.4577H5.66602C4.73634 15.4577 3.92429 15.2248 3.34907 14.6496C2.77386 14.0744 2.54102 13.2624 2.54102 12.3327V5.66602C2.54102 4.73634 2.77386 3.92429 3.34907 3.34907ZM4.23296 4.23296C3.97484 4.49107 3.79102 4.92902 3.79102 5.66602V12.3327C3.79102 13.0697 3.97484 13.5076 4.23296 13.7657C4.49107 14.0239 4.92902 14.2077 5.66602 14.2077H12.3327C13.0697 14.2077 13.5076 14.0239 13.7657 13.7657C14.0239 13.5076 14.2077 13.0697 14.2077 12.3327V5.66602C14.2077 4.92902 14.0239 4.49107 13.7657 4.23296C13.5076 3.97484 13.0697 3.79102 12.3327 3.79102H5.66602C4.92902 3.79102 4.49107 3.97484 4.23296 4.23296Z"
+                                                                          fill="#444444"/>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                          d="M2.54102 6.91602C2.54102 6.57084 2.82084 6.29102 3.16602 6.29102H5.23268C6.72786 6.29102 7.94101 7.50417 7.94101 8.99935C7.94101 10.4945 6.72786 11.7077 5.23268 11.7077H3.16602C2.82084 11.7077 2.54102 11.4279 2.54102 11.0827C2.54102 10.7375 2.82084 10.4577 3.16602 10.4577H5.23268C6.0375 10.4577 6.69101 9.80417 6.69101 8.99935C6.69101 8.19453 6.0375 7.54102 5.23268 7.54102H3.16602C2.82084 7.54102 2.54102 7.26119 2.54102 6.91602Z"
+                                                                          fill="#444444"/>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                          d="M11.707 7.32422C11.707 6.97904 11.9869 6.69922 12.332 6.69922H14.832C15.1772 6.69922 15.457 6.97904 15.457 7.32422C15.457 7.6694 15.1772 7.94922 14.832 7.94922H12.332C11.9869 7.94922 11.707 7.6694 11.707 7.32422Z"
+                                                                          fill="#444444"/>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                          d="M11.707 10.666C11.707 10.3208 11.9869 10.041 12.332 10.041H14.832C15.1772 10.041 15.457 10.3208 15.457 10.666C15.457 11.0112 15.1772 11.291 14.832 11.291H12.332C11.9869 11.291 11.707 11.0112 11.707 10.666Z"
+                                                                          fill="#444444"/>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                          d="M4.16602 8.99935C4.16602 8.53911 4.53911 8.16602 4.99935 8.16602H5.08268C5.54292 8.16602 5.91602 8.53911 5.91602 8.99935C5.91602 9.45959 5.54292 9.83268 5.08268 9.83268H4.99935C4.53911 9.83268 4.16602 9.45959 4.16602 8.99935Z"
+                                                                          fill="#444444"/>
+                                                                </svg>
                                                             </div>
+                                                            Ngân hàng TMCP Á Châu (ACB) - <br>Chi nhánh Lê Văn Sỹ, Hồ
+                                                            Chí
+                                                            Minh
+                                                        </div>
+                                                        <div class="text-black fw-bold hstack align-items-center gap-3 heading-4">
+                                                            <div class="flex-shrink-0">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                     height="20" viewBox="0 0 20 20" fill="none">
+                                                                    <path d="M9.99935 10.0007C5.39699 10.0007 1.66602 13.7316 1.66602 18.334C1.66602 18.7942 2.03911 19.1673 2.49935 19.1673C2.95959 19.1673 3.33268 18.7942 3.33268 18.334C3.33268 14.6521 6.31746 11.6673 9.99935 11.6673C13.6812 11.6673 16.666 14.6521 16.666 18.334C16.666 18.7942 17.0391 19.1673 17.4993 19.1673C17.9596 19.1673 18.3327 18.7942 18.3327 18.334C18.3327 13.7316 14.6017 10.0007 9.99935 10.0007Z"
+                                                                          fill="#444444"/>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                          d="M10.0007 7.66732C11.4734 7.66732 12.6673 6.47341 12.6673 5.00065C12.6673 3.52789 11.4734 2.33398 10.0007 2.33398C8.52789 2.33398 7.33398 3.52789 7.33398 5.00065C7.33398 6.47341 8.52789 7.66732 10.0007 7.66732ZM10.0007 9.16732C12.3018 9.16732 14.1673 7.30184 14.1673 5.00065C14.1673 2.69946 12.3018 0.833984 10.0007 0.833984C7.69946 0.833984 5.83398 2.69946 5.83398 5.00065C5.83398 7.30184 7.69946 9.16732 10.0007 9.16732Z"
+                                                                          fill="#444444"/>
+                                                                </svg>
+                                                            </div>
+                                                            VO VIET TIEN
+                                                        </div>
+                                                        <div class="primary-color fw-bold hstack align-items-center gap-3 heading-4">
+                                                            <div class="flex-shrink-0">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                     height="18" viewBox="0 0 18 18" fill="none">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                          d="M1.57824 1.57824C2.6903 0.466183 4.35437 0.0410156 6.49935 0.0410156H11.4993C13.6443 0.0410156 15.3084 0.466183 16.4205 1.57824C17.5325 2.6903 17.9577 4.35437 17.9577 6.49935V11.4993C17.9577 13.6443 17.5325 15.3084 16.4205 16.4205C15.3084 17.5325 13.6443 17.9577 11.4993 17.9577H6.49935C4.35437 17.9577 2.6903 17.5325 1.57824 16.4205C0.466183 15.3084 0.0410156 13.6443 0.0410156 11.4993V6.49935C0.0410156 4.35437 0.466183 2.6903 1.57824 1.57824ZM2.46212 2.46212C1.69918 3.22507 1.29102 4.47766 1.29102 6.49935V11.4993C1.29102 13.521 1.69918 14.7736 2.46212 15.5366C3.22507 16.2995 4.47766 16.7077 6.49935 16.7077H11.4993C13.521 16.7077 14.7736 16.2995 15.5366 15.5366C16.2995 14.7736 16.7077 13.521 16.7077 11.4993V6.49935C16.7077 4.47766 16.2995 3.22507 15.5366 2.46212C14.7736 1.69918 13.521 1.29102 11.4993 1.29102H6.49935C4.47766 1.29102 3.22507 1.69918 2.46212 2.46212Z"
+                                                                          fill="#444444"/>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                          d="M5.25 6.5C5.25 6.15482 5.52982 5.875 5.875 5.875H12.125C12.4702 5.875 12.75 6.15482 12.75 6.5C12.75 6.84518 12.4702 7.125 12.125 7.125H5.875C5.52982 7.125 5.25 6.84518 5.25 6.5Z"
+                                                                          fill="#444444"/>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                          d="M5.25 11.5C5.25 11.1548 5.52982 10.875 5.875 10.875H12.125C12.4702 10.875 12.75 11.1548 12.75 11.5C12.75 11.8452 12.4702 12.125 12.125 12.125H5.875C5.52982 12.125 5.25 11.8452 5.25 11.5Z"
+                                                                          fill="#444444"/>
+                                                                </svg>
+                                                            </div>
+                                                            236800509
+                                                        </div>
+                                                    </div>
+                                                    <div class="bank-transfer_divider hstack gap-2">
+                                                        <div class="heading-4 fw-medium primary-color">
+                                                            Số tiền:
+                                                        </div>
+                                                        <div class="heading-4">
+                                                            1.000.000đ
+                                                        </div>
+                                                    </div>
+                                                    <div class="bank-transfer_divider vstack gap-2">
+                                                        <div class="heading-4 fw-medium primary-color">
+                                                            Nội dung chuyển khoản
+                                                        </div>
+                                                        <div class="heading-3">
+                                                            NAPVMT storagex.studio 1525363
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="heading-4">
+                                                    Nhấn xác nhận sau khi đã chuyển khoản.
+                                                </div>
                                                 <div class="hstack gap-3 align-items-center justify-content-center">
-                                                    <a href="./mo-rong-chon-ngan-hang.html"
-                                                       class="button-theme button-gradient_green flex-fill">
-                                                        Tiếp tục
+                                                    <a href="./mo-rong-nap-tien.html"
+                                                       class="button-theme button-outline_green flex-fill">
+                                                        Quay lại
                                                     </a>
+                                                    <button data-bs-toggle="modal" data-bs-target="#modal-transfer"
+                                                            class="button-theme button-gradient_green flex-fill">
+                                                        Xác nhận
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>

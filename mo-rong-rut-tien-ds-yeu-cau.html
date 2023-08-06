@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Template VMT App</title>
+    <meta name="description" content="Template VMT App">
+    <meta name="author" content="">
+
+    <meta property="og:title" content="Template VMT App">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Template VMT App">
+    <meta property="og:image" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+
+    <link rel="icon" href="./assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+    <link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<div class="vstack position-relative min-vh-100 h-100 overflow-hidden">
+
+    <div class="vstack flex-fill overflow-hidden position-relative">
+        <div class="screen-overflow">
+            <div class="main main-spacing main-spacing_tabs screen-extend">
+                <!-- Header page -->
+                <div class="section-header bg-white position-fixed top-0 start-0 end-0 zi-10 w-100">
+                    <div class="header-inner">
+                        <div class="container">
+                            <div class="vstack">
+                                <div class="header-inner_title pt-3 pb-2 heading-2 hstack gap-2">
+                                    <a href="./index.html" class="hstack align-items-center justify-content-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24"
+                                             fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
+                                                  fill="#191E24"/>
+                                        </svg>
+                                    </a>
+                                    Rút tiền
+                                    <div class="header-inner_buttons ms-auto hstack align-items-center justify-content-end gap-2">
+                                        <a href="./mo-rong-tai-khoan-vi-vmt.html" type="button"
+                                           class="button-reset heading-6 text-black fw-normal">
+                                            Ví VMT
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="theme-tabs theme-tabs_divider theme-tabs_overflow">
+                                    <ul class="nav nav-tabs border-0 flex-nowrap align-items-center justify-content-center">
+                                        <li class="nav-item">
+                                            <a href="./mo-rong-rut-tien.html"
+                                               class="nav-link px-3 pseudo hstack gap-2 align-items-center justify-content-center w-100 mb-0 button-reset">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                     viewBox="0 0 24 24" fill="none">
+                                                    <path d="M22.1113 6.46787L14.6113 2.34287C14.5005 2.28195 14.3762 2.25 14.2498 2.25C14.1234 2.25 13.999 2.28195 13.8883 2.34287L6.38827 6.46787C6.27068 6.53261 6.17262 6.62773 6.10432 6.7433C6.03603 6.85886 6 6.99064 6 7.12487C6 7.25911 6.03603 7.39088 6.10432 7.50645C6.17262 7.62201 6.27068 7.71713 6.38827 7.78187L13.4998 11.6931V19.7324L11.2228 18.4799L10.4998 19.7931L13.8883 21.6569C13.999 21.7179 14.1233 21.75 14.2498 21.75C14.3762 21.75 14.5006 21.7179 14.6113 21.6569L22.1113 17.5319C22.2289 17.4672 22.327 17.3721 22.3953 17.2565C22.4637 17.1409 22.4997 17.0091 22.4998 16.8749V7.12487C22.4997 6.99061 22.4637 6.85882 22.3953 6.74325C22.327 6.62769 22.2289 6.53258 22.1113 6.46787ZM14.2498 3.85637L20.1935 7.12487L14.2498 10.3934L8.30602 7.12487L14.2498 3.85637ZM20.9998 16.4316L14.9998 19.7316V11.6924L20.9998 8.39237V16.4316Z"
+                                                          fill="#ADB4BB"/>
+                                                    <path d="M7.5 12H1.5V10.5H7.5V12Z" fill="#ADB4BB"/>
+                                                    <path d="M9 18H3V16.5H9V18Z" fill="#ADB4BB"/>
+                                                    <path d="M10.5 15H4.5V13.5H10.5V15Z" fill="#ADB4BB"/>
+                                                </svg>
+                                                Tạo lệnh rút tiền
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="./mo-rong-rut-tien-ds-yeu-cau.html"
+                                               class="nav-link active px-3 pseudo hstack gap-2 align-items-center justify-content-center w-100 mb-0 button-reset">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                     viewBox="0 0 24 24" fill="none">
+                                                    <path d="M16.125 7.3125V6.1875C16.125 6.08437 16.0406 6 15.9375 6H6.9375C6.83437 6 6.75 6.08437 6.75 6.1875V7.3125C6.75 7.41563 6.83437 7.5 6.9375 7.5H15.9375C16.0406 7.5 16.125 7.41563 16.125 7.3125ZM6.9375 9.375C6.83437 9.375 6.75 9.45937 6.75 9.5625V10.6875C6.75 10.7906 6.83437 10.875 6.9375 10.875H11.25C11.3531 10.875 11.4375 10.7906 11.4375 10.6875V9.5625C11.4375 9.45937 11.3531 9.375 11.25 9.375H6.9375ZM15.75 12.0938C12.9539 12.0938 10.6875 14.3602 10.6875 17.1562C10.6875 19.9523 12.9539 22.2188 15.75 22.2188C18.5461 22.2188 20.8125 19.9523 20.8125 17.1562C20.8125 14.3602 18.5461 12.0938 15.75 12.0938ZM18.2695 19.6758C17.5969 20.3484 16.7016 20.7188 15.75 20.7188C14.7984 20.7188 13.9031 20.3484 13.2305 19.6758C12.5578 19.0031 12.1875 18.1078 12.1875 17.1562C12.1875 16.2047 12.5578 15.3094 13.2305 14.6367C13.9031 13.9641 14.7984 13.5938 15.75 13.5938C16.7016 13.5938 17.5969 13.9641 18.2695 14.6367C18.9422 15.3094 19.3125 16.2047 19.3125 17.1562C19.3125 18.1078 18.9422 19.0031 18.2695 19.6758ZM17.8359 15.375H16.7977C16.7367 15.375 16.6805 15.4031 16.6453 15.4523L15.157 17.5102L14.6156 16.7625C14.5983 16.7383 14.5754 16.7187 14.5489 16.7053C14.5224 16.6918 14.493 16.6849 14.4633 16.6852H13.4297C13.2773 16.6852 13.1883 16.8586 13.2773 16.9828L15.007 19.3758C15.082 19.4789 15.2344 19.4789 15.3094 19.3758L17.9859 15.6727C18.0773 15.5484 17.9883 15.375 17.8359 15.375ZM10.3125 19.9688H4.875V3.46875H18V11.5312C18 11.6344 18.0844 11.7188 18.1875 11.7188H19.5C19.6031 11.7188 19.6875 11.6344 19.6875 11.5312V2.53125C19.6875 2.11641 19.3523 1.78125 18.9375 1.78125H3.9375C3.52266 1.78125 3.1875 2.11641 3.1875 2.53125V20.9062C3.1875 21.3211 3.52266 21.6562 3.9375 21.6562H10.3125C10.4156 21.6562 10.5 21.5719 10.5 21.4688V20.1562C10.5 20.0531 10.4156 19.9688 10.3125 19.9688Z"
+                                                          fill="#1A8917"/>
+                                                </svg>
+                                                DS yêu cầu
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="extend-inner">
+                    <div class="container">
+                        <div class="extend-wrapper mt-3 vstack gap-3">
+                            <div class="extend-list bg-white">
+                                <div class="extend-list_collapse">
+                                    <div class="extend-list_item position-relative hstack align-items-center gap-2">
+                                        <div class="flex-shrink-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none">
+                                                <path d="M22 6V8.42C22 10 21 11 19.42 11H16V4.01C16 2.9 16.91 2 18.02 2C19.11 2.01 20.11 2.45 20.83 3.17C21.55 3.9 22 4.9 22 6Z"
+                                                      stroke="#1A8917" stroke-width="1.5" stroke-miterlimit="10"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M2 7V21C2 21.83 2.93998 22.3 3.59998 21.8L5.31 20.52C5.71 20.22 6.27 20.26 6.63 20.62L8.28998 22.29C8.67998 22.68 9.32002 22.68 9.71002 22.29L11.39 20.61C11.74 20.26 12.3 20.22 12.69 20.52L14.4 21.8C15.06 22.29 16 21.82 16 21V4C16 2.9 16.9 2 18 2H7H6C3 2 2 3.79 2 6V7Z"
+                                                      stroke="#1A8917" stroke-width="1.5" stroke-miterlimit="10"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path opacity="0.4" d="M6 9H12" stroke="#1A8917" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path opacity="0.4" d="M6.75 13H11.25" stroke="#1A8917"
+                                                      stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="heading-4">
+                                            Yêu cầu đã tạo
+                                        </div>
+                                        <div class="ms-auto extend-list_collapse__icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z"
+                                                      fill="#191E24"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="extend-list_collapse__inner">
+                                        <div class="extend-list_item">
+                                            <div class="bank-request vstack gap-10px p-3">
+                                                <div class="bank-request_header hstack align-items-center justify-content-between">
+                                                    <div class="heading-4">
+                                                        20.05.2021
+                                                    </div>
+                                                    <div class="button-theme button-background_green bank-request_status">
+                                                        Thành công
+                                                    </div>
+                                                </div>
+                                                <div class="bank-request_body hstack align-items-start">
+                                                    <div class="bank-request_price vstack gap-10px">
+                                                        <div class="heading-4">
+                                                            Số tiền
+                                                        </div>
+                                                        <div class="heading-4">
+                                                            5.000.000đ
+                                                        </div>
+                                                    </div>
+                                                    <div class="bank-request_information vstack gap-10px">
+                                                        <div class="heading-4">
+                                                            Tài khoản nhận
+                                                        </div>
+                                                        <div class="heading-4 vstack gap-1">
+                                                            TPBank
+                                                            <span class="gray-color">02030535101</span>
+                                                            <span class="gray-color">BUI XUAN THIEN</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bank-request_footer heading-4">
+                                                    <span class="fw-bold text-black">Ghi chú:&nbsp;</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="extend-list_item">
+                                            <div class="bank-request vstack gap-10px p-3">
+                                                <div class="bank-request_header hstack align-items-center justify-content-between">
+                                                    <div class="heading-4">
+                                                        20.05.2021
+                                                    </div>
+                                                    <div class="button-theme button-background_green bank-request_status">
+                                                        Thành công
+                                                    </div>
+                                                </div>
+                                                <div class="bank-request_body hstack align-items-start">
+                                                    <div class="bank-request_price vstack gap-10px">
+                                                        <div class="heading-4">
+                                                            Số tiền
+                                                        </div>
+                                                        <div class="heading-4">
+                                                            5.000.000đ
+                                                        </div>
+                                                    </div>
+                                                    <div class="bank-request_information vstack gap-10px">
+                                                        <div class="heading-4">
+                                                            Tài khoản nhận
+                                                        </div>
+                                                        <div class="heading-4 vstack gap-1">
+                                                            TPBank
+                                                            <span class="gray-color">02030535101</span>
+                                                            <span class="gray-color">BUI XUAN THIEN</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bank-request_footer heading-4">
+                                                    <span class="fw-bold text-black">Ghi chú:&nbsp;</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/momment.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chart.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-labels.js"></script>
+<script type="text/javascript"
+        src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+
+</body>
+</html>

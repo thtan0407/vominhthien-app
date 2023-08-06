@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Template VMT App</title>
+    <meta name="description" content="Template VMT App">
+    <meta name="author" content="">
+
+    <meta property="og:title" content="Template VMT App">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Template VMT App">
+    <meta property="og:image" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+
+    <link rel="icon" href="./assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+    <link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<div class="vstack position-relative min-vh-100 h-100 overflow-hidden">
+
+    <div class="vstack flex-fill overflow-hidden position-relative">
+        <div class="screen-overflow">
+            <div class="main main-spacing screen-extend">
+                <!-- Header page -->
+                <div class="section-header bg-white position-fixed top-0 start-0 end-0 zi-10 w-100">
+                    <div class="header-inner">
+                        <div class="container">
+                            <div class="vstack">
+                                <div class="header-inner_title pt-3 pb-2 heading-2 hstack gap-2">
+                                    <a href="./index.html" class="hstack align-items-center justify-content-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24"
+                                             fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
+                                                  fill="#191E24"/>
+                                        </svg>
+                                    </a>
+                                    Liên kết thẻ
+                                    <div class="header-inner_buttons ms-auto hstack align-items-center justify-content-end gap-2">
+                                        <a href="./mo-rong-tai-khoan-vi-vmt.html" type="button"
+                                           class="button-reset heading-6 text-black fw-normal">
+                                            Ví VMT
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="extend-inner">
+                    <div class="container">
+                        <div class="extend-wrapper mt-2 vstack gap-3">
+                            <div class="extend-list bg-white">
+                                <div class="extend-list_collapse">
+                                    <div class="extend-list_collapse__inner border-top-0">
+                                        <div class="extend-list_item">
+                                            <div class="vstack gap-15px">
+                                                <div class="text-black fw-normal hstack align-items-center gap-3 heading-4">
+                                                    Liên kết thẻ để nạp rút tiền nhanh chóng hơn.
+                                                </div>
+                                                <a href="./mo-rong-rut-tien-lien-ket-the-nhap-thong-tin.html" class="bank-linked position-relative p-4 vstack gap-2 primary-color heading-3 align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 25" fill="none">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666016 7.83203C0.666016 7.27975 1.11373 6.83203 1.66602 6.83203H16.9993C17.5516 6.83203 17.9993 7.27975 17.9993 7.83203C17.9993 8.38432 17.5516 8.83203 16.9993 8.83203H1.66602C1.11373 8.83203 0.666016 8.38432 0.666016 7.83203Z" fill="#076007"/>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6 18.5C6 17.9477 6.44772 17.5 7 17.5H9.66667C10.219 17.5 10.6667 17.9477 10.6667 18.5C10.6667 19.0523 10.219 19.5 9.66667 19.5H7C6.44772 19.5 6 19.0523 6 18.5Z" fill="#076007"/>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18.5C12 17.9477 12.4477 17.5 13 17.5H18.3333C18.8856 17.5 19.3333 17.9477 19.3333 18.5C19.3333 19.0523 18.8856 19.5 18.3333 19.5H13C12.4477 19.5 12 19.0523 12 18.5Z" fill="#076007"/>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.55411 3.04878C2.98736 3.60915 2.66602 4.67425 2.66602 7.01935V17.9794C2.66602 20.3245 2.98736 21.3895 3.55411 21.9499C4.1248 22.5142 5.21136 22.8327 7.58602 22.8327H22.4127C24.7873 22.8327 25.8739 22.5142 26.4446 21.9499C27.0113 21.3895 27.3327 20.3245 27.3327 17.9794V12.5393C27.3327 11.9871 27.7804 11.5393 28.3327 11.5393C28.885 11.5393 29.3327 11.9871 29.3327 12.5393V17.9794C29.3327 20.3143 29.0607 22.1758 27.8508 23.3721C26.6448 24.5645 24.7714 24.8327 22.4127 24.8327H7.58602C5.22734 24.8327 3.3539 24.5645 2.14792 23.3721C0.938006 22.1758 0.666016 20.3142 0.666016 17.9794V7.01935C0.666016 4.68445 0.938006 2.82288 2.14792 1.62658C3.3539 0.434182 5.22734 0.166016 7.58602 0.166016H16.9993C17.5516 0.166016 17.9993 0.613731 17.9993 1.16602C17.9993 1.7183 17.5516 2.16602 16.9993 2.16602H7.58602C5.21136 2.16602 4.1248 2.48452 3.55411 3.04878Z" fill="#076007"/>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20 4.83203C20 4.27975 20.4477 3.83203 21 3.83203H28.3333C28.8856 3.83203 29.3333 4.27975 29.3333 4.83203C29.3333 5.38432 28.8856 5.83203 28.3333 5.83203H21C20.4477 5.83203 20 5.38432 20 4.83203Z" fill="#076007"/>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.666 0.166016C25.2183 0.166016 25.666 0.613731 25.666 1.16602V8.49935C25.666 9.05163 25.2183 9.49935 24.666 9.49935C24.1137 9.49935 23.666 9.05163 23.666 8.49935V1.16602C23.666 0.613731 24.1137 0.166016 24.666 0.166016Z" fill="#076007"/>
+                                                    </svg>
+                                                    Thêm thẻ
+                                                </a>
+                                                <div class="vstack gap-15px">
+                                                    <div class="primary-color heading-4">
+                                                        Thẻ đã liên kết
+                                                    </div>
+                                                    <div class="bank-link_slider" id="bank-link_slider">
+                                                        <div class="swiper">
+                                                            <div class="swiper-wrapper">
+                                                                <div class="swiper-slide">
+                                                                    <div class="bank-link p-3 is-active hstack align-items-start gap-2">
+                                                                        <div class="flex-shrink-0">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                 width="25"
+                                                                                 height="25" viewBox="0 0 25 25"
+                                                                                 fill="none">
+                                                                                <path fill-rule="evenodd"
+                                                                                      clip-rule="evenodd"
+                                                                                      d="M20.0058 4.00471L4.00586 4.02541C2.349 4.02756 1.0076 5.37244 1.00974 7.02929L1.01117 8.12929L23.0111 8.10082L23.0097 7.00082C23.0076 5.34397 21.6627 4.00256 20.0058 4.00471ZM1.02268 17.0293L1.01349 9.92929L23.0135 9.90082L23.0227 17.0008C23.0248 18.6577 21.6834 20.0026 20.0265 20.0047L4.02656 20.0254C2.36971 20.0275 1.02483 18.6861 1.02268 17.0293ZM13.0189 14.1138C12.5219 14.1144 12.1194 14.5179 12.1201 15.0149C12.1207 15.512 12.5242 15.9144 13.0212 15.9138L18.0212 15.9073C18.5183 15.9066 18.9207 15.5032 18.9201 15.0061C18.9194 14.5091 18.516 14.1066 18.0189 14.1073L13.0189 14.1138Z"
+                                                                                      fill="#444444"/>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <div class="vstack gap-5px">
+                                                                            <div class="heading-4 text-uppercase">
+                                                                                TPBank (ATM)
+                                                                            </div>
+                                                                            <div class="heading-4 text-uppercase">
+                                                                                BUI XUAN THIEN
+                                                                            </div>
+                                                                            <div class="heading-5">
+                                                                                02030535101
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <div class="bank-link p-3 hstack align-items-start gap-2">
+                                                                        <div class="flex-shrink-0">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                 width="25"
+                                                                                 height="25" viewBox="0 0 25 25"
+                                                                                 fill="none">
+                                                                                <path fill-rule="evenodd"
+                                                                                      clip-rule="evenodd"
+                                                                                      d="M20.0058 4.00471L4.00586 4.02541C2.349 4.02756 1.0076 5.37244 1.00974 7.02929L1.01117 8.12929L23.0111 8.10082L23.0097 7.00082C23.0076 5.34397 21.6627 4.00256 20.0058 4.00471ZM1.02268 17.0293L1.01349 9.92929L23.0135 9.90082L23.0227 17.0008C23.0248 18.6577 21.6834 20.0026 20.0265 20.0047L4.02656 20.0254C2.36971 20.0275 1.02483 18.6861 1.02268 17.0293ZM13.0189 14.1138C12.5219 14.1144 12.1194 14.5179 12.1201 15.0149C12.1207 15.512 12.5242 15.9144 13.0212 15.9138L18.0212 15.9073C18.5183 15.9066 18.9207 15.5032 18.9201 15.0061C18.9194 14.5091 18.516 14.1066 18.0189 14.1073L13.0189 14.1138Z"
+                                                                                      fill="#444444"/>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <div class="vstack gap-5px">
+                                                                            <div class="heading-4 text-uppercase dark-color">
+                                                                                TPBank (ATM)
+                                                                            </div>
+                                                                            <div class="heading-4 text-uppercase dark-color">
+                                                                                BUI XUAN THIEN
+                                                                            </div>
+                                                                            <div class="heading-5 dark-color">
+                                                                                02030535101
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <div class="bank-link p-3 hstack align-items-start gap-2">
+                                                                        <div class="flex-shrink-0">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                 width="25"
+                                                                                 height="25" viewBox="0 0 25 25"
+                                                                                 fill="none">
+                                                                                <path fill-rule="evenodd"
+                                                                                      clip-rule="evenodd"
+                                                                                      d="M20.0058 4.00471L4.00586 4.02541C2.349 4.02756 1.0076 5.37244 1.00974 7.02929L1.01117 8.12929L23.0111 8.10082L23.0097 7.00082C23.0076 5.34397 21.6627 4.00256 20.0058 4.00471ZM1.02268 17.0293L1.01349 9.92929L23.0135 9.90082L23.0227 17.0008C23.0248 18.6577 21.6834 20.0026 20.0265 20.0047L4.02656 20.0254C2.36971 20.0275 1.02483 18.6861 1.02268 17.0293ZM13.0189 14.1138C12.5219 14.1144 12.1194 14.5179 12.1201 15.0149C12.1207 15.512 12.5242 15.9144 13.0212 15.9138L18.0212 15.9073C18.5183 15.9066 18.9207 15.5032 18.9201 15.0061C18.9194 14.5091 18.516 14.1066 18.0189 14.1073L13.0189 14.1138Z"
+                                                                                      fill="#444444"/>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <div class="vstack gap-5px">
+                                                                            <div class="heading-4 text-uppercase dark-color">
+                                                                                TPBank (ATM)
+                                                                            </div>
+                                                                            <div class="heading-4 text-uppercase dark-color">
+                                                                                BUI XUAN THIEN
+                                                                            </div>
+                                                                            <div class="heading-5 dark-color">
+                                                                                02030535101
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <div class="bank-link p-3 hstack align-items-start gap-2">
+                                                                        <div class="flex-shrink-0">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                 width="25"
+                                                                                 height="25" viewBox="0 0 25 25"
+                                                                                 fill="none">
+                                                                                <path fill-rule="evenodd"
+                                                                                      clip-rule="evenodd"
+                                                                                      d="M20.0058 4.00471L4.00586 4.02541C2.349 4.02756 1.0076 5.37244 1.00974 7.02929L1.01117 8.12929L23.0111 8.10082L23.0097 7.00082C23.0076 5.34397 21.6627 4.00256 20.0058 4.00471ZM1.02268 17.0293L1.01349 9.92929L23.0135 9.90082L23.0227 17.0008C23.0248 18.6577 21.6834 20.0026 20.0265 20.0047L4.02656 20.0254C2.36971 20.0275 1.02483 18.6861 1.02268 17.0293ZM13.0189 14.1138C12.5219 14.1144 12.1194 14.5179 12.1201 15.0149C12.1207 15.512 12.5242 15.9144 13.0212 15.9138L18.0212 15.9073C18.5183 15.9066 18.9207 15.5032 18.9201 15.0061C18.9194 14.5091 18.516 14.1066 18.0189 14.1073L13.0189 14.1138Z"
+                                                                                      fill="#444444"/>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <div class="vstack gap-5px">
+                                                                            <div class="heading-4 text-uppercase dark-color">
+                                                                                TPBank (ATM)
+                                                                            </div>
+                                                                            <div class="heading-4 text-uppercase dark-color">
+                                                                                BUI XUAN THIEN
+                                                                            </div>
+                                                                            <div class="heading-5 dark-color">
+                                                                                02030535101
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/momment.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chart.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-labels.js"></script>
+<script type="text/javascript"
+        src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+
+</body>
+</html>

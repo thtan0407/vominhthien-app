@@ -726,6 +726,44 @@ export function handleFormEditUser() {
     }
 }
 
+/****
+ * Handle Filter Price Other
+ */
+export function handleFilterPriceOther() {
+    const filterPriceOther = document.getElementById('filterPriceOther');
+    if (filterPriceOther !== null) {
+        const filterPriceOtherButton = filterPriceOther.querySelector('button');
+        const filterPriceOtherInput = filterPriceOther.querySelector('input');
+        if (filterPriceOtherButton !== null && filterPriceOtherInput !== null) {
+            filterPriceOtherButton.addEventListener('click', function () {
+                if (filterPriceOther.classList.contains('is-input')) {
+                    filterPriceOtherButton.innerHTML = 'Số tiền';
+                    filterPriceOther.classList.remove('is-input');
+                } else {
+                    filterPriceOtherButton.innerHTML = 'Nhập số tiền';
+                    filterPriceOther.classList.add('is-input');
+                }
+            });
+        }
+    }
+}
+
+/****
+ * Slider Card Bank Link
+ */
+export function handleSliderBankLink() {
+    const bankLink = document.getElementById('bank-link_slider');
+    if (bankLink !== null) {
+        new Swiper('#bank-link_slider .swiper', {
+            speed: 500,
+            slidesPerView: 1.75,
+            effect: 'slide',
+            loop: false,
+            spaceBetween: 8
+        });
+    }
+}
+
 window.addEventListener('load', function () {
     handleNavigation();
 
@@ -780,6 +818,10 @@ window.addEventListener('load', function () {
     handleReadAllNotification();
 
     handleFormEditUser();
+
+    handleFilterPriceOther();
+
+    handleSliderBankLink();
 
     window.addEventListener("resize", () => {
         windowWidth = window.innerWidth;
