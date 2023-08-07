@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Template VMT App</title>
+    <meta name="description" content="Template VMT App">
+    <meta name="author" content="">
+
+    <meta property="og:title" content="Template VMT App">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Template VMT App">
+    <meta property="og:image" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+
+    <link rel="icon" href="./assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+    <link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<div class="vstack position-relative min-vh-100 h-100 overflow-hidden">
+
+    <div class="vstack flex-fill overflow-hidden position-relative">
+        <div class="screen-overflow">
+            <div class="main main-spacing main-spacing_tabs screen-lookup_form">
+                <!-- Header page -->
+                <div class="section-header bg-white position-fixed top-0 start-0 end-0 zi-10 w-100">
+                    <div class="header-inner">
+                        <div class="container">
+                            <div class="vstack">
+                                <div class="header-inner_title pt-3 pb-2 heading-2 hstack gap-2">
+                                    <a href="./index.html" class="hstack align-items-center justify-content-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24"
+                                             fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
+                                                  fill="#191E24"/>
+                                        </svg>
+                                    </a>
+                                    Tra cứu thông tin
+                                </div>
+                                <div class="theme-tabs theme-tabs_divider theme-tabs_icon theme-tabs_icon__transparent theme-tabs_overflow">
+                                    <ul class="nav nav-tabs border-0 flex-nowrap align-items-center justify-content-start">
+                                        <li class="nav-item w-auto">
+                                            <a href="./tra-cuu-ti-gia.html"
+                                               class="nav-link px-3 gap-2 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                     viewBox="0 0 24 24" fill="none">
+                                                    <path d="M2 2V19C2 20.66 3.34 22 5 22H22" stroke="#ADB4BB"
+                                                          stroke-width="1.5" stroke-miterlimit="10"
+                                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path opacity="0.4"
+                                                          d="M5 17L9.59 11.64C10.35 10.76 11.7 10.7 12.52 11.53L13.47 12.48C14.29 13.3 15.64 13.25 16.4 12.37L21 7"
+                                                          stroke="#ADB4BB" stroke-width="1.5" stroke-miterlimit="10"
+                                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                <span>
+                                                    Tra cứu tỉ giá
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item w-auto">
+                                            <a href="./tra-cuu-cuoc-van-chuyen.html"
+                                               class="nav-link active px-3 gap-2 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                     viewBox="0 0 24 24" fill="none">
+                                                    <path d="M10 22H14C19 22 21 20 21 15V9C21 4 19 2 14 2H10C5 2 3 4 3 9V15C3 20 5 22 10 22Z"
+                                                          stroke="#1A8917" stroke-width="1.5" stroke-linecap="round"
+                                                          stroke-linejoin="round"/>
+                                                    <path opacity="0.4"
+                                                          d="M16.5 7.57999V8.57999C16.5 9.39999 15.83 10.08 15 10.08H9C8.18 10.08 7.5 9.40999 7.5 8.57999V7.57999C7.5 6.75999 8.17 6.07999 9 6.07999H15C15.83 6.07999 16.5 6.74999 16.5 7.57999Z"
+                                                          stroke="#1A8917" stroke-width="1.5" stroke-linecap="round"
+                                                          stroke-linejoin="round"/>
+                                                    <path opacity="0.4" d="M8.13612 14H8.14767" stroke="#1A8917"
+                                                          stroke-width="2" stroke-linecap="round"
+                                                          stroke-linejoin="round"/>
+                                                    <path opacity="0.4" d="M11.9952 14H12.0068" stroke="#1A8917"
+                                                          stroke-width="2" stroke-linecap="round"
+                                                          stroke-linejoin="round"/>
+                                                    <path opacity="0.4" d="M15.8544 14H15.8659" stroke="#1A8917"
+                                                          stroke-width="2" stroke-linecap="round"
+                                                          stroke-linejoin="round"/>
+                                                    <path opacity="0.4" d="M8.13612 17.5H8.14767" stroke="#1A8917"
+                                                          stroke-width="2" stroke-linecap="round"
+                                                          stroke-linejoin="round"/>
+                                                    <path opacity="0.4" d="M11.9952 17.5H12.0068" stroke="#1A8917"
+                                                          stroke-width="2" stroke-linecap="round"
+                                                          stroke-linejoin="round"/>
+                                                    <path opacity="0.4" d="M15.8544 17.5H15.8659" stroke="#1A8917"
+                                                          stroke-width="2" stroke-linecap="round"
+                                                          stroke-linejoin="round"/>
+                                                </svg>
+                                                <span>
+                                                    Cước vận chuyển
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item w-auto">
+                                            <a href="./tra-cuu-van-don.html"
+                                               class="nav-link px-3 gap-2 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                     viewBox="0 0 24 24" fill="none">
+                                                    <path opacity="0.4"
+                                                          d="M11.9998 14H12.9998C14.0998 14 14.9998 13.1 14.9998 12V2H5.99976C4.49976 2 3.18977 2.82999 2.50977 4.04999"
+                                                          stroke="#ADB4BB" stroke-width="1.5" stroke-linecap="round"
+                                                          stroke-linejoin="round"/>
+                                                    <path d="M2 17C2 18.66 3.34 20 5 20H6C6 18.9 6.9 18 8 18C9.1 18 10 18.9 10 20H14C14 18.9 14.9 18 16 18C17.1 18 18 18.9 18 20H19C20.66 20 22 18.66 22 17V14H19C18.45 14 18 13.55 18 13V10C18 9.45 18.45 9 19 9H20.29L18.58 6.01001C18.22 5.39001 17.56 5 16.84 5H15V12C15 13.1 14.1 14 13 14H12"
+                                                          stroke="#ADB4BB" stroke-width="1.5" stroke-linecap="round"
+                                                          stroke-linejoin="round"/>
+                                                    <path d="M8 22C9.10457 22 10 21.1046 10 20C10 18.8954 9.10457 18 8 18C6.89543 18 6 18.8954 6 20C6 21.1046 6.89543 22 8 22Z"
+                                                          stroke="#ADB4BB" stroke-width="1.5" stroke-linecap="round"
+                                                          stroke-linejoin="round"/>
+                                                    <path d="M16 22C17.1046 22 18 21.1046 18 20C18 18.8954 17.1046 18 16 18C14.8954 18 14 18.8954 14 20C14 21.1046 14.8954 22 16 22Z"
+                                                          stroke="#ADB4BB" stroke-width="1.5" stroke-linecap="round"
+                                                          stroke-linejoin="round"/>
+                                                    <path d="M22 12V14H19C18.45 14 18 13.55 18 13V10C18 9.45 18.45 9 19 9H20.29L22 12Z"
+                                                          stroke="#ADB4BB" stroke-width="1.5" stroke-linecap="round"
+                                                          stroke-linejoin="round"/>
+                                                    <path d="M2 8H8" stroke="#ADB4BB" stroke-width="1.5"
+                                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M2 11H6" stroke="#ADB4BB" stroke-width="1.5"
+                                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M2 14H4" stroke="#ADB4BB" stroke-width="1.5"
+                                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                <span>
+                                                    Tra cứu vận đơn
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item w-auto">
+                                            <a href="./tra-cuu-email.html"
+                                               class="nav-link px-3 gap-2 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                     viewBox="0 0 24 24" fill="none">
+                                                    <path d="M12 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V11.5"
+                                                          stroke="#ADB4BB" stroke-width="1.5" stroke-miterlimit="10"
+                                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path opacity="0.4"
+                                                          d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9"
+                                                          stroke="#ADB4BB" stroke-width="1.5" stroke-miterlimit="10"
+                                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <g opacity="0.4">
+                                                        <path d="M18.2 21.4C19.9673 21.4 21.4 19.9673 21.4 18.2C21.4 16.4327 19.9673 15 18.2 15C16.4327 15 15 16.4327 15 18.2C15 19.9673 16.4327 21.4 18.2 21.4Z"
+                                                              stroke="#ADB4BB" stroke-width="1.5" stroke-linecap="round"
+                                                              stroke-linejoin="round"/>
+                                                        <path d="M22 22L21 21" stroke="#ADB4BB" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </g>
+                                                </svg>
+                                                <span>
+                                                    Tra cứu Email
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item w-auto">
+                                            <a href="./tra-cuu-dia-chi.html"
+                                               class="nav-link px-3 gap-2 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                     viewBox="0 0 24 24" fill="none">
+                                                    <path d="M2 22H22" stroke="#ADB4BB" stroke-width="1.5"
+                                                          stroke-miterlimit="10" stroke-linecap="round"
+                                                          stroke-linejoin="round"/>
+                                                    <path d="M2.9502 22L3.0002 9.96999C3.0002 9.35999 3.2902 8.78004 3.7702 8.40004L10.7702 2.95003C11.4902 2.39003 12.5002 2.39003 13.2302 2.95003L20.2302 8.39003C20.7202 8.77003 21.0002 9.34999 21.0002 9.96999V22"
+                                                          stroke="#ADB4BB" stroke-width="1.5" stroke-miterlimit="10"
+                                                          stroke-linejoin="round"/>
+                                                    <path opacity="0.4"
+                                                          d="M15.5 11H8.5C7.67 11 7 11.67 7 12.5V22H17V12.5C17 11.67 16.33 11 15.5 11Z"
+                                                          stroke="#ADB4BB" stroke-width="1.5" stroke-miterlimit="10"
+                                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M10 16.25V17.75" stroke="#ADB4BB" stroke-width="1.5"
+                                                          stroke-miterlimit="10" stroke-linecap="round"
+                                                          stroke-linejoin="round"/>
+                                                    <path opacity="0.4" d="M10.5 7.5H13.5" stroke="#ADB4BB"
+                                                          stroke-width="1.5" stroke-miterlimit="10"
+                                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                <span>
+                                                    Tra cứu địa chỉ
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lookup-inner">
+                    <div class="container">
+                        <div class="lookup-wrapper mt-3 vstack gap-3">
+                            <div class="lookup-form user-form user-form_edit form-edit_user p-3 bg-white vstack gap-3">
+                                <div class="heading-4 hstack align-items-center gap-1">
+                                    TRA CỨU THIẾT LẬP ĐIA CHỈ KHO TQ
+                                    <div data-bs-toggle="tooltip" title="Nội dung Kiểm đếm"
+                                         class="handlePrevent hstack align-items-center justify-content-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                             viewBox="0 0 16 16"
+                                             fill="none">
+                                            <g clip-path="url(#clip0_2842_13529)">
+                                                <path d="M5.33317 6.20866C5.33317 4.7359 6.52708 3.54199 7.99984 3.54199C9.47259 3.54199 10.6665 4.7359 10.6665 6.20866C10.6665 7.45122 9.81665 8.49528 8.6665 8.79131V9.54199C8.6665 9.91018 8.36803 10.2087 7.99984 10.2087C7.63165 10.2087 7.33317 9.91018 7.33317 9.54199V8.20866C7.33317 7.84047 7.63165 7.54199 7.99984 7.54199C8.73621 7.54199 9.33317 6.94504 9.33317 6.20866C9.33317 5.47228 8.73621 4.87533 7.99984 4.87533C7.26346 4.87533 6.6665 5.47228 6.6665 6.20866C6.6665 6.57685 6.36803 6.87533 5.99984 6.87533C5.63165 6.87533 5.33317 6.57685 5.33317 6.20866Z"
+                                                      fill="#333"/>
+                                                <path d="M8.83317 11.7087C8.83317 12.1689 8.46007 12.542 7.99984 12.542C7.5396 12.542 7.1665 12.1689 7.1665 11.7087C7.1665 11.2484 7.5396 10.8753 7.99984 10.8753C8.46007 10.8753 8.83317 11.2484 8.83317 11.7087Z"
+                                                      fill="#333"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M2.81439 2.81487C4.14075 1.48854 5.97499 0.666992 7.99984 0.666992C10.0247 0.666992 11.8589 1.48854 13.1853 2.81487C14.5116 4.14123 15.3332 5.97548 15.3332 8.00033C15.3332 10.0252 14.5116 11.8594 13.1853 13.1858C11.8589 14.5121 10.0247 15.3337 7.99984 15.3337C5.97499 15.3337 4.14074 14.5121 2.81439 13.1858C1.48805 11.8594 0.666504 10.0252 0.666504 8.00033C0.666504 5.97548 1.48806 4.14123 2.81439 2.81487ZM7.99984 2.00033C6.34282 2.00033 4.84373 2.67117 3.75719 3.75769C2.67067 4.84422 1.99984 6.3433 1.99984 8.00033C1.99984 9.65735 2.67068 11.1564 3.7572 12.243C4.84373 13.3295 6.34282 14.0003 7.99984 14.0003C9.65686 14.0003 11.1559 13.3295 12.2425 12.243C13.329 11.1564 13.9998 9.65734 13.9998 8.00033C13.9998 6.34331 13.329 4.84422 12.2425 3.75768C11.1559 2.67117 9.65686 2.00033 7.99984 2.00033Z"
+                                                      fill="#333"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_2842_13529">
+                                                    <rect width="16" height="16" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="lookup-form_item">
+                                    <div class="hstack align-items-center gap-2">
+                                        <div class="user-form_item form-edit_user__item vstack gap-10px">
+                                            <span class="user-form_item__append">KG</span>
+                                            <input type="text" class="user-form_item__input form-edit_user__input"
+                                                   value="0,00">
+                                            <label class="user-form_item__label form-edit_user__label" for="">
+                                                Nhập khối lượng (Kg)
+                                                <span class="fw-bold text-danger">*</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lookup-form_item">
+                                    <div class="hstack align-items-center gap-3">
+                                        <div class="heading-4">
+                                            Kích thước
+                                            (cm)
+                                            <span class="fw-bold text-danger">*</span>
+                                        </div>
+                                        <input type="text" class="lookup-form_border"
+                                               value="" placeholder="Dài">
+                                        <div class="heading-4">
+                                            x
+                                        </div>
+                                        <input type="text" class="lookup-form_border"
+                                               value="" placeholder="Rộng">
+                                        <div class="heading-4">
+                                            x
+                                        </div>
+                                        <input type="text" class="lookup-form_border"
+                                               value="" placeholder="Cao">
+                                    </div>
+                                </div>
+                                <div class="lookup-form_item">
+                                    <div class="hstack align-items-center gap-15px">
+                                        <div class="user-form_item form-edit_user__item vstack gap-10px w-50">
+                                            <select name=""
+                                                    class="user-form_item__input form-edit_user__select fw-normal"
+                                                    id="">
+                                                <option value="">Chọn kho TQ *</option>
+                                                <option value="1">Kho TQ 1</option>
+                                                <option value="2">Kho TQ 2 Kho TQ 2</option>
+                                                <option value="3">Kho TQ 3</option>
+                                                <option value="4">Kho TQ 4</option>
+                                            </select>
+                                        </div>
+                                        <div class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                 viewBox="0 0 20 20" fill="none">
+                                                <path d="M19 10L12 1V5.99L1 6V14H12V19L19 10Z" stroke="#ADB4BB"
+                                                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="user-form_item form-edit_user__item vstack gap-10px w-50">
+                                            <select name=""
+                                                    class="user-form_item__input form-edit_user__select fw-normal"
+                                                    id="">
+                                                <option value="">Chọn kho VN *</option>
+                                                <option value="1">Quận Tân Phú</option>
+                                                <option value="2">Quận 1</option>
+                                                <option value="3">Quận 2</option>
+                                                <option value="4">Quận 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lookup-service_inner vstack gap-15px flex-fill bg-white w-100">
+                                    <div class="heading-4 orange-color">
+                                        CHỌN DỊCH VỤ
+                                    </div>
+                                    <div class="hstack align-items-center flex-wrap gap-15px">
+                                        <div class="lookup-checkbox_item hstack gap-1">
+                                            <div class="position-relative overflow-hidden">
+                                                <input type="checkbox"
+                                                       class="lookup-checkbox_item__input position-absolute visually-hidden"
+                                                       id="checkBoxExample01">
+                                                <label for="checkBoxExample01"
+                                                       class="lookup-checkbox_item__label hstack gap-1 pseudo">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                         viewBox="0 0 24 24" fill="none">
+                                                        <g clip-path="url(#clip0_2842_13523)">
+                                                            <path d="M16 2H8C5.24 2 3 4.24 3 7V17C3 19.76 5.24 22 8 22H16C18.76 22 21 19.76 21 17V7C21 4.24 18.76 2 16 2ZM8.86 18.63C8.67 18.82 8.42 18.92 8.16 18.92C7.89 18.92 7.64 18.82 7.45 18.63C7.26 18.44 7.15 18.19 7.15 17.92C7.15 17.66 7.26 17.4 7.45 17.21C7.54 17.12 7.65 17.05 7.77 17C8.02 16.9 8.29 16.9 8.54 17C8.6 17.02 8.66 17.05 8.71 17.09C8.77 17.12 8.82 17.17 8.86 17.21C9.05 17.4 9.16 17.66 9.16 17.92C9.16 18.19 9.05 18.44 8.86 18.63ZM7.15 13.92C7.15 13.79 7.18 13.66 7.23 13.54C7.28 13.41 7.35 13.31 7.45 13.21C7.68 12.98 8.03 12.87 8.35 12.94C8.41 12.95 8.48 12.97 8.54 13C8.6 13.02 8.66 13.05 8.71 13.09C8.77 13.12 8.82 13.17 8.86 13.21C8.95 13.31 9.03 13.41 9.08 13.54C9.13 13.66 9.15 13.79 9.15 13.92C9.15 14.19 9.05 14.44 8.86 14.63C8.67 14.82 8.42 14.92 8.16 14.92C8.02 14.92 7.89 14.89 7.77 14.84C7.65 14.79 7.54 14.72 7.45 14.63C7.26 14.44 7.15 14.19 7.15 13.92ZM12.86 18.63C12.77 18.72 12.66 18.79 12.54 18.84C12.42 18.89 12.29 18.92 12.15 18.92C11.89 18.92 11.64 18.82 11.45 18.63C11.26 18.44 11.15 18.19 11.15 17.92C11.15 17.85 11.16 17.79 11.17 17.72C11.19 17.66 11.21 17.6 11.23 17.54C11.26 17.48 11.29 17.42 11.32 17.36C11.36 17.31 11.4 17.26 11.45 17.21C11.54 17.12 11.65 17.05 11.77 17C12.14 16.85 12.58 16.93 12.86 17.21C13.05 17.4 13.15 17.66 13.15 17.92C13.15 18.19 13.05 18.44 12.86 18.63ZM12.86 14.63C12.67 14.82 12.42 14.92 12.15 14.92C11.89 14.92 11.64 14.82 11.45 14.63C11.26 14.44 11.15 14.19 11.15 13.92C11.15 13.66 11.26 13.4 11.45 13.21C11.82 12.84 12.49 12.84 12.86 13.21C12.95 13.31 13.03 13.41 13.08 13.54C13.13 13.66 13.15 13.79 13.15 13.92C13.15 14.19 13.05 14.44 12.86 14.63ZM9 10.46C7.97 10.46 7.12 9.62 7.12 8.58V7.58C7.12 6.55 7.96 5.7 9 5.7H15C16.03 5.7 16.88 6.54 16.88 7.58V8.58C16.88 9.61 16.04 10.46 15 10.46H9ZM16.86 18.63C16.67 18.82 16.42 18.92 16.15 18.92C16.02 18.92 15.89 18.89 15.77 18.84C15.65 18.79 15.54 18.72 15.45 18.63C15.26 18.44 15.16 18.19 15.16 17.92C15.16 17.66 15.26 17.4 15.45 17.21C15.72 16.93 16.17 16.85 16.54 17C16.66 17.05 16.77 17.12 16.86 17.21C17.05 17.4 17.15 17.66 17.15 17.92C17.15 18.19 17.05 18.44 16.86 18.63ZM17.08 14.3C17.03 14.42 16.96 14.53 16.86 14.63C16.67 14.82 16.42 14.92 16.15 14.92C15.89 14.92 15.64 14.82 15.45 14.63C15.26 14.44 15.15 14.19 15.15 13.92C15.15 13.66 15.26 13.4 15.45 13.21C15.82 12.84 16.49 12.84 16.86 13.21C17.05 13.4 17.16 13.66 17.16 13.92C17.16 14.05 17.13 14.18 17.08 14.3Z"
+                                                                  fill="#212C28"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_2842_13523">
+                                                                <rect width="24" height="24" fill="white"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                    Kiểm đếm
+                                                </label>
+                                            </div>
+                                            <div data-bs-toggle="tooltip" class="handlePrevent"
+                                                 aria-label="Nội dung Kiểm đếm">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                     viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_2842_13529)">
+                                                        <path d="M5.33317 6.20866C5.33317 4.7359 6.52708 3.54199 7.99984 3.54199C9.47259 3.54199 10.6665 4.7359 10.6665 6.20866C10.6665 7.45122 9.81665 8.49528 8.6665 8.79131V9.54199C8.6665 9.91018 8.36803 10.2087 7.99984 10.2087C7.63165 10.2087 7.33317 9.91018 7.33317 9.54199V8.20866C7.33317 7.84047 7.63165 7.54199 7.99984 7.54199C8.73621 7.54199 9.33317 6.94504 9.33317 6.20866C9.33317 5.47228 8.73621 4.87533 7.99984 4.87533C7.26346 4.87533 6.6665 5.47228 6.6665 6.20866C6.6665 6.57685 6.36803 6.87533 5.99984 6.87533C5.63165 6.87533 5.33317 6.57685 5.33317 6.20866Z"
+                                                              fill="#ADB4BB"></path>
+                                                        <path d="M8.83317 11.7087C8.83317 12.1689 8.46007 12.542 7.99984 12.542C7.5396 12.542 7.1665 12.1689 7.1665 11.7087C7.1665 11.2484 7.5396 10.8753 7.99984 10.8753C8.46007 10.8753 8.83317 11.2484 8.83317 11.7087Z"
+                                                              fill="#ADB4BB"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                              d="M2.81439 2.81487C4.14075 1.48854 5.97499 0.666992 7.99984 0.666992C10.0247 0.666992 11.8589 1.48854 13.1853 2.81487C14.5116 4.14123 15.3332 5.97548 15.3332 8.00033C15.3332 10.0252 14.5116 11.8594 13.1853 13.1858C11.8589 14.5121 10.0247 15.3337 7.99984 15.3337C5.97499 15.3337 4.14074 14.5121 2.81439 13.1858C1.48805 11.8594 0.666504 10.0252 0.666504 8.00033C0.666504 5.97548 1.48806 4.14123 2.81439 2.81487ZM7.99984 2.00033C6.34282 2.00033 4.84373 2.67117 3.75719 3.75769C2.67067 4.84422 1.99984 6.3433 1.99984 8.00033C1.99984 9.65735 2.67068 11.1564 3.7572 12.243C4.84373 13.3295 6.34282 14.0003 7.99984 14.0003C9.65686 14.0003 11.1559 13.3295 12.2425 12.243C13.329 11.1564 13.9998 9.65734 13.9998 8.00033C13.9998 6.34331 13.329 4.84422 12.2425 3.75768C11.1559 2.67117 9.65686 2.00033 7.99984 2.00033Z"
+                                                              fill="#ADB4BB"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_2842_13529">
+                                                            <rect width="16" height="16" fill="white"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="lookup-checkbox_item hstack gap-1">
+                                            <div class="position-relative overflow-hidden">
+                                                <input type="checkbox"
+                                                       class="lookup-checkbox_item__input position-absolute visually-hidden"
+                                                       id="checkBoxExample02">
+                                                <label for="checkBoxExample02"
+                                                       class="lookup-checkbox_item__label hstack gap-1 pseudo">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+                                                         viewBox="0 0 25 24" fill="none">
+                                                        <g clip-path="url(#clip0_2849_4083)">
+                                                            <path d="M18.1 5.31027L12.45 2.27027C11.85 1.95027 11.14 1.95027 10.54 2.27027L4.89998 5.31027C4.48998 5.54027 4.22998 5.98027 4.22998 6.46027C4.22998 6.95027 4.47998 7.39027 4.89998 7.61027L10.55 10.6503C10.85 10.8103 11.18 10.8903 11.5 10.8903C11.82 10.8903 12.16 10.8103 12.45 10.6503L18.1 7.61027C18.51 7.39027 18.77 6.95027 18.77 6.46027C18.77 5.98027 18.51 5.54027 18.1 5.31027Z"
+                                                                  fill="#212C28"></path>
+                                                            <path d="M9.62 11.7106L4.37 9.09058C3.96 8.88058 3.5 8.91058 3.11 9.14058C2.73 9.38058 2.5 9.79058 2.5 10.2406V15.2006C2.5 16.0606 2.98 16.8306 3.75 17.2206L9 19.8406C9.18 19.9306 9.38 19.9806 9.58 19.9806C9.81 19.9806 10.05 19.9106 10.26 19.7906C10.64 19.5506 10.87 19.1406 10.87 18.6906V13.7306C10.86 12.8706 10.38 12.1006 9.62 11.7106Z"
+                                                                  fill="#212C28"></path>
+                                                            <path d="M20.5001 10.2406V12.7006C20.0201 12.5606 19.5101 12.5006 19.0001 12.5006C17.6401 12.5006 16.3101 12.9706 15.2601 13.8106C13.8201 14.9406 13.0001 16.6506 13.0001 18.5006C13.0001 18.9906 13.0601 19.4806 13.1901 19.9506C13.0401 19.9306 12.8901 19.8706 12.7501 19.7806C12.3701 19.5506 12.1401 19.1406 12.1401 18.6906V13.7306C12.1401 12.8706 12.6201 12.1006 13.3801 11.7106L18.6301 9.09058C19.0401 8.88058 19.5001 8.91058 19.8901 9.14058C20.2701 9.38058 20.5001 9.79058 20.5001 10.2406Z"
+                                                                  fill="#212C28"></path>
+                                                            <path d="M22.48 15.6695C21.66 14.6595 20.41 14.0195 19 14.0195C17.94 14.0195 16.96 14.3895 16.19 15.0095C15.15 15.8295 14.5 17.0995 14.5 18.5195C14.5 19.3595 14.74 20.1595 15.15 20.8395C15.42 21.2895 15.76 21.6795 16.16 21.9995H16.17C16.94 22.6395 17.93 23.0195 19 23.0195C20.14 23.0195 21.17 22.5995 21.96 21.8995C22.31 21.5995 22.61 21.2395 22.85 20.8395C23.26 20.1595 23.5 19.3595 23.5 18.5195C23.5 17.4395 23.12 16.4395 22.48 15.6695ZM21.26 17.9595L18.86 20.1795C18.72 20.3095 18.53 20.3795 18.35 20.3795C18.16 20.3795 17.97 20.3095 17.82 20.1595L16.71 19.0495C16.42 18.7595 16.42 18.2795 16.71 17.9895C17 17.6995 17.48 17.6995 17.77 17.9895L18.37 18.5895L20.24 16.8595C20.54 16.5795 21.02 16.5995 21.3 16.8995C21.59 17.2095 21.57 17.6795 21.26 17.9595Z"
+                                                                  fill="#212C28"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_2849_4083">
+                                                                <rect width="24" height="24" fill="white"
+                                                                      transform="translate(0.5)"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                    Nẹp giấy
+                                                </label>
+                                            </div>
+                                            <div data-bs-toggle="tooltip" class="handlePrevent"
+                                                 aria-label="Nội dung Nẹp giấy">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                     viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_2842_13529)">
+                                                        <path d="M5.33317 6.20866C5.33317 4.7359 6.52708 3.54199 7.99984 3.54199C9.47259 3.54199 10.6665 4.7359 10.6665 6.20866C10.6665 7.45122 9.81665 8.49528 8.6665 8.79131V9.54199C8.6665 9.91018 8.36803 10.2087 7.99984 10.2087C7.63165 10.2087 7.33317 9.91018 7.33317 9.54199V8.20866C7.33317 7.84047 7.63165 7.54199 7.99984 7.54199C8.73621 7.54199 9.33317 6.94504 9.33317 6.20866C9.33317 5.47228 8.73621 4.87533 7.99984 4.87533C7.26346 4.87533 6.6665 5.47228 6.6665 6.20866C6.6665 6.57685 6.36803 6.87533 5.99984 6.87533C5.63165 6.87533 5.33317 6.57685 5.33317 6.20866Z"
+                                                              fill="#ADB4BB"></path>
+                                                        <path d="M8.83317 11.7087C8.83317 12.1689 8.46007 12.542 7.99984 12.542C7.5396 12.542 7.1665 12.1689 7.1665 11.7087C7.1665 11.2484 7.5396 10.8753 7.99984 10.8753C8.46007 10.8753 8.83317 11.2484 8.83317 11.7087Z"
+                                                              fill="#ADB4BB"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                              d="M2.81439 2.81487C4.14075 1.48854 5.97499 0.666992 7.99984 0.666992C10.0247 0.666992 11.8589 1.48854 13.1853 2.81487C14.5116 4.14123 15.3332 5.97548 15.3332 8.00033C15.3332 10.0252 14.5116 11.8594 13.1853 13.1858C11.8589 14.5121 10.0247 15.3337 7.99984 15.3337C5.97499 15.3337 4.14074 14.5121 2.81439 13.1858C1.48805 11.8594 0.666504 10.0252 0.666504 8.00033C0.666504 5.97548 1.48806 4.14123 2.81439 2.81487ZM7.99984 2.00033C6.34282 2.00033 4.84373 2.67117 3.75719 3.75769C2.67067 4.84422 1.99984 6.3433 1.99984 8.00033C1.99984 9.65735 2.67068 11.1564 3.7572 12.243C4.84373 13.3295 6.34282 14.0003 7.99984 14.0003C9.65686 14.0003 11.1559 13.3295 12.2425 12.243C13.329 11.1564 13.9998 9.65734 13.9998 8.00033C13.9998 6.34331 13.329 4.84422 12.2425 3.75768C11.1559 2.67117 9.65686 2.00033 7.99984 2.00033Z"
+                                                              fill="#ADB4BB"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_2842_13529">
+                                                            <rect width="16" height="16" fill="white"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="lookup-checkbox_item hstack gap-1">
+                                            <div class="position-relative overflow-hidden">
+                                                <input type="checkbox"
+                                                       class="lookup-checkbox_item__input position-absolute visually-hidden"
+                                                       id="checkBoxExample03">
+                                                <label for="checkBoxExample03"
+                                                       class="lookup-checkbox_item__label hstack gap-1 pseudo">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                         viewBox="0 0 24 24" fill="none">
+                                                        <g clip-path="url(#clip0_2849_7569)">
+                                                            <path d="M20.2102 7.82043L12.5102 12.2804C12.2002 12.4604 11.8102 12.4604 11.4902 12.2804L3.79021 7.82043C3.24021 7.50043 3.10021 6.75043 3.52021 6.28043C3.81021 5.95043 4.14021 5.68043 4.49021 5.49043L9.91021 2.49043C11.0702 1.84043 12.9502 1.84043 14.1102 2.49043L19.5302 5.49043C19.8802 5.68043 20.2102 5.96043 20.5002 6.28043C20.9002 6.75043 20.7602 7.50043 20.2102 7.82043Z"
+                                                                  fill="#212C28"></path>
+                                                            <path d="M11.43 14.1399V20.9599C11.43 21.7199 10.66 22.2199 9.97998 21.8899C7.91998 20.8799 4.44998 18.9899 4.44998 18.9899C3.22998 18.2999 2.22998 16.5599 2.22998 15.1299V9.96988C2.22998 9.17988 3.05998 8.67988 3.73998 9.06988L10.93 13.2399C11.23 13.4299 11.43 13.7699 11.43 14.1399Z"
+                                                                  fill="#212C28"></path>
+                                                            <path d="M12.5698 14.1399V20.9599C12.5698 21.7199 13.3398 22.2199 14.0198 21.8899C16.0798 20.8799 19.5498 18.9899 19.5498 18.9899C20.7698 18.2999 21.7698 16.5599 21.7698 15.1299V9.96988C21.7698 9.17988 20.9398 8.67988 20.2598 9.06988L13.0698 13.2399C12.7698 13.4299 12.5698 13.7699 12.5698 14.1399Z"
+                                                                  fill="#212C28"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_2849_7569">
+                                                                <rect width="24" height="24" fill="white"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                    Đóng gỗ
+                                                </label>
+                                            </div>
+                                            <div data-bs-toggle="tooltip" class="handlePrevent"
+                                                 aria-label="Nội dung Đóng gỗ">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                     viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_2842_13529)">
+                                                        <path d="M5.33317 6.20866C5.33317 4.7359 6.52708 3.54199 7.99984 3.54199C9.47259 3.54199 10.6665 4.7359 10.6665 6.20866C10.6665 7.45122 9.81665 8.49528 8.6665 8.79131V9.54199C8.6665 9.91018 8.36803 10.2087 7.99984 10.2087C7.63165 10.2087 7.33317 9.91018 7.33317 9.54199V8.20866C7.33317 7.84047 7.63165 7.54199 7.99984 7.54199C8.73621 7.54199 9.33317 6.94504 9.33317 6.20866C9.33317 5.47228 8.73621 4.87533 7.99984 4.87533C7.26346 4.87533 6.6665 5.47228 6.6665 6.20866C6.6665 6.57685 6.36803 6.87533 5.99984 6.87533C5.63165 6.87533 5.33317 6.57685 5.33317 6.20866Z"
+                                                              fill="#ADB4BB"></path>
+                                                        <path d="M8.83317 11.7087C8.83317 12.1689 8.46007 12.542 7.99984 12.542C7.5396 12.542 7.1665 12.1689 7.1665 11.7087C7.1665 11.2484 7.5396 10.8753 7.99984 10.8753C8.46007 10.8753 8.83317 11.2484 8.83317 11.7087Z"
+                                                              fill="#ADB4BB"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                              d="M2.81439 2.81487C4.14075 1.48854 5.97499 0.666992 7.99984 0.666992C10.0247 0.666992 11.8589 1.48854 13.1853 2.81487C14.5116 4.14123 15.3332 5.97548 15.3332 8.00033C15.3332 10.0252 14.5116 11.8594 13.1853 13.1858C11.8589 14.5121 10.0247 15.3337 7.99984 15.3337C5.97499 15.3337 4.14074 14.5121 2.81439 13.1858C1.48805 11.8594 0.666504 10.0252 0.666504 8.00033C0.666504 5.97548 1.48806 4.14123 2.81439 2.81487ZM7.99984 2.00033C6.34282 2.00033 4.84373 2.67117 3.75719 3.75769C2.67067 4.84422 1.99984 6.3433 1.99984 8.00033C1.99984 9.65735 2.67068 11.1564 3.7572 12.243C4.84373 13.3295 6.34282 14.0003 7.99984 14.0003C9.65686 14.0003 11.1559 13.3295 12.2425 12.243C13.329 11.1564 13.9998 9.65734 13.9998 8.00033C13.9998 6.34331 13.329 4.84422 12.2425 3.75768C11.1559 2.67117 9.65686 2.00033 7.99984 2.00033Z"
+                                                              fill="#ADB4BB"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_2842_13529">
+                                                            <rect width="16" height="16" fill="white"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="lookup-checkbox_item hstack gap-1">
+                                            <div class="position-relative overflow-hidden">
+                                                <input type="checkbox"
+                                                       class="lookup-checkbox_item__input position-absolute visually-hidden"
+                                                       id="checkBoxExample04">
+                                                <label for="checkBoxExample04"
+                                                       class="lookup-checkbox_item__label hstack gap-1 pseudo">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+                                                         viewBox="0 0 25 24" fill="none">
+                                                        <g clip-path="url(#clip0_2849_11355)">
+                                                            <path d="M16.69 2H8.31C4.67 2 2.5 4.17 2.5 7.81V16.18C2.5 19.83 4.67 22 8.31 22H16.68C20.32 22 22.49 19.83 22.49 16.19V7.81C22.5 4.17 20.33 2 16.69 2ZM10.1 16.2C10.1 17.19 9.29 18 8.3 18C7.31 18 6.5 17.19 6.5 16.2C6.5 15.21 7.31 14.4 8.3 14.4H9.1C9.65 14.4 10.1 14.85 10.1 15.4V16.2ZM10.1 8.6C10.1 9.15 9.65 9.6 9.1 9.6H8.3C7.31 9.6 6.5 8.79 6.5 7.8C6.5 6.81 7.31 6 8.3 6C9.29 6 10.1 6.81 10.1 7.8V8.6ZM14.65 13.25C14.65 13.74 14.25 14.15 13.75 14.15H11.24C10.75 14.15 10.34 13.75 10.34 13.25V10.74C10.34 10.25 10.74 9.84 11.24 9.84H13.75C14.24 9.84 14.65 10.24 14.65 10.74V13.25ZM16.7 18C15.71 18 14.9 17.19 14.9 16.2V15.4C14.9 14.85 15.35 14.4 15.9 14.4H16.7C17.69 14.4 18.5 15.21 18.5 16.2C18.5 17.19 17.69 18 16.7 18ZM16.7 9.6H15.9C15.35 9.6 14.9 9.15 14.9 8.6V7.8C14.9 6.81 15.71 6 16.7 6C17.69 6 18.5 6.81 18.5 7.8C18.5 8.79 17.69 9.6 16.7 9.6Z"
+                                                                  fill="#212C28"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_2849_11355">
+                                                                <rect width="24" height="24" fill="white"
+                                                                      transform="translate(0.5)"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                    Quấn bọt khí
+                                                </label>
+                                            </div>
+                                            <div data-bs-toggle="tooltip" class="handlePrevent"
+                                                 aria-label="Nội dung Quấn bọt khí">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                     viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_2842_13529)">
+                                                        <path d="M5.33317 6.20866C5.33317 4.7359 6.52708 3.54199 7.99984 3.54199C9.47259 3.54199 10.6665 4.7359 10.6665 6.20866C10.6665 7.45122 9.81665 8.49528 8.6665 8.79131V9.54199C8.6665 9.91018 8.36803 10.2087 7.99984 10.2087C7.63165 10.2087 7.33317 9.91018 7.33317 9.54199V8.20866C7.33317 7.84047 7.63165 7.54199 7.99984 7.54199C8.73621 7.54199 9.33317 6.94504 9.33317 6.20866C9.33317 5.47228 8.73621 4.87533 7.99984 4.87533C7.26346 4.87533 6.6665 5.47228 6.6665 6.20866C6.6665 6.57685 6.36803 6.87533 5.99984 6.87533C5.63165 6.87533 5.33317 6.57685 5.33317 6.20866Z"
+                                                              fill="#ADB4BB"></path>
+                                                        <path d="M8.83317 11.7087C8.83317 12.1689 8.46007 12.542 7.99984 12.542C7.5396 12.542 7.1665 12.1689 7.1665 11.7087C7.1665 11.2484 7.5396 10.8753 7.99984 10.8753C8.46007 10.8753 8.83317 11.2484 8.83317 11.7087Z"
+                                                              fill="#ADB4BB"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                              d="M2.81439 2.81487C4.14075 1.48854 5.97499 0.666992 7.99984 0.666992C10.0247 0.666992 11.8589 1.48854 13.1853 2.81487C14.5116 4.14123 15.3332 5.97548 15.3332 8.00033C15.3332 10.0252 14.5116 11.8594 13.1853 13.1858C11.8589 14.5121 10.0247 15.3337 7.99984 15.3337C5.97499 15.3337 4.14074 14.5121 2.81439 13.1858C1.48805 11.8594 0.666504 10.0252 0.666504 8.00033C0.666504 5.97548 1.48806 4.14123 2.81439 2.81487ZM7.99984 2.00033C6.34282 2.00033 4.84373 2.67117 3.75719 3.75769C2.67067 4.84422 1.99984 6.3433 1.99984 8.00033C1.99984 9.65735 2.67068 11.1564 3.7572 12.243C4.84373 13.3295 6.34282 14.0003 7.99984 14.0003C9.65686 14.0003 11.1559 13.3295 12.2425 12.243C13.329 11.1564 13.9998 9.65734 13.9998 8.00033C13.9998 6.34331 13.329 4.84422 12.2425 3.75768C11.1559 2.67117 9.65686 2.00033 7.99984 2.00033Z"
+                                                              fill="#ADB4BB"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_2842_13529">
+                                                            <rect width="16" height="16" fill="white"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="lookup-checkbox_item hstack gap-1">
+                                            <div class="position-relative overflow-hidden">
+                                                <input type="checkbox"
+                                                       class="lookup-checkbox_item__input position-absolute visually-hidden"
+                                                       id="checkBoxExample05">
+                                                <label for="checkBoxExample05"
+                                                       class="lookup-checkbox_item__label hstack gap-1 pseudo">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                         viewBox="0 0 24 24" fill="none">
+                                                        <g clip-path="url(#clip0_2849_11319)">
+                                                            <path d="M18.5398 4.11984L13.0398 2.05984C12.4698 1.84984 11.5398 1.84984 10.9698 2.05984L5.4698 4.11984C4.4098 4.51984 3.5498 5.75984 3.5498 6.88984V14.9898C3.5498 15.7998 4.0798 16.8698 4.7298 17.3498L10.2298 21.4598C11.1998 22.1898 12.7898 22.1898 13.7598 21.4598L19.2598 17.3498C19.9098 16.8598 20.4398 15.7998 20.4398 14.9898V6.88984C20.4498 5.75984 19.5898 4.51984 18.5398 4.11984ZM15.4798 9.71984L11.1798 14.0198C11.0298 14.1698 10.8398 14.2398 10.6498 14.2398C10.4598 14.2398 10.2698 14.1698 10.1198 14.0198L8.5198 12.3998C8.2298 12.1098 8.2298 11.6298 8.5198 11.3398C8.8098 11.0498 9.2898 11.0498 9.5798 11.3398L10.6598 12.4198L14.4298 8.64984C14.7198 8.35984 15.1998 8.35984 15.4898 8.64984C15.7798 8.93984 15.7798 9.42984 15.4798 9.71984Z"
+                                                                  fill="#212C28"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_2849_11319">
+                                                                <rect width="24" height="24" fill="white"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                    Bảo hiểm
+                                                </label>
+                                            </div>
+                                            <div data-bs-toggle="tooltip" class="handlePrevent"
+                                                 aria-label="Nội dung Bảo hiểm">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                     viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_2842_13529)">
+                                                        <path d="M5.33317 6.20866C5.33317 4.7359 6.52708 3.54199 7.99984 3.54199C9.47259 3.54199 10.6665 4.7359 10.6665 6.20866C10.6665 7.45122 9.81665 8.49528 8.6665 8.79131V9.54199C8.6665 9.91018 8.36803 10.2087 7.99984 10.2087C7.63165 10.2087 7.33317 9.91018 7.33317 9.54199V8.20866C7.33317 7.84047 7.63165 7.54199 7.99984 7.54199C8.73621 7.54199 9.33317 6.94504 9.33317 6.20866C9.33317 5.47228 8.73621 4.87533 7.99984 4.87533C7.26346 4.87533 6.6665 5.47228 6.6665 6.20866C6.6665 6.57685 6.36803 6.87533 5.99984 6.87533C5.63165 6.87533 5.33317 6.57685 5.33317 6.20866Z"
+                                                              fill="#ADB4BB"></path>
+                                                        <path d="M8.83317 11.7087C8.83317 12.1689 8.46007 12.542 7.99984 12.542C7.5396 12.542 7.1665 12.1689 7.1665 11.7087C7.1665 11.2484 7.5396 10.8753 7.99984 10.8753C8.46007 10.8753 8.83317 11.2484 8.83317 11.7087Z"
+                                                              fill="#ADB4BB"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                              d="M2.81439 2.81487C4.14075 1.48854 5.97499 0.666992 7.99984 0.666992C10.0247 0.666992 11.8589 1.48854 13.1853 2.81487C14.5116 4.14123 15.3332 5.97548 15.3332 8.00033C15.3332 10.0252 14.5116 11.8594 13.1853 13.1858C11.8589 14.5121 10.0247 15.3337 7.99984 15.3337C5.97499 15.3337 4.14074 14.5121 2.81439 13.1858C1.48805 11.8594 0.666504 10.0252 0.666504 8.00033C0.666504 5.97548 1.48806 4.14123 2.81439 2.81487ZM7.99984 2.00033C6.34282 2.00033 4.84373 2.67117 3.75719 3.75769C2.67067 4.84422 1.99984 6.3433 1.99984 8.00033C1.99984 9.65735 2.67068 11.1564 3.7572 12.243C4.84373 13.3295 6.34282 14.0003 7.99984 14.0003C9.65686 14.0003 11.1559 13.3295 12.2425 12.243C13.329 11.1564 13.9998 9.65734 13.9998 8.00033C13.9998 6.34331 13.329 4.84422 12.2425 3.75768C11.1559 2.67117 9.65686 2.00033 7.99984 2.00033Z"
+                                                              fill="#ADB4BB"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_2842_13529">
+                                                            <rect width="16" height="16" fill="white"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="lookup-checkbox_item hstack gap-1">
+                                            <div class="position-relative overflow-hidden">
+                                                <input type="checkbox"
+                                                       class="lookup-checkbox_item__input position-absolute visually-hidden"
+                                                       id="checkBoxExample06">
+                                                <label for="checkBoxExample06"
+                                                       class="lookup-checkbox_item__label hstack gap-1 pseudo">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+                                                         viewBox="0 0 25 24" fill="none">
+                                                        <g clip-path="url(#clip0_2849_13091)">
+                                                            <path d="M7.5 2H6.5C3.5 2 2.5 3.79 2.5 6V7V21C2.5 21.83 3.44 22.3 4.1 21.8L5.81 20.52C6.21 20.22 6.77 20.26 7.13 20.62L8.79 22.29C9.18 22.68 9.82 22.68 10.21 22.29L11.89 20.61C12.24 20.26 12.8 20.22 13.19 20.52L14.9 21.8C15.56 22.29 16.5 21.82 16.5 21V4C16.5 2.9 17.4 2 18.5 2H7.5ZM7.07 8.03C7.62 8.03 8.07 8.48 8.07 9.03C8.07 9.58 7.62 10.03 7.07 10.03C6.52 10.03 6.07 9.58 6.07 9.03C6.07 8.48 6.52 8.03 7.07 8.03ZM11.93 14.08C11.37 14.08 10.93 13.63 10.93 13.08C10.93 12.53 11.38 12.08 11.93 12.08C12.48 12.08 12.93 12.53 12.93 13.08C12.93 13.63 12.48 14.08 11.93 14.08ZM12.76 8.8L7.3 14.26C7.15 14.41 6.96 14.48 6.77 14.48C6.58 14.48 6.39 14.41 6.24 14.26C5.95 13.97 5.95 13.49 6.24 13.2L11.7 7.74C11.99 7.45 12.47 7.45 12.76 7.74C13.05 8.03 13.05 8.51 12.76 8.8Z"
+                                                                  fill="#212C28"></path>
+                                                            <path d="M18.51 2V3.5C19.17 3.5 19.8 3.77 20.26 4.22C20.74 4.71 21 5.34 21 6V8.42C21 9.16 20.67 9.5 19.92 9.5H18V4.01C18 3.73 18.23 3.5 18.51 3.5V2ZM18.51 2C17.4 2 16.5 2.9 16.5 4.01V11H19.92C21.5 11 22.5 10 22.5 8.42V6C22.5 4.9 22.05 3.9 21.33 3.17C20.6 2.45 19.61 2.01 18.51 2C18.52 2 18.51 2 18.51 2Z"
+                                                                  fill="#212C28"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_2849_13091">
+                                                                <rect width="24" height="24" fill="white"
+                                                                      transform="translate(0.5)"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                    Chính ngạch
+                                                </label>
+                                            </div>
+                                            <div data-bs-toggle="tooltip" class="handlePrevent"
+                                                 aria-label="Nội dung Chính ngạch">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                     viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_2842_13529)">
+                                                        <path d="M5.33317 6.20866C5.33317 4.7359 6.52708 3.54199 7.99984 3.54199C9.47259 3.54199 10.6665 4.7359 10.6665 6.20866C10.6665 7.45122 9.81665 8.49528 8.6665 8.79131V9.54199C8.6665 9.91018 8.36803 10.2087 7.99984 10.2087C7.63165 10.2087 7.33317 9.91018 7.33317 9.54199V8.20866C7.33317 7.84047 7.63165 7.54199 7.99984 7.54199C8.73621 7.54199 9.33317 6.94504 9.33317 6.20866C9.33317 5.47228 8.73621 4.87533 7.99984 4.87533C7.26346 4.87533 6.6665 5.47228 6.6665 6.20866C6.6665 6.57685 6.36803 6.87533 5.99984 6.87533C5.63165 6.87533 5.33317 6.57685 5.33317 6.20866Z"
+                                                              fill="#ADB4BB"></path>
+                                                        <path d="M8.83317 11.7087C8.83317 12.1689 8.46007 12.542 7.99984 12.542C7.5396 12.542 7.1665 12.1689 7.1665 11.7087C7.1665 11.2484 7.5396 10.8753 7.99984 10.8753C8.46007 10.8753 8.83317 11.2484 8.83317 11.7087Z"
+                                                              fill="#ADB4BB"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                              d="M2.81439 2.81487C4.14075 1.48854 5.97499 0.666992 7.99984 0.666992C10.0247 0.666992 11.8589 1.48854 13.1853 2.81487C14.5116 4.14123 15.3332 5.97548 15.3332 8.00033C15.3332 10.0252 14.5116 11.8594 13.1853 13.1858C11.8589 14.5121 10.0247 15.3337 7.99984 15.3337C5.97499 15.3337 4.14074 14.5121 2.81439 13.1858C1.48805 11.8594 0.666504 10.0252 0.666504 8.00033C0.666504 5.97548 1.48806 4.14123 2.81439 2.81487ZM7.99984 2.00033C6.34282 2.00033 4.84373 2.67117 3.75719 3.75769C2.67067 4.84422 1.99984 6.3433 1.99984 8.00033C1.99984 9.65735 2.67068 11.1564 3.7572 12.243C4.84373 13.3295 6.34282 14.0003 7.99984 14.0003C9.65686 14.0003 11.1559 13.3295 12.2425 12.243C13.329 11.1564 13.9998 9.65734 13.9998 8.00033C13.9998 6.34331 13.329 4.84422 12.2425 3.75768C11.1559 2.67117 9.65686 2.00033 7.99984 2.00033Z"
+                                                              fill="#ADB4BB"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_2842_13529">
+                                                            <rect width="16" height="16" fill="white"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lookup-service_inner vstack gap-15px flex-fill bg-white w-100">
+                                    <div class="heading-4 primary-color">
+                                        CƯỚC VẬN CHUYỂN ƯỚC TÍNH
+                                    </div>
+                                    <div class="lookup-form_item">
+                                        <div class="hstack align-items-center gap-2">
+                                            <div class="user-form_item form-edit_user__item is-value vstack gap-10px">
+                                                <span class="user-form_item__append primary-color">VND</span>
+                                                <input type="text" class="user-form_item__input form-edit_user__input primary-color" readonly value="7,100,000">
+                                            </div>
+                                        </div>
+                                        <div class="text-end heading-5 fst-italic fw-normal gray-color mt-1">
+                                            Ba mươi bảy triệu một trăm nghìn đồng chẵn.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <button type="button" class="button-theme button-gradient_green rounded-2 w-100">
+                                        KIỂM TRA
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-footer section-footer_lookup position-fixed bottom-0 start-0 end-0 zi-10 bg-white w-100 p-3 pb-0">
+                    <div class="card-footer_buttons hstack gap-2 w-100 pb-3">
+                        <a href="" class="button-theme button-gradient_green flex-fill w-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                                <path d="M13.804 25.3911L13.7729 1.39111" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M25.5005 13.3759L1.50049 13.407" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Tạo đơn vận chuyển
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/momment.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chart.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-labels.js"></script>
+<script type="text/javascript"
+        src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+
+</body>
+</html>

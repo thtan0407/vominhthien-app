@@ -764,6 +764,24 @@ export function handleSliderBankLink() {
     }
 }
 
+/****
+ * Handle Overlay Lookup Hint
+ */
+export function handleOverlayLookupHint() {
+    const lookupHint = document.getElementById('lookup-hint');
+    if (lookupHint !== null) {
+        setTimeout(function () {
+            lookupHint.classList.add('is-hint');
+        }, 250);
+
+        lookupHint.addEventListener('click', () => {
+            if (lookupHint.classList.contains('is-hint')) {
+                lookupHint.classList.remove('is-hint');
+            }
+        });
+    }
+}
+
 window.addEventListener('load', function () {
     handleNavigation();
 
@@ -822,6 +840,8 @@ window.addEventListener('load', function () {
     handleFilterPriceOther();
 
     handleSliderBankLink();
+
+    handleOverlayLookupHint();
 
     window.addEventListener("resize", () => {
         windowWidth = window.innerWidth;
