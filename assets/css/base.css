@@ -395,6 +395,12 @@ input[type='number'] {
 	color: var(--bs-white) !important;
 }
 
+.button-gradient_orange {
+	background-image: linear-gradient(90deg, #E9750E 0%, #FF993E 100%) !important;
+	color: var(--bs-white) !important;
+	box-shadow: 0 4px 15px rgba(140, 255, 165, 0.35);
+}
+
 .button-outline_orange {
 	border: 1px solid #E9750E;
 	color: #E9750E !important;

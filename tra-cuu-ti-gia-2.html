@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>Template VMT App</title>
+	<meta name="description" content="Template VMT App">
+	<meta name="author" content="">
+
+	<meta property="og:title" content="Template VMT App">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="Template VMT App">
+	<meta property="og:image" content="">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		  rel="stylesheet">
+
+	<link rel="icon" href="./assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+	<link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<div class="vstack position-relative min-vh-100 h-100 overflow-hidden">
+
+	<div class="vstack flex-fill overflow-hidden position-relative">
+		<div class="screen-overflow">
+			<div class="main main-spacing main-spacing_tabs screen-lookup">
+				<!-- Header page -->
+				<div class="section-header bg-white position-fixed top-0 start-0 end-0 zi-10 w-100">
+					<div class="header-inner">
+						<div class="container">
+							<div class="vstack">
+								<div class="header-inner_title pt-3 pb-2 heading-2 hstack gap-2">
+									<a href="./index.html" class="hstack align-items-center justify-content-center">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+											 viewBox="0 0 24 24"
+											 fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												  d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
+												  fill="#191E24"/>
+										</svg>
+									</a>
+									Tra cứu thông tin
+								</div>
+								<div class="theme-tabs theme-tabs_divider theme-tabs_icon theme-tabs_icon__transparent theme-tabs_overflow">
+									<ul class="nav nav-tabs border-0 flex-nowrap align-items-center justify-content-start">
+										<li class="nav-item w-auto">
+											<a href="./tra-cuu-ti-gia.html"
+											   class="nav-link active px-3 gap-2 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+													 viewBox="0 0 24 24" fill="none">
+													<path d="M2 2V19C2 20.66 3.34 22 5 22H22" stroke="#1A8917"
+														  stroke-width="1.5" stroke-miterlimit="10"
+														  stroke-linecap="round" stroke-linejoin="round"/>
+													<path opacity="0.4"
+														  d="M5 17L9.59 11.64C10.35 10.76 11.7 10.7 12.52 11.53L13.47 12.48C14.29 13.3 15.64 13.25 16.4 12.37L21 7"
+														  stroke="#1A8917" stroke-width="1.5" stroke-miterlimit="10"
+														  stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+												<span>
+													Tra cứu tỉ giá
+												</span>
+											</a>
+										</li>
+										<li class="nav-item w-auto">
+											<a href="./tra-cuu-cuoc-van-chuyen.html"
+											   class="nav-link px-3 gap-2 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+													 viewBox="0 0 24 24" fill="none">
+													<path d="M10 22H14C19 22 21 20 21 15V9C21 4 19 2 14 2H10C5 2 3 4 3 9V15C3 20 5 22 10 22Z"
+														  stroke="#ADB4BB" stroke-width="1.5" stroke-linecap="round"
+														  stroke-linejoin="round"/>
+													<path opacity="0.4"
+														  d="M16.5 7.57999V8.57999C16.5 9.39999 15.83 10.08 15 10.08H9C8.18 10.08 7.5 9.40999 7.5 8.57999V7.57999C7.5 6.75999 8.17 6.07999 9 6.07999H15C15.83 6.07999 16.5 6.74999 16.5 7.57999Z"
+														  stroke="#ADB4BB" stroke-width="1.5" stroke-linecap="round"
+														  stroke-linejoin="round"/>
+													<path opacity="0.4" d="M8.13612 14H8.14767" stroke="#ADB4BB"
+														  stroke-width="2" stroke-linecap="round"
+														  stroke-linejoin="round"/>
+													<path opacity="0.4" d="M11.9952 14H12.0068" stroke="#ADB4BB"
+														  stroke-width="2" stroke-linecap="round"
+														  stroke-linejoin="round"/>
+													<path opacity="0.4" d="M15.8544 14H15.8659" stroke="#ADB4BB"
+														  stroke-width="2" stroke-linecap="round"
+														  stroke-linejoin="round"/>
+													<path opacity="0.4" d="M8.13612 17.5H8.14767" stroke="#ADB4BB"
+														  stroke-width="2" stroke-linecap="round"
+														  stroke-linejoin="round"/>
+													<path opacity="0.4" d="M11.9952 17.5H12.0068" stroke="#ADB4BB"
+														  stroke-width="2" stroke-linecap="round"
+														  stroke-linejoin="round"/>
+													<path opacity="0.4" d="M15.8544 17.5H15.8659" stroke="#ADB4BB"
+														  stroke-width="2" stroke-linecap="round"
+														  stroke-linejoin="round"/>
+												</svg>
+												<span>
+													Cước vận chuyển
+												</span>
+											</a>
+										</li>
+										<li class="nav-item w-auto">
+											<a href="./tra-cuu-van-don.html"
+											   class="nav-link px-3 gap-2 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+													 viewBox="0 0 24 24" fill="none">
+													<path opacity="0.4"
+														  d="M11.9998 14H12.9998C14.0998 14 14.9998 13.1 14.9998 12V2H5.99976C4.49976 2 3.18977 2.82999 2.50977 4.04999"
+														  stroke="#ADB4BB" stroke-width="1.5" stroke-linecap="round"
+														  stroke-linejoin="round"/>
+													<path d="M2 17C2 18.66 3.34 20 5 20H6C6 18.9 6.9 18 8 18C9.1 18 10 18.9 10 20H14C14 18.9 14.9 18 16 18C17.1 18 18 18.9 18 20H19C20.66 20 22 18.66 22 17V14H19C18.45 14 18 13.55 18 13V10C18 9.45 18.45 9 19 9H20.29L18.58 6.01001C18.22 5.39001 17.56 5 16.84 5H15V12C15 13.1 14.1 14 13 14H12"
+														  stroke="#ADB4BB" stroke-width="1.5" stroke-linecap="round"
+														  stroke-linejoin="round"/>
+													<path d="M8 22C9.10457 22 10 21.1046 10 20C10 18.8954 9.10457 18 8 18C6.89543 18 6 18.8954 6 20C6 21.1046 6.89543 22 8 22Z"
+														  stroke="#ADB4BB" stroke-width="1.5" stroke-linecap="round"
+														  stroke-linejoin="round"/>
+													<path d="M16 22C17.1046 22 18 21.1046 18 20C18 18.8954 17.1046 18 16 18C14.8954 18 14 18.8954 14 20C14 21.1046 14.8954 22 16 22Z"
+														  stroke="#ADB4BB" stroke-width="1.5" stroke-linecap="round"
+														  stroke-linejoin="round"/>
+													<path d="M22 12V14H19C18.45 14 18 13.55 18 13V10C18 9.45 18.45 9 19 9H20.29L22 12Z"
+														  stroke="#ADB4BB" stroke-width="1.5" stroke-linecap="round"
+														  stroke-linejoin="round"/>
+													<path d="M2 8H8" stroke="#ADB4BB" stroke-width="1.5"
+														  stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M2 11H6" stroke="#ADB4BB" stroke-width="1.5"
+														  stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M2 14H4" stroke="#ADB4BB" stroke-width="1.5"
+														  stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+												<span>
+													Tra cứu vận đơn
+												</span>
+											</a>
+										</li>
+										<li class="nav-item w-auto">
+											<a href="./tra-cuu-email.html"
+											   class="nav-link px-3 gap-2 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+													 viewBox="0 0 24 24" fill="none">
+													<path d="M12 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V11.5"
+														  stroke="#ADB4BB" stroke-width="1.5" stroke-miterlimit="10"
+														  stroke-linecap="round" stroke-linejoin="round"/>
+													<path opacity="0.4"
+														  d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9"
+														  stroke="#ADB4BB" stroke-width="1.5" stroke-miterlimit="10"
+														  stroke-linecap="round" stroke-linejoin="round"/>
+													<g opacity="0.4">
+														<path d="M18.2 21.4C19.9673 21.4 21.4 19.9673 21.4 18.2C21.4 16.4327 19.9673 15 18.2 15C16.4327 15 15 16.4327 15 18.2C15 19.9673 16.4327 21.4 18.2 21.4Z"
+															  stroke="#ADB4BB" stroke-width="1.5" stroke-linecap="round"
+															  stroke-linejoin="round"/>
+														<path d="M22 22L21 21" stroke="#ADB4BB" stroke-width="1.5"
+															  stroke-linecap="round" stroke-linejoin="round"/>
+													</g>
+												</svg>
+												<span>
+													Tra cứu Email
+												</span>
+											</a>
+										</li>
+										<li class="nav-item w-auto">
+											<a href="./mo-rong-tai-khoan-vi-vmt-2-hoan-tien.html"
+											   class="nav-link px-3 gap-2 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+													 viewBox="0 0 24 24" fill="none">
+													<path d="M2 22H22" stroke="#ADB4BB" stroke-width="1.5"
+														  stroke-miterlimit="10" stroke-linecap="round"
+														  stroke-linejoin="round"/>
+													<path d="M2.9502 22L3.0002 9.96999C3.0002 9.35999 3.2902 8.78004 3.7702 8.40004L10.7702 2.95003C11.4902 2.39003 12.5002 2.39003 13.2302 2.95003L20.2302 8.39003C20.7202 8.77003 21.0002 9.34999 21.0002 9.96999V22"
+														  stroke="#ADB4BB" stroke-width="1.5" stroke-miterlimit="10"
+														  stroke-linejoin="round"/>
+													<path opacity="0.4"
+														  d="M15.5 11H8.5C7.67 11 7 11.67 7 12.5V22H17V12.5C17 11.67 16.33 11 15.5 11Z"
+														  stroke="#ADB4BB" stroke-width="1.5" stroke-miterlimit="10"
+														  stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M10 16.25V17.75" stroke="#ADB4BB" stroke-width="1.5"
+														  stroke-miterlimit="10" stroke-linecap="round"
+														  stroke-linejoin="round"/>
+													<path opacity="0.4" d="M10.5 7.5H13.5" stroke="#ADB4BB"
+														  stroke-width="1.5" stroke-miterlimit="10"
+														  stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+												<span>
+													Tra cứu địa chỉ
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="lookup-inner">
+					<div class="container">
+						<div class="lookup-wrapper mt-3 vstack gap-3">
+							<div class="lookup-form user-form user-form_edit form-edit_user p-3 bg-white vstack gap-3">
+								<div class="heading-4 hstack align-items-center gap-1">
+									TRA CỨU TỈ GIÁ
+									<div data-bs-toggle="tooltip" title="Nội dung Kiểm đếm"
+										 class="handlePrevent hstack align-items-center justify-content-center">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											 viewBox="0 0 16 16"
+											 fill="none">
+											<g clip-path="url(#clip0_2842_13529)">
+												<path d="M5.33317 6.20866C5.33317 4.7359 6.52708 3.54199 7.99984 3.54199C9.47259 3.54199 10.6665 4.7359 10.6665 6.20866C10.6665 7.45122 9.81665 8.49528 8.6665 8.79131V9.54199C8.6665 9.91018 8.36803 10.2087 7.99984 10.2087C7.63165 10.2087 7.33317 9.91018 7.33317 9.54199V8.20866C7.33317 7.84047 7.63165 7.54199 7.99984 7.54199C8.73621 7.54199 9.33317 6.94504 9.33317 6.20866C9.33317 5.47228 8.73621 4.87533 7.99984 4.87533C7.26346 4.87533 6.6665 5.47228 6.6665 6.20866C6.6665 6.57685 6.36803 6.87533 5.99984 6.87533C5.63165 6.87533 5.33317 6.57685 5.33317 6.20866Z"
+													  fill="#333"/>
+												<path d="M8.83317 11.7087C8.83317 12.1689 8.46007 12.542 7.99984 12.542C7.5396 12.542 7.1665 12.1689 7.1665 11.7087C7.1665 11.2484 7.5396 10.8753 7.99984 10.8753C8.46007 10.8753 8.83317 11.2484 8.83317 11.7087Z"
+													  fill="#333"/>
+												<path fill-rule="evenodd" clip-rule="evenodd"
+													  d="M2.81439 2.81487C4.14075 1.48854 5.97499 0.666992 7.99984 0.666992C10.0247 0.666992 11.8589 1.48854 13.1853 2.81487C14.5116 4.14123 15.3332 5.97548 15.3332 8.00033C15.3332 10.0252 14.5116 11.8594 13.1853 13.1858C11.8589 14.5121 10.0247 15.3337 7.99984 15.3337C5.97499 15.3337 4.14074 14.5121 2.81439 13.1858C1.48805 11.8594 0.666504 10.0252 0.666504 8.00033C0.666504 5.97548 1.48806 4.14123 2.81439 2.81487ZM7.99984 2.00033C6.34282 2.00033 4.84373 2.67117 3.75719 3.75769C2.67067 4.84422 1.99984 6.3433 1.99984 8.00033C1.99984 9.65735 2.67068 11.1564 3.7572 12.243C4.84373 13.3295 6.34282 14.0003 7.99984 14.0003C9.65686 14.0003 11.1559 13.3295 12.2425 12.243C13.329 11.1564 13.9998 9.65734 13.9998 8.00033C13.9998 6.34331 13.329 4.84422 12.2425 3.75768C11.1559 2.67117 9.65686 2.00033 7.99984 2.00033Z"
+													  fill="#333"/>
+											</g>
+											<defs>
+												<clipPath id="clip0_2842_13529">
+													<rect width="16" height="16" fill="white"/>
+												</clipPath>
+											</defs>
+										</svg>
+									</div>
+								</div>
+								<div class="lookup-form_item">
+									<div class="hstack align-items-center gap-2">
+										<div class="user-form_item form-edit_user__item user-form_item__noborder is-value vstack gap-10px">
+											<input type="text" class="user-form_item__input form-edit_user__input" value="20">
+											<label class="user-form_item__label form-edit_user__label" for="">
+												Nhập số tiền dự kiến (¥)
+												<span class="fw-bold text-danger">*</span>
+											</label>
+										</div>
+										<button type="button" class="button-theme button-gradient_orange rounded-2 px-4">
+											Thử lại
+											<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+												 viewBox="0 0 25 25" fill="none">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+													  d="M12.0918 2.78607C10.0073 2.78877 8.10492 3.46665 6.57298 4.61409C6.24145 4.8624 5.77139 4.79495 5.52307 4.46342C5.27476 4.13189 5.34221 3.66183 5.67374 3.41351C7.45859 2.07665 9.6743 1.2892 12.0898 1.28608C15.6475 1.28147 18.3136 2.76403 20.0753 4.22983C20.5673 4.63912 20.9905 5.04841 21.3452 5.42612L21.3415 2.5841C21.341 2.16989 21.6763 1.83367 22.0906 1.83313C22.5048 1.8326 22.841 2.16795 22.8415 2.58216L22.848 7.58216C22.8485 7.99637 22.5132 8.33259 22.099 8.33313L17.659 8.33888C17.2448 8.33941 16.9085 8.00406 16.908 7.58985C16.9075 7.17563 17.2428 6.83941 17.657 6.83888L20.5963 6.83507C20.2225 6.40295 19.7288 5.89276 19.116 5.38291C17.5416 4.07302 15.2041 2.78205 12.0918 2.78607ZM3.80187 6.39753C4.16072 6.60441 4.28392 7.06303 4.07704 7.42188C3.29408 8.77999 2.85157 10.3612 2.85375 12.048C2.85429 12.4623 2.51894 12.7985 2.10473 12.799C1.69051 12.7995 1.35429 12.4642 1.35376 12.05C1.35123 10.0968 1.86429 8.25679 2.77753 6.6727C2.98441 6.31385 3.44302 6.19066 3.80187 6.39753ZM22.1028 11.2731C22.517 11.2726 22.8532 11.6079 22.8537 12.0222C22.8563 13.9782 22.3318 15.8179 21.42 17.3994C21.2131 17.7583 20.7545 17.8815 20.3956 17.6746C20.0368 17.4677 19.9136 17.0091 20.1205 16.6503C20.9049 15.2896 21.3559 13.708 21.3537 12.0241C21.3532 11.6099 21.6886 11.2737 22.1028 11.2731ZM2.4695 16.4885C2.46896 16.0743 2.80432 15.7381 3.21853 15.7376L7.73853 15.7317C8.15274 15.7312 8.48896 16.0665 8.4895 16.4807C8.49003 16.895 8.15468 17.2312 7.74047 17.2317L4.69757 17.2357C5.05893 17.6738 5.53013 18.1916 6.10125 18.7083C7.5646 20.0321 9.61618 21.2893 12.1157 21.2861C14.1972 21.2834 16.1288 20.5873 17.6716 19.4202C18.0019 19.1703 18.4723 19.2355 18.7222 19.5658C18.9721 19.8961 18.9069 20.3665 18.5766 20.6164C16.7826 21.9736 14.5361 22.7829 12.1177 22.7861C9.0972 22.79 6.70018 21.2729 5.09494 19.8207C4.66885 19.4352 4.29377 19.0501 3.97235 18.6921L3.97597 21.4866C3.97651 21.9008 3.64115 22.237 3.22694 22.2376C2.81273 22.2381 2.47651 21.9027 2.47597 21.4885L2.4695 16.4885Z"
+													  fill="white"/>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="heading-5 gray-color fw-normal">
+									Số tệ càng nhiều, VMT sẽ áp dụng tỉ giá càng thấp.
+								</div>
+								<div class="heading-4 gray-color">
+									Kết quả quy đổi
+								</div>
+								<div class="lookup-form_item">
+									<div class="hstack align-items-center gap-2">
+										<div class="user-form_item form-edit_user__item is-value vstack gap-10px">
+											<span class="user-form_item__append">VND</span>
+											<input type="text" class="user-form_item__input form-edit_user__input"
+												   value="7,100,000" disabled>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="vstack gap-15px">
+								<div class="heading-4 orange-color">
+									Lịch sử tra cứu gần đây
+								</div>
+								<div class="lookup-table">
+									<table class="table table-sticky">
+										<thead>
+										<tr>
+											<th class="heading-4 border-0">
+												Số tiền tra cứu(¥)
+											</th>
+											<th class="heading-4 border-0">
+												Kết quả (VND)
+											</th>
+											<th class="heading-4 border-0">
+												Tỉ giá áp dụng
+											</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<td>¥34</td>
+											<td>621,000</td>
+											<td>
+												<div class="primary-color">1¥ = 3750 VND</div>
+											</td>
+										</tr>
+										<tr>
+											<td>¥34</td>
+											<td>621,000</td>
+											<td>
+												<div class="primary-color">1¥ = 3750 VND</div>
+											</td>
+										</tr>
+										<tr>
+											<td>¥34</td>
+											<td>621,000</td>
+											<td>
+												<div class="primary-color">1¥ = 3750 VND</div>
+											</td>
+										</tr>
+										<tr>
+											<td>¥34</td>
+											<td>621,000</td>
+											<td>
+												<div class="primary-color">1¥ = 3750 VND</div>
+											</td>
+										</tr>
+										<tr>
+											<td>¥34</td>
+											<td>621,000</td>
+											<td>
+												<div class="primary-color">1¥ = 3750 VND</div>
+											</td>
+										</tr>
+										<tr>
+											<td>¥34</td>
+											<td>621,000</td>
+											<td>
+												<div class="primary-color">1¥ = 3750 VND</div>
+											</td>
+										</tr>
+										<tr>
+											<td>¥34</td>
+											<td>621,000</td>
+											<td>
+												<div class="primary-color">1¥ = 3750 VND</div>
+											</td>
+										</tr>
+										<tr>
+											<td>¥34</td>
+											<td>621,000</td>
+											<td>
+												<div class="primary-color">1¥ = 3750 VND</div>
+											</td>
+										</tr>
+										<tr>
+											<td>¥34</td>
+											<td>621,000</td>
+											<td>
+												<div class="primary-color">1¥ = 3750 VND</div>
+											</td>
+										</tr>
+										<tr>
+											<td>¥34</td>
+											<td>621,000</td>
+											<td>
+												<div class="primary-color">1¥ = 3750 VND</div>
+											</td>
+										</tr>
+										<tr>
+											<td>¥34</td>
+											<td>621,000</td>
+											<td>
+												<div class="primary-color">1¥ = 3750 VND</div>
+											</td>
+										</tr>
+										<tr>
+											<td>¥34</td>
+											<td>621,000</td>
+											<td>
+												<div class="primary-color">1¥ = 3750 VND</div>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section-footer section-footer_lookup position-fixed bottom-0 start-0 end-0 zi-10 bg-white w-100 p-3 pb-0">
+					<div class="card-footer_buttons hstack gap-2 w-100 pb-3">
+						<a href="" class="button-theme button-gradient_green flex-fill w-100">
+							<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+								<path d="M13.804 25.3911L13.7729 1.39111" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M25.5005 13.3759L1.50049 13.407" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							Tạo yêu cầu thanh toán mới
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/momment.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chart.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-labels.js"></script>
+<script type="text/javascript"
+		src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+
+</body>
+</html>
