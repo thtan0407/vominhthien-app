@@ -1,283 +1,428 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta name="theme-color" content="#ffffff">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
 
-	<title>Template VMT App</title>
-	<meta name="description" content="Template VMT App">
-	<meta name="author" content="">
+    <title>Template VMT App</title>
+    <meta name="description" content="Template VMT App">
+    <meta name="author" content="">
 
-	<meta property="og:title" content="Template VMT App">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="">
-	<meta property="og:description" content="Template VMT App">
-	<meta property="og:image" content="">
+    <meta property="og:title" content="Template VMT App">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Template VMT App">
+    <meta property="og:image" content="">
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-		  rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
 
-	<link rel="icon" href="./assets/images/favicon.png">
-	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
-	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
-	<link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
-	<link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
-	<link rel="stylesheet" href="./assets/css/base.css">
-	<link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+    <link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
 <div class="modal modal-bottom fade modal-notification" id="modal-add_cart" data-bs-backdrop="static"
-	 data-bs-keyboard="false">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content border-0">
-			<div class="modal-body bg-white">
-				<div class="vstack align-items-center justify-content-center gap-15px">
-					<svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
-						<path opacity="0.4"
-							  d="M28.9999 53.1663C42.3468 53.1663 53.1666 42.3466 53.1666 28.9997C53.1666 15.6528 42.3468 4.83301 28.9999 4.83301C15.653 4.83301 4.83325 15.6528 4.83325 28.9997C4.83325 42.3466 15.653 53.1663 28.9999 53.1663Z"
-							  fill="#E9750E"/>
-						<path d="M29 33.2288C29.9908 33.2288 30.8125 32.4072 30.8125 31.4163V19.333C30.8125 18.3422 29.9908 17.5205 29 17.5205C28.0092 17.5205 27.1875 18.3422 27.1875 19.333V31.4163C27.1875 32.4072 28.0092 33.2288 29 33.2288Z"
-							  fill="#E9750E"/>
-						<path d="M31.2233 37.748C31.1024 37.458 30.9333 37.1921 30.7158 36.9505C30.4741 36.733 30.2083 36.5638 29.9183 36.443C29.3383 36.2013 28.6616 36.2013 28.0816 36.443C27.7916 36.5638 27.5258 36.733 27.2841 36.9505C27.0666 37.1921 26.8974 37.458 26.7766 37.748C26.6558 38.038 26.5833 38.3521 26.5833 38.6663C26.5833 38.9805 26.6558 39.2946 26.7766 39.5846C26.8974 39.8988 27.0666 40.1405 27.2841 40.3821C27.5258 40.5996 27.7916 40.7688 28.0816 40.8896C28.3716 41.0105 28.6858 41.083 28.9999 41.083C29.3141 41.083 29.6283 41.0105 29.9183 40.8896C30.2083 40.7688 30.4741 40.5996 30.7158 40.3821C30.9333 40.1405 31.1024 39.8988 31.2233 39.5846C31.3441 39.2946 31.4166 38.9805 31.4166 38.6663C31.4166 38.3521 31.3441 38.038 31.2233 37.748Z"
-							  fill="#E9750E"/>
-					</svg>
-					<div class="heading-3 text-black text-center">
-						Đang tới giỏ hàng, <br>
-						bạn muốn hủy tạo đơn mua hàng?
-					</div>
-					<div class="text-center hstack gap-2 w-100">
-						<button type="button"
-								class="button-theme button-gradient_green flex-fill w-50">
-							Xác nhận
-						</button>
-						<button data-bs-dismiss="modal" type="button"
-								class="button-theme button-outline_green flex-fill w-50">
-							Đóng
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+     data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+            <div class="modal-body bg-white">
+                <div class="vstack align-items-center justify-content-center gap-15px">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
+                        <path opacity="0.4"
+                              d="M28.9999 53.1663C42.3468 53.1663 53.1666 42.3466 53.1666 28.9997C53.1666 15.6528 42.3468 4.83301 28.9999 4.83301C15.653 4.83301 4.83325 15.6528 4.83325 28.9997C4.83325 42.3466 15.653 53.1663 28.9999 53.1663Z"
+                              fill="#E9750E"/>
+                        <path d="M29 33.2288C29.9908 33.2288 30.8125 32.4072 30.8125 31.4163V19.333C30.8125 18.3422 29.9908 17.5205 29 17.5205C28.0092 17.5205 27.1875 18.3422 27.1875 19.333V31.4163C27.1875 32.4072 28.0092 33.2288 29 33.2288Z"
+                              fill="#E9750E"/>
+                        <path d="M31.2233 37.748C31.1024 37.458 30.9333 37.1921 30.7158 36.9505C30.4741 36.733 30.2083 36.5638 29.9183 36.443C29.3383 36.2013 28.6616 36.2013 28.0816 36.443C27.7916 36.5638 27.5258 36.733 27.2841 36.9505C27.0666 37.1921 26.8974 37.458 26.7766 37.748C26.6558 38.038 26.5833 38.3521 26.5833 38.6663C26.5833 38.9805 26.6558 39.2946 26.7766 39.5846C26.8974 39.8988 27.0666 40.1405 27.2841 40.3821C27.5258 40.5996 27.7916 40.7688 28.0816 40.8896C28.3716 41.0105 28.6858 41.083 28.9999 41.083C29.3141 41.083 29.6283 41.0105 29.9183 40.8896C30.2083 40.7688 30.4741 40.5996 30.7158 40.3821C30.9333 40.1405 31.1024 39.8988 31.2233 39.5846C31.3441 39.2946 31.4166 38.9805 31.4166 38.6663C31.4166 38.3521 31.3441 38.038 31.2233 37.748Z"
+                              fill="#E9750E"/>
+                    </svg>
+                    <div class="heading-3 text-black text-center">
+                        Đang tới giỏ hàng, <br>
+                        bạn muốn hủy tạo đơn mua hàng?
+                    </div>
+                    <div class="text-center hstack gap-2 w-100">
+                        <button type="button"
+                                class="button-theme button-gradient_green flex-fill w-50">
+                            Xác nhận
+                        </button>
+                        <button data-bs-dismiss="modal" type="button"
+                                class="button-theme button-outline_green flex-fill w-50">
+                            Đóng
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="vstack position-relative min-vh-100 h-100 overflow-hidden">
 
-	<div class="vstack flex-fill overflow-hidden position-relative">
-		<div class="screen-overflow">
-			<div class="main main-spacing screen-support">
-				<!-- Header page -->
-				<div class="section-header bg-white position-fixed top-0 start-0 end-0 zi-10 w-100">
-					<div class="header-inner">
-						<div class="container">
-							<div class="vstack">
-								<div class="header-inner_title py-3 heading-2 hstack gap-2">
-									<a href="./index.html" class="hstack align-items-center justify-content-center">
-										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-											 viewBox="0 0 24 24"
-											 fill="none">
-											<path fill-rule="evenodd" clip-rule="evenodd"
-												  d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
-												  fill="#191E24"/>
-										</svg>
-									</a>
-									Quay lại
-									<div class="header-inner_buttons ms-auto hstack align-items-center justify-content-end gap-2">
-										<button data-bs-toggle="modal" data-bs-target="#modal-add_cart" type="button"
-												class="button-reset">
-											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-												 viewBox="0 0 24 24" fill="none">
-												<path d="M7.5 7.66952V6.69952C7.5 4.44952 9.31 2.23952 11.56 2.02952C14.24 1.76952 16.5 3.87952 16.5 6.50952V7.88952"
-													  stroke="#1A8917" stroke-width="1.5" stroke-miterlimit="10"
-													  stroke-linecap="round" stroke-linejoin="round"/>
-												<path d="M8.99983 22H14.9998C19.0198 22 19.7398 20.39 19.9498 18.43L20.6998 12.43C20.9698 9.99 20.2698 8 15.9998 8H7.99983C3.72983 8 3.02983 9.99 3.29983 12.43L4.04983 18.43C4.25983 20.39 4.97983 22 8.99983 22Z"
-													  stroke="#1A8917" stroke-width="1.5" stroke-miterlimit="10"
-													  stroke-linecap="round" stroke-linejoin="round"/>
-												<path d="M15.4955 12H15.5045" stroke="#1A8917" stroke-width="2"
-													  stroke-linecap="round" stroke-linejoin="round"/>
-												<path d="M8.49451 12H8.50349" stroke="#1A8917" stroke-width="2"
-													  stroke-linecap="round" stroke-linejoin="round"/>
-											</svg>
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="vstack pt-3">
-					<div class="container">
-						<div class="bg-white rounded-3 p-2">
-							<div class="detail-images gap-2 vstack">
-								<div class="detail-images_avatar" id="detail-images_avatar">
-									<div class="swiper">
-										<div class="swiper-wrapper">
-											<div class="swiper-slide">
-												<div class="rounded-4 overflow-hidden">
-													<img src="./assets/images/product/product-2.png"
-														 class="img-fluid w-100"
-														 alt="">
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="rounded-4 overflow-hidden">
-													<img src="./assets/images/product/product-1.png"
-														 class="img-fluid w-100"
-														 alt="">
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="rounded-4 overflow-hidden">
-													<img src="./assets/images/product/product-2.png"
-														 class="img-fluid w-100"
-														 alt="">
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="rounded-4 overflow-hidden">
-													<img src="./assets/images/product/product-1.png"
-														 class="img-fluid w-100"
-														 alt="">
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="rounded-4 overflow-hidden">
-													<img src="./assets/images/product/product-2.png"
-														 class="img-fluid w-100"
-														 alt="">
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="rounded-4 overflow-hidden">
-													<img src="./assets/images/product/product-1.png"
-														 class="img-fluid w-100"
-														 alt="">
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="rounded-4 overflow-hidden">
-													<img src="./assets/images/product/product-2.png"
-														 class="img-fluid w-100"
-														 alt="">
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="rounded-4 overflow-hidden">
-													<img src="./assets/images/product/product-1.png"
-														 class="img-fluid w-100"
-														 alt="">
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="detail-images_thumb" id="detail-images_thumb">
-									<div class="swiper">
-										<div class="swiper-wrapper">
-											<div class="swiper-slide">
-												<div class="rounded-2 overflow-hidden">
-													<img src="./assets/images/product/product-2.png"
-														 class="img-fluid w-100"
-														 alt="">
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="rounded-2 overflow-hidden">
-													<img src="./assets/images/product/product-1.png"
-														 class="img-fluid w-100"
-														 alt="">
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="rounded-2 overflow-hidden">
-													<img src="./assets/images/product/product-2.png"
-														 class="img-fluid w-100"
-														 alt="">
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="rounded-2 overflow-hidden">
-													<img src="./assets/images/product/product-1.png"
-														 class="img-fluid w-100"
-														 alt="">
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="rounded-2 overflow-hidden">
-													<img src="./assets/images/product/product-2.png"
-														 class="img-fluid w-100"
-														 alt="">
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="rounded-2 overflow-hidden">
-													<img src="./assets/images/product/product-1.png"
-														 class="img-fluid w-100"
-														 alt="">
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="rounded-2 overflow-hidden">
-													<img src="./assets/images/product/product-2.png"
-														 class="img-fluid w-100"
-														 alt="">
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="rounded-2 overflow-hidden">
-													<img src="./assets/images/product/product-1.png"
-														 class="img-fluid w-100"
-														 alt="">
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="section-footer position-fixed bottom-0 start-0 end-0 zi-10 bg-white w-100 p-3 pb-0">
-					<div class="card-footer_total">
-						<div class="hstack align-items-start justify-content-between gap-3">
-							<div class="heading-4 fw-bold black-50-color">
-								Thành tiền
-							</div>
-							<div class="vstack align-items-end text-end">
-								<div class="heading-3 text-black">
-									320.000 (VND)
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="card-footer_buttons hstack gap-2 w-100 pb-3">
-						<a href="" class="button-theme button-gradient_green flex-fill w-100">
-							Thêm vào giỏ hàng
-							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"
-								 fill="none">
-								<path d="M7.99463 7.82284L7.99338 6.85284C7.99046 4.60284 9.7976 2.3905 12.0473 2.17759C14.727 1.91412 16.9897 4.02119 16.9931 6.65119L16.9949 8.03119"
-									  stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-									  stroke-linejoin="round"/>
-								<path d="M9.51355 22.1507L15.5135 22.143C19.5335 22.1378 20.2515 20.5269 20.4589 18.5666L21.2012 12.5656C21.468 10.1253 20.7654 8.13618 16.4954 8.1417L8.49543 8.15206C4.22543 8.15758 3.52801 10.1485 3.80116 12.5881L4.55893 18.5872C4.77147 20.5469 5.49355 22.156 9.51355 22.1507Z"
-									  stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-									  stroke-linejoin="round"/>
-								<path d="M15.9956 12.1419L16.0046 12.1419" stroke="white" stroke-width="2"
-									  stroke-linecap="round" stroke-linejoin="round"/>
-								<path d="M8.99467 12.1507L9.00365 12.1507" stroke="white" stroke-width="2"
-									  stroke-linecap="round" stroke-linejoin="round"/>
-							</svg>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="vstack flex-fill overflow-hidden position-relative">
+        <div class="screen-overflow">
+            <div class="main main-spacing screen-support">
+                <!-- Header page -->
+                <div class="section-header bg-white position-fixed top-0 start-0 end-0 zi-10 w-100">
+                    <div class="header-inner">
+                        <div class="container">
+                            <div class="vstack">
+                                <div class="header-inner_title py-3 heading-2 hstack gap-2">
+                                    <a href="./index.html" class="hstack align-items-center justify-content-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24"
+                                             fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
+                                                  fill="#191E24"/>
+                                        </svg>
+                                    </a>
+                                    Quay lại
+                                    <div class="header-inner_buttons ms-auto hstack align-items-center justify-content-end gap-2">
+                                        <button data-bs-toggle="modal" data-bs-target="#modal-add_cart" type="button"
+                                                class="button-reset">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none">
+                                                <path d="M7.5 7.66952V6.69952C7.5 4.44952 9.31 2.23952 11.56 2.02952C14.24 1.76952 16.5 3.87952 16.5 6.50952V7.88952"
+                                                      stroke="#1A8917" stroke-width="1.5" stroke-miterlimit="10"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M8.99983 22H14.9998C19.0198 22 19.7398 20.39 19.9498 18.43L20.6998 12.43C20.9698 9.99 20.2698 8 15.9998 8H7.99983C3.72983 8 3.02983 9.99 3.29983 12.43L4.04983 18.43C4.25983 20.39 4.97983 22 8.99983 22Z"
+                                                      stroke="#1A8917" stroke-width="1.5" stroke-miterlimit="10"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M15.4955 12H15.5045" stroke="#1A8917" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M8.49451 12H8.50349" stroke="#1A8917" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vstack pt-3">
+                    <div class="container">
+                        <div class="bg-white rounded-3 p-3 vstack gap-15px">
+                            <div class="detail-images gap-2 vstack">
+                                <div class="detail-images_avatar" id="detail-images_avatar">
+                                    <div class="swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="rounded-4 overflow-hidden">
+                                                    <img src="./assets/images/product/product-2.png"
+                                                         class="img-fluid w-100"
+                                                         alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="rounded-4 overflow-hidden">
+                                                    <img src="./assets/images/product/product-1.png"
+                                                         class="img-fluid w-100"
+                                                         alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="rounded-4 overflow-hidden">
+                                                    <img src="./assets/images/product/product-2.png"
+                                                         class="img-fluid w-100"
+                                                         alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="rounded-4 overflow-hidden">
+                                                    <img src="./assets/images/product/product-1.png"
+                                                         class="img-fluid w-100"
+                                                         alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="rounded-4 overflow-hidden">
+                                                    <img src="./assets/images/product/product-2.png"
+                                                         class="img-fluid w-100"
+                                                         alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="rounded-4 overflow-hidden">
+                                                    <img src="./assets/images/product/product-1.png"
+                                                         class="img-fluid w-100"
+                                                         alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="rounded-4 overflow-hidden">
+                                                    <img src="./assets/images/product/product-2.png"
+                                                         class="img-fluid w-100"
+                                                         alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="rounded-4 overflow-hidden">
+                                                    <img src="./assets/images/product/product-1.png"
+                                                         class="img-fluid w-100"
+                                                         alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detail-images_thumb" id="detail-images_thumb">
+                                    <div class="swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="rounded-2 overflow-hidden">
+                                                    <img src="./assets/images/product/product-2.png"
+                                                         class="img-fluid w-100"
+                                                         alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="rounded-2 overflow-hidden">
+                                                    <img src="./assets/images/product/product-1.png"
+                                                         class="img-fluid w-100"
+                                                         alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="rounded-2 overflow-hidden">
+                                                    <img src="./assets/images/product/product-2.png"
+                                                         class="img-fluid w-100"
+                                                         alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="rounded-2 overflow-hidden">
+                                                    <img src="./assets/images/product/product-1.png"
+                                                         class="img-fluid w-100"
+                                                         alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="rounded-2 overflow-hidden">
+                                                    <img src="./assets/images/product/product-2.png"
+                                                         class="img-fluid w-100"
+                                                         alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="rounded-2 overflow-hidden">
+                                                    <img src="./assets/images/product/product-1.png"
+                                                         class="img-fluid w-100"
+                                                         alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="rounded-2 overflow-hidden">
+                                                    <img src="./assets/images/product/product-2.png"
+                                                         class="img-fluid w-100"
+                                                         alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="rounded-2 overflow-hidden">
+                                                    <img src="./assets/images/product/product-1.png"
+                                                         class="img-fluid w-100"
+                                                         alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gap-2 hstack align-items-center">
+                                <div class="heading-4 black-50-color">
+                                    Shop:
+                                </div>
+                                <div class="heading-4 black-50-color gap-1 hstack align-items-center">
+                                    <img src="./assets/images/icon/tmall.png" width="16" height="16" class="mw-100"
+                                         alt="">
+                                    diw迪威
+                                </div>
+                            </div>
+                            <div class="detail-information_wrapper gap-2 vstack">
+                                <div class="heading-4 dark-color fw-normal">
+                                    适用铃木悦帅GD110摩托托车摩托车摩摩托车摩摩托车摩摩托车摩
+                                </div>
+                                <div class="hstack gap-2 justify-content-between">
+                                    <div class="primary-color heading-3">
+                                        252.000 đ
+                                    </div>
+                                    <div class="orange-color heading-3">
+                                        875 đã bán
+                                    </div>
+                                </div>
+                                <div class="heading-4 text-black fw-normal">
+                                    62 ¥
+                                </div>
+                                <div class="heading-4 hstack gap-2 justify-content-between">
+                                    Điều kiện
+                                    <div class="orange-color">
+                                        >= 3
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detail-information_wrapper gap-2 vstack">
+                                <div class="orange-color heading-4 pb-2">
+                                    MÀU SẮC
+                                </div>
+                                <div class="hstack gap-2">
+                                    <button type="button" class="detail-color button-reset is-active">
+                                        Màu xanh
+                                    </button>
+                                    <button type="button" class="detail-color button-reset">
+                                        Màu đỏ
+                                    </button>
+                                    <button type="button" class="detail-color button-reset">
+                                        Tím lịm
+                                    </button>
+                                    <button type="button" class="detail-color button-reset">
+                                        Vàng đất
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="detail-information_wrapper gap-2 vstack">
+                                <div class="orange-color heading-4 pb-2">
+                                    PHÂN LOẠI
+                                </div>
+                                <div class="vstack gap-3">
+                                    <div class="detail-information_quantity hstack justify-content-between gap-3">
+                                        <div class="heading-4 fw-normal text-black">
+                                            Không dây
+                                        </div>
+                                        <div class="hstack gap-2 align-items-center justify-content-end">
+                                            <button type="button"
+                                                    class="button-reset detail-information_quantity__button flex-fill disabled"
+                                                    disabled="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                     viewBox="0 0 16 16" fill="none">
+                                                    <rect width="16" height="16" rx="8" fill="#1A8917"></rect>
+                                                    <path d="M4 8L11.6667 8" stroke="white" stroke-width="2"
+                                                          stroke-linecap="round"></path>
+                                                </svg>
+                                            </button>
+                                            <input type="text" value="01" class="detail-information_quantity__input">
+                                            <button type="button"
+                                                    class="button-reset detail-information_quantity__button flex-fill">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                     viewBox="0 0 16 16" fill="none">
+                                                    <rect width="16" height="16" rx="8" fill="#1A8917"></rect>
+                                                    <path d="M4 8L11.6667 8" stroke="white" stroke-width="2"
+                                                          stroke-linecap="round"></path>
+                                                    <path d="M8 4L8 11.6667" stroke="white" stroke-width="2"
+                                                          stroke-linecap="round"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="detail-information_quantity hstack justify-content-between gap-3">
+                                        <div class="heading-4 fw-normal text-black">
+                                            Wireless
+                                        </div>
+                                        <div class="hstack gap-2 align-items-center justify-content-end">
+                                            <button type="button"
+                                                    class="button-reset detail-information_quantity__button flex-fill disabled"
+                                                    disabled="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                     viewBox="0 0 16 16" fill="none">
+                                                    <rect width="16" height="16" rx="8" fill="#1A8917"></rect>
+                                                    <path d="M4 8L11.6667 8" stroke="white" stroke-width="2"
+                                                          stroke-linecap="round"></path>
+                                                </svg>
+                                            </button>
+                                            <input type="text" value="01" class="detail-information_quantity__input">
+                                            <button type="button"
+                                                    class="button-reset detail-information_quantity__button flex-fill">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                     viewBox="0 0 16 16" fill="none">
+                                                    <rect width="16" height="16" rx="8" fill="#1A8917"></rect>
+                                                    <path d="M4 8L11.6667 8" stroke="white" stroke-width="2"
+                                                          stroke-linecap="round"></path>
+                                                    <path d="M8 4L8 11.6667" stroke="white" stroke-width="2"
+                                                          stroke-linecap="round"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="detail-information_quantity hstack justify-content-between gap-3">
+                                        <div class="heading-4 fw-normal text-black">
+                                            USB
+                                        </div>
+                                        <div class="hstack gap-2 align-items-center justify-content-end">
+                                            <button type="button"
+                                                    class="button-reset detail-information_quantity__button flex-fill disabled"
+                                                    disabled="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                     viewBox="0 0 16 16" fill="none">
+                                                    <rect width="16" height="16" rx="8" fill="#1A8917"></rect>
+                                                    <path d="M4 8L11.6667 8" stroke="white" stroke-width="2"
+                                                          stroke-linecap="round"></path>
+                                                </svg>
+                                            </button>
+                                            <input type="text" value="01" class="detail-information_quantity__input">
+                                            <button type="button"
+                                                    class="button-reset detail-information_quantity__button flex-fill">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                     viewBox="0 0 16 16" fill="none">
+                                                    <rect width="16" height="16" rx="8" fill="#1A8917"></rect>
+                                                    <path d="M4 8L11.6667 8" stroke="white" stroke-width="2"
+                                                          stroke-linecap="round"></path>
+                                                    <path d="M8 4L8 11.6667" stroke="white" stroke-width="2"
+                                                          stroke-linecap="round"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-footer position-fixed bottom-0 start-0 end-0 zi-10 bg-white w-100 p-3 pb-0">
+                    <div class="card-footer_total">
+                        <div class="hstack align-items-start justify-content-between gap-3">
+                            <div class="heading-4 fw-bold text-black">
+                                Thành tiền
+                            </div>
+                            <div class="vstack align-items-end text-end">
+                                <div class="heading-3 text-black">
+                                    320.000 (VND)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer_buttons hstack gap-2 w-100 pb-3">
+                        <a href="" class="button-theme button-gradient_green flex-fill w-100">
+                            Thêm vào giỏ hàng
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"
+                                 fill="none">
+                                <path d="M7.99463 7.82284L7.99338 6.85284C7.99046 4.60284 9.7976 2.3905 12.0473 2.17759C14.727 1.91412 16.9897 4.02119 16.9931 6.65119L16.9949 8.03119"
+                                      stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M9.51355 22.1507L15.5135 22.143C19.5335 22.1378 20.2515 20.5269 20.4589 18.5666L21.2012 12.5656C21.468 10.1253 20.7654 8.13618 16.4954 8.1417L8.49543 8.15206C4.22543 8.15758 3.52801 10.1485 3.80116 12.5881L4.55893 18.5872C4.77147 20.5469 5.49355 22.156 9.51355 22.1507Z"
+                                      stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M15.9956 12.1419L16.0046 12.1419" stroke="white" stroke-width="2"
+                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8.99467 12.1507L9.00365 12.1507" stroke="white" stroke-width="2"
+                                      stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </div>
@@ -287,7 +432,7 @@
 <script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-labels.js"></script>
 <script type="text/javascript"
-		src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/daterangepicker/daterangepicker.min.js"></script>
