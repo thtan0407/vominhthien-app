@@ -698,7 +698,7 @@ export function handleFormEditUser() {
 						});
 
 						formEditUserItemInput.addEventListener('mouseup', function (event) {
-							if (!formEditUserItemInput.classList.contains('abc')) {
+							if (!formEditUserItemInput.classList.contains('is-value')) {
 								item.classList.add('is-value');
 							}
 						});
@@ -710,7 +710,7 @@ export function handleFormEditUser() {
 						});
 					}
 
-					const formEditUserItemSelect = item.querySelector('.form-edit_user__select');
+					const formEditUserItemSelect = item.querySelector('.form-edit_user__select form-select');
 					if (formEditUserItemSelect !== null) {
 						formEditUserItemSelect.addEventListener('change', function (event) {
 							if (event.target.value.trim() !== '') {
@@ -800,7 +800,7 @@ export function handleSliderWebshop() {
 
 /****
  * Detail Image
- * Page don-dat-hang-ho-keyword-searching-result
+ * Page khoi-tao-don-dat-hang-ho-keyword-searching-detail
  */
 export function handleSliderDetailImages() {
 	const detailAvatar = document.getElementById('detail-images_avatar');
@@ -818,6 +818,33 @@ export function handleSliderDetailImages() {
 			thumbs: {
 				swiper: sliderDetailThumb,
 			},
+		});
+	}
+}
+
+/****
+ * Handle Footer Card Detail
+ */
+export function handleFooterCartDetail() {
+	let buttonOpen = document.getElementById('call-footerDetail');
+	let footerWrapper = document.getElementById('parentFooter');
+	let cardFooterCart = document.getElementById('cardFooterCart');
+	let cardFooterTotal = document.getElementById('cardFooterTotal');
+
+	if (buttonOpen !== null && buttonOpen.getAttribute('data-bs-toggle') === 'collapse' && footerWrapper !== null && cardFooterCart !== null && cardFooterTotal !== null) {
+		buttonOpen.addEventListener('click', () => {
+			buttonOpen.setAttribute('data-bs-target', '#modal-add_cart__success');
+			buttonOpen.setAttribute('data-bs-toggle', 'modal');
+		});
+
+		let modalAddCartSuccess = document.getElementById('modal-add_cart__success');
+		document.addEventListener('click', function (event) {
+			if (!footerWrapper.contains(event.target) && !modalAddCartSuccess.contains(event.target)) {
+				buttonOpen.setAttribute('data-bs-target', '#cardFooterCart');
+				buttonOpen.setAttribute('data-bs-toggle', 'collapse');
+				new bootstrap.Collapse(cardFooterCart).hide();
+				new bootstrap.Collapse(cardFooterTotal).show();
+			}
 		});
 	}
 }
@@ -886,6 +913,8 @@ window.addEventListener('load', function () {
 	handleSliderWebshop();
 
 	handleSliderDetailImages();
+
+	handleFooterCartDetail();
 
 	window.addEventListener("resize", () => {
 		windowWidth = window.innerWidth;

@@ -32,7 +32,7 @@
 </head>
 <body>
 
-<div class="modal modal-bottom fade modal-notification" id="modal-add_cart" data-bs-backdrop="static"
+<div class="modal modal-bottom fade modal-notification" id="modal-add_cart__cancel" data-bs-backdrop="static"
      data-bs-keyboard="false">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-0">
@@ -71,13 +71,13 @@
 
     <div class="vstack flex-fill overflow-hidden position-relative">
         <div class="screen-overflow">
-            <div class="main main-spacing screen-support">
+            <div class="main main-spacing main-spacing_tabs__multiple screen-support">
                 <!-- Header page -->
                 <div class="section-header bg-white position-fixed top-0 start-0 end-0 zi-10 w-100">
                     <div class="header-inner">
                         <div class="container">
                             <div class="vstack">
-                                <div class="header-inner_title py-3 heading-2 hstack gap-2">
+                                <div class="header-inner_title pt-3 pb-2 heading-2 hstack gap-2">
                                     <a href="./index.html" class="hstack align-items-center justify-content-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                              viewBox="0 0 24 24"
@@ -89,7 +89,7 @@
                                     </a>
                                     Quay lại
                                     <div class="header-inner_buttons ms-auto hstack align-items-center justify-content-end gap-2">
-                                        <button data-bs-toggle="modal" data-bs-target="#modal-add_cart" type="button"
+                                        <button data-bs-toggle="modal" data-bs-target="#modal-add_cart__cancel" type="button"
                                                 class="button-reset">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                  viewBox="0 0 24 24" fill="none">
@@ -107,6 +107,34 @@
                                         </button>
                                     </div>
                                 </div>
+								<div class="theme-tabs theme-tabs_overflow">
+									<ul class="nav nav-tabs border-0 flex-nowrap align-items-center justify-content-center">
+										<li class="nav-item">
+											<a href=""
+											   class="nav-link active px-3 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+												Đặt hàng chính ngạch
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href=""
+											   class="nav-link px-3 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+												Vận chuyển chính ngạch
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="text-center py-2">
+									<button type="button"
+											class="button-reset w-100 heading-4 hstack justify-content-center align-items-center gap-3">
+										Tìm kiếm sản phẩm
+										<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+											 viewBox="0 0 25 24" fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												  d="M11.3989 4.92135C8.09758 4.92135 5.42135 7.59758 5.42135 10.8989C5.42135 14.2002 8.09758 16.8764 11.3989 16.8764C13.0498 16.8764 14.5429 16.2084 15.6256 15.1256C16.7084 14.0429 17.3764 12.5498 17.3764 10.8989C17.3764 7.59758 14.7002 4.92135 11.3989 4.92135ZM3.5 10.8989C3.5 6.53645 7.03645 3 11.3989 3C15.7613 3 19.2978 6.53645 19.2978 10.8989C19.2978 12.7335 18.6714 14.4231 17.6223 15.7637L22.2186 20.36C22.5938 20.7352 22.5938 21.3435 22.2186 21.7186C21.8435 22.0938 21.2352 22.0938 20.86 21.7186L16.2637 17.1223C14.9231 18.1714 13.2335 18.7978 11.3989 18.7978C7.03645 18.7978 3.5 15.2613 3.5 10.8989Z"
+												  fill="#191E24"/>
+										</svg>
+									</button>
+								</div>
                             </div>
                         </div>
                     </div>
@@ -388,8 +416,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="section-footer position-fixed bottom-0 start-0 end-0 zi-10 bg-white w-100 p-3 pb-0">
-                    <div class="card-footer_total">
+                <div class="section-footer section-footer_support position-fixed bottom-0 start-0 end-0 zi-10 bg-white w-100 p-3 pb-0">
+                    <div class="card-footer_total pt-3">
                         <div class="hstack align-items-start justify-content-between gap-3">
                             <div class="heading-4 fw-bold text-black">
                                 Thành tiền
@@ -402,7 +430,7 @@
                         </div>
                     </div>
                     <div class="card-footer_buttons hstack gap-2 w-100 pb-3">
-                        <a href="" class="button-theme button-gradient_green flex-fill w-100">
+						<button type="button" class="button-theme button-gradient_green flex-fill w-100">
                             Thêm vào giỏ hàng
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"
                                  fill="none">
@@ -417,7 +445,7 @@
                                 <path d="M8.99467 12.1507L9.00365 12.1507" stroke="white" stroke-width="2"
                                       stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </a>
+						</button>
                     </div>
                 </div>
             </div>

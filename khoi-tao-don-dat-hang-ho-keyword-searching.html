@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>Template VMT App</title>
+	<meta name="description" content="Template VMT App">
+	<meta name="author" content="">
+
+	<meta property="og:title" content="Template VMT App">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="Template VMT App">
+	<meta property="og:image" content="">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		  rel="stylesheet">
+
+	<link rel="icon" href="./assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+	<link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<div class="modal modal-bottom fade modal-notification" id="modal-cancel" data-bs-backdrop="static"
+	 data-bs-keyboard="false">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content border-0">
+			<div class="modal-body bg-white">
+				<div class="vstack align-items-center justify-content-center gap-15px">
+					<svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
+						<path opacity="0.4"
+							  d="M28.9999 53.1663C42.3468 53.1663 53.1666 42.3466 53.1666 28.9997C53.1666 15.6528 42.3468 4.83301 28.9999 4.83301C15.653 4.83301 4.83325 15.6528 4.83325 28.9997C4.83325 42.3466 15.653 53.1663 28.9999 53.1663Z"
+							  fill="#E9750E"/>
+						<path d="M29 33.2288C29.9908 33.2288 30.8125 32.4072 30.8125 31.4163V19.333C30.8125 18.3422 29.9908 17.5205 29 17.5205C28.0092 17.5205 27.1875 18.3422 27.1875 19.333V31.4163C27.1875 32.4072 28.0092 33.2288 29 33.2288Z"
+							  fill="#E9750E"/>
+						<path d="M31.2233 37.748C31.1024 37.458 30.9333 37.1921 30.7158 36.9505C30.4741 36.733 30.2083 36.5638 29.9183 36.443C29.3383 36.2013 28.6616 36.2013 28.0816 36.443C27.7916 36.5638 27.5258 36.733 27.2841 36.9505C27.0666 37.1921 26.8974 37.458 26.7766 37.748C26.6558 38.038 26.5833 38.3521 26.5833 38.6663C26.5833 38.9805 26.6558 39.2946 26.7766 39.5846C26.8974 39.8988 27.0666 40.1405 27.2841 40.3821C27.5258 40.5996 27.7916 40.7688 28.0816 40.8896C28.3716 41.0105 28.6858 41.083 28.9999 41.083C29.3141 41.083 29.6283 41.0105 29.9183 40.8896C30.2083 40.7688 30.4741 40.5996 30.7158 40.3821C30.9333 40.1405 31.1024 39.8988 31.2233 39.5846C31.3441 39.2946 31.4166 38.9805 31.4166 38.6663C31.4166 38.3521 31.3441 38.038 31.2233 37.748Z"
+							  fill="#E9750E"/>
+					</svg>
+					<div class="heading-3 text-black text-center">
+						Bạn muốn hủy yêu cầu?
+					</div>
+					<div class="text-center hstack gap-2 w-100">
+						<button type="button"
+								class="button-theme button-gradient_green flex-fill w-50">
+							Xác nhận
+						</button>
+						<button data-bs-dismiss="modal" type="button"
+								class="button-theme button-outline_green flex-fill w-50">
+							Đóng
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="vstack position-relative min-vh-100 h-100 overflow-hidden">
+
+	<div class="vstack flex-fill overflow-hidden position-relative">
+		<div class="screen-overflow">
+			<div class="main main-spacing screen-support">
+				<!-- Header page -->
+				<div class="section-header bg-white position-fixed top-0 start-0 end-0 zi-10 w-100">
+					<div class="header-inner">
+						<div class="container">
+							<div class="vstack">
+								<div class="header-inner_title py-3 heading-2 hstack gap-2">
+									Tạo đơn đặt hàng hộ
+									<div class="header-inner_buttons ms-auto hstack align-items-center justify-content-end gap-2">
+										<button data-bs-toggle="modal" data-bs-target="#modal-cancel" type="button"
+												class="button-reset orange-color">
+											Hủy bỏ
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="vstack pt-3">
+					<div class="container">
+						<div class="row g-3 row-cols-2 row-cols-lg-3">
+							<div class="col">
+								<div class="support-card_product heading-6 rounded-3 p-2 bg-white position-relative overflow-hidden">
+									<div class="support-card_product__image">
+										<img src="./assets/images/product/product-2.png" class="w-100 img-fluid" alt="">
+									</div>
+									<div class="pt-2 vstack gap-1">
+										<div class="dark-color">
+											适用铃木悦帅GD110摩托车摩托车托车摩托车
+										</div>
+										<div class="hstack gap-2 justify-content-between">
+											<div class="primary-color">
+												252.000 đ
+											</div>
+											<div class="orange-color">
+												875 đã bán
+											</div>
+										</div>
+										<div class="gray-color">
+											62 ¥
+										</div>
+									</div>
+									<a href="./khoi-tao-don-dat-hang-ho-keyword-searching-detail.html" class="stretched-link"></a>
+								</div>
+							</div>
+							<div class="col">
+								<div class="support-card_product heading-6 rounded-3 p-2 bg-white position-relative overflow-hidden">
+									<div class="support-card_product__image">
+										<img src="./assets/images/product/product-2.png" class="w-100 img-fluid" alt="">
+									</div>
+									<div class="pt-2 vstack gap-1">
+										<div class="dark-color">
+											适用铃木悦帅GD110摩托车摩托车托车摩托车
+										</div>
+										<div class="hstack gap-2 justify-content-between">
+											<div class="primary-color">
+												252.000 đ
+											</div>
+											<div class="orange-color">
+												875 đã bán
+											</div>
+										</div>
+										<div class="gray-color">
+											62 ¥
+										</div>
+									</div>
+									<a href="./khoi-tao-don-dat-hang-ho-keyword-searching-detail.html" class="stretched-link"></a>
+								</div>
+							</div>
+							<div class="col">
+								<div class="support-card_product heading-6 rounded-3 p-2 bg-white position-relative overflow-hidden">
+									<div class="support-card_product__image">
+										<img src="./assets/images/product/product-2.png" class="w-100 img-fluid" alt="">
+									</div>
+									<div class="pt-2 vstack gap-1">
+										<div class="dark-color">
+											适用铃木悦帅GD110摩托车摩托车托车摩托车
+										</div>
+										<div class="hstack gap-2 justify-content-between">
+											<div class="primary-color">
+												252.000 đ
+											</div>
+											<div class="orange-color">
+												875 đã bán
+											</div>
+										</div>
+										<div class="gray-color">
+											62 ¥
+										</div>
+									</div>
+									<a href="./khoi-tao-don-dat-hang-ho-keyword-searching-detail.html" class="stretched-link"></a>
+								</div>
+							</div>
+							<div class="col">
+								<div class="support-card_product heading-6 rounded-3 p-2 bg-white position-relative overflow-hidden">
+									<div class="support-card_product__image">
+										<img src="./assets/images/product/product-2.png" class="w-100 img-fluid" alt="">
+									</div>
+									<div class="pt-2 vstack gap-1">
+										<div class="dark-color">
+											适用铃木悦帅GD110摩托车摩托车托车摩托车
+										</div>
+										<div class="hstack gap-2 justify-content-between">
+											<div class="primary-color">
+												252.000 đ
+											</div>
+											<div class="orange-color">
+												875 đã bán
+											</div>
+										</div>
+										<div class="gray-color">
+											62 ¥
+										</div>
+									</div>
+									<a href="./khoi-tao-don-dat-hang-ho-keyword-searching-detail.html" class="stretched-link"></a>
+								</div>
+							</div>
+							<div class="col">
+								<div class="support-card_product heading-6 rounded-3 p-2 bg-white position-relative overflow-hidden">
+									<div class="support-card_product__image">
+										<img src="./assets/images/product/product-2.png" class="w-100 img-fluid" alt="">
+									</div>
+									<div class="pt-2 vstack gap-1">
+										<div class="dark-color">
+											适用铃木悦帅GD110摩托车摩托车托车摩托车
+										</div>
+										<div class="hstack gap-2 justify-content-between">
+											<div class="primary-color">
+												252.000 đ
+											</div>
+											<div class="orange-color">
+												875 đã bán
+											</div>
+										</div>
+										<div class="gray-color">
+											62 ¥
+										</div>
+									</div>
+									<a href="./khoi-tao-don-dat-hang-ho-keyword-searching-detail.html" class="stretched-link"></a>
+								</div>
+							</div>
+							<div class="col">
+								<div class="support-card_product heading-6 rounded-3 p-2 bg-white position-relative overflow-hidden">
+									<div class="support-card_product__image">
+										<img src="./assets/images/product/product-2.png" class="w-100 img-fluid" alt="">
+									</div>
+									<div class="pt-2 vstack gap-1">
+										<div class="dark-color">
+											适用铃木悦帅GD110摩托车摩托车托车摩托车
+										</div>
+										<div class="hstack gap-2 justify-content-between">
+											<div class="primary-color">
+												252.000 đ
+											</div>
+											<div class="orange-color">
+												875 đã bán
+											</div>
+										</div>
+										<div class="gray-color">
+											62 ¥
+										</div>
+									</div>
+									<a href="./khoi-tao-don-dat-hang-ho-keyword-searching-detail.html" class="stretched-link"></a>
+								</div>
+							</div>
+							<div class="col">
+								<div class="support-card_product heading-6 rounded-3 p-2 bg-white position-relative overflow-hidden">
+									<div class="support-card_product__image">
+										<img src="./assets/images/product/product-2.png" class="w-100 img-fluid" alt="">
+									</div>
+									<div class="pt-2 vstack gap-1">
+										<div class="dark-color">
+											适用铃木悦帅GD110摩托车摩托车托车摩托车
+										</div>
+										<div class="hstack gap-2 justify-content-between">
+											<div class="primary-color">
+												252.000 đ
+											</div>
+											<div class="orange-color">
+												875 đã bán
+											</div>
+										</div>
+										<div class="gray-color">
+											62 ¥
+										</div>
+									</div>
+									<a href="./khoi-tao-don-dat-hang-ho-keyword-searching-detail.html" class="stretched-link"></a>
+								</div>
+							</div>
+							<div class="col">
+								<div class="support-card_product heading-6 rounded-3 p-2 bg-white position-relative overflow-hidden">
+									<div class="support-card_product__image">
+										<img src="./assets/images/product/product-2.png" class="w-100 img-fluid" alt="">
+									</div>
+									<div class="pt-2 vstack gap-1">
+										<div class="dark-color">
+											适用铃木悦帅GD110摩托车摩托车托车摩托车
+										</div>
+										<div class="hstack gap-2 justify-content-between">
+											<div class="primary-color">
+												252.000 đ
+											</div>
+											<div class="orange-color">
+												875 đã bán
+											</div>
+										</div>
+										<div class="gray-color">
+											62 ¥
+										</div>
+									</div>
+									<a href="./khoi-tao-don-dat-hang-ho-keyword-searching-detail.html" class="stretched-link"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section-footer position-fixed bottom-0 start-0 end-0 zi-10 bg-white w-100 p-3 pb-0">
+					<div class="section-footer_collapse position-absolute start-50 translate-middle-x">
+						<button type="button" data-bs-target="#card-footer_detail" data-bs-toggle="collapse"
+								class="section-footer_collapse__button pseudo button-reset"></button>
+					</div>
+					<div class="collapse" id="card-footer_detail">
+						<div class="vstack gap-3 pb-1">
+							<div class="heading-4">
+								Nguồn hàng
+							</div>
+							<div class="row g-2 row-cols-5 row-cols-md-6">
+								<div class="col">
+									<div class="feature-item p-2 position-relative text-center h-100 bg-white vstack align-items-center justify-content-center">
+										<div class="feature-item_icon">
+											<img src="./assets/images/webshop/taobao.png" alt="">
+										</div>
+										<div class="feature-item_title heading-5">
+											Taobao
+										</div>
+										<a href="" class="stretched-link"></a>
+									</div>
+								</div>
+								<div class="col">
+									<div class="feature-item is-active p-2 position-relative text-center h-100 bg-white vstack align-items-center justify-content-center">
+										<div class="feature-item_icon">
+											<img src="./assets/images/webshop/taobao.png" alt="">
+										</div>
+										<div class="feature-item_title heading-5">
+											Taobao
+										</div>
+										<a href="" class="stretched-link"></a>
+									</div>
+								</div>
+								<div class="col">
+									<div class="feature-item p-2 position-relative text-center h-100 bg-white vstack align-items-center justify-content-center">
+										<div class="feature-item_icon">
+											<img src="./assets/images/webshop/taobao.png" alt="">
+										</div>
+										<div class="feature-item_title heading-5">
+											Taobao
+										</div>
+										<a href="" class="stretched-link"></a>
+									</div>
+								</div>
+								<div class="col">
+									<div class="feature-item p-2 position-relative text-center h-100 bg-white vstack align-items-center justify-content-center">
+										<div class="feature-item_icon">
+											<img src="./assets/images/webshop/taobao.png" alt="">
+										</div>
+										<div class="feature-item_title heading-5">
+											Taobao
+										</div>
+										<a href="" class="stretched-link"></a>
+									</div>
+								</div>
+								<div class="col">
+									<div class="feature-item p-2 position-relative text-center h-100 bg-white vstack align-items-center justify-content-center">
+										<div class="feature-item_icon">
+											<img src="./assets/images/webshop/taobao.png" alt="">
+										</div>
+										<div class="feature-item_title heading-5">
+											Taobao
+										</div>
+										<a href="" class="stretched-link"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lookup-form user-form user-form_edit form-edit_user rounded-0 border-0 pt-2">
+						<div class="user-form_item form-edit_user__item vstack gap-10px">
+							<button type="submit" class="user-form_item__append button-reset">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+									 viewBox="0 0 24 24"
+									 fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										  d="M10.8989 4.92135C7.59758 4.92135 4.92135 7.59758 4.92135 10.8989C4.92135 14.2002 7.59758 16.8764 10.8989 16.8764C12.5498 16.8764 14.0429 16.2084 15.1256 15.1256C16.2084 14.0429 16.8764 12.5498 16.8764 10.8989C16.8764 7.59758 14.2002 4.92135 10.8989 4.92135ZM3 10.8989C3 6.53645 6.53645 3 10.8989 3C15.2613 3 18.7978 6.53645 18.7978 10.8989C18.7978 12.7335 18.1714 14.4231 17.1223 15.7637L21.7186 20.36C22.0938 20.7352 22.0938 21.3435 21.7186 21.7186C21.3435 22.0938 20.7352 22.0938 20.36 21.7186L15.7637 17.1223C14.4231 18.1714 12.7335 18.7978 10.8989 18.7978C6.53645 18.7978 3 15.2613 3 10.8989Z"
+										  fill="#191E24"></path>
+								</svg>
+							</button>
+							<input type="text" class="user-form_item__input form-edit_user__input"
+								   placeholder="Gõ từ khóa cần tìm">
+							<label class="user-form_item__label form-edit_user__label" for="">
+								Gõ từ khóa cần tìm
+							</label>
+						</div>
+					</div>
+					<div class="card-footer_buttons hstack gap-2 w-100 pb-3">
+						<a href="" class="button-theme button-background_gray flex-fill w-100">
+							Tìm kiếm
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/momment.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chart.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-labels.js"></script>
+<script type="text/javascript"
+		src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+
+</body>
+</html>
