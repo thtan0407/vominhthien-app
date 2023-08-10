@@ -1525,26 +1525,11 @@
 }
 
 .cart-wrapper .cart-actions .cart-action_button .cart-choose_item__radio {
-	position: absolute;
+	position: relative;
 	width: 24px;
 	height: 24px;
 	padding-left: 3px;
 	z-index: 2;
-	opacity: 0;
-	visibility: hidden;
-	pointer-events: none;
-}
-
-.cart-wrapper .cart-actions .cart-action_button.is-checkbox svg {
-	opacity: 0;
-	visibility: hidden;
-	pointer-events: none;
-}
-
-.cart-wrapper .cart-actions .cart-action_button.is-checkbox .cart-choose_item__radio {
-	opacity: 1;
-	visibility: visible;
-	pointer-events: auto;
 }
 
 .cart-wrapper .cart-actions .cart-action_collapse button svg {

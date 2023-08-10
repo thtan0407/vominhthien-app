@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>Template VMT App</title>
+	<meta name="description" content="Template VMT App">
+	<meta name="author" content="">
+
+	<meta property="og:title" content="Template VMT App">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="Template VMT App">
+	<meta property="og:image" content="">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		  rel="stylesheet">
+
+	<link rel="icon" href="./assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+	<link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="is-preloader">
+
+<div class="preloader-fullscreen animated-rotate vstack align-items-center justify-content-center">
+	<svg xmlns="http://www.w3.org/2000/svg"
+		 x="0px" y="0px" fill="#1A8917"
+		 width="60px" height="60px" viewBox="0 0 456.817 456.817">
+		<path d="M109.641,324.332c-11.423,0-21.13,3.997-29.125,11.991c-7.992,8.001-11.991,17.706-11.991,29.129
+			c0,11.424,3.996,21.129,11.991,29.13c7.998,7.994,17.705,11.991,29.125,11.991c11.231,0,20.889-3.997,28.98-11.991
+			c8.088-7.991,12.132-17.706,12.132-29.13c0-11.423-4.043-21.121-12.132-29.129C130.529,328.336,120.872,324.332,109.641,324.332z"
+		/>
+		<path d="M100.505,237.542c0-12.562-4.471-23.313-13.418-32.267c-8.946-8.946-19.702-13.418-32.264-13.418
+			c-12.563,0-23.317,4.473-32.264,13.418c-8.945,8.947-13.417,19.701-13.417,32.267c0,12.56,4.471,23.309,13.417,32.258
+			c8.947,8.949,19.701,13.422,32.264,13.422c12.562,0,23.318-4.473,32.264-13.422C96.034,260.857,100.505,250.102,100.505,237.542z"
+		/>
+		<path d="M365.454,132.48c6.276,0,11.662-2.24,16.129-6.711c4.473-4.475,6.714-9.854,6.714-16.134
+			c0-6.283-2.241-11.658-6.714-16.13c-4.47-4.475-9.853-6.711-16.129-6.711c-6.283,0-11.663,2.24-16.136,6.711
+			c-4.47,4.473-6.707,9.847-6.707,16.13s2.237,11.659,6.707,16.134C353.791,130.244,359.171,132.48,365.454,132.48z"/>
+		<path d="M109.644,59.388c-13.897,0-25.745,4.902-35.548,14.703c-9.804,9.801-14.703,21.65-14.703,35.544
+			c0,13.899,4.899,25.743,14.703,35.548c9.806,9.804,21.654,14.705,35.548,14.705s25.743-4.904,35.544-14.705
+			c9.801-9.805,14.703-21.652,14.703-35.548c0-13.894-4.902-25.743-14.703-35.544C135.387,64.29,123.538,59.388,109.644,59.388z"/>
+		<path d="M439.684,218.125c-5.328-5.33-11.799-7.992-19.41-7.992c-7.618,0-14.089,2.662-19.417,7.992
+			c-5.325,5.33-7.987,11.803-7.987,19.421c0,7.61,2.662,14.092,7.987,19.41c5.331,5.332,11.799,7.994,19.417,7.994
+			c7.611,0,14.086-2.662,19.41-7.994c5.332-5.324,7.991-11.8,7.991-19.41C447.675,229.932,445.02,223.458,439.684,218.125z"/>
+		<path d="M365.454,333.473c-8.761,0-16.279,3.138-22.562,9.421c-6.276,6.276-9.418,13.798-9.418,22.559
+			c0,8.754,3.142,16.276,9.418,22.56c6.283,6.282,13.802,9.417,22.562,9.417c8.754,0,16.272-3.141,22.555-9.417
+			c6.283-6.283,9.422-13.802,9.422-22.56c0-8.761-3.139-16.275-9.422-22.559C381.727,336.61,374.208,333.473,365.454,333.473z"/>
+		<path d="M237.547,383.717c-10.088,0-18.702,3.576-25.844,10.715c-7.135,7.139-10.705,15.748-10.705,25.837
+			s3.566,18.699,10.705,25.837c7.142,7.139,15.752,10.712,25.844,10.712c10.089,0,18.699-3.573,25.838-10.712
+			c7.139-7.138,10.708-15.748,10.708-25.837s-3.569-18.698-10.708-25.837S247.636,383.717,237.547,383.717z"/>
+		<path d="M237.547,0c-15.225,0-28.174,5.327-38.834,15.986c-10.657,10.66-15.986,23.606-15.986,38.832
+			c0,15.227,5.327,28.167,15.986,38.828c10.66,10.657,23.606,15.987,38.834,15.987c15.232,0,28.172-5.327,38.828-15.987
+			c10.656-10.656,15.985-23.601,15.985-38.828c0-15.225-5.329-28.168-15.985-38.832C265.719,5.33,252.779,0,237.547,0z"/>
+	</svg>
+</div>
+
+<div class="modal fade modal-copy" id="modal-copy" data-bs-backdrop="static" data-bs-keyboard="false">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content border-0">
+			<div class="modal-header p-3 border-0 bg-transparent justify-content-center">
+				<div class="modal-title mb-0 text-white text-center heading-3">
+					Sản phẩm bạn vừa copy
+				</div>
+			</div>
+			<div class="modal-body p-3 bg-white">
+				<div class="product-copy">
+					<div class="product-copy_header gap-2 hstack align-items-center">
+						<div class="heading-4 black-50-color">
+							Shop:
+						</div>
+						<div class="heading-4 black-50-color gap-1 hstack align-items-center">
+							<img src="./assets/images/icon/tmall.png" width="16" height="16" class="mw-100" alt="">
+							diw迪威
+						</div>
+					</div>
+					<div class="product-item hstack gap-3">
+						<div class="product-item_image overflow-hidden flex-shrink-0">
+							<img src="./assets/images/product/product-1.png" width="120" height="120" class="mw-100"
+								 alt="">
+						</div>
+						<div class="product-item_content vstack gap-2">
+							<div class="product-item_title dark-color">
+								适用摩托车摩托铃木悦帅GD110摩托车摩托车...
+							</div>
+							<div class="product-item_information hstack gap-3 justify-content-between">
+								<div class="primary-color heading-4">252.000 đ</div>
+								<div class="orange-color heading-4">Đã bán 756</div>
+							</div>
+							<div class="product-item_information">
+								<div class="gray-color heading-4">67 ¥</div>
+							</div>
+							<div class="product-item_information hstack gap-4">
+								<div class="gray-color heading-4">Điều kiện</div>
+								<div class="orange-color heading-4">>= 3</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer p-3 border-top-0 bg-transparent justify-content-center gap-2 flex-nowrap rounded-0">
+				<a href="" class="button-theme button-gradient_green m-0 w-100">
+					Xem sản phẩm
+				</a>
+				<button type="button" data-bs-dismiss="modal" class="button-theme button-background_white m-0">
+					Bỏ qua
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="floating-copy">
+	<a href="" class="d-inline-flex align-middle text-white fw-bold align-items-center">
+		<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+			<path d="M20.69 14.06L19.56 12.18C19.31 11.77 19.09 10.98 19.09 10.5V8.62999C19.09 4.99999 16.14 2.04999 12.52 2.04999C8.88996 2.05999 5.93996 4.99999 5.93996 8.62999V10.49C5.93996 10.97 5.71996 11.76 5.47996 12.17L4.34996 14.05C3.91996 14.78 3.81996 15.61 4.08996 16.33C4.35996 17.06 4.96996 17.64 5.76996 17.9C6.84996 18.26 7.93996 18.52 9.04996 18.71C9.15996 18.73 9.26996 18.74 9.37996 18.76C9.51996 18.78 9.66996 18.8 9.81996 18.82C10.08 18.86 10.34 18.89 10.61 18.91C11.24 18.97 11.88 19 12.52 19C13.15 19 13.78 18.97 14.4 18.91C14.63 18.89 14.86 18.87 15.08 18.84C15.26 18.82 15.44 18.8 15.62 18.77C15.73 18.76 15.84 18.74 15.95 18.72C17.07 18.54 18.18 18.26 19.26 17.9C20.03 17.64 20.62 17.06 20.9 16.32C21.18 15.57 21.1 14.75 20.69 14.06ZM13.25 9.99999C13.25 10.42 12.91 10.76 12.49 10.76C12.07 10.76 11.73 10.42 11.73 9.99999V6.89999C11.73 6.47999 12.07 6.13999 12.49 6.13999C12.91 6.13999 13.25 6.47999 13.25 6.89999V9.99999Z"
+				  fill="url(#paint0_linear_1390_30412)"/>
+			<path d="M15.3299 20.01C14.9099 21.17 13.7999 22 12.4999 22C11.7099 22 10.9299 21.68 10.3799 21.11C10.0599 20.81 9.81993 20.41 9.67993 20C9.80993 20.02 9.93993 20.03 10.0799 20.05C10.3099 20.08 10.5499 20.11 10.7899 20.13C11.3599 20.18 11.9399 20.21 12.5199 20.21C13.0899 20.21 13.6599 20.18 14.2199 20.13C14.4299 20.11 14.6399 20.1 14.8399 20.07C14.9999 20.05 15.1599 20.03 15.3299 20.01Z"
+				  fill="url(#paint1_linear_1390_30412)"/>
+			<defs>
+				<linearGradient id="paint0_linear_1390_30412" x1="12.7053" y1="31.1471" x2="18.0215" y2="12.4313"
+								gradientUnits="userSpaceOnUse">
+					<stop stop-color="#178317"/>
+					<stop offset="0.924979" stop-color="#1AB616"/>
+				</linearGradient>
+				<linearGradient id="paint1_linear_1390_30412" x1="12.5718" y1="23.4333" x2="12.8118" y2="21.0711"
+								gradientUnits="userSpaceOnUse">
+					<stop stop-color="#178317"/>
+					<stop offset="0.924979" stop-color="#1AB616"/>
+				</linearGradient>
+			</defs>
+		</svg>
+		<span class="hstack align-items-center justify-content-center">
+			Xem sản phẩm vừa Copy
+			<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+				<path fill-rule="evenodd" clip-rule="evenodd"
+					  d="M6.02851 12.4714C5.76816 12.211 5.76816 11.7889 6.02851 11.5286L9.55711 7.99999L6.02851 4.47139C5.76816 4.21104 5.76816 3.78893 6.02851 3.52859C6.28886 3.26824 6.71097 3.26824 6.97132 3.52859L10.9713 7.52859C11.2317 7.78893 11.2317 8.21104 10.9713 8.47139L6.97132 12.4714C6.71097 12.7317 6.28886 12.7317 6.02851 12.4714Z"
+					  fill="white"/>
+			</svg>
+		</span>
+	</a>
+</div>
+
+<div class="vstack position-relative min-vh-100 h-100 overflow-hidden">
+
+	<header id="header" class="header bg-white position-fixed top-0 start-0 end-0 zi-10 w-100">
+		<div class="container">
+			<div class="hstack justify-content-between gap-5">
+				<div class="header-left hstack gap-10px">
+					<button type="button" class="header-icon button-reset"
+							id="btnOpen-navigation" role="button">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								  d="M3.6001 5.99999C3.6001 5.68173 3.72653 5.3765 3.95157 5.15146C4.17661 4.92642 4.48184 4.79999 4.8001 4.79999H19.2001C19.5184 4.79999 19.8236 4.92642 20.0486 5.15146C20.2737 5.3765 20.4001 5.68173 20.4001 5.99999C20.4001 6.31825 20.2737 6.62347 20.0486 6.84852C19.8236 7.07356 19.5184 7.19999 19.2001 7.19999H4.8001C4.48184 7.19999 4.17661 7.07356 3.95157 6.84852C3.72653 6.62347 3.6001 6.31825 3.6001 5.99999ZM3.6001 12C3.6001 11.6817 3.72653 11.3765 3.95157 11.1515C4.17661 10.9264 4.48184 10.8 4.8001 10.8H19.2001C19.5184 10.8 19.8236 10.9264 20.0486 11.1515C20.2737 11.3765 20.4001 11.6817 20.4001 12C20.4001 12.3182 20.2737 12.6235 20.0486 12.8485C19.8236 13.0736 19.5184 13.2 19.2001 13.2H4.8001C4.48184 13.2 4.17661 13.0736 3.95157 12.8485C3.72653 12.6235 3.6001 12.3182 3.6001 12ZM3.6001 18C3.6001 17.6817 3.72653 17.3765 3.95157 17.1515C4.17661 16.9264 4.48184 16.8 4.8001 16.8H12.0001C12.3184 16.8 12.6236 16.9264 12.8486 17.1515C13.0737 17.3765 13.2001 17.6817 13.2001 18C13.2001 18.3182 13.0737 18.6235 12.8486 18.8485C12.6236 19.0736 12.3184 19.2 12.0001 19.2H4.8001C4.48184 19.2 4.17661 19.0736 3.95157 18.8485C3.72653 18.6235 3.6001 18.3182 3.6001 18Z"
+								  fill="#191E24"/>
+						</svg>
+					</button>
+					<div class="header-logo">
+						<a href="/" class="d-inline-flex align-middle">
+							<img src="./assets/images/logo-icon_primary.png" width="24" height="20"
+								 class="mw-100 w-auto"
+								 alt="">
+						</a>
+					</div>
+				</div>
+				<div class="header-right hstack gap-10px">
+					<div class="header-text hstack gap-10px fw-bold text-black">
+						Tỉ giá <span class="primary-color">1 Y = 3650đ</span>
+					</div>
+					<div class="header-search">
+						<button class="header-button button-reset" type="button">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+								 fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									  d="M10.8989 4.92135C7.59758 4.92135 4.92135 7.59758 4.92135 10.8989C4.92135 14.2002 7.59758 16.8764 10.8989 16.8764C12.5498 16.8764 14.0429 16.2084 15.1256 15.1256C16.2084 14.0429 16.8764 12.5498 16.8764 10.8989C16.8764 7.59758 14.2002 4.92135 10.8989 4.92135ZM3 10.8989C3 6.53645 6.53645 3 10.8989 3C15.2613 3 18.7978 6.53645 18.7978 10.8989C18.7978 12.7335 18.1714 14.4231 17.1223 15.7637L21.7186 20.36C22.0938 20.7352 22.0938 21.3435 21.7186 21.7186C21.3435 22.0938 20.7352 22.0938 20.36 21.7186L15.7637 17.1223C14.4231 18.1714 12.7335 18.7978 10.8989 18.7978C6.53645 18.7978 3 15.2613 3 10.8989Z"
+									  fill="#191E24"/>
+							</svg>
+						</button>
+					</div>
+					<div class="header-cart">
+						<button class="header-button button-reset" type="button">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+								 fill="none">
+								<path d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001"
+									  stroke="#212C28" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+									  stroke-linejoin="round"/>
+								<path d="M9.00007 22H15.0001C19.0201 22 19.7401 20.39 19.9501 18.43L20.7001 12.43C20.9701 9.99 20.2701 8 16.0001 8H8.00007C3.73007 8 3.03007 9.99 3.30007 12.43L4.05007 18.43C4.26007 20.39 4.98007 22 9.00007 22Z"
+									  stroke="#212C28" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+									  stroke-linejoin="round"/>
+								<path d="M15.4955 12H15.5045" stroke="#212C28" stroke-width="2" stroke-linecap="round"
+									  stroke-linejoin="round"/>
+								<path d="M8.49451 12H8.50349" stroke="#212C28" stroke-width="2" stroke-linecap="round"
+									  stroke-linejoin="round"/>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-floating position-fixed top-0 start-0 vh-100 bg-white transition-default w-100">
+			<div class="vstack h-100 gap-15px">
+				<div class="header-top">
+					<div class="container">
+						<div class="hstack justify-content-between gap-5">
+							<div class="header-left hstack gap-10px">
+								<button type="button" class="header-icon button-reset"
+										id="btnClose-navigation" role="button">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+										 fill="none">
+										<path d="M5 5L12 12M12 12L19 19M12 12L19 5M12 12L5 19" stroke="#444444"
+											  stroke-width="1.8"
+											  stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+								<div class="header-logo">
+									<a href="/" class="d-inline-flex align-middle">
+										<img src="./assets/images/logo-text_hoz_primary.png" width="123" height="32"
+											 class="mw-100 w-auto"
+											 alt="">
+									</a>
+								</div>
+							</div>
+							<div class="header-right hstack gap-10px">
+								<div class="header-text hstack gap-10px fw-bold text-black">
+									Tỉ giá <span class="primary-color">1 Y = 3650đ</span>
+								</div>
+								<div class="header-search">
+									<button class="header-button button-reset" type="button">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+											 viewBox="0 0 24 24"
+											 fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												  d="M10.8989 4.92135C7.59758 4.92135 4.92135 7.59758 4.92135 10.8989C4.92135 14.2002 7.59758 16.8764 10.8989 16.8764C12.5498 16.8764 14.0429 16.2084 15.1256 15.1256C16.2084 14.0429 16.8764 12.5498 16.8764 10.8989C16.8764 7.59758 14.2002 4.92135 10.8989 4.92135ZM3 10.8989C3 6.53645 6.53645 3 10.8989 3C15.2613 3 18.7978 6.53645 18.7978 10.8989C18.7978 12.7335 18.1714 14.4231 17.1223 15.7637L21.7186 20.36C22.0938 20.7352 22.0938 21.3435 21.7186 21.7186C21.3435 22.0938 20.7352 22.0938 20.36 21.7186L15.7637 17.1223C14.4231 18.1714 12.7335 18.7978 10.8989 18.7978C6.53645 18.7978 3 15.2613 3 10.8989Z"
+												  fill="#191E24"/>
+										</svg>
+									</button>
+								</div>
+								<div class="header-cart">
+									<button class="header-button button-reset" type="button">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+											 viewBox="0 0 24 24"
+											 fill="none">
+											<path d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001"
+												  stroke="#212C28" stroke-width="1.5" stroke-miterlimit="10"
+												  stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path d="M9.00007 22H15.0001C19.0201 22 19.7401 20.39 19.9501 18.43L20.7001 12.43C20.9701 9.99 20.2701 8 16.0001 8H8.00007C3.73007 8 3.03007 9.99 3.30007 12.43L4.05007 18.43C4.26007 20.39 4.98007 22 9.00007 22Z"
+												  stroke="#212C28" stroke-width="1.5" stroke-miterlimit="10"
+												  stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path d="M15.4955 12H15.5045" stroke="#212C28" stroke-width="2"
+												  stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path d="M8.49451 12H8.50349" stroke="#212C28" stroke-width="2"
+												  stroke-linecap="round"
+												  stroke-linejoin="round"/>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header-body scrollbar">
+					<div class="container">
+						<div class="header-navigation" id="header-navigation">
+							<ul class="list-unstyled mb-0">
+								<li>
+									<a href="#dich-vu" data-bs-toggle="collapse"
+									   class="header-navigation_item text-uppercase fw-bold">
+										Dịch vụ
+										<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+											 viewBox="0 0 25 24"
+											 fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												  d="M5.79481 8.29289C6.18529 7.90237 6.81839 7.90237 7.20887 8.29289L12.5012 13.5858L17.7935 8.29289C18.1839 7.90237 18.817 7.90237 19.2075 8.29289C19.598 8.68342 19.598 9.31658 19.2075 9.70711L13.2082 15.7071C12.8177 16.0976 12.1846 16.0976 11.7941 15.7071L5.79481 9.70711C5.40433 9.31658 5.40433 8.68342 5.79481 8.29289Z"
+												  fill="#191E24"/>
+										</svg>
+									</a>
+									<ul class="list-unstyled mb-0 collapse" data-bs-parent="#header-navigation"
+										id="dich-vu">
+										<li>
+											<a href="" class="header-navigation_item fw-semibold">
+												Đặt hàng Trung Quốc
+											</a>
+										</li>
+										<li>
+											<a href="" class="header-navigation_item fw-semibold">
+												Thanh toán hộ
+											</a>
+										</li>
+										<li>
+											<a href="" class="header-navigation_item fw-semibold">
+												Vận chuyển hộ
+											</a>
+										</li>
+										<li>
+											<a href="" class="header-navigation_item fw-semibold">
+												Nhập khẩu chính ngạch
+											</a>
+										</li>
+										<li>
+											<a href="" class="header-navigation_item fw-semibold">
+												Gửi hàng sang Trung Quốc
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#huong-dan" data-bs-toggle="collapse"
+									   class="header-navigation_item text-uppercase fw-bold">
+										Hướng dẫn
+										<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+											 viewBox="0 0 25 24"
+											 fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												  d="M5.79481 8.29289C6.18529 7.90237 6.81839 7.90237 7.20887 8.29289L12.5012 13.5858L17.7935 8.29289C18.1839 7.90237 18.817 7.90237 19.2075 8.29289C19.598 8.68342 19.598 9.31658 19.2075 9.70711L13.2082 15.7071C12.8177 16.0976 12.1846 16.0976 11.7941 15.7071L5.79481 9.70711C5.40433 9.31658 5.40433 8.68342 5.79481 8.29289Z"
+												  fill="#191E24"/>
+										</svg>
+									</a>
+									<ul class="list-unstyled mb-0 collapse" data-bs-parent="#header-navigation"
+										id="huong-dan">
+										<li>
+											<a href="" class="header-navigation_item fw-semibold">
+												Sử dụng công cụ VMT
+											</a>
+										</li>
+										<li>
+											<a href="" class="header-navigation_item fw-semibold">
+												Quy trình đặt hàng hộ
+											</a>
+										</li>
+										<li>
+											<a href="" class="header-navigation_item fw-semibold">
+												Các bước thanh toán hộ
+											</a>
+										</li>
+										<li>
+											<a href="" class="header-navigation_item fw-semibold">
+												Gửi hàng sang Trung Quốc
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#bieu-phi" data-bs-toggle="collapse"
+									   class="header-navigation_item text-uppercase fw-bold">
+										Biểu Phí
+										<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+											 viewBox="0 0 25 24"
+											 fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												  d="M5.79481 8.29289C6.18529 7.90237 6.81839 7.90237 7.20887 8.29289L12.5012 13.5858L17.7935 8.29289C18.1839 7.90237 18.817 7.90237 19.2075 8.29289C19.598 8.68342 19.598 9.31658 19.2075 9.70711L13.2082 15.7071C12.8177 16.0976 12.1846 16.0976 11.7941 15.7071L5.79481 9.70711C5.40433 9.31658 5.40433 8.68342 5.79481 8.29289Z"
+												  fill="#191E24"/>
+										</svg>
+									</a>
+									<ul class="list-unstyled mb-0 collapse" data-bs-parent="#header-navigation"
+										id="bieu-phi">
+										<li>
+											<a href="" class="header-navigation_item fw-semibold">
+												Đặt hàng Trung Quốc
+											</a>
+										</li>
+										<li>
+											<a href="" class="header-navigation_item fw-semibold">
+												Thanh toán hộ
+											</a>
+										</li>
+										<li>
+											<a href="" class="header-navigation_item fw-semibold">
+												Vận chuyển hộ
+											</a>
+										</li>
+										<li>
+											<a href="" class="header-navigation_item fw-semibold">
+												Gửi hàng sang Trung Quốc
+											</a>
+										</li>
+										<li>
+											<a href="" class="header-navigation_item fw-semibold">
+												Phí nẹp giấy, đóng gỗ
+											</a>
+										</li>
+										<li>
+											<a href="" class="header-navigation_item fw-semibold">
+												Phí kiểm đếm, bảo hiểm
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#chinh-sach" data-bs-toggle="collapse"
+									   class="header-navigation_item text-uppercase fw-bold">
+										Chính sách
+										<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+											 viewBox="0 0 25 24"
+											 fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												  d="M5.79481 8.29289C6.18529 7.90237 6.81839 7.90237 7.20887 8.29289L12.5012 13.5858L17.7935 8.29289C18.1839 7.90237 18.817 7.90237 19.2075 8.29289C19.598 8.68342 19.598 9.31658 19.2075 9.70711L13.2082 15.7071C12.8177 16.0976 12.1846 16.0976 11.7941 15.7071L5.79481 9.70711C5.40433 9.31658 5.40433 8.68342 5.79481 8.29289Z"
+												  fill="#191E24"/>
+										</svg>
+									</a>
+									<ul class="list-unstyled mb-0 collapse" data-bs-parent="#header-navigation"
+										id="chinh-sach">
+										<li>
+											<a href="" class="header-navigation_item fw-semibold">
+												Chính xác vận chuyển
+											</a>
+										</li>
+										<li>
+											<a href="" class="header-navigation_item fw-semibold">
+												Chính sách thanh toán hộ
+											</a>
+										</li>
+										<li>
+											<a href="" class="header-navigation_item fw-semibold">
+												Chính sách bảo mật
+											</a>
+										</li>
+										<li>
+											<a href="" class="header-navigation_item fw-semibold">
+												Chính sách đặt hàng
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href=""
+									   class="header-navigation_item text-uppercase fw-bold">
+										Blog
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="vstack flex-fill overflow-hidden position-relative">
+		<div class="screen-overflow">
+			<main id="main" class="main main-spacing">
+				<div class="section-hero pseudo" style="--bg: url('../images/background/background-hero.png')">
+					<div class="container">
+						<div class="row">
+							<div class="col-6">
+								<div class="hero-title heading-1">
+									Chào mừng trở lại, <br>Storage X !
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section-wallet shadow-pseudo">
+					<div class="container">
+						<div class="wallet-inner vstack gap-3 p-3 bg-white">
+							<div class="wallet-top hstack align-items-center justify-content-between">
+								<div class="wallet-balance hstack align-items-center gap-2 heading-3 primary-color">
+									Số dư
+									<button type="button"
+											class=" hstack align-items-center justify-content-center button-reset text-black"
+											id="button-visibility">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+											 viewBox="0 0 24 24"
+											 fill="none">
+											<path d="M12 7C14.76 7 17 9.24 17 12C17 12.65 16.87 13.26 16.64 13.83L19.56 16.75C21.07 15.49 22.26 13.86 22.99 12C21.26 7.61 16.99 4.5 11.99 4.5C10.59 4.5 9.25 4.75 8.01 5.2L10.17 7.36C10.74 7.13 11.35 7 12 7ZM2 4.27L4.28 6.55L4.74 7.01C3.08 8.3 1.78 10.02 1 12C2.73 16.39 7 19.5 12 19.5C13.55 19.5 15.03 19.2 16.38 18.66L16.8 19.08L19.73 22L21 20.73L3.27 3L2 4.27ZM7.53 9.8L9.08 11.35C9.03 11.56 9 11.78 9 12C9 13.66 10.34 15 12 15C12.22 15 12.44 14.97 12.65 14.92L14.2 16.47C13.53 16.8 12.79 17 12 17C9.24 17 7 14.76 7 12C7 11.21 7.2 10.47 7.53 9.8ZM11.84 9.02L14.99 12.17L15.01 12.01C15.01 10.35 13.67 9.01 12.01 9.01L11.84 9.02Z"
+												  fill="#191E24"/>
+										</svg>
+									</button>
+								</div>
+								<div class="wallet-price heading-3" id="element-visibility">
+									10.234.000 đ
+								</div>
+							</div>
+							<div class="wallet-bottom hstack align-items-center justify-content-between">
+								<a href="" class="button-text">
+									Lịch sử giao dịch
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
+										 fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											  d="M6.91083 15.7626C6.58539 15.4371 6.58539 14.9095 6.91083 14.5841L11.3216 10.1733L6.91083 5.76257C6.58539 5.43714 6.58539 4.9095 6.91083 4.58406C7.23626 4.25863 7.7639 4.25862 8.08934 4.58406L13.0893 9.58406C13.4148 9.9095 13.4148 10.4371 13.0893 10.7626L8.08934 15.7626C7.7639 16.088 7.23626 16.088 6.91083 15.7626Z"
+											  fill="#1A8917"/>
+									</svg>
+								</a>
+								<a href="" class="button-theme button-gradient_green">
+									Nạp tiền
+									<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"
+										 fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											  d="M1.96882 12.0763C1.96096 6.00122 6.87945 1.06998 12.9546 1.06212C19.0297 1.05426 23.9609 5.97275 23.9688 12.0479C23.9767 18.123 19.0582 23.0542 12.9831 23.0621C6.90792 23.07 1.97669 18.1515 1.96882 12.0763ZM12.9572 3.06212C7.98661 3.06855 3.96239 7.1032 3.96882 12.0738C3.97526 17.0443 8.0099 21.0685 12.9805 21.0621C17.951 21.0557 21.9752 17.021 21.9688 12.0505C21.9624 7.0799 17.9277 3.05569 12.9572 3.06212ZM12.9623 7.06211C13.5146 7.0614 13.9629 7.50854 13.9636 8.06082L13.9675 11.0608L16.9675 11.0569C17.5198 11.0562 17.9681 11.5034 17.9688 12.0556C17.9695 12.6079 17.5224 13.0562 16.9701 13.0569L13.9701 13.0608L13.974 16.0608C13.9747 16.6131 13.5276 17.0614 12.9753 17.0621C12.423 17.0628 11.9747 16.6157 11.974 16.0634L11.9701 13.0634L8.97011 13.0673C8.41783 13.068 7.96953 12.6209 7.96882 12.0686C7.96811 11.5163 8.41524 11.068 8.96753 11.0673L11.9675 11.0634L11.9636 8.06341C11.9629 7.51112 12.4101 7.06283 12.9623 7.06211Z"
+											  fill="white"/>
+										<path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+											  d="M3.96892 12.0737C3.96249 7.10316 7.98671 3.06852 12.9573 3.06208C17.9278 3.05565 21.9625 7.07987 21.9689 12.0504C21.9753 17.021 17.9511 21.0556 12.9806 21.0621C8.01 21.0685 3.97535 17.0443 3.96892 12.0737ZM12.9624 7.06208C13.5147 7.06137 13.963 7.5085 13.9637 8.06079L13.9676 11.0608L16.9676 11.0569C17.5199 11.0562 17.9682 11.5033 17.9689 12.0556C17.9696 12.6079 17.5225 13.0562 16.9702 13.0569L13.9702 13.0608L13.9741 16.0608C13.9748 16.6131 13.5277 17.0614 12.9754 17.0621C12.4231 17.0628 11.9748 16.6157 11.9741 16.0634L11.9702 13.0634L8.97021 13.0673C8.41793 13.068 7.96963 12.6208 7.96892 12.0685C7.9682 11.5163 8.41534 11.068 8.96762 11.0673L11.9676 11.0634L11.9637 8.06337C11.963 7.51109 12.4102 7.06279 12.9624 7.06208Z"
+											  fill="white"/>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section-features section-gap">
+					<div class="container">
+						<div class="row row-cols-4 g-2">
+							<div class="col">
+								<div class="feature-item position-relative text-center h-100 bg-white vstack align-items-center justify-content-center">
+									<div class="feature-item_icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25"
+											 viewBox="0 0 24 25"
+											 fill="none">
+											<path d="M2 2.17334V19.1733C2 20.8333 3.34 22.1733 5 22.1733H22"
+												  stroke="#1A8917"
+												  stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path opacity="0.4"
+												  d="M5 17.1733L9.59 11.8134C10.35 10.9334 11.7 10.8733 12.52 11.7033L13.47 12.6534C14.29 13.4734 15.64 13.4233 16.4 12.5433L21 7.17334"
+												  stroke="#1A8917" stroke-width="1.5" stroke-miterlimit="10"
+												  stroke-linecap="round"
+												  stroke-linejoin="round"/>
+										</svg>
+									</div>
+									<div class="feature-item_title heading-5">
+										Tra cứu<br>tỉ giá
+									</div>
+									<a href="" class="stretched-link"></a>
+								</div>
+							</div>
+							<div class="col">
+								<div class="feature-item position-relative text-center h-100 bg-white vstack align-items-center justify-content-center">
+									<div class="feature-item_icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+											 viewBox="0 0 25 25"
+											 fill="none">
+											<path d="M10.3333 22.1733H14.3333C19.3333 22.1733 21.3333 20.1733 21.3333 15.1733V9.17334C21.3333 4.17334 19.3333 2.17334 14.3333 2.17334H10.3333C5.33325 2.17334 3.33325 4.17334 3.33325 9.17334V15.1733C3.33325 20.1733 5.33325 22.1733 10.3333 22.1733Z"
+												  stroke="#0077AA" stroke-width="1.5" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path opacity="0.4"
+												  d="M16.8333 7.75336V8.75336C16.8333 9.57336 16.1633 10.2534 15.3333 10.2534H9.33325C8.51325 10.2534 7.83325 9.58336 7.83325 8.75336V7.75336C7.83325 6.93336 8.50325 6.25336 9.33325 6.25336H15.3333C16.1633 6.25336 16.8333 6.92336 16.8333 7.75336Z"
+												  stroke="#0077AA" stroke-width="1.5" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path opacity="0.4" d="M8.46937 14.1733H8.48092" stroke="#0077AA"
+												  stroke-width="2"
+												  stroke-linecap="round" stroke-linejoin="round"/>
+											<path opacity="0.4" d="M12.3285 14.1733H12.3401" stroke="#0077AA"
+												  stroke-width="2"
+												  stroke-linecap="round" stroke-linejoin="round"/>
+											<path opacity="0.4" d="M16.1876 14.1733H16.1992" stroke="#0077AA"
+												  stroke-width="2"
+												  stroke-linecap="round" stroke-linejoin="round"/>
+											<path opacity="0.4" d="M8.46937 17.6733H8.48092" stroke="#0077AA"
+												  stroke-width="2"
+												  stroke-linecap="round" stroke-linejoin="round"/>
+											<path opacity="0.4" d="M12.3285 17.6733H12.3401" stroke="#0077AA"
+												  stroke-width="2"
+												  stroke-linecap="round" stroke-linejoin="round"/>
+											<path opacity="0.4" d="M16.1876 17.6733H16.1992" stroke="#0077AA"
+												  stroke-width="2"
+												  stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+									<div class="feature-item_title heading-5">
+										Tính cước<br>vận chuyển
+									</div>
+									<a href="" class="stretched-link"></a>
+								</div>
+							</div>
+							<div class="col">
+								<div class="feature-item position-relative text-center h-100 bg-white vstack align-items-center justify-content-center">
+									<div class="feature-item_icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+											 viewBox="0 0 25 25"
+											 fill="none">
+											<path opacity="0.4"
+												  d="M12.6667 14.1733H13.6667C14.7667 14.1733 15.6667 13.2733 15.6667 12.1733V2.17334H6.66675C5.16675 2.17334 3.85676 3.00333 3.17676 4.22333"
+												  stroke="#E9750E" stroke-width="1.5" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path d="M2.66675 17.1733C2.66675 18.8333 4.00675 20.1733 5.66675 20.1733H6.66675C6.66675 19.0733 7.56675 18.1733 8.66675 18.1733C9.76675 18.1733 10.6667 19.0733 10.6667 20.1733H14.6667C14.6667 19.0733 15.5667 18.1733 16.6667 18.1733C17.7667 18.1733 18.6667 19.0733 18.6667 20.1733H19.6667C21.3267 20.1733 22.6667 18.8333 22.6667 17.1733V14.1733H19.6667C19.1167 14.1733 18.6667 13.7233 18.6667 13.1733V10.1733C18.6667 9.62334 19.1167 9.17334 19.6667 9.17334H20.9567L19.2468 6.18335C18.8868 5.56335 18.2268 5.17334 17.5068 5.17334H15.6667V12.1733C15.6667 13.2733 14.7667 14.1733 13.6667 14.1733H12.6667"
+												  stroke="#E9750E" stroke-width="1.5" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path d="M8.66675 22.1733C9.77132 22.1733 10.6667 21.2779 10.6667 20.1733C10.6667 19.0688 9.77132 18.1733 8.66675 18.1733C7.56218 18.1733 6.66675 19.0688 6.66675 20.1733C6.66675 21.2779 7.56218 22.1733 8.66675 22.1733Z"
+												  stroke="#E9750E" stroke-width="1.5" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path d="M16.6667 22.1733C17.7713 22.1733 18.6667 21.2779 18.6667 20.1733C18.6667 19.0688 17.7713 18.1733 16.6667 18.1733C15.5622 18.1733 14.6667 19.0688 14.6667 20.1733C14.6667 21.2779 15.5622 22.1733 16.6667 22.1733Z"
+												  stroke="#E9750E" stroke-width="1.5" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path d="M22.6667 12.1733V14.1733H19.6667C19.1167 14.1733 18.6667 13.7233 18.6667 13.1733V10.1733C18.6667 9.62334 19.1167 9.17334 19.6667 9.17334H20.9567L22.6667 12.1733Z"
+												  stroke="#E9750E" stroke-width="1.5" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path d="M2.66675 8.17334H8.66675" stroke="#E9750E" stroke-width="1.5"
+												  stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M2.66675 11.1733H6.66675" stroke="#E9750E" stroke-width="1.5"
+												  stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M2.66675 14.1733H4.66675" stroke="#E9750E" stroke-width="1.5"
+												  stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+									<div class="feature-item_title heading-5">
+										Tra cứu<br>vận đơn
+									</div>
+									<a href="" class="stretched-link"></a>
+								</div>
+							</div>
+							<div class="col">
+								<div class="feature-item position-relative text-center h-100 bg-white vstack align-items-center justify-content-center">
+									<div class="feature-item_icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25"
+											 viewBox="0 0 24 25"
+											 fill="none">
+											<path d="M12 20.6733H7C4 20.6733 2 19.1733 2 15.6733V8.67334C2 5.17334 4 3.67334 7 3.67334H17C20 3.67334 22 5.17334 22 8.67334V11.6733"
+												  stroke="#EF5DA8" stroke-width="1.5" stroke-miterlimit="10"
+												  stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path opacity="0.4"
+												  d="M17 9.17334L13.87 11.6733C12.84 12.4933 11.15 12.4933 10.12 11.6733L7 9.17334"
+												  stroke="#EF5DA8" stroke-width="1.5" stroke-miterlimit="10"
+												  stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<g opacity="0.4">
+												<path d="M18.2 21.5733C19.9673 21.5733 21.4 20.1407 21.4 18.3734C21.4 16.606 19.9673 15.1733 18.2 15.1733C16.4327 15.1733 15 16.606 15 18.3734C15 20.1407 16.4327 21.5733 18.2 21.5733Z"
+													  stroke="#EF5DA8" stroke-width="1.5" stroke-linecap="round"
+													  stroke-linejoin="round"/>
+												<path d="M22 22.1733L21 21.1733" stroke="#EF5DA8" stroke-width="1.5"
+													  stroke-linecap="round" stroke-linejoin="round"/>
+											</g>
+										</svg>
+									</div>
+									<div class="feature-item_title heading-5">
+										Tra cứu<br>Email TTH
+									</div>
+									<a href="" class="stretched-link"></a>
+								</div>
+							</div>
+							<div class="col">
+								<div class="feature-item position-relative text-center h-100 bg-white vstack align-items-center justify-content-center">
+									<div class="feature-item_icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25"
+											 viewBox="0 0 24 25"
+											 fill="none">
+											<path d="M2 22.1733H22" stroke="#5D5FEF" stroke-width="1.5"
+												  stroke-miterlimit="10"
+												  stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M2.94995 22.1734L2.99995 10.1433C2.99995 9.53333 3.28995 8.95338 3.76995 8.57338L10.77 3.12337C11.49 2.56337 12.5 2.56337 13.23 3.12337L20.23 8.56337C20.72 8.94337 21 9.52333 21 10.1433V22.1734"
+												  stroke="#5D5FEF" stroke-width="1.5" stroke-miterlimit="10"
+												  stroke-linejoin="round"/>
+											<path opacity="0.4"
+												  d="M15.5 11.1733H8.5C7.67 11.1733 7 11.8433 7 12.6733V22.1733H17V12.6733C17 11.8433 16.33 11.1733 15.5 11.1733Z"
+												  stroke="#5D5FEF" stroke-width="1.5" stroke-miterlimit="10"
+												  stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path d="M10 16.4233V17.9233" stroke="#5D5FEF" stroke-width="1.5"
+												  stroke-miterlimit="10"
+												  stroke-linecap="round" stroke-linejoin="round"/>
+											<path opacity="0.4" d="M10.5 7.67334H13.5" stroke="#5D5FEF"
+												  stroke-width="1.5"
+												  stroke-miterlimit="10" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+										</svg>
+									</div>
+									<div class="feature-item_title heading-5">
+										Tra cứu<br>địa chỉ
+									</div>
+									<a href="" class="stretched-link"></a>
+								</div>
+							</div>
+							<div class="col">
+								<div class="feature-item position-relative text-center h-100 bg-white vstack align-items-center justify-content-center">
+									<div class="feature-item_icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+											 viewBox="0 0 25 25"
+											 fill="none">
+											<path opacity="0.34"
+												  d="M17.2932 6.34332C19.2932 7.73332 20.6732 9.94332 20.9532 12.4933"
+												  stroke="#FF4545" stroke-width="1.5" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path opacity="0.34"
+												  d="M3.82324 12.5433C4.08324 10.0033 5.44324 7.79331 7.42324 6.39331"
+												  stroke="#FF4545" stroke-width="1.5" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path opacity="0.34"
+												  d="M8.52319 21.1133C9.68319 21.7033 11.0032 22.0333 12.3932 22.0333C13.7332 22.0333 14.9932 21.7333 16.1232 21.1833"
+												  stroke="#FF4545" stroke-width="1.5" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path d="M12.3933 7.87335C13.9286 7.87335 15.1733 6.62871 15.1733 5.09335C15.1733 3.558 13.9286 2.31335 12.3933 2.31335C10.8579 2.31335 9.61328 3.558 9.61328 5.09335C9.61328 6.62871 10.8579 7.87335 12.3933 7.87335Z"
+												  stroke="#FF4545" stroke-width="1.5" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path d="M5.1633 20.0933C6.69865 20.0933 7.9433 18.8487 7.9433 17.3133C7.9433 15.778 6.69865 14.5333 5.1633 14.5333C3.62795 14.5333 2.3833 15.778 2.3833 17.3133C2.3833 18.8487 3.62795 20.0933 5.1633 20.0933Z"
+												  stroke="#FF4545" stroke-width="1.5" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path d="M19.5031 20.0933C21.0385 20.0933 22.2831 18.8487 22.2831 17.3133C22.2831 15.778 21.0385 14.5333 19.5031 14.5333C17.9678 14.5333 16.7231 15.778 16.7231 17.3133C16.7231 18.8487 17.9678 20.0933 19.5031 20.0933Z"
+												  stroke="#FF4545" stroke-width="1.5" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+										</svg>
+									</div>
+									<div class="feature-item_title heading-5">
+										Tiếp thị<br>liên kết
+									</div>
+									<a href="" class="stretched-link"></a>
+								</div>
+							</div>
+							<div class="col">
+								<div class="feature-item position-relative text-center h-100 bg-white vstack align-items-center justify-content-center">
+									<div class="feature-item_icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+											 viewBox="0 0 25 25"
+											 fill="none">
+											<path d="M13.5867 2.43337L20.0967 5.94337C20.8567 6.35337 20.8567 7.52337 20.0967 7.93337L13.5867 11.4434C13.0067 11.7534 12.3267 11.7534 11.7467 11.4434L5.23675 7.93337C4.47675 7.52337 4.47675 6.35337 5.23675 5.94337L11.7467 2.43337C12.3267 2.12337 13.0067 2.12337 13.5867 2.43337Z"
+												  stroke="#1A8917" stroke-width="1.5" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path opacity="0.4"
+												  d="M4.27675 10.3033L10.3267 13.3333C11.0767 13.7133 11.5567 14.4833 11.5567 15.3233V21.0433C11.5567 21.8733 10.6867 22.4033 9.94675 22.0333L3.89675 19.0033C3.14675 18.6233 2.66675 17.8533 2.66675 17.0133V11.2933C2.66675 10.4633 3.53675 9.93333 4.27675 10.3033Z"
+												  stroke="#1A8917" stroke-width="1.5" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path opacity="0.4"
+												  d="M21.0569 10.3033L15.0069 13.3333C14.2569 13.7133 13.7769 14.4833 13.7769 15.3233V21.0433C13.7769 21.8733 14.6469 22.4033 15.3869 22.0333L21.4369 19.0033C22.1869 18.6233 22.6669 17.8533 22.6669 17.0133V11.2933C22.6669 10.4633 21.7969 9.93333 21.0569 10.3033Z"
+												  stroke="#1A8917" stroke-width="1.5" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+										</svg>
+									</div>
+									<div class="feature-item_title heading-5">
+										Công cụ<br>tiện ích
+									</div>
+									<a href="" class="stretched-link"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section-statistical shadow-pseudo section-gap">
+					<div class="container">
+						<div class="section-heading hstack justify-content-between">
+							<div class="heading-title">
+								Cập nhật hôm nay
+							</div>
+							<div class="heading-link">
+								<a href="" class="button-text">
+									Tới danh sách
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
+										 fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											  d="M6.91083 15.7626C6.58539 15.4371 6.58539 14.9095 6.91083 14.5841L11.3216 10.1733L6.91083 5.76257C6.58539 5.43714 6.58539 4.9095 6.91083 4.58406C7.23626 4.25863 7.7639 4.25862 8.08934 4.58406L13.0893 9.58406C13.4148 9.9095 13.4148 10.4371 13.0893 10.7626L8.08934 15.7626C7.7639 16.088 7.23626 16.088 6.91083 15.7626Z"
+											  fill="#1A8917"/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="statistical-inner bg-white p-3 vstack">
+							<div class="statistical-inner_grid hstack align-items-center">
+								<div class="statistical-item vstack">
+									<div class="statistical-item_sub gray-color">
+										Đang vận chuyển
+									</div>
+									<div class="statistical-item_wrapper hstack align-items-center">
+										<div class="statistical-item_content">
+											<div class="heading-1">
+												160
+											</div>
+											<div class="gradient-green heading-5 mt-1">
+												Đơn hàng
+											</div>
+										</div>
+										<div class="statistical-item_icon gradient-orange rounded-circle hstack justify-content-center">
+											<svg xmlns="http://www.w3.org/2000/svg" width="28" height="29"
+												 viewBox="0 0 28 29"
+												 fill="none">
+												<path d="M25.0429 18.7733C25.3688 18.7733 25.6248 19.0294 25.6248 19.3553V20.5191C25.6248 22.451 24.0653 24.0105 22.1333 24.0105C22.1333 22.0902 20.5622 20.5191 18.6419 20.5191C16.7216 20.5191 15.1504 22.0902 15.1504 24.0105H12.8228C12.8228 22.0902 11.2516 20.5191 9.33131 20.5191C7.41101 20.5191 5.83985 22.0902 5.83985 24.0105C3.90791 24.0105 2.34839 22.451 2.34839 20.5191V18.1914C2.34839 17.5513 2.87211 17.0276 3.51221 17.0276H14.5685C16.1746 17.0276 17.4781 15.7241 17.4781 14.1181V7.71704C17.4781 7.07694 18.0018 6.55322 18.6419 6.55322H19.6195C20.4574 6.55322 21.2256 7.00711 21.6445 7.72868L22.3894 9.03216C22.4941 9.21837 22.3545 9.46278 22.1333 9.46278C20.5273 9.46278 19.2238 10.7663 19.2238 12.3723V15.8638C19.2238 17.4699 20.5273 18.7733 22.1333 18.7733H25.0429Z"
+													  fill="#FFF6EE"/>
+												<path d="M9.3313 26.3381C10.6168 26.3381 11.6589 25.296 11.6589 24.0105C11.6589 22.725 10.6168 21.6829 9.3313 21.6829C8.04578 21.6829 7.00366 22.725 7.00366 24.0105C7.00366 25.296 8.04578 26.3381 9.3313 26.3381Z"
+													  fill="#F0F8EF"/>
+												<path d="M18.6419 26.3381C19.9274 26.3381 20.9695 25.296 20.9695 24.0105C20.9695 22.725 19.9274 21.6829 18.6419 21.6829C17.3563 21.6829 16.3142 22.725 16.3142 24.0105C16.3142 25.296 17.3563 26.3381 18.6419 26.3381Z"
+													  fill="#F0F8EF"/>
+												<path d="M25.6248 15.3168V17.0276H22.1333C21.4932 17.0276 20.9695 16.5039 20.9695 15.8638V12.3723C20.9695 11.7322 21.4932 11.2085 22.1333 11.2085H23.6346L25.3222 14.1646C25.52 14.5137 25.6248 14.9094 25.6248 15.3168Z"
+													  fill="#F0F8EF"/>
+												<path d="M15.2435 3.06177H6.64289C4.55965 3.06177 2.81392 4.55146 2.42986 6.52995H7.51575C7.95801 6.52995 8.30715 6.89074 8.30715 7.33299C8.30715 7.77524 7.95801 8.12439 7.51575 8.12439H2.34839V9.73046H5.37432C5.81658 9.73046 6.17736 10.0912 6.17736 10.5335C6.17736 10.9758 5.81658 11.3249 5.37432 11.3249H2.34839V12.931H3.24453C3.68678 12.931 4.04757 13.2918 4.04757 13.734C4.04757 14.1763 3.68678 14.5254 3.24453 14.5254H2.34839V14.7931C2.34839 15.4332 2.87211 15.9569 3.51221 15.9569H14.1612C15.3483 15.9569 16.3142 14.9909 16.3142 13.8038V4.13248C16.3142 3.53893 15.8371 3.06177 15.2435 3.06177Z"
+													  fill="#F0F8EF"/>
+												<path d="M2.42992 6.52991H2.25535H1.1148C0.672552 6.52991 0.311768 6.89069 0.311768 7.33294C0.311768 7.7752 0.672552 8.12434 1.1148 8.12434H2.17388H2.34845V7.35622C2.34845 7.0769 2.38337 6.79759 2.42992 6.52991Z"
+													  fill="#F0F8EF"/>
+												<path d="M2.17388 9.73047H1.1148C0.672552 9.73047 0.311768 10.0913 0.311768 10.5335C0.311768 10.9758 0.672552 11.3249 1.1148 11.3249H2.17388H2.34845V9.73047H2.17388Z"
+													  fill="#F0F8EF"/>
+												<path d="M2.17388 12.9309H1.1148C0.672552 12.9309 0.311768 13.2917 0.311768 13.7339C0.311768 14.1762 0.672552 14.5253 1.1148 14.5253H2.17388H2.34845V12.9309H2.17388Z"
+													  fill="#F0F8EF"/>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="statistical-item vstack">
+									<div class="statistical-item_sub gray-color">
+										Chờ thanh toán
+									</div>
+									<div class="statistical-item_wrapper hstack align-items-center">
+										<div class="statistical-item_content">
+											<div class="heading-1">
+												23
+											</div>
+											<div class="gradient-green heading-5 mt-1">
+												Yêu cầu
+											</div>
+										</div>
+										<div class="statistical-item_icon gradient-orange rounded-circle hstack justify-content-center">
+											<svg xmlns="http://www.w3.org/2000/svg" width="28" height="29"
+												 viewBox="0 0 28 29"
+												 fill="none">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+													  d="M23.7886 5.3894H4.18457C2.52772 5.3894 1.18457 6.73255 1.18457 8.3894V10.3085H26.7886V8.3894C26.7886 6.73255 25.4455 5.3894 23.7886 5.3894ZM1.18457 21.0105V12.1085H26.7886V21.0105C26.7886 22.6674 25.4455 24.0105 23.7886 24.0105H4.18457C2.52772 24.0105 1.18457 22.6674 1.18457 21.0105ZM15.1504 17.2914C14.6534 17.2914 14.2504 17.6944 14.2504 18.1914C14.2504 18.6885 14.6534 19.0914 15.1504 19.0914H20.9695C21.4666 19.0914 21.8695 18.6885 21.8695 18.1914C21.8695 17.6944 21.4666 17.2914 20.9695 17.2914H15.1504Z"
+													  fill="#F0F8EF"/>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="statistical-inner_grid hstack align-items-center">
+								<div class="statistical-item vstack">
+									<div class="statistical-item_sub gray-color">
+										Đã nhập kho VN
+									</div>
+									<div class="statistical-item_wrapper hstack align-items-center">
+										<div class="statistical-item_content">
+											<div class="heading-1">
+												45
+											</div>
+											<div class="gradient-green heading-5 mt-1">
+												Đơn hàng
+											</div>
+										</div>
+										<div class="statistical-item_icon gradient-green rounded-circle hstack justify-content-center">
+											<svg xmlns="http://www.w3.org/2000/svg" width="28" height="29"
+												 viewBox="0 0 28 29"
+												 fill="none">
+												<path d="M23.3436 8.33819L16.64 3.64799C14.8128 2.36779 12.008 2.43762 10.2507 3.79929L4.41991 8.34983C3.25609 9.25761 2.33667 11.1197 2.33667 12.5861V20.6165C2.33667 23.5842 4.74578 26.005 7.71352 26.005H20.2595C23.2273 26.005 25.6364 23.5959 25.6364 20.6281V12.7374C25.6364 11.1663 24.6238 9.23433 23.3436 8.33819ZM14.8594 21.3497C14.8594 21.8269 14.4637 22.2226 13.9865 22.2226C13.5094 22.2226 13.1137 21.8269 13.1137 21.3497V17.8582C13.1137 17.3811 13.5094 16.9854 13.9865 16.9854C14.4637 16.9854 14.8594 17.3811 14.8594 17.8582V21.3497Z"
+													  fill="#F0F8EF"/>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="statistical-item vstack">
+									<div class="statistical-item_sub gray-color">
+										Khiếu nại
+									</div>
+									<div class="statistical-item_wrapper hstack align-items-center">
+										<div class="statistical-item_content">
+											<div class="heading-1">
+												02
+											</div>
+											<div class="gradient-green heading-5 mt-1">
+												Yêu cầu
+											</div>
+										</div>
+										<div class="statistical-item_icon background-red rounded-circle hstack justify-content-center">
+											<svg xmlns="http://www.w3.org/2000/svg" width="28" height="29"
+												 viewBox="0 0 28 29"
+												 fill="none">
+												<path d="M20.9928 14.7508L19.573 13.3309C19.2355 13.04 19.0376 12.6094 19.026 12.1322C19.0027 11.6085 19.2122 11.0848 19.5963 10.7007L20.9928 9.3041C22.2032 8.09373 22.6571 6.92991 22.273 6.01049C21.9006 5.10271 20.7484 4.60227 19.0493 4.60227H6.88733V3.60138C6.88733 3.12421 6.49163 2.72852 6.01447 2.72852C5.5373 2.72852 5.1416 3.12421 5.1416 3.60138V25.1321C5.1416 25.6092 5.5373 26.0049 6.01447 26.0049C6.49163 26.0049 6.88733 25.6092 6.88733 25.1321V19.4526H19.0493C20.7252 19.4526 21.8541 18.9405 22.2381 18.0211C22.6222 17.1017 22.1799 15.9495 20.9928 14.7508Z"
+													  fill="#F0F8EF"/>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section-chart shadow-pseudo section-gap">
+					<div class="container">
+						<div class="chart-inner p-3 bg-white">
+							<ul class="nav nav-tabs border-0 flex-nowrap">
+								<li class="nav-item">
+									<button class="nav-link hstack align-items-center gap-2 mb-0 button-reset active"
+											data-bs-toggle="tab"
+											data-bs-target="#tab-don-hang" type="button" role="tab">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25"
+											 viewBox="0 0 24 25"
+											 fill="none">
+											<path d="M3.16992 7.94666L11.9999 13.0566L20.7699 7.97662"
+												  stroke-width="1.5" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path d="M12 22.1166V13.0466" stroke-width="1.5"
+												  stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M2.39014 9.67666C2.39014 8.29666 3.38012 6.61668 4.59012 5.94668L9.93011 2.97665C11.0701 2.34665 12.9401 2.34665 14.0801 2.97665L19.4201 5.94668C20.6301 6.61668 21.6201 8.29666 21.6201 9.67666V15.3267C21.6201 16.7067 20.6301 18.3867 19.4201 19.0567L14.0801 22.0267C12.9401 22.6567 11.0701 22.6567 9.93011 22.0267L4.59012 19.0567C3.38012 18.3867 2.39014 16.7067 2.39014 15.3267V14.5067"
+												  stroke-width="1.5" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path d="M17.0002 13.7467V10.0867L10.9302 6.57672L9.88025 5.97668L7.51025 4.60669"
+												  stroke-width="1.5" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+										</svg>
+										Đơn hàng
+									</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link hstack align-items-center gap-2 mb-0 button-reset"
+											data-bs-toggle="tab"
+											data-bs-target="#tab-tai-chinh" type="button" role="tab">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25"
+											 viewBox="0 0 24 25"
+											 fill="none">
+											<path d="M2 2.50671V19.5067C2 21.1667 3.34 22.5067 5 22.5067H22"
+												  stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+											<path opacity="0.4"
+												  d="M5 17.5067L9.59 12.1467C10.35 11.2667 11.7 11.2067 12.52 12.0367L13.47 12.9867C14.29 13.8067 15.64 13.7567 16.4 12.8767L21 7.50671"
+												  stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+												  stroke-linejoin="round"/>
+										</svg>
+										Tài chính
+									</button>
+								</li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane fade show active" id="tab-don-hang">
+									<div class="chart-content">
+										<div class="chart-select hstack align-items-center justify-content-center gap-3">
+											<select name="" class="form-select black-50-color" id="">
+												<option value="">Tất cả dịch vụ</option>
+												<option value="">Tất cả dịch vụ</option>
+												<option value="">Tất cả dịch vụ</option>
+												<option value="">Tất cả dịch vụ</option>
+												<option value="">Tất cả dịch vụ</option>
+											</select>
+											<select name="" class="form-select black-50-color" id="">
+												<option value="">Hôm nay</option>
+												<option value="">Hôm qua</option>
+												<option value="">Tuần này</option>
+												<option value="">Tháng này</option>
+												<option value="">Năm này</option>
+											</select>
+										</div>
+										<div class="chart-doughnut">
+											<canvas id="chart-doughnut" style="width: 200px; height: 200px;"></canvas>
+										</div>
+										<div class="chart-detail hstack">
+											<div class="chart-detail_column w-50 vstack gap-15px">
+												<div class="chart-detail_item hstack gap-15px">
+													<div class="chart-detail_line align-self-start">
+														<svg xmlns="http://www.w3.org/2000/svg" width="30" height="23"
+															 viewBox="0 0 30 23" fill="none">
+															<rect y="9.50671" width="30" height="8" rx="4"
+																  fill="#076007"/>
+														</svg>
+													</div>
+													<div class="chart-detail_content">
+														<div class="heading-5 gray-color fw-normal">
+															Vận chuyển hộ
+														</div>
+														<div class="heading-4">
+															05
+														</div>
+													</div>
+												</div>
+												<div class="chart-detail_item hstack gap-15px">
+													<div class="chart-detail_line align-self-start">
+														<svg xmlns="http://www.w3.org/2000/svg" width="30" height="23"
+															 viewBox="0 0 30 23" fill="none">
+															<rect y="9.50671" width="30" height="8" rx="4"
+																  fill="#1A8917"/>
+														</svg>
+													</div>
+													<div class="chart-detail_content">
+														<div class="heading-5 gray-color fw-normal">
+															Thanh toán hộ
+														</div>
+														<div class="heading-4">
+															08
+														</div>
+													</div>
+												</div>
+												<div class="chart-detail_item hstack gap-15px">
+													<div class="chart-detail_line align-self-start">
+														<svg xmlns="http://www.w3.org/2000/svg" width="30" height="23"
+															 viewBox="0 0 30 23" fill="none">
+															<rect y="9.50671" width="30" height="8" rx="4"
+																  fill="url(#paint0_linear_2747_39787)"/>
+															<defs>
+																<linearGradient id="paint0_linear_2747_39787"
+																				x1="37.3359"
+																				y1="13.5067" x2="-11.8157" y2="13.705"
+																				gradientUnits="userSpaceOnUse">
+																	<stop stop-color="#8DC63F"/>
+																	<stop offset="1" stop-color="#009444"/>
+																</linearGradient>
+															</defs>
+														</svg>
+													</div>
+													<div class="chart-detail_content">
+														<div class="heading-5 gray-color fw-normal">
+															Đặt hàng TQ
+														</div>
+														<div class="heading-4">
+															70
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="chart-detail_column w-50 vstack gap-15px align-self-end">
+												<div class="chart-detail_item hstack gap-15px">
+													<div class="chart-detail_line align-self-start">
+														<svg xmlns="http://www.w3.org/2000/svg" width="30" height="23"
+															 viewBox="0 0 30 23" fill="none">
+															<rect y="9.50671" width="30" height="8" rx="4"
+																  fill="#F2994A"/>
+														</svg>
+													</div>
+													<div class="chart-detail_content">
+														<div class="heading-5 gray-color fw-normal">
+															NK chính ngạch
+														</div>
+														<div class="heading-4">
+															0
+														</div>
+													</div>
+												</div>
+												<div class="chart-detail_item hstack gap-15px">
+													<div class="chart-detail_line align-self-start">
+														<svg xmlns="http://www.w3.org/2000/svg" width="30" height="23"
+															 viewBox="0 0 30 23" fill="none">
+															<rect y="9.50671" width="30" height="8" rx="4"
+																  fill="#C05A00"/>
+														</svg>
+													</div>
+													<div class="chart-detail_content">
+														<div class="heading-5 gray-color fw-normal">
+															Gửi hàng TQ
+														</div>
+														<div class="heading-4">
+															0
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="tab-tai-chinh">
+									<div class="chart-content">
+										<div class="chart-select hstack align-items-center justify-content-center gap-3">
+											<select name="" class="form-select black-50-color" id="">
+												<option value="">Tất cả dịch vụ</option>
+												<option value="">Tất cả dịch vụ</option>
+												<option value="">Tất cả dịch vụ</option>
+												<option value="">Tất cả dịch vụ</option>
+												<option value="">Tất cả dịch vụ</option>
+											</select>
+											<select name="" class="form-select black-50-color" id="">
+												<option value="">Hôm nay</option>
+												<option value="">Hôm qua</option>
+												<option value="">Tuần này</option>
+												<option value="">Tháng này</option>
+												<option value="">Năm này</option>
+											</select>
+										</div>
+										<div class="chart-heading hstack align-items-center justify-content-between">
+											<div class="heading-4 black-50-color">
+												Tổng giá trị
+											</div>
+											<div class="heading-4 text-black fw-normal hstack align-items-center justify-content-between gap-2">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+													 viewBox="0 0 24 24"
+													 fill="none">
+													<circle cx="12" cy="12" r="12" fill="#1A8917"/>
+													<path d="M16.1403 18L8.86159 18C8.52939 18.0002 8.22759 17.7969 8.08759 17.479C7.93857 17.1539 7.98217 16.767 8.19951 16.488C8.21544 16.4672 8.23304 16.4479 8.2519 16.43L12.5733 12.3736C12.6744 12.2787 12.7322 12.1428 12.7322 12.0001C12.7322 11.8574 12.6744 11.7213 12.5733 11.6266L8.2519 7.57C8.23304 7.5523 8.21544 7.53283 8.19951 7.51203C7.98217 7.23303 7.93858 6.84606 8.08759 6.52105C8.22759 6.20311 8.5294 5.99978 8.86159 6L16.1403 6C16.619 6.00509 17.0033 6.41794 17 6.92306L17 8.1926C17 8.46872 16.7879 8.69263 16.5263 8.69263C16.2648 8.69263 16.0527 8.46872 16.0527 8.1926L16.0527 7.00006L9.07033 7.00006L13.2029 10.879C13.5062 11.1638 13.6797 11.5715 13.6797 12.0001C13.6797 12.4285 13.5062 12.8364 13.2029 13.121L9.07033 16.9999L16.0527 16.9999L16.0527 15.8074C16.0527 15.5313 16.2648 15.3076 16.5263 15.3076C16.7879 15.3076 17 15.5313 17 15.8074L17 17.0769C17.0033 17.5823 16.619 17.9951 16.1403 18Z"
+														  fill="white"/>
+												</svg>
+												Tổng cộng: <b>1,32 tỷ</b>
+											</div>
+										</div>
+										<div class="chart-line">
+											<canvas id="chart-line" style="width: 100%; height: 250px;"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	</div>
+
+	<footer id="footer" class="footer position-fixed bottom-0 start-0 end-0 zi-10 bg-white w-100">
+		<div class="footer-actions position-relative zi-1">
+			<div class="container">
+				<div class="gap-2 hstack">
+					<div class="footer-item flex-fill">
+						<a href="./index.html"
+						   class="footer-item_link align-items-center justify-content-center vstack gap-1 is-active">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+								 fill="none">
+								<path d="M12.7 17.38H13.4C14.55 17.38 15.49 16.44 15.49 15.29V14.59H12.7V17.38Z"/>
+								<path d="M8.51001 15.29C8.51001 16.44 9.45001 17.38 10.6 17.38H11.3V14.59H8.51001V15.29Z"/>
+								<path d="M8.51001 12.5V13.2H11.3V10.41H10.6C9.45001 10.41 8.51001 11.35 8.51001 12.5Z"/>
+								<path d="M20.03 7.32006L14.28 3.29006C12.71 2.19006 10.31 2.25006 8.8 3.42006L3.79 7.33006C2.78 8.11006 2 9.71006 2 10.9701V17.8701C2 20.4201 4.07 22.5001 6.61 22.5001H17.38C19.92 22.5001 21.99 20.4301 21.99 17.8801V11.1001C22 9.75006 21.13 8.09006 20.03 7.32006ZM16.88 15.2901C16.88 17.2101 15.31 18.7801 13.39 18.7801H10.6C8.68 18.7801 7.11 17.2201 7.11 15.2901V12.5001C7.11 10.5801 8.68 9.01006 10.6 9.01006H13.39C15.31 9.01006 16.88 10.5701 16.88 12.5001V15.2901Z"/>
+								<path d="M13.4 10.41H12.7V13.2H15.49V12.5C15.49 11.35 14.55 10.41 13.4 10.41Z"/>
+							</svg>
+							<span>Trang chủ</span>
+						</a>
+					</div>
+					<div class="footer-item flex-fill">
+						<a href="./tat-ca-don-hang.html"
+						   class="footer-item_link align-items-center justify-content-center vstack gap-1">
+							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"
+								 fill="none">
+								<path d="M20.71 8.31994L13.01 12.7799C12.7 12.9599 12.31 12.9599 11.99 12.7799L4.28997 8.31994C3.73997 7.99994 3.59997 7.24994 4.01997 6.77994C4.30997 6.44994 4.63997 6.17994 4.98997 5.98994L10.41 2.98994C11.57 2.33994 13.45 2.33994 14.61 2.98994L20.03 5.98994C20.38 6.17994 20.71 6.45994 21 6.77994C21.4 7.24994 21.26 7.99994 20.71 8.31994Z"/>
+								<path d="M11.93 14.64V21.46C11.93 22.22 11.16 22.72 10.48 22.39C8.41998 21.38 4.94998 19.49 4.94998 19.49C3.72998 18.8 2.72998 17.06 2.72998 15.63V10.47C2.72998 9.68 3.55998 9.18 4.23998 9.57L11.43 13.74C11.73 13.93 11.93 14.27 11.93 14.64Z"/>
+								<path d="M13.0701 14.64V21.46C13.0701 22.22 13.8401 22.72 14.5201 22.39C16.5801 21.38 20.0501 19.49 20.0501 19.49C21.2701 18.8 22.2701 17.06 22.2701 15.63V10.47C22.2701 9.68 21.4401 9.18 20.7601 9.57L13.5701 13.74C13.2701 13.93 13.0701 14.27 13.0701 14.64Z"/>
+							</svg>
+							<span>Đơn hàng</span>
+						</a>
+					</div>
+					<div class="footer-item flex-fill footer-item_highlight translate-middle-y">
+						<button type="button" id="footer-extend"
+								class="footer-item_link align-items-center justify-content-center vstack gap-1">
+							<svg xmlns="http://www.w3.org/2000/svg" width="72" height="73" viewBox="0 0 72 73"
+								 fill="none">
+								<path d="M36 6.5C19.47 6.5 6 19.97 6 36.5C6 53.03 19.47 66.5 36 66.5C52.53 66.5 66 53.03 66 36.5C66 19.97 52.53 6.5 36 6.5ZM48 38.75H38.25V48.5C38.25 49.73 37.23 50.75 36 50.75C34.77 50.75 33.75 49.73 33.75 48.5V38.75H24C22.77 38.75 21.75 37.73 21.75 36.5C21.75 35.27 22.77 34.25 24 34.25H33.75V24.5C33.75 23.27 34.77 22.25 36 22.25C37.23 22.25 38.25 23.27 38.25 24.5V34.25H48C49.23 34.25 50.25 35.27 50.25 36.5C50.25 37.73 49.23 38.75 48 38.75Z"
+									  fill="url(#paint0_linear_2675_1531)"/>
+								<defs>
+									<linearGradient id="paint0_linear_2675_1531" x1="36.71" y1="109.499" x2="55.6933"
+													y2="43.3504" gradientUnits="userSpaceOnUse">
+										<stop stop-color="#178317"/>
+										<stop offset="0.924979" stop-color="#1AB616"/>
+									</linearGradient>
+								</defs>
+							</svg>
+						</button>
+					</div>
+					<div class="footer-item flex-fill">
+						<a href="" class="footer-item_link align-items-center justify-content-center vstack gap-1">
+							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"
+								 fill="none">
+								<path d="M20.69 14.56L19.56 12.68C19.31 12.27 19.09 11.48 19.09 11V9.13005C19.09 5.50005 16.14 2.55005 12.52 2.55005C8.88996 2.56005 5.93996 5.50005 5.93996 9.13005V10.99C5.93996 11.47 5.71996 12.26 5.47996 12.67L4.34996 14.55C3.91996 15.28 3.81996 16.11 4.08996 16.83C4.35996 17.56 4.96996 18.14 5.76996 18.4C6.84996 18.76 7.93996 19.02 9.04996 19.21C9.15996 19.23 9.26996 19.24 9.37996 19.26C9.51996 19.2801 9.66996 19.3 9.81996 19.32C10.08 19.3601 10.34 19.39 10.61 19.41C11.24 19.47 11.88 19.5 12.52 19.5C13.15 19.5 13.78 19.47 14.4 19.41C14.63 19.39 14.86 19.3701 15.08 19.34C15.26 19.32 15.44 19.3001 15.62 19.2701C15.73 19.26 15.84 19.24 15.95 19.22C17.07 19.04 18.18 18.76 19.26 18.4C20.03 18.14 20.62 17.56 20.9 16.82C21.18 16.07 21.1 15.25 20.69 14.56ZM13.25 10.5C13.25 10.92 12.91 11.26 12.49 11.26C12.07 11.26 11.73 10.92 11.73 10.5V7.40005C11.73 6.98005 12.07 6.64005 12.49 6.64005C12.91 6.64005 13.25 6.98005 13.25 7.40005V10.5Z"/>
+								<path d="M15.3299 20.51C14.9099 21.67 13.7999 22.5 12.4999 22.5C11.7099 22.5 10.9299 22.18 10.3799 21.61C10.0599 21.31 9.81993 20.91 9.67993 20.5C9.80993 20.52 9.93993 20.53 10.0799 20.55C10.3099 20.58 10.5499 20.61 10.7899 20.63C11.3599 20.68 11.9399 20.71 12.5199 20.71C13.0899 20.71 13.6599 20.68 14.2199 20.63C14.4299 20.61 14.6399 20.6 14.8399 20.57C14.9999 20.55 15.1599 20.53 15.3299 20.51Z"/>
+							</svg>
+							<span>Thông báo</span>
+						</a>
+					</div>
+					<div class="footer-item flex-fill">
+						<a href="" class="footer-item_link align-items-center justify-content-center vstack gap-1">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+								 fill="none">
+								<path opacity="0.97"
+									  d="M16.19 2.5H7.81C4.17 2.5 2 4.67 2 8.31V16.68C2 20.33 4.17 22.5 7.81 22.5H16.18C19.82 22.5 21.99 20.33 21.99 16.69V8.31C22 4.67 19.83 2.5 16.19 2.5ZM8.31 16.81C7.59 16.81 7 16.22 7 15.5C7 14.78 7.59 14.19 8.31 14.19C9.03 14.19 9.62 14.78 9.62 15.5C9.62 16.22 9.03 16.81 8.31 16.81ZM12 10.81C11.28 10.81 10.69 10.22 10.69 9.5C10.69 8.78 11.28 8.19 12 8.19C12.72 8.19 13.31 8.78 13.31 9.5C13.31 10.22 12.72 10.81 12 10.81ZM15.69 16.81C14.97 16.81 14.38 16.22 14.38 15.5C14.38 14.78 14.97 14.19 15.69 14.19C16.41 14.19 17 14.78 17 15.5C17 16.22 16.41 16.81 15.69 16.81Z"/>
+							</svg>
+							<span>Mở rộng</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-floating position-fixed bg-white start-0 end-0 zi-3 transition-default">
+			<div class="footer-floating_button position-absolute start-50 translate-middle-x">
+				<a href="" class="text-white hstack gap-2 heading-4">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+						<path d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM16 12.75H12.75V16C12.75 16.41 12.41 16.75 12 16.75C11.59 16.75 11.25 16.41 11.25 16V12.75H8C7.59 12.75 7.25 12.41 7.25 12C7.25 11.59 7.59 11.25 8 11.25H11.25V8C11.25 7.59 11.59 7.25 12 7.25C12.41 7.25 12.75 7.59 12.75 8V11.25H16C16.41 11.25 16.75 11.59 16.75 12C16.75 12.41 16.41 12.75 16 12.75Z"
+							  fill="white"/>
+					</svg>
+					Tạo đơn
+				</a>
+			</div>
+			<div class="container">
+				<div class="hstack flex-wrap gap-1">
+					<div class="footer-floating_grid h-100 overflow-hidden vstack flex-grow-1 gap-1">
+						<a href="" class="footer-floating_item hstack gap-3 p-3 bg-white fw-bold text-black">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+								 fill="none">
+								<path d="M0.627669 1.46713C0.948963 0.985189 1.60012 0.854958 2.08206 1.17625L6.80154 4.32258C7.0251 4.47162 7.18293 4.70077 7.24248 4.96278L9.67888 15.683H18.5447L19.1617 13.5854H11.988C11.4088 13.5854 10.9393 13.1158 10.9393 12.5366C10.9393 11.9574 11.4088 11.4878 11.988 11.4878H19.7786L20.5497 8.86592H11.988C11.4088 8.86592 10.9393 8.39637 10.9393 7.81714C10.9393 7.23792 11.4088 6.76837 11.988 6.76837H21.9514C22.2819 6.76837 22.5931 6.92418 22.7911 7.18883C22.9891 7.45347 23.0508 7.79598 22.9576 8.11307L20.3356 17.0277C20.2043 17.474 19.7947 17.7805 19.3295 17.7805H8.84172C8.35205 17.7805 7.92755 17.4417 7.81903 16.9642L5.28983 5.83571L0.918546 2.92152C0.436605 2.60022 0.306374 1.94907 0.627669 1.46713Z"
+									  fill="url(#paint0_linear_2675_3389)"/>
+								<path d="M11.4637 20.6646C11.4637 21.6783 10.6419 22.5 9.6283 22.5C8.61466 22.5 7.79295 21.6783 7.79295 20.6646C7.79295 19.651 8.61466 18.8293 9.6283 18.8293C10.6419 18.8293 11.4637 19.651 11.4637 20.6646Z"
+									  fill="url(#paint1_linear_2675_3389)"/>
+								<path d="M20.3782 20.6646C20.3782 21.6783 19.5565 22.5 18.5429 22.5C17.5292 22.5 16.7075 21.6783 16.7075 20.6646C16.7075 19.651 17.5292 18.8293 18.5429 18.8293C19.5565 18.8293 20.3782 19.651 20.3782 20.6646Z"
+									  fill="url(#paint2_linear_2675_3389)"/>
+								<defs>
+									<linearGradient id="paint0_linear_2675_3389" x1="11.9926" y1="37.9078" x2="18.5237"
+													y2="14.0397" gradientUnits="userSpaceOnUse">
+										<stop stop-color="#178317"/>
+										<stop offset="0.924979" stop-color="#1AB616"/>
+									</linearGradient>
+									<linearGradient id="paint1_linear_2675_3389" x1="11.9926" y1="37.9078" x2="18.5237"
+													y2="14.0397" gradientUnits="userSpaceOnUse">
+										<stop stop-color="#178317"/>
+										<stop offset="0.924979" stop-color="#1AB616"/>
+									</linearGradient>
+									<linearGradient id="paint2_linear_2675_3389" x1="11.9926" y1="37.9078" x2="18.5237"
+													y2="14.0397" gradientUnits="userSpaceOnUse">
+										<stop stop-color="#178317"/>
+										<stop offset="0.924979" stop-color="#1AB616"/>
+									</linearGradient>
+								</defs>
+							</svg>
+							<span>Đặt hàng hộ</span>
+						</a>
+						<a href="" class="footer-floating_item hstack gap-3 p-3 bg-white fw-bold text-black">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+								 fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									  d="M1.22998 6.99998C1.22998 5.47015 2.47015 4.22998 3.99998 4.22998H20C21.5298 4.22998 22.77 5.47015 22.77 6.99998V8.99998V17C22.77 18.5298 21.5298 19.77 20 19.77H3.99998C2.47015 19.77 1.22998 18.5298 1.22998 17V8.99998V6.99998ZM3.99998 5.76998C3.32067 5.76998 2.76998 6.32067 2.76998 6.99998V8.22998H21.23V6.99998C21.23 6.32067 20.6793 5.76998 20 5.76998H3.99998ZM21.23 9.76998H2.76998V17C2.76998 17.6793 3.32067 18.23 3.99998 18.23H20C20.6793 18.23 21.23 17.6793 21.23 17V9.76998ZM13.23 15C13.23 14.5747 13.5747 14.23 14 14.23H18C18.4252 14.23 18.77 14.5747 18.77 15C18.77 15.4252 18.4252 15.77 18 15.77H14C13.5747 15.77 13.23 15.4252 13.23 15Z"
+									  fill="url(#paint0_radial_2675_3399)"/>
+								<defs>
+									<radialGradient id="paint0_radial_2675_3399" cx="0" cy="0" r="1"
+													gradientUnits="userSpaceOnUse"
+													gradientTransform="translate(12 4.22998) rotate(90) scale(16.576 22.4359)">
+										<stop stop-color="#FE9B4B"/>
+										<stop offset="1" stop-color="#F47814"/>
+									</radialGradient>
+								</defs>
+							</svg>
+							<span>Thanh toán hộ</span>
+						</a>
+						<a href="" class="footer-floating_item hstack gap-3 p-3 bg-white fw-bold text-black">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+								 fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									  d="M2.52091 7.06441C2.72838 6.7059 3.1872 6.58346 3.54571 6.79093L11.9999 11.6834L20.3941 6.82105C20.7525 6.61343 21.2114 6.73569 21.419 7.09411C21.6266 7.45253 21.5044 7.9114 21.1459 8.11902L12.376 13.199C12.1435 13.3337 11.8569 13.3337 11.6244 13.1992L2.79439 8.0892C2.43588 7.88173 2.31344 7.42291 2.52091 7.06441Z"
+									  fill="#5D5FEF"/>
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									  d="M12 11.79C12.4142 11.79 12.75 12.1258 12.75 12.54V21.61C12.75 22.0243 12.4142 22.36 12 22.36C11.5858 22.36 11.25 22.0243 11.25 21.61V12.54C11.25 12.1258 11.5858 11.79 12 11.79Z"
+									  fill="#5D5FEF"/>
+								<path d="M2.39014 9.17007C2.39014 7.79007 3.38012 6.11009 4.59012 5.44009L9.93011 2.47006C11.0701 1.84006 12.9401 1.84006 14.0801 2.47006L19.4201 5.44009C20.6301 6.11009 21.6201 7.79007 21.6201 9.17007V14.8201C21.6201 16.2001 20.6301 17.8801 19.4201 18.5501L14.0801 21.5201C12.9401 22.1501 11.0701 22.1501 9.93011 21.5201L4.59012 18.5501C3.38012 17.8801 2.39014 16.2001 2.39014 14.8201V14.0001"
+									  stroke="#5D5FEF" stroke-width="1.5" stroke-linecap="round"
+									  stroke-linejoin="round"/>
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									  d="M6.86106 3.72463C7.06836 3.36602 7.52711 3.24336 7.88572 3.45066L10.2541 4.81972L11.3058 5.42074L17.3758 8.93076C17.6076 9.0648 17.7504 9.31225 17.7504 9.58002V13.24C17.7504 13.6542 17.4146 13.99 17.0004 13.99C16.5862 13.99 16.2504 13.6542 16.2504 13.24V10.0127L10.5582 6.72118L9.50502 6.1193L7.13503 4.7493C6.77642 4.542 6.65376 4.08324 6.86106 3.72463Z"
+									  fill="#5D5FEF"/>
+							</svg>
+							<span>Vận chuyển hộ</span>
+						</a>
+					</div>
+					<div class="footer-floating_grid h-100 overflow-hidden vstack flex-grow-1 gap-1 w-50">
+						<a href="" class="footer-floating_item hstack gap-3 p-3 bg-white fw-bold text-black">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+								 fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									  d="M9 10.25C9.41421 10.25 9.75 10.5858 9.75 11V15.1893L10.4697 14.4697C10.7626 14.1768 11.2374 14.1768 11.5303 14.4697C11.8232 14.7626 11.8232 15.2374 11.5303 15.5303L9.53033 17.5303C9.31583 17.7448 8.99324 17.809 8.71299 17.6929C8.43273 17.5768 8.25 17.3033 8.25 17V11C8.25 10.5858 8.58579 10.25 9 10.25Z"
+									  fill="#EF5DA8"/>
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									  d="M6.46967 14.4697C6.76256 14.1768 7.23744 14.1768 7.53033 14.4697L9.53033 16.4697C9.82322 16.7626 9.82322 17.2374 9.53033 17.5303C9.23744 17.8232 8.76256 17.8232 8.46967 17.5303L6.46967 15.5303C6.17678 15.2374 6.17678 14.7626 6.46967 14.4697Z"
+									  fill="#EF5DA8"/>
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									  d="M4.15533 4.15533C3.2398 5.07086 2.75 6.57397 2.75 9V15C2.75 17.426 3.2398 18.9291 4.15533 19.8447C5.07086 20.7602 6.57397 21.25 9 21.25H15C17.426 21.25 18.9291 20.7602 19.8447 19.8447C20.7602 18.9291 21.25 17.426 21.25 15V10C21.25 9.58579 21.5858 9.25 22 9.25C22.4142 9.25 22.75 9.58579 22.75 10V15C22.75 17.574 22.2398 19.5709 20.9053 20.9053C19.5709 22.2398 17.574 22.75 15 22.75H9C6.42603 22.75 4.42914 22.2398 3.09467 20.9053C1.7602 19.5709 1.25 17.574 1.25 15V9C1.25 6.42603 1.7602 4.42914 3.09467 3.09467C4.42914 1.7602 6.42603 1.25 9 1.25H14C14.4142 1.25 14.75 1.58579 14.75 2C14.75 2.41421 14.4142 2.75 14 2.75H9C6.57397 2.75 5.07086 3.2398 4.15533 4.15533Z"
+									  fill="#EF5DA8"/>
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									  d="M13.713 1.30711C13.9932 1.19103 14.3158 1.25519 14.5303 1.46969L22.5303 9.46969C22.7448 9.68419 22.809 10.0068 22.6929 10.287C22.5768 10.5673 22.3033 10.75 22 10.75H18C16.4585 10.75 15.1921 10.5028 14.3447 9.65535C13.4972 8.80793 13.25 7.54157 13.25 6.00002V2.00002C13.25 1.69668 13.4327 1.4232 13.713 1.30711ZM14.75 3.81068V6.00002C14.75 7.45847 15.0028 8.19211 15.4053 8.59469C15.8079 8.99727 16.5415 9.25002 18 9.25002H20.1893L14.75 3.81068Z"
+									  fill="#EF5DA8"/>
+							</svg>
+							<span>NK chính ngạch</span>
+						</a>
+						<a href="" class="footer-floating_item hstack gap-3 p-3 bg-white fw-bold text-black">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+								 fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									  d="M6 2.75C4.20421 2.75 2.75 4.20421 2.75 6V13.25H13C13.6858 13.25 14.25 12.6858 14.25 12V2.75H6ZM1.25 6C1.25 3.37579 3.37579 1.25 6 1.25H15C15.4142 1.25 15.75 1.58579 15.75 2V12C15.75 13.5142 14.5142 14.75 13 14.75H2C1.58579 14.75 1.25 14.4142 1.25 14V6Z"
+									  fill="#0077AA"/>
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									  d="M14.25 5C14.25 4.58579 14.5858 4.25 15 4.25H16.84C17.8339 4.25 18.7377 4.788 19.2286 5.63341L19.231 5.63766L19.231 5.63767L20.9411 8.62766C21.0738 8.85978 21.0729 9.14502 20.9388 9.37633C20.8046 9.60763 20.5574 9.75 20.29 9.75H19C18.8642 9.75 18.75 9.86421 18.75 10V13C18.75 13.1358 18.8642 13.25 19 13.25H22C22.4142 13.25 22.75 13.5858 22.75 14V17C22.75 19.0742 21.0742 20.75 19 20.75H18C17.5858 20.75 17.25 20.4142 17.25 20C17.25 19.3142 16.6858 18.75 16 18.75C15.3142 18.75 14.75 19.3142 14.75 20C14.75 20.4142 14.4142 20.75 14 20.75H10C9.58579 20.75 9.25 20.4142 9.25 20C9.25 19.3142 8.68579 18.75 8 18.75C7.31421 18.75 6.75 19.3142 6.75 20C6.75 20.4142 6.41421 20.75 6 20.75H5C2.92579 20.75 1.25 19.0742 1.25 17V14C1.25 13.5858 1.58579 13.25 2 13.25H13C13.6858 13.25 14.25 12.6858 14.25 12V5ZM15.75 5.75V12C15.75 13.5142 14.5142 14.75 13 14.75H2.75V17C2.75 18.2458 3.75421 19.25 5 19.25H5.35431C5.68227 18.0981 6.74559 17.25 8 17.25C9.25441 17.25 10.3177 18.0981 10.6457 19.25H13.3543C13.6823 18.0981 14.7456 17.25 16 17.25C17.2544 17.25 18.3177 18.0981 18.6457 19.25H19C20.2458 19.25 21.25 18.2458 21.25 17V14.75H19C18.0358 14.75 17.25 13.9642 17.25 13V10C17.25 9.03676 18.0342 8.25159 18.9971 8.25L17.9314 6.38661C17.931 6.38599 17.9307 6.38537 17.9303 6.38475C17.701 5.99126 17.2854 5.75 16.84 5.75H15.75Z"
+									  fill="#0077AA"/>
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									  d="M8 18.75C7.30964 18.75 6.75 19.3096 6.75 20C6.75 20.6904 7.30964 21.25 8 21.25C8.69036 21.25 9.25 20.6904 9.25 20C9.25 19.3096 8.69036 18.75 8 18.75ZM5.25 20C5.25 18.4812 6.48122 17.25 8 17.25C9.51878 17.25 10.75 18.4812 10.75 20C10.75 21.5188 9.51878 22.75 8 22.75C6.48122 22.75 5.25 21.5188 5.25 20Z"
+									  fill="#0077AA"/>
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									  d="M16 18.75C15.3096 18.75 14.75 19.3096 14.75 20C14.75 20.6904 15.3096 21.25 16 21.25C16.6904 21.25 17.25 20.6904 17.25 20C17.25 19.3096 16.6904 18.75 16 18.75ZM13.25 20C13.25 18.4812 14.4812 17.25 16 17.25C17.5188 17.25 18.75 18.4812 18.75 20C18.75 21.5188 17.5188 22.75 16 22.75C14.4812 22.75 13.25 21.5188 13.25 20Z"
+									  fill="#0077AA"/>
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									  d="M19 9.75C18.8642 9.75 18.75 9.86421 18.75 10V13C18.75 13.1358 18.8642 13.25 19 13.25H21.25V12.1987L19.8542 9.75H19ZM17.25 10C17.25 9.03579 18.0358 8.25 19 8.25H20.29C20.5594 8.25 20.8082 8.39452 20.9416 8.6286L22.6516 11.6286C22.7161 11.7418 22.75 11.8698 22.75 12V14C22.75 14.4142 22.4142 14.75 22 14.75H19C18.0358 14.75 17.25 13.9642 17.25 13V10Z"
+									  fill="#0077AA"/>
+							</svg>
+							<span>Gửi hàng sang TQ</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer-overlay"
+			 class="footer-overlay position-fixed start-0 end-0 w-100 h-100 zi-2 transition-default"></div>
+	</footer>
+</div>
+
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/momment.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chart.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-labels.js"></script>
+<script type="text/javascript"
+		src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+
+</body>
+</html>
