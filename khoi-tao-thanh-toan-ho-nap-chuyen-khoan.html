@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>Template VMT App</title>
+	<meta name="description" content="Template VMT App">
+	<meta name="author" content="">
+
+	<meta property="og:title" content="Template VMT App">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="Template VMT App">
+	<meta property="og:image" content="">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		  rel="stylesheet">
+
+	<link rel="icon" href="./assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+	<link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<div class="modal modal-bottom fade modal-notification" id="modal-cancel" data-bs-backdrop="static"
+	 data-bs-keyboard="false">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content border-0">
+			<div class="modal-body bg-white">
+				<div class="vstack align-items-center justify-content-center gap-15px">
+					<svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
+						<path opacity="0.4"
+							  d="M28.9999 53.1663C42.3468 53.1663 53.1666 42.3466 53.1666 28.9997C53.1666 15.6528 42.3468 4.83301 28.9999 4.83301C15.653 4.83301 4.83325 15.6528 4.83325 28.9997C4.83325 42.3466 15.653 53.1663 28.9999 53.1663Z"
+							  fill="#E9750E"/>
+						<path d="M29 33.2288C29.9908 33.2288 30.8125 32.4072 30.8125 31.4163V19.333C30.8125 18.3422 29.9908 17.5205 29 17.5205C28.0092 17.5205 27.1875 18.3422 27.1875 19.333V31.4163C27.1875 32.4072 28.0092 33.2288 29 33.2288Z"
+							  fill="#E9750E"/>
+						<path d="M31.2233 37.748C31.1024 37.458 30.9333 37.1921 30.7158 36.9505C30.4741 36.733 30.2083 36.5638 29.9183 36.443C29.3383 36.2013 28.6616 36.2013 28.0816 36.443C27.7916 36.5638 27.5258 36.733 27.2841 36.9505C27.0666 37.1921 26.8974 37.458 26.7766 37.748C26.6558 38.038 26.5833 38.3521 26.5833 38.6663C26.5833 38.9805 26.6558 39.2946 26.7766 39.5846C26.8974 39.8988 27.0666 40.1405 27.2841 40.3821C27.5258 40.5996 27.7916 40.7688 28.0816 40.8896C28.3716 41.0105 28.6858 41.083 28.9999 41.083C29.3141 41.083 29.6283 41.0105 29.9183 40.8896C30.2083 40.7688 30.4741 40.5996 30.7158 40.3821C30.9333 40.1405 31.1024 39.8988 31.2233 39.5846C31.3441 39.2946 31.4166 38.9805 31.4166 38.6663C31.4166 38.3521 31.3441 38.038 31.2233 37.748Z"
+							  fill="#E9750E"/>
+					</svg>
+					<div class="heading-3 text-black text-center">
+						Bạn muốn hủy yêu cầu?
+					</div>
+					<div class="text-center hstack gap-2 w-100">
+						<button type="button"
+								class="button-theme button-gradient_green flex-fill w-50">
+							Xác nhận
+						</button>
+						<button data-bs-dismiss="modal" type="button"
+								class="button-theme button-outline_green flex-fill w-50">
+							Đóng
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="vstack position-relative min-vh-100 h-100 overflow-hidden">
+
+	<div class="vstack flex-fill overflow-hidden position-relative">
+		<div class="screen-overflow">
+			<div class="main main-spacing main-spacing_tabs screen-support_pay">
+				<!-- Header page -->
+				<div class="section-header bg-white position-fixed top-0 start-0 end-0 zi-10 w-100">
+					<div class="header-inner">
+						<div class="container">
+							<div class="vstack">
+								<div class="header-inner_title pt-3 pb-2 heading-2 hstack gap-2">
+									Tạo đơn thanh toán hộ
+									<div class="header-inner_buttons ms-auto hstack align-items-center justify-content-end gap-2">
+										<button data-bs-toggle="modal" data-bs-target="#modal-cancel" type="button"
+												class="button-reset orange-color">
+											Hủy bỏ
+										</button>
+									</div>
+								</div>
+								<div class="theme-tabs theme-tabs_overflow theme-tabs_icon">
+									<ul class="nav nav-tabs border-0 flex-nowrap align-items-center justify-content-center">
+										<li class="nav-item">
+											<a href=""
+											   class="nav-link px-3 gap-2 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+												<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+													 viewBox="0 0 25 24" fill="none">
+													<path fill-rule="evenodd" clip-rule="evenodd"
+														  d="M1.72998 7.00047C1.72998 5.47064 2.97015 4.23047 4.49998 4.23047H20.5C22.0298 4.23047 23.27 5.47064 23.27 7.00047V9.00047V17.0005C23.27 18.5303 22.0298 19.7705 20.5 19.7705H4.49998C2.97015 19.7705 1.72998 18.5303 1.72998 17.0005V9.00047V7.00047ZM4.49998 5.77047C3.82067 5.77047 3.26998 6.32116 3.26998 7.00047V8.23047H21.73V7.00047C21.73 6.32116 21.1793 5.77047 20.5 5.77047H4.49998ZM21.73 9.77047H3.26998V17.0005C3.26998 17.6798 3.82067 18.2305 4.49998 18.2305H20.5C21.1793 18.2305 21.73 17.6798 21.73 17.0005V9.77047ZM13.73 15.0005C13.73 14.5752 14.0747 14.2305 14.5 14.2305H18.5C18.9252 14.2305 19.27 14.5752 19.27 15.0005C19.27 15.4257 18.9252 15.7705 18.5 15.7705H14.5C14.0747 15.7705 13.73 15.4257 13.73 15.0005Z"
+														  fill="#ADB4BB"/>
+												</svg>
+												<span>
+													Thanh toán hộ
+												</span>
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href=""
+											   class="nav-link active px-3 gap-2 pseudo hstack align-items-center justify-content-center w-100 mb-0 button-reset">
+												<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+													 viewBox="0 0 25 24" fill="none">
+													<path fill-rule="evenodd" clip-rule="evenodd"
+														  d="M1.72998 7.00047C1.72998 5.47064 2.97015 4.23047 4.49998 4.23047H20.5C22.0298 4.23047 23.27 5.47064 23.27 7.00047V9.00047V17.0005C23.27 18.5303 22.0298 19.7705 20.5 19.7705H4.49998C2.97015 19.7705 1.72998 18.5303 1.72998 17.0005V9.00047V7.00047ZM4.49998 5.77047C3.82067 5.77047 3.26998 6.32116 3.26998 7.00047V8.23047H21.73V7.00047C21.73 6.32116 21.1793 5.77047 20.5 5.77047H4.49998ZM21.73 9.77047H3.26998V17.0005C3.26998 17.6798 3.82067 18.2305 4.49998 18.2305H20.5C21.1793 18.2305 21.73 17.6798 21.73 17.0005V9.77047ZM13.73 15.0005C13.73 14.5752 14.0747 14.2305 14.5 14.2305H18.5C18.9252 14.2305 19.27 14.5752 19.27 15.0005C19.27 15.4257 18.9252 15.7705 18.5 15.7705H14.5C14.0747 15.7705 13.73 15.4257 13.73 15.0005Z"
+														  fill="#1A8917"/>
+												</svg>
+												<span>
+													Nạp/chuyển khoản
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="vstack pt-3">
+					<div class="container">
+						<div class="vstack gap-3">
+							<div class="gray-color fw-normal">
+								Lưu ý: <br>
+								Yêu cầu không đúng thực tế sẽ bị huỷ và hoàn tiền.
+								Gom nhiều thanh toán vào chung yêu cầu để hưởng tỉ giá tốt hơn
+							</div>
+							<div class="support-inner lookup-form user-form user-form_edit form-edit_user vstack gap-3 p-3 bg-white">
+								<div class="lookup-form_item">
+									<div class="hstack align-items-center gap-2">
+										<div class="user-form_item form-edit_user__item vstack gap-10px">
+											<input type="text" class="user-form_item__input form-edit_user__input">
+											<label class="user-form_item__label form-edit_user__label" for="">
+												Nhập tên ngân hàng<span
+													class="fw-bold text-danger">*</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="lookup-form_item">
+									<div class="hstack align-items-center gap-2">
+										<div class="user-form_item form-edit_user__item vstack gap-10px">
+											<input type="text" class="user-form_item__input form-edit_user__input">
+											<label class="user-form_item__label form-edit_user__label" for="">
+												Số tài khoản người nhận<span
+													class="fw-bold text-danger">*</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="lookup-form_item">
+									<div class="hstack align-items-center gap-2">
+										<div class="user-form_item form-edit_user__item vstack gap-10px">
+											<input type="text" class="user-form_item__input form-edit_user__input">
+											<label class="user-form_item__label form-edit_user__label" for="">
+												Tên người nhận<span
+													class="fw-bold text-danger">*</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="lookup-form_item">
+									<div class="hstack align-items-center gap-2">
+										<div class="user-form_item form-edit_user__item vstack gap-10px">
+											<input type="text" class="user-form_item__input form-edit_user__input">
+											<label class="user-form_item__label form-edit_user__label" for="">
+												Nhập số tiền CNY (¥)<span
+													class="fw-bold text-danger">*</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="support-textarea bg-white p-3 vstack gap-1 disabled">
+									<label for="" class="gray-color">Nội dung giao dịch</label>
+									<textarea name="" id="" rows="1" class="form-control" placeholder="Tối đa 100 ký tự">STORAGE X CHUYEN TIEN</textarea>
+								</div>
+								<div class="support-textarea bg-white p-3 vstack gap-1">
+									<label for="" class="gray-color">Ghi chú cho Võ Minh Thiên</label>
+									<textarea name="" id="" rows="1" class="form-control" placeholder="Tối đa 100 ký tự"></textarea>
+								</div>
+							</div>
+							<button type="button"
+									class="support-inner support-inner_border lookup-form user-form user-form_edit form-edit_user hstack align-items-center justify-content-center gap-2 p-3 bg-white">
+								<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
+									 fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										  d="M1.5 12C1.5 5.92487 6.42487 1 12.5 1C18.5751 1 23.5 5.92487 23.5 12C23.5 18.0751 18.5751 23 12.5 23C6.42487 23 1.5 18.0751 1.5 12ZM12.5 3C7.52943 3 3.5 7.02943 3.5 12C3.5 16.9706 7.52943 21 12.5 21C17.4706 21 21.5 16.9706 21.5 12C21.5 7.02943 17.4706 3 12.5 3ZM12.5 7C13.0523 7 13.5 7.44772 13.5 8V11H16.5C17.0523 11 17.5 11.4477 17.5 12C17.5 12.5523 17.0523 13 16.5 13H13.5V16C13.5 16.5523 13.0523 17 12.5 17C11.9477 17 11.5 16.5523 11.5 16V13H8.5C7.94772 13 7.5 12.5523 7.5 12C7.5 11.4477 7.94772 11 8.5 11H11.5V8C11.5 7.44772 11.9477 7 12.5 7Z"
+										  fill="#1A8917"/>
+									<path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+										  d="M3.5 12C3.5 7.02943 7.52943 3 12.5 3C17.4706 3 21.5 7.02943 21.5 12C21.5 16.9706 17.4706 21 12.5 21C7.52943 21 3.5 16.9706 3.5 12ZM12.5 7C13.0523 7 13.5 7.44772 13.5 8V11H16.5C17.0523 11 17.5 11.4477 17.5 12C17.5 12.5523 17.0523 13 16.5 13H13.5V16C13.5 16.5523 13.0523 17 12.5 17C11.9477 17 11.5 16.5523 11.5 16V13H8.5C7.94772 13 7.5 12.5523 7.5 12C7.5 11.4477 7.94772 11 8.5 11H11.5V8C11.5 7.44772 11.9477 7 12.5 7Z"
+										  fill="white"/>
+								</svg>
+								Gộp thêm yêu cầu khác
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="section-footer section-footer_support position-fixed bottom-0 start-0 end-0 zi-10 bg-white w-100 p-3 pb-0">
+					<div class="card-footer_detail vstack gap-2 pt-3">
+						<div class="card-footer_detail__item">
+							<div class="hstack align-items-start justify-content-between gap-3">
+								<div class="heading-5 fw-normal gray-color">
+									Tổng số tệ
+								</div>
+								<div class="vstack align-items-end text-end">
+									<div class="heading-5 text-black">
+										6700 ¥
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer_detail__item">
+							<div class="hstack align-items-start justify-content-between gap-3">
+								<div class="heading-5 fw-normal gray-color">
+									Tỉ giá áp dụng
+								</div>
+								<div class="vstack align-items-end text-end">
+									<div class="heading-5 orange-color">
+										1 ¥ = 3750 đ
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer_detail__item">
+							<div class="hstack align-items-start justify-content-between gap-3">
+								<div class="heading-4 fw-normal gray-color">
+									Thành tiền
+								</div>
+								<div class="vstack align-items-end text-end">
+									<div class="heading-4 primary-color">
+										5.403.000 đ
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lookup-service_inner border-top-0 pt-0 mt-0">
+						<div class="lookup-checkbox_item w-100">
+							<div class="position-relative overflow-hidden">
+								<input type="checkbox"
+									   class="lookup-checkbox_item__input position-absolute visually-hidden"
+									   id="checkbox-accept">
+								<label for="checkbox-accept"
+									   class="lookup-checkbox_item__label heading-6 pseudo text-black fw-normal text-wrap">
+									Tôi đã đọc và đồng ý với <a href=""
+																class="primary-color text-decoration-underline fw-normal">Điều
+																														  khoản</a>
+									và <a href="" class="primary-color text-decoration-underline fw-normal">chính
+																											sách</a> của
+									dịch vụ
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="card-footer_buttons hstack gap-2 w-100 pb-3">
+						<button type="button"
+								class="button-theme button-gradient_green flex-fill w-100">
+							Tạo yêu cầu
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/momment.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chart.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-labels.js"></script>
+<script type="text/javascript"
+		src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+
+</body>
+</html>
