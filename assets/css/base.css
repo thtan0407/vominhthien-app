@@ -329,10 +329,13 @@ input[type='number'] {
 }
 
 .gradient-green {
+	background-image: -o-linear-gradient(94deg, var(--primary-color) 0%, var(--primary-hover) 92.50%) !important;
 	background-image: linear-gradient(356deg, var(--primary-color) 0%, var(--primary-hover) 92.50%) !important;
 }
 
 .gradient-orange {
+	background-image: -webkit-gradient(linear, left top, right top, from(#E9750E), to(#FF993E)) !important;
+	background-image: -o-linear-gradient(left, #E9750E 0%, #FF993E 100%) !important;
 	background-image: linear-gradient(90deg, #E9750E 0%, #FF993E 100%) !important;
 }
 
@@ -349,14 +352,22 @@ input[type='number'] {
 	padding: 12px 36px;
 	border: 1px solid transparent;
 	border-radius: 16px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	gap: 8px;
 	font-size: 1.15em;
 	font-weight: 700;
 	line-height: 135%;
 	white-space: nowrap;
+	-webkit-transition: var(--transition-default);
+	-o-transition: var(--transition-default);
 	transition: var(--transition-default);
 	color: #343434;
 }
@@ -368,18 +379,22 @@ input[type='number'] {
 .button-background_green {
 	background: var(--primary-color);
 	color: var(--bs-white) !important;
+	-webkit-box-shadow: 0 4px 15px rgba(140, 255, 165, 0.25);
 	box-shadow: 0 4px 15px rgba(140, 255, 165, 0.25);
 }
 
 .button-gradient_green {
+	background-image: -o-linear-gradient(94deg, var(--primary-color) 0%, var(--primary-hover) 92.50%);
 	background-image: linear-gradient(356deg, var(--primary-color) 0%, var(--primary-hover) 92.50%);
 	color: var(--bs-white) !important;
+	-webkit-box-shadow: 0 4px 15px rgba(140, 255, 165, 0.35);
 	box-shadow: 0 4px 15px rgba(140, 255, 165, 0.35);
 }
 
 .button-outline_green {
 	border: 1px solid var(--primary-color);
 	color: var(--primary-color) !important;
+	-webkit-box-shadow: 0 4px 15px rgba(140, 255, 165, 0.25);
 	box-shadow: 0 4px 15px rgba(140, 255, 165, 0.25);
 	background-color: transparent;
 }
@@ -396,8 +411,11 @@ input[type='number'] {
 }
 
 .button-gradient_orange {
+	background-image: -webkit-gradient(linear, left top, right top, from(#E9750E), to(#FF993E)) !important;
+	background-image: -o-linear-gradient(left, #E9750E 0%, #FF993E 100%) !important;
 	background-image: linear-gradient(90deg, #E9750E 0%, #FF993E 100%) !important;
 	color: var(--bs-white) !important;
+	-webkit-box-shadow: 0 4px 15px rgba(140, 255, 165, 0.35);
 	box-shadow: 0 4px 15px rgba(140, 255, 165, 0.35);
 }
 
@@ -410,6 +428,7 @@ input[type='number'] {
 .button-background_gray {
 	background: #ADB4BB;
 	color: var(--bs-white) !important;
+	-webkit-box-shadow: 0px 4px 15px 0px rgba(130, 130, 130, 0.25);
 	box-shadow: 0px 4px 15px 0px rgba(130, 130, 130, 0.25);
 }
 
@@ -418,17 +437,36 @@ input[type='number'] {
 }
 
 .animated-rotate > svg {
+	-webkit-animation: loadingRotateDefault 2.5s infinite linear;
 	animation: loadingRotateDefault 2.5s infinite linear;
+}
+
+@-webkit-keyframes loadingRotateDefault {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	50% {
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
 }
 
 @keyframes loadingRotateDefault {
 	0% {
+		-webkit-transform: rotate(0);
 		transform: rotate(0);
 	}
 	50% {
+		-webkit-transform: rotate(180deg);
 		transform: rotate(180deg);
 	}
 	100% {
+		-webkit-transform: rotate(360deg);
 		transform: rotate(360deg);
 	}
 }
@@ -438,6 +476,7 @@ input[type='number'] {
 	background: transparent;
 	border: 0;
 	outline: none;
+	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
@@ -446,13 +485,17 @@ input[type='number'] {
 }
 
 .shadow-pseudo:after {
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
 	height: 32px;
 	max-width: 85%;
 	width: 100%;
 	border-radius: 50%;
 	opacity: 0.20000000298023224;
+	background: -o-radial-gradient(50.00% 0.00%, 104.16% 106.67%, #26D921 0%, #0EA40A 100%);
 	background: radial-gradient(104.16% 106.67% at 50.00% 0.00%, #26D921 0%, #0EA40A 100%);
+	-webkit-filter: blur(25px);
 	filter: blur(25px);
 	position: absolute;
 	content: "";
@@ -534,14 +577,20 @@ input[type='number'] {
 }
 
 .modal.modal-static .modal-dialog {
+	-webkit-transform: none;
+	-ms-transform: none;
 	transform: none;
 }
 
 .modal.modal-bottom .modal-dialog {
+	-webkit-transform: translate(0, 250px);
+	-ms-transform: translate(0, 250px);
 	transform: translate(0, 250px);
 }
 
 .modal.show .modal-dialog {
+	-webkit-transform: none;
+	-ms-transform: none;
 	transform: none;
 }
 
@@ -555,6 +604,8 @@ input[type='number'] {
 
 .fancybox__toolbar .fancybox__toolbar__column .f-button {
 	border-radius: 50%;
+	background: -webkit-gradient(linear, left top, right top, from(#E9750E), to(#FF993E)) !important;
+	background: -o-linear-gradient(left, #E9750E 0%, #FF993E 100%) !important;
 	background: linear-gradient(90deg, #E9750E 0%, #FF993E 100%) !important;
 	width: 36px;
 	height: 36px;
@@ -594,6 +645,8 @@ input[type='number'] {
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
+	-webkit-transition: var(--transition-default);
+	-o-transition: var(--transition-default);
 	transition: var(--transition-default);
 }
 
@@ -610,6 +663,8 @@ input[type='number'] {
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
+	-webkit-transition: var(--transition-default);
+	-o-transition: var(--transition-default);
 	transition: var(--transition-default);
 }
 
