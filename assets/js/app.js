@@ -526,12 +526,18 @@ export function handleInitDateRangePicker() {
 	const daterangepickerItems = $('.handle-init_daterangepicker');
 	if (daterangepickerItems.length > 0) {
 		daterangepickerItems.each(function () {
+			let parentEl = $(this).attr('data-parent');
+			if(typeof parentEl == 'undefined' || parentEl === '') {
+				parentEl = $(this).closest('.filter-item_input')
+			}
+
+			console.log(parentEl)
 			$(this).daterangepicker({
 				"singleDatePicker": true,
 				"autoApply": true,
 				"startDate": "07/20/2023",
 				"endDate": "07/26/2023",
-				"parentEl": $(this).closest('.filter-item_input'),
+				"parentEl": parentEl,
 				"opens": "center"
 			});
 		})
