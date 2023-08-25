@@ -527,7 +527,7 @@ export function handleInitDateRangePicker() {
 	if (daterangepickerItems.length > 0) {
 		daterangepickerItems.each(function () {
 			let parentEl = $(this).attr('data-parent');
-			if(typeof parentEl == 'undefined' || parentEl === '') {
+			if (typeof parentEl == 'undefined' || parentEl === '') {
 				parentEl = $(this).closest('.filter-item_input')
 			}
 
@@ -854,6 +854,23 @@ export function handleFooterCartDetail() {
 	}
 }
 
+/****
+ * Handle Init Material Date
+ */
+
+export function handleInitMaterialDate() {
+	const picker = new MaterialDatePicker()
+
+	let handleInitMaterial = document.querySelectorAll('.handle-init_material');
+	if (handleInitMaterial !== null) {
+		handleInitMaterial.forEach(function (item) {
+			item.addEventListener('click', function () {
+				picker.open() || picker.set(moment())
+			});
+		});
+	}
+}
+
 window.addEventListener('load', function () {
 	handleNavigation();
 
@@ -920,6 +937,8 @@ window.addEventListener('load', function () {
 	handleSliderDetailImages();
 
 	handleFooterCartDetail();
+
+	handleInitMaterialDate();
 
 	window.addEventListener("resize", () => {
 		windowWidth = window.innerWidth;
