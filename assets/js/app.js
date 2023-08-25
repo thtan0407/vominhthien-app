@@ -531,7 +531,6 @@ export function handleInitDateRangePicker() {
 				parentEl = $(this).closest('.filter-item_input')
 			}
 
-			console.log(parentEl)
 			$(this).daterangepicker({
 				"singleDatePicker": true,
 				"autoApply": true,
