@@ -859,13 +859,15 @@ export function handleFooterCartDetail() {
  */
 
 export function handleInitMaterialDate() {
-	const picker = new MaterialDatePicker()
-
 	let handleInitMaterial = document.querySelectorAll('.handle-init_material');
 	if (handleInitMaterial !== null) {
 		handleInitMaterial.forEach(function (item) {
+			const picker = new MaterialDatePicker().on('submit', (val) => {
+				item.value = moment(val.toDate()).format('DD/MM/YYYY');
+			})
+
 			item.addEventListener('click', function () {
-				picker.open() || picker.set(moment())
+				picker.open()
 			});
 		});
 	}

@@ -3731,6 +3731,15 @@
 	background-color: var(--primary-color);
 }
 
+.c-datepicker__day--selected {
+	color: var(--bs-white);
+}
+
+.c-datepicker__day--selected::after {
+	background-color: var(--primary-hover) !important;
+	z-index: -1;
+}
+
 .c-datepicker__hour-hand,
 .u-hover-ball-effect:hover:before, .c-datepicker__day-body:hover:before, .c-datepicker__clock__num:hover:before, .c-datepicker__clock__am-pm-toggle label:hover:before {
 	background-color: var(--primary-hover) !important;
