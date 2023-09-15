@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>Template VMT App</title>
+	<meta name="description" content="Template VMT App">
+	<meta name="author" content="">
+
+	<meta property="og:title" content="Template VMT App">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="Template VMT App">
+	<meta property="og:image" content="">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		  rel="stylesheet">
+
+	<link rel="icon" href="./assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+	<link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<div class="modal modal-bottom fade modal-notification" id="modal-validate" data-bs-backdrop="static"
+	 data-bs-keyboard="false">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content border-0">
+			<div class="modal-body bg-white">
+				<div class="vstack align-items-center justify-content-center gap-15px">
+					<svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
+						<path opacity="0.4"
+							  d="M39.2466 8.8208H18.7533C12.7841 8.8208 7.95081 13.6783 7.95081 19.6233V42.3641C7.95081 48.3091 12.8083 53.1666 18.7533 53.1666H39.2225C45.1916 53.1666 50.025 48.3091 50.025 42.3641V19.6233C50.0491 13.6541 45.1916 8.8208 39.2466 8.8208Z"
+							  fill="#FF4545"/>
+						<path d="M34.6792 4.83325H23.3209C20.8075 4.83325 18.7534 6.86325 18.7534 9.37659V11.6483C18.7534 14.1616 20.7834 16.1916 23.2967 16.1916H34.6792C37.1925 16.1916 39.2225 14.1616 39.2225 11.6483V9.37659C39.2467 6.86325 37.1925 4.83325 34.6792 4.83325Z"
+							  fill="#FF4545"/>
+						<path d="M35.1142 37.7485L31.61 34.2443L34.9934 30.861C35.6942 30.1601 35.6942 29.0001 34.9934 28.2993C34.2925 27.5985 33.1325 27.5985 32.4317 28.2993L29.0484 31.6826L25.5442 28.1785C24.8434 27.4776 23.6834 27.4776 22.9825 28.1785C22.2817 28.8793 22.2817 30.0393 22.9825 30.7401L26.4867 34.2443L22.8859 37.8451C22.185 38.546 22.185 39.706 22.8859 40.4068C23.2484 40.7693 23.7075 40.9385 24.1667 40.9385C24.6259 40.9385 25.085 40.7693 25.4475 40.4068L29.0484 36.806L32.5525 40.3101C32.915 40.6726 33.3742 40.8418 33.8334 40.8418C34.2925 40.8418 34.7517 40.6726 35.1142 40.3101C35.815 39.6093 35.815 38.4735 35.1142 37.7485Z"
+							  fill="#FF4545"/>
+					</svg>
+					<div class="heading-3 text-black text-center">
+						Số điện thoại đã được sử dụng
+					</div>
+					<div class="text-center hstack gap-2 w-100">
+						<a href="./dang-nhap.html"
+						   class="button-theme button-gradient_green flex-fill w-50">
+							Đăng nhập ngay
+						</a>
+						<button data-bs-dismiss="modal" type="button"
+								class="button-theme button-outline_green flex-fill w-50">
+							Nhập lại
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="screen-register">
+	<div class="register-wrapper vstack min-vh-100 transition-default hidden-bg position-relative">
+		<div class="register-heading vstack gap-5px">
+			<div class="register-heading_title">
+				Đăng kí
+			</div>
+			<div class="register-heading_desc heading-4 fw-normal text-white hstack align-items-center gap-2">
+				Bạn đã có tài khoản?
+				<a class="text-white text-decoration-underline fw-bold" href="./dang-nhap.html">
+					Đăng nhập
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							  d="M6.91076 15.5893C6.58533 15.2639 6.58533 14.7362 6.91076 14.4108L11.3215 10L6.91076 5.5893C6.58533 5.26386 6.58533 4.73622 6.91076 4.41078C7.2362 4.08535 7.76384 4.08535 8.08928 4.41078L13.0893 9.41078C13.4147 9.73622 13.4147 10.2639 13.0893 10.5893L8.08928 15.5893C7.76384 15.9147 7.2362 15.9147 6.91076 15.5893Z"
+							  fill="white"/>
+					</svg>
+				</a>
+			</div>
+			<div class="register-heading_image position-absolute top-0 end-0 pe-none">
+				<img src="./assets/images/logo-icon_opacity.png" height="180" width="210" alt="">
+			</div>
+		</div>
+		<div class="register-body mt-auto vstack gap-30px position-relative zi-2 bg-white">
+			<div class="register-body_title fw-normal heading-4">
+				Vui lòng nhập số điện của bạn
+			</div>
+			<form action="" id="formRegisterExampleStep1">
+				<div class="vstack gap-30px">
+					<div class="account-form vstack gap-20px">
+						<div class="flex-fill hstack gap-2 account-form_item">
+							<div class="account-form_item__list position-absolute flex-fill" id="dropdown-phoneNumber">
+								<div class="account-list_fill hstack gap-5px" id="call-dropdown">
+									<div class="hstack gap-5px" id="fill-dropdown">
+										<div class="account-list_fill__image">
+											<img src="./assets/images/icon/flag-vn.png" height="24" width="34"
+												 class="mw-100" alt="">
+										</div>
+										<div class="account-list_fill__number">
+											+84
+										</div>
+									</div>
+									<div class="account-list_fill__arrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+											 viewBox="0 0 24 24" fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												  d="M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z"
+												  fill="#191E24"/>
+										</svg>
+									</div>
+
+									<input id="inputExample1" placeholder="Fill Format Number Phone"
+										   value="+84"
+										   class="account-form_item__input"
+										   type="hidden">
+								</div>
+								<div class="account-list_fill__dropdown shadow-sm position-absolute bg-white zi-2 transition-default"
+									 id="handle-dropdown">
+									<ul class="list-unstyled mb-0 vstack gap-10px">
+										<li data-value="+82">
+											<div class="account-list_fill hstack gap-5px">
+												<div class="account-list_fill__image">
+													<img src="./assets/images/icon/flag-vn.png" height="24" width="34"
+														 class="mw-100" alt="">
+												</div>
+												<div class="account-list_fill__number">
+													+82
+												</div>
+											</div>
+										</li>
+										<li data-value="+83">
+											<div class="account-list_fill hstack gap-5px">
+												<div class="account-list_fill__image">
+													<img src="./assets/images/icon/flag-vn.png" height="24" width="34"
+														 class="mw-100" alt="">
+												</div>
+												<div class="account-list_fill__number">
+													+83
+												</div>
+											</div>
+										</li>
+										<li data-value="+84" class="is-active">
+											<div class="account-list_fill hstack gap-5px">
+												<div class="account-list_fill__image">
+													<img src="./assets/images/icon/flag-vn.png" height="24" width="34"
+														 class="mw-100" alt="">
+												</div>
+												<div class="account-list_fill__number">
+													+84
+												</div>
+											</div>
+										</li>
+										<li data-value="+85">
+											<div class="account-list_fill hstack gap-5px">
+												<div class="account-list_fill__image">
+													<img src="./assets/images/icon/flag-vn.png" height="24" width="34"
+														 class="mw-100" alt="">
+												</div>
+												<div class="account-list_fill__number">
+													+85
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<input id="inputExample2" placeholder="Số điện thoại" class="account-form_item__input"
+								   type="text">
+						</div>
+						<div class="flex-fill account-form_item">
+							<input id="inputExample1" placeholder="Username" class="account-form_item__input"
+								   type="text">
+							<label class="account-form_item__label" for="inputExample1">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+									 fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										  d="M12.01 6.97998C10.6057 6.97998 9.47998 8.1127 9.47998 9.50998C9.47998 10.8588 10.5336 11.9585 11.8686 12.0284C11.9614 12.0208 12.0604 12.0202 12.1565 12.0285C13.4797 11.9657 14.5312 10.866 14.54 9.50786C14.5396 9.10233 14.4401 8.71735 14.2692 8.37539C14.0839 8.00491 14.2341 7.5544 14.6046 7.36916C14.9751 7.18392 15.4256 7.33409 15.6108 7.70457C15.8795 8.24202 16.04 8.85629 16.04 9.50998V9.51422H16.04C16.0277 11.6788 14.325 13.4679 12.1513 13.5297C12.1097 13.5309 12.0681 13.5286 12.0269 13.5229C12.0267 13.5229 12.0265 13.5228 12.0263 13.5228C12.0237 13.5227 12.0194 13.5225 12.0137 13.5225C12.0014 13.5225 11.9901 13.5233 11.983 13.5242C11.9437 13.5291 11.904 13.5309 11.8644 13.5295C9.70159 13.4558 7.97998 11.6854 7.97998 9.50998C7.97998 7.28726 9.77428 5.47998 12.01 5.47998C12.4242 5.47998 12.76 5.81577 12.76 6.22998C12.76 6.64419 12.4242 6.97998 12.01 6.97998Z"
+										  fill="#ADB4BB"/>
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										  d="M7.44686 17.4236C6.67666 17.9423 6.24615 18.5359 6.07839 19.1001C7.68458 20.4451 9.74374 21.2501 12 21.2501C14.2563 21.2501 16.3154 20.4451 17.9216 19.1001C17.7538 18.5357 17.323 17.9418 16.5521 17.4228C15.3419 16.6134 13.6963 16.1851 12.0075 16.1851C10.3195 16.1851 8.66811 16.613 7.44686 17.4236ZM12.0075 14.6851C13.9234 14.6851 15.8774 15.1666 17.3871 16.1767L17.3887 16.1778C18.5914 16.9871 19.3565 18.0855 19.4858 19.3007C19.511 19.5376 19.4222 19.7723 19.2465 19.9332C17.3338 21.6847 14.7949 22.7501 12 22.7501C9.20512 22.7501 6.66625 21.6847 4.7535 19.9332C4.57784 19.7723 4.48903 19.5376 4.51422 19.3007C4.6435 18.0855 5.40865 16.9871 6.61131 16.1778L6.61504 16.1753L6.61504 16.1753C8.1336 15.1666 10.0914 14.6851 12.0075 14.6851Z"
+										  fill="#ADB4BB"/>
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										  d="M7.66385 2.16533C8.99055 1.57209 10.4649 1.25 12 1.25C17.9342 1.25 22.75 6.06579 22.75 12C22.75 17.9342 17.9342 22.75 12 22.75C6.06579 22.75 1.25 17.9342 1.25 12C1.25 9.5809 2.0568 7.34452 3.39957 5.55058C3.64778 5.21897 4.11782 5.15136 4.44942 5.39957C4.78103 5.64778 4.84864 6.11782 4.60043 6.44942C3.4432 7.99548 2.75 9.9191 2.75 12C2.75 17.1058 6.89421 21.25 12 21.25C17.1058 21.25 21.25 17.1058 21.25 12C21.25 6.89421 17.1058 2.75 12 2.75C10.6751 2.75 9.40945 3.02791 8.27615 3.53467C7.89802 3.70375 7.45441 3.53428 7.28533 3.15615C7.11625 2.77802 7.28572 2.33441 7.66385 2.16533Z"
+										  fill="#ADB4BB"/>
+								</svg>
+							</label>
+						</div>
+						<div class="flex-fill account-form_item">
+							<input id="inputExample2" placeholder="Mật khẩu" class="account-form_item__input"
+								   type="password">
+							<label class="account-form_item__label" for="inputExample2">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+									 fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										  d="M7.70907 4.22924C7.00031 5.10912 6.75 6.38987 6.75 8V9.25127C6.83253 9.25041 6.91587 9.25 7 9.25H17C17.0841 9.25 17.1675 9.25041 17.25 9.25127V8C17.25 6.38987 16.9997 5.10912 16.2909 4.22924C15.6104 3.38439 14.3716 2.75 12 2.75C9.62836 2.75 8.38962 3.38439 7.70907 4.22924ZM18.75 9.33546V8C18.75 6.30013 18.5003 4.58088 17.4591 3.28826C16.3896 1.96061 14.6284 1.25 12 1.25C9.37164 1.25 7.61038 1.96061 6.54093 3.28826C5.49969 4.58088 5.25 6.30013 5.25 8V9.33546C4.08514 9.4711 3.14646 9.79288 2.46967 10.4697C1.48116 11.4582 1.25 13.0054 1.25 15V17C1.25 18.9946 1.48116 20.5418 2.46967 21.5303C3.45818 22.5188 5.00536 22.75 7 22.75H17C18.7629 22.75 20.1676 22.5719 21.1511 21.8566C21.4861 21.6129 21.5602 21.1439 21.3165 20.8089C21.0729 20.4739 20.6039 20.3998 20.2689 20.6434C19.7124 21.0481 18.7571 21.25 17 21.25H7C4.99464 21.25 4.04182 20.9812 3.53033 20.4697C3.01884 19.9582 2.75 19.0054 2.75 17V15C2.75 12.9946 3.01884 12.0418 3.53033 11.5303C4.04182 11.0188 4.99464 10.75 7 10.75H17C19.0054 10.75 19.9582 11.0188 20.4697 11.5303C20.9812 12.0418 21.25 12.9946 21.25 15V17C21.25 17.4142 21.5858 17.75 22 17.75C22.4142 17.75 22.75 17.4142 22.75 17V15C22.75 13.0054 22.5188 11.4582 21.5303 10.4697C20.8535 9.79288 19.9149 9.4711 18.75 9.33546Z"
+										  fill="#ADB4BB"/>
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										  d="M6.99451 16C6.99451 15.4477 7.44222 15 7.99451 15H8.00349C8.55577 15 9.00349 15.4477 9.00349 16C9.00349 16.5523 8.55577 17 8.00349 17H7.99451C7.44222 17 6.99451 16.5523 6.99451 16ZM10.9955 16C10.9955 15.4477 11.4432 15 11.9955 15H12.0045C12.5568 15 13.0045 15.4477 13.0045 16C13.0045 16.5523 12.5568 17 12.0045 17H11.9955C11.4432 17 10.9955 16.5523 10.9955 16ZM14.9965 16C14.9965 15.4477 15.4442 15 15.9965 15H16.0054C16.5577 15 17.0054 15.4477 17.0054 16C17.0054 16.5523 16.5577 17 16.0054 17H15.9965C15.4442 17 14.9965 16.5523 14.9965 16Z"
+										  fill="#ADB4BB"/>
+								</svg>
+							</label>
+						</div>
+						<div class="flex-fill account-form_item">
+							<input id="inputExample3" placeholder="Nhập lại mật khẩu" class="account-form_item__input"
+								   type="password">
+							<label class="account-form_item__label" for="inputExample3">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+									 fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										  d="M7.70907 4.22924C7.00031 5.10912 6.75 6.38987 6.75 8V9.25127C6.83253 9.25041 6.91587 9.25 7 9.25H17C17.0841 9.25 17.1675 9.25041 17.25 9.25127V8C17.25 6.38987 16.9997 5.10912 16.2909 4.22924C15.6104 3.38439 14.3716 2.75 12 2.75C9.62836 2.75 8.38962 3.38439 7.70907 4.22924ZM18.75 9.33546V8C18.75 6.30013 18.5003 4.58088 17.4591 3.28826C16.3896 1.96061 14.6284 1.25 12 1.25C9.37164 1.25 7.61038 1.96061 6.54093 3.28826C5.49969 4.58088 5.25 6.30013 5.25 8V9.33546C4.08514 9.4711 3.14646 9.79288 2.46967 10.4697C1.48116 11.4582 1.25 13.0054 1.25 15V17C1.25 18.9946 1.48116 20.5418 2.46967 21.5303C3.45818 22.5188 5.00536 22.75 7 22.75H17C18.7629 22.75 20.1676 22.5719 21.1511 21.8566C21.4861 21.6129 21.5602 21.1439 21.3165 20.8089C21.0729 20.4739 20.6039 20.3998 20.2689 20.6434C19.7124 21.0481 18.7571 21.25 17 21.25H7C4.99464 21.25 4.04182 20.9812 3.53033 20.4697C3.01884 19.9582 2.75 19.0054 2.75 17V15C2.75 12.9946 3.01884 12.0418 3.53033 11.5303C4.04182 11.0188 4.99464 10.75 7 10.75H17C19.0054 10.75 19.9582 11.0188 20.4697 11.5303C20.9812 12.0418 21.25 12.9946 21.25 15V17C21.25 17.4142 21.5858 17.75 22 17.75C22.4142 17.75 22.75 17.4142 22.75 17V15C22.75 13.0054 22.5188 11.4582 21.5303 10.4697C20.8535 9.79288 19.9149 9.4711 18.75 9.33546Z"
+										  fill="#ADB4BB"/>
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										  d="M6.99451 16C6.99451 15.4477 7.44222 15 7.99451 15H8.00349C8.55577 15 9.00349 15.4477 9.00349 16C9.00349 16.5523 8.55577 17 8.00349 17H7.99451C7.44222 17 6.99451 16.5523 6.99451 16ZM10.9955 16C10.9955 15.4477 11.4432 15 11.9955 15H12.0045C12.5568 15 13.0045 15.4477 13.0045 16C13.0045 16.5523 12.5568 17 12.0045 17H11.9955C11.4432 17 10.9955 16.5523 10.9955 16ZM14.9965 16C14.9965 15.4477 15.4442 15 15.9965 15H16.0054C16.5577 15 17.0054 15.4477 17.0054 16C17.0054 16.5523 16.5577 17 16.0054 17H15.9965C15.4442 17 14.9965 16.5523 14.9965 16Z"
+										  fill="#ADB4BB"/>
+								</svg>
+							</label>
+						</div>
+						<div class="flex-fill account-form_item">
+							<input id="inputExample4" placeholder="Email" class="account-form_item__input"
+								   type="text">
+							<label class="account-form_item__label" for="inputExample4">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+									 fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										  d="M3.88534 5.2371C3.20538 5.86848 2.75 6.89295 2.75 8.5V15.5C2.75 17.107 3.20538 18.1315 3.88534 18.7629C4.57535 19.4036 5.61497 19.75 7 19.75H17C18.385 19.75 19.4246 19.4036 20.1147 18.7629C20.7946 18.1315 21.25 17.107 21.25 15.5V12.98C21.25 12.5658 21.5858 12.23 22 12.23C22.4142 12.23 22.75 12.5658 22.75 12.98V15.5C22.75 17.393 22.2054 18.8685 21.1353 19.8621C20.0754 20.8464 18.615 21.25 17 21.25H7C5.38503 21.25 3.92465 20.8464 2.86466 19.8621C1.79462 18.8685 1.25 17.393 1.25 15.5V8.5C1.25 6.60705 1.79462 5.13152 2.86466 4.1379C3.92465 3.15363 5.38503 2.75 7 2.75H17C18.615 2.75 20.0754 3.15363 21.1353 4.1379C22.2054 5.13152 22.75 6.60705 22.75 8.5C22.75 8.91421 22.4142 9.25 22 9.25C21.5858 9.25 21.25 8.91421 21.25 8.5C21.25 6.89295 20.7946 5.86848 20.1147 5.2371C19.4246 4.59637 18.385 4.25 17 4.25H7C5.61497 4.25 4.57535 4.59637 3.88534 5.2371ZM17.586 8.53194C17.8445 8.85558 17.7917 9.32751 17.4681 9.58602L14.3371 12.0868C13.0337 13.1244 10.9563 13.1244 9.65286 12.0868L9.65102 12.0853L6.53102 9.58529C6.20778 9.32627 6.1557 8.85426 6.41471 8.53102C6.67373 8.20778 7.14574 8.1557 7.46898 8.41471L10.5871 10.9132C10.5874 10.9135 10.5877 10.9137 10.5879 10.9139C11.3445 11.5155 12.646 11.5154 13.4024 10.9136C13.4022 10.9137 13.4025 10.9135 13.4024 10.9136L16.5319 8.41398C16.8556 8.15548 17.3275 8.20829 17.586 8.53194Z"
+										  fill="#ADB4BB"/>
+								</svg>
+							</label>
+						</div>
+						<div class="flex-fill account-form_item account-form_item__checkbox">
+							<input type="checkbox" id="checkBoxExample">
+							<label class="position-relative gray-color"
+								   for="checkBoxExample">
+								Tôi đã đọc và đồng với
+							</label>
+							<a href="" class="blue-color">
+								Điều khoản và chính sách
+							</a>
+						</div>
+					</div>
+					<div class="hstack align-items-center justify-content-center">
+						<div class="d-flex align-items-center flex-fill">
+							<button type="submit" class="button-theme button-gradient_green w-100">
+								Đăng ký
+							</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/momment.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chart.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/chartjs/chartjs-plugin-labels.js"></script>
+<script type="text/javascript"
+		src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+
+</body>
+</html>
