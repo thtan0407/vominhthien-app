@@ -1,133 +1,141 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta name="theme-color" content="#ffffff">
 
-    <title>Template VMT App</title>
-    <meta name="description" content="Template VMT App">
-    <meta name="author" content="">
+	<title>Template VMT App</title>
+	<meta name="description" content="Template VMT App">
+	<meta name="author" content="">
 
-    <meta property="og:title" content="Template VMT App">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:description" content="Template VMT App">
-    <meta property="og:image" content="">
+	<meta property="og:title" content="Template VMT App">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="Template VMT App">
+	<meta property="og:image" content="">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-          rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		  rel="stylesheet">
 
-    <link rel="icon" href="./assets/images/favicon.png">
-    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
-    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+	<link rel="icon" href="./assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
 	<link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
-<div class="modal modal-bottom fade modal-notification" id="modal-validate" data-bs-backdrop="static" data-bs-keyboard="false">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content border-0">
-            <div class="modal-body bg-white">
-                <div class="vstack align-items-center justify-content-center gap-15px">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
-                        <path opacity="0.4"
-                              d="M29 53.1666C42.3469 53.1666 53.1667 42.3468 53.1667 28.9999C53.1667 15.653 42.3469 4.83325 29 4.83325C15.6531 4.83325 4.83334 15.653 4.83334 28.9999C4.83334 42.3468 15.6531 53.1666 29 53.1666Z"
-                              fill="#E9750E"/>
-                        <path d="M29 33.2291C29.9908 33.2291 30.8125 32.4074 30.8125 31.4166V19.3333C30.8125 18.3424 29.9908 17.5208 29 17.5208C28.0092 17.5208 27.1875 18.3424 27.1875 19.3333V31.4166C27.1875 32.4074 28.0092 33.2291 29 33.2291Z"
-                              fill="#E9750E"/>
-                        <path d="M31.2233 37.7485C31.1025 37.4585 30.9333 37.1926 30.7158 36.951C30.4742 36.7335 30.2083 36.5643 29.9183 36.4435C29.3383 36.2018 28.6617 36.2018 28.0817 36.4435C27.7917 36.5643 27.5258 36.7335 27.2842 36.951C27.0667 37.1926 26.8975 37.4585 26.7767 37.7485C26.6558 38.0385 26.5833 38.3526 26.5833 38.6668C26.5833 38.981 26.6558 39.2951 26.7767 39.5851C26.8975 39.8993 27.0667 40.141 27.2842 40.3826C27.5258 40.6001 27.7917 40.7693 28.0817 40.8901C28.3717 41.011 28.6858 41.0835 29 41.0835C29.3142 41.0835 29.6283 41.011 29.9183 40.8901C30.2083 40.7693 30.4742 40.6001 30.7158 40.3826C30.9333 40.141 31.1025 39.8993 31.2233 39.5851C31.3442 39.2951 31.4167 38.981 31.4167 38.6668C31.4167 38.3526 31.3442 38.0385 31.2233 37.7485Z"
-                              fill="#E9750E"/>
-                    </svg>
-                    <div class="heading-3 text-black text-center">
-                        Bạn có chắc muốn quay lại?<br/>Thao tác sẽ bị hủy.
-                    </div>
-                    <div class="text-center hstack gap-2 w-100">
-                        <button data-bs-dismiss="modal" type="button"
-                                class="button-theme button-outline_green flex-fill w-50">
-                            Tiếp tục
-                        </button>
-                        <a href="./dang-ky-buoc-1.html"
-                           class="button-theme button-gradient_green flex-fill w-50">
-                            Vẫn quay lại
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="modal modal-bottom fade modal-notification" id="modal-validate" data-bs-backdrop="static"
+	 data-bs-keyboard="false">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content border-0">
+			<div class="modal-body bg-white">
+				<div class="vstack align-items-center justify-content-center gap-15px">
+					<svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
+						<path opacity="0.4"
+							  d="M29 53.1666C42.3469 53.1666 53.1667 42.3468 53.1667 28.9999C53.1667 15.653 42.3469 4.83325 29 4.83325C15.6531 4.83325 4.83334 15.653 4.83334 28.9999C4.83334 42.3468 15.6531 53.1666 29 53.1666Z"
+							  fill="#E9750E"/>
+						<path d="M29 33.2291C29.9908 33.2291 30.8125 32.4074 30.8125 31.4166V19.3333C30.8125 18.3424 29.9908 17.5208 29 17.5208C28.0092 17.5208 27.1875 18.3424 27.1875 19.3333V31.4166C27.1875 32.4074 28.0092 33.2291 29 33.2291Z"
+							  fill="#E9750E"/>
+						<path d="M31.2233 37.7485C31.1025 37.4585 30.9333 37.1926 30.7158 36.951C30.4742 36.7335 30.2083 36.5643 29.9183 36.4435C29.3383 36.2018 28.6617 36.2018 28.0817 36.4435C27.7917 36.5643 27.5258 36.7335 27.2842 36.951C27.0667 37.1926 26.8975 37.4585 26.7767 37.7485C26.6558 38.0385 26.5833 38.3526 26.5833 38.6668C26.5833 38.981 26.6558 39.2951 26.7767 39.5851C26.8975 39.8993 27.0667 40.141 27.2842 40.3826C27.5258 40.6001 27.7917 40.7693 28.0817 40.8901C28.3717 41.011 28.6858 41.0835 29 41.0835C29.3142 41.0835 29.6283 41.011 29.9183 40.8901C30.2083 40.7693 30.4742 40.6001 30.7158 40.3826C30.9333 40.141 31.1025 39.8993 31.2233 39.5851C31.3442 39.2951 31.4167 38.981 31.4167 38.6668C31.4167 38.3526 31.3442 38.0385 31.2233 37.7485Z"
+							  fill="#E9750E"/>
+					</svg>
+					<div class="heading-3 text-black text-center">
+						Bạn có chắc muốn quay lại?<br/>Thao tác sẽ bị hủy.
+					</div>
+					<div class="text-center hstack gap-2 w-100">
+						<button data-bs-dismiss="modal" type="button"
+								class="button-theme button-outline_green flex-fill w-50">
+							Tiếp tục
+						</button>
+						<a href="./dang-ky-buoc-1.html"
+						   class="button-theme button-gradient_green flex-fill w-50">
+							Vẫn quay lại
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
-<div class="screen-register">
-    <div class="register-wrapper vstack min-vh-100 transition-default hidden-bg position-relative">
-        <div class="register-heading vstack gap-5px">
-            <div class="register-heading_title register-heading_title__offset">
-                <button type="button" data-bs-target="#modal-validate" data-bs-toggle="modal"
-                        class="button-reset text-white hstack align-items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M20.9428 7.55715C21.4635 8.07785 21.4635 8.92207 20.9428 9.44277L13.8856 16.5L20.9428 23.5572C21.4635 24.0779 21.4635 24.9221 20.9428 25.4428C20.4221 25.9635 19.5779 25.9635 19.0572 25.4428L11.0572 17.4428C10.5365 16.9221 10.5365 16.0778 11.0572 15.5572L19.0572 7.55715C19.5779 7.03645 20.4221 7.03645 20.9428 7.55715Z"
-                              fill="white"/>
-                    </svg>
-                    Quay lại
-                </button>
-            </div>
-            <div class="register-heading_desc heading-4 fw-normal text-white hstack align-items-center gap-2">
-                Thao tác đăng kí sẽ bị hủy nếu bạn quay lại.
-            </div>
-            <div class="register-heading_image position-absolute top-0 end-0 pe-none">
-                <img src="./assets/images/logo-icon_opacity.png" height="180" width="210" alt="">
-            </div>
-        </div>
-        <div class="register-body mt-auto vstack gap-30px position-relative zi-2 bg-white">
-            <div class="register-body_title fw-normal heading-4">
-                Một mã code gồm <span class="primary-color fw-bold">4 chữ số</span> vừa được gửi đến
-                số điện thoại ***3457
-            </div>
-            <form action="" id="formRegisterExampleStep2">
-                <div class="vstack gap-30px">
-                    <div class="account-form hstack gap-20px">
-                        <div class="flex-fill hstack account-form_item">
-                            <input id="inputExample1" class="account-form_item__number"
-                                   type="tel" minlength="1" maxlength="1">
-                        </div>
-                        <div class="flex-fill hstack account-form_item">
-                            <input id="inputExample2" class="account-form_item__number"
-                                   type="tel" minlength="1" maxlength="1">
-                        </div>
-                        <div class="flex-fill hstack account-form_item">
-                            <input id="inputExample3" class="account-form_item__number"
-                                   type="tel" minlength="1" maxlength="1">
-                        </div>
-                        <div class="flex-fill hstack account-form_item">
-                            <input id="inputExample4" class="account-form_item__number"
-                                   type="tel" minlength="1" maxlength="1">
-                        </div>
-                    </div>
-                    <div class="vstack gap-20px align-items-center justify-content-center">
-                        <div class="d-flex align-items-center flex-fill w-100">
-                            <button type="submit" class="button-theme button-gradient_green w-100">
-                                Xác nhận
-                            </button>
-                        </div>
-                        <div class="register-body_desc text-center fw-normal heading-4">
-                            Đã gửi lại tin nhắn. Hãy kiểm tra điện thoại của bạn <br>
-                            <button type="button" class="primary-color button-reset fw-bold">
-                                Yêu cầu gửi lại
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
+<div class="vstack position-relative min-vh-100 h-100 overflow-hidden">
+	<div class="vstack flex-fill overflow-hidden position-relative">
+		<div class="screen-overflow">
+			<div class="screen-register">
+				<div class="register-wrapper vstack min-vh-100 transition-default hidden-bg position-relative">
+					<div class="register-heading vstack gap-5px">
+						<div class="register-heading_title register-heading_title__offset">
+							<button type="button" data-bs-target="#modal-validate" data-bs-toggle="modal"
+									class="button-reset text-white hstack align-items-center">
+								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33"
+									 fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										  d="M20.9428 7.55715C21.4635 8.07785 21.4635 8.92207 20.9428 9.44277L13.8856 16.5L20.9428 23.5572C21.4635 24.0779 21.4635 24.9221 20.9428 25.4428C20.4221 25.9635 19.5779 25.9635 19.0572 25.4428L11.0572 17.4428C10.5365 16.9221 10.5365 16.0778 11.0572 15.5572L19.0572 7.55715C19.5779 7.03645 20.4221 7.03645 20.9428 7.55715Z"
+										  fill="white"/>
+								</svg>
+								Quay lại
+							</button>
+						</div>
+						<div class="register-heading_desc heading-4 fw-normal text-white hstack align-items-center gap-2">
+							Thao tác đăng kí sẽ bị hủy nếu bạn quay lại.
+						</div>
+						<div class="register-heading_image position-absolute top-0 end-0 pe-none">
+							<img src="./assets/images/logo-icon_opacity.png" height="180" width="210" alt="">
+						</div>
+					</div>
+					<div class="register-body mt-auto vstack gap-30px position-relative zi-2 bg-white">
+						<div class="register-body_title fw-normal heading-4">
+							Một mã code gồm <span class="primary-color fw-bold">4 chữ số</span> vừa được gửi đến
+							số điện thoại ***3457
+						</div>
+						<form action="" id="formRegisterExampleStep2">
+							<div class="vstack gap-30px">
+								<div class="account-form hstack gap-20px">
+									<div class="flex-fill hstack account-form_item">
+										<input id="inputExample1" class="account-form_item__number"
+											   type="tel" minlength="1" maxlength="1">
+									</div>
+									<div class="flex-fill hstack account-form_item">
+										<input id="inputExample2" class="account-form_item__number"
+											   type="tel" minlength="1" maxlength="1">
+									</div>
+									<div class="flex-fill hstack account-form_item">
+										<input id="inputExample3" class="account-form_item__number"
+											   type="tel" minlength="1" maxlength="1">
+									</div>
+									<div class="flex-fill hstack account-form_item">
+										<input id="inputExample4" class="account-form_item__number"
+											   type="tel" minlength="1" maxlength="1">
+									</div>
+								</div>
+								<div class="vstack gap-20px align-items-center justify-content-center">
+									<div class="d-flex align-items-center flex-fill w-100">
+										<button type="submit" class="button-theme button-gradient_green w-100">
+											Xác nhận
+										</button>
+									</div>
+									<div class="register-body_desc text-center fw-normal heading-4">
+										Đã gửi lại tin nhắn. Hãy kiểm tra điện thoại của bạn <br>
+										<button type="button" class="primary-color button-reset fw-bold">
+											Yêu cầu gửi lại
+										</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/momment.min.js"></script>
